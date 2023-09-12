@@ -1,4 +1,6 @@
 ---
+import { Sprite } from "astro-icon";
+
 interface Props {
   title: string;
 }
@@ -17,7 +19,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Sprite.Provider>
+      <slot />
+    </Sprite.Provider>
   </body>
   <style is:global>
     @font-face {
