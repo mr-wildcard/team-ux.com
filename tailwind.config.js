@@ -1,7 +1,10 @@
 module.exports = {
   content: ["./src/**/*.{astro,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["SatoshiVariable", "sans-serif"],
+      },
+    },
   },
-  plugins: [],
-}
+};
