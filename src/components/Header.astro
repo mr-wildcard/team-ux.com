@@ -1,0 +1,51 @@
+---
+import Icon from "../components/@common/Icon.astro";
+---
+
+<header class="container">
+  <div class="logo">
+    <Icon width="56px" height="40px" name="logo" />
+    <span>Team UX</span>
+
+    <nav>
+      <ul>
+        <li>Accueil</li>
+        <li>Projets</li>
+        <li>Projets</li>
+        <li>Team UX</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    padding-block: 22px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & span {
+      @apply text-primary;
+
+      font-size: 28px;
+      letter-spacing: 0.42px;
+      line-height: normal;
+      font-weight: 700;
+    }
+  }
+
+  nav {
+    margin-left: auto;
+
+    & ul {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+</style>
