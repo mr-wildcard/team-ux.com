@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{astro,ts}"],
   theme: {
+    container: {
+      center: true,
+    },
     extends: {
       spacing: {
         8: "30px",
