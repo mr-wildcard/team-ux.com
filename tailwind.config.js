@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,ts}"],
+  plugins: ["tailwindcss/nesting"],
   theme: {
     container: {
       center: true,
