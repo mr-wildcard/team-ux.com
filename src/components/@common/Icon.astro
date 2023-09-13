@@ -1,6 +1,22 @@
 ---
 import { Sprite } from "astro-icon";
 
+interface Props {
+  name:
+    | "arrow_drop_down"
+    | "arrow_drop_up"
+    | "chevron_right"
+    | "content_copy"
+    | "expand_less"
+    | "expand_more"
+    | "forward"
+    | "logo"
+    | "open_in_new"
+    | "visibility";
+  width: `${number}px`;
+  height: `${number}px`;
+}
+
 const { name, width, height } = Astro.props;
 ---
 

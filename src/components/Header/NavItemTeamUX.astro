@@ -1,5 +1,79 @@
 ---
-
+import NavItem from "./components/NavItem.astro";
+import Icon from "../@common/Icon.astro";
 ---
 
-<span> Team UX</span>
+<NavItem>
+  Team UX
+  <Icon name="arrow_drop_down" width="20px" height="20px" />
+
+  <div class="submenu-container" slot="submenu">
+    <ul>
+      <li>
+        <NavItem to="/nos-deux-profils">Nos 2 profils</NavItem>
+      </li>
+      <li>
+        <NavItem to="/notre-manifeste">Notre manifeste</NavItem>
+      </li>
+    </ul>
+  </div>
+</NavItem>
+
+<script>
+  const button = document.querySelector("button.nav-item");
+  const svg = button.querySelector("svg");
+
+  button.addEventListener("click", () => {
+    if (button.classList.contains("opened")) {
+      button.classList.remove("opened");
+    } else {
+      button.classList.add("opened");
+    }
+  });
+</script>
+
+<style>
+  :global(button.nav-item.opened) {
+    :global([astro-icon="arrow_drop_down"]) {
+      transform: rotateZ(180deg);
+    }
+
+    .submenu-container {
+      display: block;
+    }
+  }
+
+  .submenu-container {
+    display: none;
+    position: absolute;
+    padding-block: 16px;
+    left: 50%;
+    top: calc(100% + 6px);
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
+  }
+
+  svg {
+    transform-origin: center center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & :global(.nav-item) {
+      padding: 8px 16px;
+
+      &:after {
+        all: unset !important;
+      }
+
+      &:hover {
+        @apply bg-surface5 text-secondary;
+      }
+    }
+  }
+</style>
