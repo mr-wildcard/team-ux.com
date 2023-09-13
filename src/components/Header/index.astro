@@ -1,0 +1,46 @@
+---
+import Icon from "../../components/@common/Icon.astro";
+import Logo from "./Logo.astro";
+import NavItem from "./NavItem.astro";
+import NavItemContact from "./NavItemContact.astro";
+import NavItemTeamUX from "./NavItemTeamUX.astro";
+---
+
+<header class="container">
+  <Logo />
+
+  <nav>
+    <ul>
+      <li>
+        <NavItem title="Accueil" to="/" />
+      </li>
+      <li>
+        <NavItem title="Projets" to="/projects" />
+      </li>
+      <li>
+        <NavItemTeamUX />
+      </li>
+      <li>
+        <NavItemContact />
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    padding-block: 22px;
+  }
+
+  nav {
+    margin-left: auto;
+
+    & ul {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+</style>
