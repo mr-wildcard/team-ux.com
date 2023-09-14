@@ -29,5 +29,119 @@ module.exports = {
       neutral3: "#DFE1EA",
       neutral4: "#9DA1B5",
     },
+    fontSize: {
+      "display-large": [
+        "72px",
+        {
+          lineHeight: "84px",
+          fontWeight: "700",
+        },
+      ],
+      "display-medium": [
+        "60px",
+        {
+          lineHeight: "82px",
+          fontWeight: "700",
+        },
+      ],
+      "display-small": [
+        "40px",
+        {
+          lineHeight: "65px",
+          fontWeight: "700",
+        },
+      ],
+      "headline-large": [
+        "32px",
+        {
+          lineHeight: "43px",
+          fontWeight: "900",
+        },
+      ],
+      "headline-medium-bold": [
+        "25px",
+        {
+          lineHeight: "34px",
+          fontWeight: "900",
+        },
+      ],
+      "headline-medium": [
+        "25px",
+        {
+          lineHeight: "34px",
+          fontWeight: "700",
+        },
+      ],
+      "headline-small": [
+        "20px",
+        {
+          lineHeight: "27px",
+          fontWeight: "700",
+        },
+      ],
+      "body-extra-large": [
+        "28px",
+        {
+          lineHeight: "38px",
+          fontWeight: "500",
+        },
+      ],
+      "body-large": [
+        "20px",
+        {
+          lineHeight: "27px",
+          fontWeight: "700",
+        },
+      ],
+      "body-medium-bold": [
+        "18px",
+        {
+          lineHeight: "28px",
+          fontWeight: "700",
+        },
+      ],
+      "body-medium": [
+        "18px",
+        {
+          lineHeight: "28px",
+          fontWeight: "500",
+        },
+      ],
+      "body-small": [
+        "14px",
+        {
+          lineHeight: "19px",
+          fontWeight: "500",
+        },
+      ],
+      "label-large": [
+        "18px",
+        {
+          lineHeight: "24px",
+          fontWeight: "700",
+        },
+      ],
+      "label-medium-bold": [
+        "16px",
+        {
+          lineHeight: "22px",
+          fontWeight: "700",
+        },
+      ],
+      "label-medium": [
+        "16px",
+        {
+          lineHeight: "22px",
+          fontWeight: "500",
+        },
+      ],
+      "label-small": [
+        "14px",
+        {
+          lineHeight: "19px",
+          fontWeight: "700",
+        },
+      ],
+    },
   },
 };
