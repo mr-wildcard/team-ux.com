@@ -1,0 +1,12 @@
+---
+import Image from "../@common/Image.astro";
+
+const { width, height } = Astro.props;
+---
+
+<Image
+  srcSet={["images/yuna.png", "images/yuna.avif", "images/yuna.webp"]}
+  alt="Yuna Orsini"
+  width={width}
+  height={height}
+/>
