@@ -1,0 +1,23 @@
+---
+type PNGSrc = string;
+type AvifSrc = string;
+type WebPSrc = string;
+
+interface Props {
+  srcSet: [AvifSrc, WebPSrc, PNGSrc];
+  alt: string;
+  width?: `${number}px`;
+  height?: `${number}px`;
+}
+
+const { srcSet, ...props } = Astro.props;
+
+const [png, avif, webp] = srcSet;
+---
+
+<picture>
+  {avif && <source srcset={avif} type="image/avif" />}
+  {webp && <source srcset={webp} type="image/webp" />}
+
+  <img {...props} src={png} loading="lazy" />
+</picture>
