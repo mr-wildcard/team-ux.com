@@ -5,7 +5,7 @@ import NavItemTeamUX from "./NavItemTeamUX.astro";
 import NavItem from "./components/NavItem.astro";
 ---
 
-<header class="container">
+<header>
   <Logo />
 
   <nav>
@@ -45,6 +45,8 @@ import NavItem from "./components/NavItem.astro";
   }
 
   header {
+    @apply container;
+
     position: sticky;
     top: 0;
     display: flex;
