@@ -26,11 +26,34 @@ import NavItem from "./components/NavItem.astro";
   </nav>
 </header>
 
+<script>
+  if (!CSS.supports("animation-timeline", "scroll()")) {
+    import("./scripts/sticky-header.fallback");
+  }
+</script>
+
 <style>
+  @keyframes sticky-bg-white-header {
+    from {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    to {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
+    }
+  }
+
   header {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
-    padding-block: 22px;
+    padding: 22px 40px;
+    animation: sticky-bg-white-header 1s linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 1px;
+    border-radius: 0 0 16px 16px;
   }
 
   nav {
