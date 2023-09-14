@@ -6,9 +6,12 @@ module.exports = {
     container: {
       center: true,
     },
-    extends: {
+    extend: {
       spacing: {
         8: "30px",
+      },
+      screens: {
+        "2xl": "1413px",
       },
     },
     fontFamily: {
