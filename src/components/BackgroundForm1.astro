@@ -1,0 +1,16 @@
+---
+const props = Astro.props;
+
+const cssClasses = [
+  "absolute",
+  "z-[-1]",
+  "bg-surface2",
+  "w-[1159px]",
+  "h-[586px]",
+  "rotate-[-30.785deg]",
+  "rounded-[1000px]",
+  props.class,
+];
+---
+
+<div class:list={cssClasses}></div>

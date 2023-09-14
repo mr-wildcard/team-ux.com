@@ -3,36 +3,41 @@ import Grid from "../../../components/@common/Grid.astro";
 import PictureYuna from "../../../components/images/Yuna.astro";
 import PictureDaniela from "../../../components/images/Daniela.astro";
 import Brush1 from "../../../components/images/Brush1.astro";
+import BackgroundForm1 from "../../../components/BackgroundForm1.astro";
 ---
 
-<section class="container mt-[129px]">
-  <Grid>
-    <h1 class="col-start-2 col-span-9 mb-8 text-display-large">
-      Nous sommes Yuna & Daniela, un binôme de <span class="text-primary"
-        >designers UX seniors en freelance</span
-      >
-    </h1>
-    <div class="col-start-2 col-span-6">
-      <p class="our-work mb-5 text-body-extra-large">
-        Notre travail est reconnu pour son efficacité et sa pertinence, en
-        particulier sur les produits numériques dits complexes que nous adorons
-        construire ou déconstruire.
-      </p>
+<section class="overflow-hidden mt-[129px]">
+  <div class="container relative">
+    <BackgroundForm1 class="top-[140px] right-[-470px]" />
 
-      <p class="text-body-large">
-        Nous livrons un design accessible et le plus sobre possible.
-      </p>
-    </div>
-    <div class="col-start-9 col-span-3">
-      <div class="relative mt-[67px]">
-        <div class="flex gap-4">
-          <PictureYuna />
-          <PictureDaniela />
-        </div>
-        <Brush1
-          class="absolute top-[-30px] z-[-1] w-[352px] h-[418px] rotate-[-165.467deg]"
-        />
+    <Grid>
+      <h1 class="col-start-2 col-span-9 mb-8 text-display-large">
+        Nous sommes Yuna & Daniela, un binôme de <span class="text-primary"
+          >designers UX seniors en freelance</span
+        >
+      </h1>
+      <div class="col-start-2 col-span-6">
+        <p class="our-work mb-5 text-body-extra-large">
+          Notre travail est reconnu pour son efficacité et sa pertinence, en
+          particulier sur les produits numériques dits complexes que nous
+          adorons construire ou déconstruire.
+        </p>
+
+        <p class="text-body-large">
+          Nous livrons un design accessible et le plus sobre possible.
+        </p>
       </div>
-    </div>
-  </Grid>
+      <div class="col-start-9 col-span-3">
+        <div class="relative mt-[67px]">
+          <div class="flex gap-4">
+            <PictureYuna />
+            <PictureDaniela />
+          </div>
+          <Brush1
+            class="absolute top-[-30px] z-[-1] w-[352px] h-[418px] rotate-[-165.467deg]"
+          />
+        </div>
+      </div>
+    </Grid>
+  </div>
 </section>
