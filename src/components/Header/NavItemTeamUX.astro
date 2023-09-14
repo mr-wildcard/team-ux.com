@@ -126,8 +126,13 @@ import Icon from "../@common/Icon.astro";
         all: unset !important;
       }
 
+      &:is(.selected),
       &:hover {
-        @apply bg-surface5 text-secondary;
+        @apply bg-surface5;
+      }
+
+      &:not(.selected):hover {
+        @apply text-secondary;
       }
     }
   }
