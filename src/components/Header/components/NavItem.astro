@@ -4,9 +4,11 @@ const { to } = Astro.props;
 
 let HTMLTag = "span";
 let hrefAttribute = undefined;
+let ariaExpandedAttribute = undefined;
 
 if ("submenu" in Astro.slots) {
   HTMLTag = "button";
+  ariaExpandedAttribute = "false";
 } else if (to !== pathname) {
   HTMLTag = "a";
   hrefAttribute = to;
@@ -16,6 +18,7 @@ if ("submenu" in Astro.slots) {
 <HTMLTag
   class="nav-item"
   href={hrefAttribute}
+  aria-expanded={ariaExpandedAttribute}
   class:list={["nav-item", { selected: pathname === to }]}
 >
   <slot />

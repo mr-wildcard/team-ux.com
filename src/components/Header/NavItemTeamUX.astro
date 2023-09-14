@@ -20,16 +20,71 @@ import Icon from "../@common/Icon.astro";
 </NavItem>
 
 <script>
-  const button = document.querySelector("button.nav-item");
-  const svg = button.querySelector("svg");
+  const button = document.querySelector<HTMLButtonElement>("button.nav-item");
+  const svg = button.querySelector<HTMLOrSVGElement>("svg");
+  const submenu = button.querySelector<HTMLDivElement>(".submenu-container");
 
-  button.addEventListener("click", () => {
-    if (button.classList.contains("opened")) {
-      button.classList.remove("opened");
+  let timer;
+
+  function isSubmenuOpened() {
+    return button.classList.contains("opened");
+  }
+
+  function openSubmenu() {
+    button.classList.add("opened");
+    button.setAttribute("aria-expanded", "true");
+  }
+
+  function closeSubmenu() {
+    button.classList.remove("opened");
+    button.setAttribute("aria-expanded", "false");
+  }
+
+  function toggleSubmenu() {
+    if (isSubmenuOpened()) {
+      closeSubmenu();
     } else {
-      button.classList.add("opened");
+      openSubmenu();
     }
-  });
+  }
+
+  function onClickOnButton() {
+    toggleSubmenu();
+
+    if (isSubmenuOpened()) {
+      submenu.addEventListener("mouseenter", onMouseEntersSubmenu);
+      window.addEventListener("click", onUserClicksOutside);
+    } else {
+      submenu.removeEventListener("mouseenter", onMouseEntersSubmenu);
+      window.removeEventListener("click", onUserClicksOutside);
+    }
+  }
+
+  function onMouseEntersSubmenu() {
+    clearTimeout(timer);
+
+    submenu.addEventListener("mouseleave", onMouseLeavesSubmenu);
+  }
+
+  function onMouseLeavesSubmenu() {
+    clearTimeout(timer);
+
+    submenu.removeEventListener("mouseleave", onMouseLeavesSubmenu);
+
+    timer = setTimeout(closeSubmenu, 1000);
+  }
+
+  function onUserClicksOutside(event: MouseEvent) {
+    const target = event.target as Node;
+
+    if (!button.contains(target) && target !== button) {
+      clearTimeout(timer);
+
+      closeSubmenu();
+    }
+  }
+
+  button.addEventListener("click", onClickOnButton);
 </script>
 
 <style>
