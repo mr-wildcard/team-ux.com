@@ -1,0 +1,76 @@
+---
+import Icon from "./@common/Icon.astro";
+
+const { pathname } = Astro.url;
+---
+
+<nav aria-label="Breadcrumb" class="container">
+  <ul>
+    <li>
+      <a href="/">Accueil</a>
+      <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+    </li>
+
+    {
+      pathname === "/projects" && (
+        <>
+          <li>
+            <span aria-current="page">Projets</span>
+          </li>
+        </>
+      )
+    }
+
+    {
+      pathname === "/nos-deux-profils" && (
+        <>
+          <li>
+            <span>Team UX</span>
+            <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+          </li>
+          <li>
+            <span aria-current="page">Nos deux profils</span>
+          </li>
+        </>
+      )
+    }
+
+    {
+      pathname === "/notre-manifeste" && (
+        <>
+          <li>
+            <span>Team UX</span>
+            <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+          </li>
+          <li>
+            <span aria-current="page">Notre manifeste</span>
+          </li>
+        </>
+      )
+    }
+  </ul>
+</nav>
+
+<style>
+  ul {
+    @apply text-label-small;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    a {
+      @apply text-secondary;
+    }
+
+    span {
+      @apply text-neutral1;
+    }
+  }
+</style>
