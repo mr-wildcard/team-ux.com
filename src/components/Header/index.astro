@@ -5,25 +5,29 @@ import NavItemTeamUX from "./NavItemTeamUX.astro";
 import NavItem from "./components/NavItem.astro";
 ---
 
-<header>
-  <Logo />
+<header class="container">
+  <div class="outer">
+    <div class="inner">
+      <Logo />
 
-  <nav>
-    <ul>
-      <li>
-        <NavItem to="/">Accueil</NavItem>
-      </li>
-      <li>
-        <NavItem to="/projects">Projets</NavItem>
-      </li>
-      <li>
-        <NavItemTeamUX />
-      </li>
-      <li>
-        <NavItemContact />
-      </li>
-    </ul>
-  </nav>
+      <nav>
+        <ul>
+          <li>
+            <NavItem to="/">Accueil</NavItem>
+          </li>
+          <li>
+            <NavItem to="/projects">Projets</NavItem>
+          </li>
+          <li>
+            <NavItemTeamUX />
+          </li>
+          <li>
+            <NavItemContact />
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <script>
@@ -45,18 +49,23 @@ import NavItem from "./components/NavItem.astro";
   }
 
   header {
-    @apply container;
-
     z-index: 1;
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    padding: 22px 40px;
+  }
+
+  .outer {
+    margin-inline: -40px;
+    border-radius: 0 0 16px 16px;
     animation: sticky-bg-white-header 1s linear forwards;
     animation-timeline: scroll();
     animation-range: 0px 1px;
-    border-radius: 0 0 16px 16px;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    padding: 22px 40px;
   }
 
   nav {
