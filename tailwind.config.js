@@ -25,12 +25,12 @@ module.exports = {
       surface3: "#FFD9A6",
       surface4: "#FBBB64",
       surface5: "#DCE1FF",
-      surface6: "#D3F5DE",
+      surface6: "#E9D6FF",
       surface7: "#D3F5DE",
       neutral1: "#474C6B",
       neutral2: "#9DA1B5",
       neutral3: "#DFE1EA",
-      neutral4: "#9DA1B5",
+      neutral4: "#FFF",
     },
     fontSize: {
       "display-large": [
