@@ -1,0 +1,92 @@
+---
+import Icon from "./Icon.astro";
+import { HTMLAttributes } from "astro/types";
+
+type BasicHTMLAttrbutes = HTMLAttributes<HTMLAnchorElement> &
+  HTMLAttributes<HTMLButtonElement>;
+
+interface Props extends BasicHTMLAttrbutes {
+  type?: "primary" | "secondary";
+  variant?: "outlined";
+  href?: string;
+  leftIcon?: string;
+  rightIcon?: string;
+}
+
+const {
+  type = "primary",
+  variant,
+  href,
+  leftIcon,
+  rightIcon,
+  class: cssClasses,
+} = Astro.props;
+
+const HTMLTag = href ? "a" : "button";
+const htmlAttributes = {
+  href: href ?? undefined,
+  "class:list": [
+    cssClasses,
+    "call-to-action",
+    {
+      outlined: variant === "outlined",
+      primary: type === "primary",
+      secondary: type === "secondary",
+    },
+  ],
+};
+---
+
+<HTMLTag {...htmlAttributes}>
+  {leftIcon && <Icon name={leftIcon} width="24px" height="24px" />}
+  <slot />
+  {rightIcon && <Icon name={rightIcon} width="24px" height="24px" />}
+</HTMLTag>
+
+<style>
+  .call-to-action {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 100px;
+
+    &.primary {
+      @apply px-10 py-4 gap-2.5 text-label-large text-neutral4 bg-primary hover:bg-secondary;
+
+      &.outlined {
+        @apply text-primary bg-neutral4;
+      }
+
+      & :global([astro-icon]) {
+        @apply fill-neutral4;
+      }
+    }
+
+    &.secondary {
+      @apply px-5	py-2.5 gap-1.5 text-label-medium-bold text-primary bg-neutral4;
+    }
+
+    &.primary.outlined,
+    &.secondary {
+      @apply shadow-primary;
+
+      box-shadow: inset 0 0 0 2px;
+
+      &:hover {
+        @apply border-primary hover:text-neutral4 hover:bg-primary hover:shadow-primary;
+
+        box-shadow: none;
+      }
+
+      & :global([astro-icon]) {
+        @apply fill-primary;
+      }
+
+      &:hover {
+        & :global([astro-icon]) {
+          @apply fill-neutral4;
+        }
+      }
+    }
+  }
+</style>
