@@ -1,0 +1,37 @@
+---
+import Grid from "../../../components/@common/Grid.astro";
+import data from "../../../data/homepage/temoignages.yaml";
+import CallToAction from "../../../components/@common/CallToAction.astro";
+---
+
+<section class="container">
+  <h2 class="text-headline-medium text-neutral1 mb-10">{data.title}</h2>
+  <Grid as="ul">
+    {
+      data.testimonials.map((testimonial) => {
+        return (
+          <li class="col-span-4 flex flex-col p-[50px] bg-neutral4 rounded-[26px]">
+            <p
+              lang={testimonial.contentLang}
+              class="text-body-medium mt-[50px] mb-auto"
+            >
+              <span class="block mb-[50px] text-primary text-[240px] translate-x-[-15px] translate-y-[20px]">
+                &ldquo;
+              </span>
+              {testimonial.content}&rdquo;
+            </p>
+            <p class="mt-5 text-body-medium-bold">
+              {testimonial.author}
+              <span class="text-primary">&nbsp;{testimonial.company}</span>
+            </p>
+          </li>
+        );
+      })
+    }
+  </Grid>
+  <div class="flex justify-center mt-[60px]">
+    <CallToAction href="/temoignages" type="secondary" rightIcon="forward">
+      {data.callToAction.label}
+    </CallToAction>
+  </div>
+</section>
