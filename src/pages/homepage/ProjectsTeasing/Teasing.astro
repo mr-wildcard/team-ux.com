@@ -1,0 +1,12 @@
+---
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+---
+
+<h3
+  class="text-headline-medium p-8 bg-surface5 rounded-[26px]"
+  set:html={content}
+/>
