@@ -1,17 +1,16 @@
 ---
+import Brush from "../../../components/@common/Brush.astro";
+import Image from "../../../components/@common/Image.astro";
 import Grid from "../../../components/@common/Grid.astro";
 import data from "../../../data/homepage/derriere-team-ux.yaml";
 import Icon from "../../../components/@common/Icon.astro";
 import DuoDeChoc from "../../../components/DuoDeChoc.astro";
 import CallToAction from "../../../components/@common/CallToAction.astro";
-import Brush1 from "../../../components/images/Brush1.astro";
-import Brush4 from "../../../components/images/Brush4.astro";
-import Image from "../../../components/@common/Image.astro";
 
 const { block1, block2 } = data;
 ---
 
-<section>
+<section class="mb-[140px]">
   <Icon name="oval" />
 
   <div class="relative flex flex-col gap-8 pb-[100px] bg-neutral4">
@@ -45,8 +44,11 @@ const { block1, block2 } = data;
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
           <div class="relative">
-            <Brush1 class="w-[173px] h-[206px]" />
-            <Brush4 class="absolute top-0 left-[52px] w-[207px] h-[206px]" />
+            <Brush id="1" class="w-[173px] h-[206px]" />
+            <Brush
+              id="4"
+              class="absolute top-0 left-[52px] w-[207px] h-[206px]"
+            />
           </div>
           <p class="text-body-medium">{block2.paragraph}</p>
           <CallToAction
@@ -85,8 +87,12 @@ const { block1, block2 } = data;
               {data.commited.title}
             </h3>
             <ul class="flex gap-[44px]">
-              <li><Image srcSet={["images/diseno-etico.png"]} /></li>
-              <li><Image srcSet={["images/designers-ethiques.png"]} /></li>
+              <li>
+                <Image srcSet={["images/diseno-etico.png"]} />
+              </li>
+              <li>
+                <Image srcSet={["images/designers-ethiques.png"]} />
+              </li>
             </ul>
           </div>
         </div>
