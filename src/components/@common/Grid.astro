@@ -1,8 +1,13 @@
 ---
-const { outerGap = true } = Astro.props;
+interface Props {
+  outerGap?: boolean;
+  as?: string;
+}
+
+const { as: HTMLTag = "div", outerGap = true } = Astro.props;
 ---
 
-<div
+<HTMLTag
   class:list={[
     "grid",
     "gap-y-0",
@@ -18,4 +23,4 @@ const { outerGap = true } = Astro.props;
   ]}
 >
   <slot />
-</div>
+</HTMLTag>
