@@ -1,0 +1,109 @@
+---
+import Grid from "../../../../components/@common/Grid.astro";
+import data from "../../../../data/homepage/derriere-team-ux.yaml";
+import Icon from "../../../../components/@common/Icon.astro";
+import DuoDeChoc from "../../../../components/DuoDeChoc.astro";
+import CallToAction from "../../../../components/@common/CallToAction.astro";
+import Brush1 from "../../../../components/images/Brush1.astro";
+import Brush4 from "../../../../components/images/Brush4.astro";
+import Image from "../../../../components/@common/Image.astro";
+
+const { block1, block2 } = data;
+---
+
+<section>
+  <Icon name="oval" />
+
+  <div class="relative flex flex-col gap-8 pb-[100px] bg-neutral4">
+    <div class="container">
+      <h2 class="mb-20 text-display-small text-center">{data.title}</h2>
+      <Grid>
+        <div
+          class="col-start-2 col-span-5 p-10 flex flex-col gap-8 bg-surface6 rounded-[26px]"
+        >
+          <h3 class="mb-8 text-headline-medium-bold">{block1.title}</h3>
+
+          <div class="w-[250px]">
+            <DuoDeChoc variant="small" />
+            <p class="text-label-large text-primary text-center mt-2.5">
+              {block1.pictureLegend}
+            </p>
+          </div>
+
+          <p class="text-body-medium">{block1.paragraph}</p>
+
+          <CallToAction
+            href="/nos-deux-profils"
+            type="secondary"
+            rightIcon="forward"
+          >
+            {block1.callToAction.label}
+          </CallToAction>
+        </div>
+        <div
+          class="col-span-5 flex flex-col gap-8 h-fit p-10 bg-surface7 rounded-[26px]"
+        >
+          <h3 class="text-headline-medium-bold">{block2.title}</h3>
+          <div class="relative">
+            <Brush1 class="w-[173px] h-[206px]" />
+            <Brush4 class="absolute top-0 left-[52px] w-[207px] h-[206px]" />
+          </div>
+          <p class="text-body-medium">{block2.paragraph}</p>
+          <CallToAction
+            href="/notre-manifeste"
+            type="secondary"
+            rightIcon="forward"
+          >
+            {block2.callToAction.label}
+          </CallToAction>
+        </div>
+      </Grid>
+    </div>
+    <div class="container">
+      <Grid>
+        <div class="col-start-2 col-span-10 flex flex-col gap-0.5">
+          <div
+            class="flex flex-col gap-10 p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+          >
+            <h3 class="text-headline-medium-bold">
+              {data.certifications.title}
+            </h3>
+            <ul class="flex justify-between">
+              <li><Image srcSet={["images/access42.png"]} /></li>
+              <li><Image srcSet={["images/IDF.png"]} /></li>
+              <li><Image srcSet={["images/w3c.png"]} /></li>
+              <li><Image srcSet={["images/opquast.png"]} /></li>
+              <li><Image srcSet={["images/uxer.png"]} /></li>
+              <li><Image srcSet={["images/shifta.png"]} /></li>
+              <li><Image srcSet={["images/INR.png"]} /></li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-10 p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
+          >
+            <h3 class="text-headline-medium-bold">
+              {data.commited.title}
+            </h3>
+            <ul class="flex gap-[44px]">
+              <li><Image srcSet={["images/diseno-etico.png"]} /></li>
+              <li><Image srcSet={["images/designers-ethiques.png"]} /></li>
+            </ul>
+          </div>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <Icon name="oval" />
+</section>
+
+<style>
+  section :global([astro-icon="oval"]) {
+    width: 100%;
+    height: 145px;
+
+    &:last-of-type {
+      transform: scaleY(-1);
+    }
+  }
+</style>
