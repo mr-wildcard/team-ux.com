@@ -1,0 +1,41 @@
+---
+interface Props {
+  expertise: {
+    name: string;
+    description: string;
+    skills: string[];
+  };
+}
+
+const { expertise } = Astro.props;
+---
+
+<div class="flex gap-5 flex-col p-10 rounded-[26px] bg-neutral4">
+  <h2 class="text-headline-medium-bold">{expertise.name}</h2>
+  <p class="text-body-large">{expertise.description}</p>
+  <ul class="flex flex-col gap-0.5">
+    {
+      expertise.skills.map((skill) => {
+        return <li class="text-body-medium bg-surface5">{skill}</li>;
+      })
+    }
+  </ul>
+</div>
+
+<style>
+  li {
+    padding-inline: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  li:first-child {
+    padding-top: 16px;
+    border-radius: 20px 20px 4px 4px;
+  }
+
+  li:last-child {
+    padding-bottom: 16px;
+    border-radius: 4px 4px 20px 20px;
+  }
+</style>

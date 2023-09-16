@@ -1,0 +1,10 @@
+---
+import Image from "../@common/Image.astro";
+
+const props = Astro.props;
+---
+
+<Image
+  srcSet={["images/brush4.png", "images/brush4.avif", "images/brush4.webp"]}
+  {...props}
+/>

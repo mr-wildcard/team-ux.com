@@ -1,0 +1,42 @@
+---
+import data from "../../../../data/homepage/expertises.yaml";
+import Grid from "../../../../components/@common/Grid.astro";
+import Expertise from "./Expertise.astro";
+import Brush1 from "../../../../components/images/Brush1.astro";
+import Brush4 from "../../../../components/images/Brush4.astro";
+---
+
+<section class="relative container mb-[140px]">
+  <Grid>
+    <h3 class="col-start-2 col-span-full text-headline-medium mb-10">
+      {data.title}
+    </h3>
+
+    <ul class="col-start-2 col-span-5 flex flex-col gap-8">
+      {
+        data.expertises.map((expertise) => {
+          return (
+            <li>
+              <Expertise expertise={expertise} />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </Grid>
+
+  <Brush1
+    class="absolute top-0 z-[-1] w-[237px] h-[281px] rotate-[136.069deg] translate-x-[45px] translate-y-[90px]"
+    role="presentation"
+  />
+
+  <Brush4
+    class="absolute top-0 z-[-1] w-[490px] h-[487px] translate-x-[600px] translate-y-[720px]"
+    role="presentation"
+  />
+
+  <Brush1
+    class="absolute top-0 z-[-1] w-[222px] h-[263px] translate-x-[-5px] translate-y-[1400px]"
+    role="presentation"
+  />
+</section>
