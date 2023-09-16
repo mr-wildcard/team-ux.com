@@ -1,10 +1,11 @@
 ---
 interface Props {
+  class: string;
   outerGap?: boolean;
   as?: string;
 }
 
-const { as: HTMLTag = "div", outerGap = true } = Astro.props;
+const { as: HTMLTag = "div", outerGap = true, class: cssClasses } = Astro.props;
 ---
 
 <HTMLTag
@@ -20,6 +21,7 @@ const { as: HTMLTag = "div", outerGap = true } = Astro.props;
       "px-5": outerGap,
       "xl:px-0": outerGap,
     },
+    cssClasses,
   ]}
 >
   <slot />
