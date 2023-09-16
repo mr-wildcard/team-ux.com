@@ -19,5 +19,5 @@ const [png, avif, webp] = srcSet;
   {avif && <source srcset={avif} type="image/avif" />}
   {webp && <source srcset={webp} type="image/webp" />}
 
-  <img {...props} src={png} loading="lazy" />
+  <img {...props} src={png} loading="lazy" decoding="async" />
 </picture>
