@@ -1,7 +1,7 @@
 ---
 import Image from "../@common/Image.astro";
 
-const { width, height } = Astro.props;
+const { width, height, class: cssClasses } = Astro.props;
 ---
 
 <Image
@@ -9,5 +9,5 @@ const { width, height } = Astro.props;
   alt="Daniela Peñaranda"
   width={width}
   height={height}
-  class="rounded-t-full rounded-b-full"
+  class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
 />

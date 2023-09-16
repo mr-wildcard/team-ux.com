@@ -1,0 +1,30 @@
+---
+import PictureYuna from "./images/Yuna.astro";
+import PictureDaniela from "./images/Daniela.astro";
+import Brush1 from "./images/Brush1.astro";
+interface Props {
+  variant: "small" | "big";
+}
+
+const { variant } = Astro.props;
+---
+
+{
+  variant === "small" && (
+    <div class="isolate relative flex justify-center">
+      <Brush1 class="absolute z-0 top-0 left-0 w-[210px] h-[249px] rotate-[-90deg] translate-x-[20px] translate-y-[-20px]" />
+      <PictureYuna width="85px" height="210px" class="relative z-10 mr-3" />
+      <PictureDaniela width="85px" height="210px" class="relative z-10" />
+    </div>
+  )
+}
+
+{
+  variant === "big" && (
+    <div class="isolate relative flex ">
+      <Brush1 class="absolute z-0 top-[-30px] left-0 w-[352px] h-[418px] rotate-[-165.467deg] translate-x-[-10px]" />
+      <PictureYuna width="156px" height="384px" class="relative z-10 mr-4" />
+      <PictureDaniela width="156px" height="384px" class="relative z-10" />
+    </div>
+  )
+}
