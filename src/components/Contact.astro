@@ -1,0 +1,104 @@
+---
+import Grid from "./@common/Grid.astro";
+import Brush from "./@common/Brush.astro";
+import CallToAction from "./@common/CallToAction.astro";
+import BackgroundForm1 from "./BackgroundForm1.astro";
+
+interface Props {
+  class: string;
+}
+
+const { class: cssClasses } = Astro.props;
+---
+
+<section
+  class:list={["overflow-hidden", "pt-[353px]", "pb-[168px]", cssClasses]}
+>
+  <div id="contact" class="container">
+    <Grid>
+      <div class="col-start-2 col-span-8">
+        <div class="relative p-14 bg-surface3 rounded-[26px]">
+          <BackgroundForm1
+            class="absolute z-[-1] top-[-205px] right-[-860px] rotate-[-31deg]"
+          />
+          <Brush
+            id="2"
+            class="absolute z-[-1] top-[-60px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
+          />
+          <Brush
+            id="2"
+            class="absolute z-[-1] right-[-101px] bottom-[-66px] w-[355px] h-[308px]"
+          />
+
+          <h2 class="text-headline-medium mb-6">
+            Envie de travailler avec nous ?
+          </h2>
+          <p class="mb-10 text-display-small leading-[normal]">
+            Contactez-nous à l’adresse <a
+              class="block underline underline-offset-[10px]"
+              href="mailto:hello@team-ux.com">hello@team-ux.com</a
+            >
+          </p>
+          <CallToAction
+            class="copy-contact relative text-center"
+            type="secondary"
+            leftIcon="content_copy"
+          >
+            <span class="content"
+              >Copier notre adresse email dans votre presse-papiers</span
+            >
+            <span
+              class="sucessful-copy-content hidden absolute left-1/2 translate-x-[-50%] sucess"
+              >C'est dans la boîte !</span
+            >
+          </CallToAction>
+        </div>
+      </div>
+    </Grid>
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector("#contact");
+  const emailAnchor = section.querySelector("a");
+  const button = section.querySelector("button");
+  const buttonContent = button.querySelector(".content");
+  const buttonSucessfulCopyContent = button.querySelector(
+    ".sucessful-copy-content",
+  );
+
+  const { textContent: email } = emailAnchor;
+
+  let timer;
+  function showCopySuccess() {
+    return new Promise((resolve) => {
+      clearTimeout(timer);
+
+      buttonContent.classList.add("invisible");
+      buttonSucessfulCopyContent.classList.remove("hidden");
+
+      setTimeout(() => {
+        buttonContent.classList.remove("invisible");
+        buttonSucessfulCopyContent.classList.add("hidden");
+
+        console.log("DONE");
+        resolve();
+      }, 2000);
+    });
+  }
+
+  async function onUserClicksOnCopyButton() {
+    button.removeEventListener("click", onUserClicksOnCopyButton);
+
+    try {
+      await navigator.clipboard.writeText(email);
+      await showCopySuccess();
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    } finally {
+      button.addEventListener("click", onUserClicksOnCopyButton);
+    }
+  }
+
+  button.addEventListener("click", onUserClicksOnCopyButton);
+</script>
