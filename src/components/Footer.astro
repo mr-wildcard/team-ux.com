@@ -1,0 +1,48 @@
+---
+import Grid from "./@common/Grid.astro";
+import Link from "./@common/Link.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: cssClasses } = Astro.props;
+---
+
+<footer class:list={["container", "mb-[70px]", cssClasses]}>
+  <Grid as="nav">
+    <div class="xl:col-start-2 xl:col-span-2">
+      <Link
+        href="https://www.linkedin.com/company/team-ux/"
+        target="_blank"
+        rightIcon="open_in_new"
+      >
+        Team UX sur LinkedIn
+      </Link>
+    </div>
+    <div class="xl:col-span-2">
+      <ul class="flex flex-col gap-4">
+        <li>
+          <Link href="/plan-du-site" type="secondary">Plan du site</Link>
+        </li>
+        <li>
+          <Link href="/mentions-legales" type="secondary">
+            Mentions légales
+          </Link>
+        </li>
+      </ul>
+    </div>
+    <div class="xl:col-span-2">
+      <ul class="flex flex-col gap-4">
+        <li>
+          <Link href="/glossaire-ux" type="secondary">Glossaire UX</Link>
+        </li>
+        <li>
+          <Link href="/demarche-eco-conception" type="secondary">
+            Démarche d’éco-conception
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </Grid>
+</footer>
