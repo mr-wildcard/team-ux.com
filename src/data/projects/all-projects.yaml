@@ -1,0 +1,205 @@
+- group:
+    display: large
+    projects:
+      - title: School of System Change
+        activity: Marque de l’ONG Forum for the Future
+        skill:
+          - Éco-conception
+          - Stratégie UX
+          - Site Web
+          - Refonte
+          - Formation professionnelle
+        description:
+          title: Un nouveau site Web pour recruter les futures promotions d’une école formant au changement systémique
+          content: |
+            Pour continuer à cultiver le changement dans le monde, la School of System Change avait besoin de refondre son site Web et de booster le nombre de candidatures.
+            Nous avons mis au point une nouvelle stratégie UX autour de 3 axes : la simplification de la présentation de cette activité de niche, la revalorisation des arguments de différenciation de l'école et l'optimisation de ses parcours de conversion.
+            Les wireframes ont été créés en respectant les bonnes pratiques de qualité Web, les règles d'accessibilité et les principes d'éco-conception, en collaboration avec le studio design bas carbone Hey Low.
+        testimonial:
+          content: |
+            Yuna and Daniela supported us with a brilliant UX strategy and wireframes for our new low-carbon website, which has made a huge difference to our organisation. Overall our website is performing very well and as we grow our impact and reach we’ll continue to work with them.
+          contentLang: en
+          author: Saskia Rysenbry, curator at
+          company: School of System Change
+      - title: Sys1
+        activity: Éditeur de la solution Logus
+        skills:
+          - Accessibilité
+          - Design UX/UI
+          - Outil métier
+          - Refonte
+          - Dossiers médico-sociaux
+        description:
+          title: Une solution numérique repensée pour suivre les dossiers des usagères et usagers dans les établissements médico-sociaux
+          content: |
+            Dédié aux équipes des établissements des secteurs social et médico-social, Logus est un logiciel spécialisé dans la gestion du DUI, le Dossier de l'Usager Informatisé. Dans le cadre de sa refonte, son éditeur Sys1 a fait appel à Team UX pour que nous placions les personnes utilisatrices au centre de la réflexion et que nous apportions notre expertise UX et UI. Focus groups et ateliers nous ont permis de comprendre les besoins finaux. Nous avons simplifié les processus complexes de ce métier et nous nous sommes assurées d'intégrer les règles d'accessibilité relatives au design.
+        testimonial:
+          content: |
+            Avec une grande capacité de compréhension de l’ensemble des process spécifiques à notre secteur d’activité, Team UX a parfaitement su répondre aux besoins de nos différents métiers. Merci à Daniela et à Yuna pour leur dynamisme, leur réactivité et leur professionnalisme.
+          author: Dominique Barillot, ingénieur commercial chez
+          company: Sys1
+- group:
+    display: small
+    projects:
+      - name: MeyerDOM, avec l’agence Mink
+        title: Une nouvelle appli de domotique dédiée aux personnes handicapées et aux institutions médicalisées
+        skills:
+          - Accessibilité
+          - Design UX/UI
+          - Application mobile
+          - MVP
+          - Domotique
+      - name: Journey (aujourd’hui Dynamo Bordeaux)
+        title: Une identité et un site e-commerce pour le nouveau concept d’indoor cycling s’adressant aux Bordelaises et Bordelais
+        skills:
+          - Design UX/UI
+          - Branding
+          - Campagne de lancement
+          - Site Web
+          - E-commerce
+          - Sport
+      - name: Canal+ International, avec l’agence Ekino
+        title: Un outil interne repensé pour que des équipes distribuées configurent et diffusent des messages par satellite
+        skills:
+          - Accessibilité
+          - Design UX/UI
+          - Outil métier
+          - Refonte
+          - Médias
+      - name: Cap Atlantique, avec les cabinets Satori&co et Sous le sens
+        title: Un outil de cartographie collaborative des parcours des usagères et usagers pour développer l’empathie des équipes de l’agglomération
+        skills:
+          - Recherche UX
+          - Design thinking
+          - Communication territoriale
+      - name: IMA Tech, avec l’agence Conserto
+        title: Une plateforme co-conçue pour aider les sociétaires des assurances à prévenir et gérer les sinistres du quotidien
+        skills:
+          - Design thinking
+          - Design UX
+          - Espace connecté
+          - Assurances
+      - name: Upp! by Place de Seine, avec l’agence Snapp’
+        title: Un concept d’appli pour proposer des services aux personnes employées et usagères d’un immeuble connecté
+        skills:
+          - Design UX
+          - Application mobile
+          - Smart building
+- group:
+    display: large
+    projects:
+      - title: Groupe des Chalets
+        activity: Entreprise Sociale de l’Habitat
+        skills:
+          - Accessibilité
+          - Design UX
+          - Site Web
+          - Espace connecté
+          - Refonte
+          - Habitat social
+        description:
+          title: Un site institutionnel et des espaces connectés repensés pour rapprocher un bailleur social et ses cibles multiples
+          content: |
+            Dans le cadre d’un travail d’AMO dans le secteur de l’habitat social, l’agence de communication responsable Rose Primaire a fait appel à Team UX pour repenser les parcours utilisatrices et utilisateurs de plusieurs sites Web du Groupe des Chalets et d’un espace client·e commun.
+            Notre mission a débuté par l’analyse des entretiens réalisés avec les différentes cibles (personnes à la recherche d’un logement, locataires, co-propriétaires,  prestataires, collectivités...) et l’animation d’un atelier d’idéation avec les équipes. L’enjeu principal était de réduire les frictions côté usager·es et de désengorger le service clientèle. Nous avons prototypé un grand nombre des parcours ainsi détectés et produit les wireframes des écrans concernés, intégrant les règles de qualité Web et d’accessibilité relatives au design.
+        testimonial:
+          content: |
+            Nous avons fait appel à Team UX pour plusieurs sites web et l'espace authentifié de l'un de nos clients (habitat social). Yuna et Daniela se sont très vite acculturées au sujet et ont produit des prototypes intégrant les bonnes pratiques de qualité (Opquast) et les règles d'accessibilité (RGAA) relatives au design. Elles ont fait preuve d'une grande rigueur et d'une capacité d'écoute.
+          author: Jade Vincent, co-fondatrice de
+          company: Rose Primaire
+      - title: Société de transport
+        activity: Projet confidentiel
+        skills:
+          - Accessibilité
+          - Design UX/UI
+          - Outil métier
+          - Application mobile
+          - Refonte
+          - Transport
+          - Transformation digitale
+        description:
+          title: Le système d’information d'un leader du transport entièrement refondu pour faciliter les échanges internes et externes
+          content: |
+            Confié par l’agence Ekino, ce projet visait initialement à créer un nouveau moyen de réservation de courses pour et par la clientèle de cette société de transport historique. Rapidement, la recherche UX ainsi que les ateliers de co-création nous ont permis de recentrer l’objectif du projet et d’aider les équipes à améliorer l’efficacité et surtout la transparence des échanges internes et externes de l’entreprise. Des preuves de concept aux maquettes UI, nous avons travaillé pendant un an et demi sur la refonte itérative de tous les outils internes, en collaboration étroite avec les personnes utilisatrices.
+        testimonial:
+          content: |
+            Tout simplement ravis de la collaboration avec Yuna et Daniela. La qualité de leur travail, de l'accompagnement de clients novices en la matière, des livrables et des analyses constructives et leur dynamisme ont été un vrai plus pour ce projet.
+          author: Alexandre Pronine, manager technique chez
+          company: Ekino
+- group:
+    display: small
+    projects:
+      - name: L’Oréal, avec l’agence Content Factory
+        title: Une architecture de l’information optimisée sur un site grand public dédié à la composition des produits
+        skills:
+          - Accessibilité
+          - Architecture UX
+          - Site Web
+          - Audit
+          - Cosmétique
+      - name: Poool, en tant que salariées
+        title: Une suite de produits conçue pour proposer aux internautes un nouveau moyen d’accéder à la presse en ligne
+        skills:
+          - Accessibilité
+          - Architecture UX
+          - Design UX/UI
+          - Produit numérique
+          - Dashboard
+          - Tech
+      - name: Ville de Mérignac, avec l’agence Transo Systémique
+        title: Une expérience de stand co-conçue pour convaincre les habitantes et habitants d’intégrer un projet sur le changement climatique
+        skills:
+          - Design thinking
+          - Atelier
+          - Innovation sociale
+          - Communication territoriale
+      - name: Orange
+        title: Les parcours des personnes utilisatrices optimisés sur tous les points de contact “jeux mobile” du Groupe
+        skills:
+          - Stratégie UX
+          - Design UX/UI
+          - Application mobile
+          - Jeux
+      - name: Sézane, avec l’UX/UI designer Thibaud Mischler
+        title: Des outils internes à imaginer pour que les équipes de la marque de mode collaborent sur les plans de collection
+        skills:
+          - Design UX/UI
+          - Outil métier
+          - MVP
+          - Mode
+          - Outil de collaboration
+      - name: Groupe FIMECO, en collaboration avec l’éditeur Acropole Expert Informatique
+        title: Un logiciel de gestion interne créé pour fusionner plusieurs solutions dédiées aux métiers de l’expertise comptable et de l’entrepreneuriat
+        skills:
+          - Accessibilité
+          - Design UX/UI
+          - Outil métier
+          - Refonte
+          - Gestion et expertise comptable
+- group:
+    display: large
+    projects:
+      - title: HF Prévention Santé
+        activity: Association Nationale de Prévention Santé
+        skill:
+          - Accessibilité
+          - Design UX
+          - Application mobile
+          - Interface conversationnelle
+          - Santé
+        description:
+          title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
+          content: |
+            En tant que prestataires de l'agence Content Factory, notre mission principale pour ce projet était de concevoir différents parcours dans l’application mobile pour aider les personnes utilisatrices à trouver des ressources et des informations pertinentes en matière de santé sexuelle, tout en minimisant les frictions entre le mode vocal et la messagerie pour interagir avec l'IA (intelligence artificielle). Pour cela, nous avons défini les cas d'utilisation sur la base des dialogues élaborés par l’agence, HF Prévention et des équipes expertes de la santé. Nous avons créé différents parcours  en intégrant les meilleures pratiques en matière de conception Web et d'accessibilité. Tout au long du processus de conception, nous avons accordé une attention particulière à l'éthique. Notre objectif principal était de sensibiliser l'équipe et l’association cliente pour nous assurer que le service soit transparent et respectueux de la vie privée des personnes utilisatrices, tout en minimisant les risques potentiels liés à l'utilisation de l'IA.
+      - title: DXOMARK
+        activity: Leader de l’évaluation de produits électroniques
+        skill:
+          - Design UX
+          - Site Web
+          - Outil spécialisé
+          - Refonte
+          - Tech
+        description:
+          title: La stratégie UX du site du leader de l’évaluation repensée pour parler à un public aussi bien technophile que novice
+          content: |
+            Pour que les utilisatrices et utilisateurs de smartphones, appareils photo et autres enceintes puissent faire un choix de matériel éclairé et autonome, DXOMARK a mis en place une méthodologie d’évaluation et des scores, publiés régulièrement et attendus voire redoutés des fabricants. La société a fait appel à Team UX pour refondre son site, avec un enjeu très fort d’architecture de l’information. Nous avons particulièrement travaillé sur la simplification de l’affichage des données techniques et des fameux “scores DXOMARK” ainsi que sur l’optimisation des tableaux comparatifs dynamiques devant s’adresser aussi bien à un public novice qu’à un public averti. Enfin, nous avons oeuvré à l’intégration d’une dimension éditoriale avec l’enrichissement des fiches produits et la création de contenus de type “tops”.
