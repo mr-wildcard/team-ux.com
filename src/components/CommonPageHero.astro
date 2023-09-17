@@ -1,0 +1,29 @@
+---
+import Grid from "./@common/Grid.astro";
+import BackgroundForm1 from "./BackgroundForm1.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section
+  class="overflow-hidden xl:mt-[-180px] xl:mb-[-287px] xl:pt-[273px] xl:pb-[427px]"
+>
+  <div class="relative container">
+    <BackgroundForm1
+      class="absolute z-[-1] top-[-125px] right-[-480px] rotate-[-31deg]"
+    />
+    <Grid>
+      <h1 class="xl:col-start-2 col-span-full mb-6 text-display-medium">
+        {title}
+      </h1>
+      <h2 class="xl:col-start-2 col-span-6 text-body-extra-large">
+        {subtitle}
+      </h2>
+    </Grid>
+  </div>
+</section>
