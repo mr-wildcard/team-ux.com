@@ -1,0 +1,37 @@
+---
+import data from "../../../data/projects/all-projects.yaml";
+import LargeProject from "./LargeProject/index.astro";
+import SmallProject from "./SmallProject.astro";
+---
+
+<section class="container">
+  {
+    data.map((projectsGroup, index) => {
+      if (projectsGroup.group_project_display === "large") {
+        return (
+          <ul class="flex flex-col gap-8" data-group-index={index}>
+            {projectsGroup.projects.map((project) => {
+              return (
+                <li>
+                  <LargeProject project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        );
+      } else {
+        return (
+          <ul class="grid xl:grid-cols-12 xl:gap-x-8 xl:gap-y-5">
+            {projectsGroup.projects.map((project) => {
+              return (
+                <li class="col-span-5">
+                  <SmallProject project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        );
+      }
+    })
+  }
+</section>

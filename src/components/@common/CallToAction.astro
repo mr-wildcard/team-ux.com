@@ -1,17 +1,18 @@
 ---
 import Icon from "./Icon.astro";
-import { HTMLAttributes } from "astro/types";
+import { HTMLAttributes, Polymorphic, HTMLTag } from "astro/types";
 
-type BasicHTMLAttrbutes = HTMLAttributes<HTMLAnchorElement> &
-  HTMLAttributes<HTMLButtonElement>;
+type BasicHTMLAttrbutes = HTMLAttributes<"a"> & HTMLAttributes<"button">;
 
-interface Props extends BasicHTMLAttrbutes {
-  type?: "primary" | "secondary";
-  variant?: "outlined";
-  href?: string;
-  leftIcon?: string;
-  rightIcon?: string;
-}
+type Props<Tag extends HTMLTag> = BasicHTMLAttrbutes &
+  Polymorphic<{
+    type?: "primary" | "secondary";
+    variant?: "outlined";
+    href?: string;
+    leftIcon?: string;
+    rightIcon?: string;
+    as?: Tag;
+  }>;
 
 const {
   type = "primary",
@@ -19,10 +20,11 @@ const {
   href,
   leftIcon,
   rightIcon,
+  as,
   class: cssClasses,
 } = Astro.props;
 
-const HTMLTag = href ? "a" : "button";
+const HTMLTag = as ? as : href ? "a" : "button";
 const htmlAttributes = {
   href: href ?? undefined,
   "class:list": [

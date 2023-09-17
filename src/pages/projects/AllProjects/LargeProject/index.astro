@@ -1,0 +1,80 @@
+---
+import Grid from "../../../../components/@common/Grid.astro";
+import CallToAction from "../../../../components/@common/CallToAction.astro";
+interface Props {
+  title: string;
+  activity: string;
+  skill: string[];
+  description: {
+    title: string;
+    content: string;
+  };
+  testimonial?: {
+    content: string;
+    contentLang?: string;
+    author: string;
+    company: string;
+  };
+}
+
+const { project } = Astro.props;
+
+console.log(project.title);
+---
+
+<div class="xl:p-10 bg-neutral4 rounded-[26px]">
+  <Grid>
+    <div class="col-span-5 flex flex-col gap-10">
+      <div>
+        <p class="mb-2.5 text-headline-medium-bold">
+          {project.title}
+        </p>
+        <p class="text-body-large">
+          {project.activity}
+        </p>
+      </div>
+      <ul class="flex flex-wrap gap-2.5">
+        {
+          project.skills.map((skill) => {
+            return (
+              <li>
+                <span class="inline-block px-3 py-1.5 text-label-small bg-surface1 rounded-lg">
+                  {skill}
+                </span>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+    <div class="col-span-7 flex flex-col gap-5 p-10 bg-surface5 rounded-[20px]">
+      <h3 class="text-headline-large">{project.description.title}</h3>
+      <p class="text-body-medium">
+        {project.description.content}
+      </p>
+
+      {
+        project.testimonial && (
+          <details>
+            <CallToAction type="secondary" as="summary" rightIcon="expand_more">
+              Déplier le témoignage
+            </CallToAction>
+            je suis le témoignage
+          </details>
+        )
+      }
+    </div>
+  </Grid>
+</div>
+
+<style>
+  details {
+    & :global(summary::-webkit-details-marker) {
+      display: none;
+    }
+
+    &[open] :global(svg) {
+      transform: scaleY(-1);
+    }
+  }
+</style>
