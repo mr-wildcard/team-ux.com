@@ -1,0 +1,54 @@
+---
+interface Props {
+  viewMode: "block" | "inline";
+  testimonial: {
+    content: string;
+    company: string;
+    author: string;
+    contentLang?: string;
+  };
+}
+
+const { viewMode = "block", testimonial } = Astro.props;
+---
+
+{
+  viewMode === "block" && (
+    <div class="testimonial flex flex-col p-[50px] bg-neutral4 rounded-[26px]">
+      <p
+        lang={testimonial.contentLang ?? undefined}
+        class="text-body-medium mt-[50px] mb-auto"
+      >
+        <span class="block mb-[50px] text-primary text-[240px] translate-x-[-15px] translate-y-[20px]">
+          &ldquo;
+        </span>
+        {testimonial.content}&rdquo;
+      </p>
+      <p class="mt-5 text-body-medium-bold">
+        {testimonial.author}
+        <span class="text-primary">&nbsp;{testimonial.company}</span>
+      </p>
+    </div>
+  )
+}
+
+{
+  viewMode === "inline" && (
+    <div class="testimonial flex gap-6 p-10 bg-neutral4 rounded-[26px]">
+      <div class="flex-[0_0_76px] h-[54px] overflow-hidden">
+        <span class="block text-primary text-[238px] translate-x-[-14px] translate-y-[-95px]">
+          &ldquo;
+        </span>
+      </div>
+      <div class="flex flex-col gap-5">
+        <p lang={testimonial.contentLang ?? undefined} class="text-body-medium">
+          {testimonial.content}&rdquo;
+        </p>
+        <p class="text-body-medium-bold">
+          {testimonial.author}
+          <span class="text-primary">&nbsp;{testimonial.company}</span>
+        </p>
+      </div>
+    </div>
+  )
+}
