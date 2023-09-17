@@ -1,6 +1,8 @@
 ---
 import Grid from "../../../../components/@common/Grid.astro";
 import CallToAction from "../../../../components/@common/CallToAction.astro";
+import Testimonial from "../../../../components/Testimonial.astro";
+
 interface Props {
   title: string;
   activity: string;
@@ -18,8 +20,6 @@ interface Props {
 }
 
 const { project } = Astro.props;
-
-console.log(project.title);
 ---
 
 <div class="xl:p-10 bg-neutral4 rounded-[26px]">
@@ -29,7 +29,7 @@ console.log(project.title);
         <p class="mb-2.5 text-headline-medium-bold">
           {project.title}
         </p>
-        <p class="text-body-large">
+        <p class="text-body-large text-neutral1">
           {project.activity}
         </p>
       </div>
@@ -59,7 +59,13 @@ console.log(project.title);
             <CallToAction type="secondary" as="summary" rightIcon="expand_more">
               Déplier le témoignage
             </CallToAction>
-            je suis le témoignage
+
+            <div class="mt-5">
+              <Testimonial
+                viewMode="inline"
+                testimonial={project.testimonial}
+              />
+            </div>
           </details>
         )
       }
