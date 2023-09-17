@@ -15,32 +15,38 @@ import data from "../../../data/homepage/expertises.yaml";
 
     <ul class="xl:col-start-2 xl:col-span-5 flex flex-col gap-8">
       {
-        data.expertises.map((expertise) => {
+        data.expertises.map((expertise, index) => {
           return (
-            <li>
+            <li class="relative">
               <Expertise expertise={expertise} />
+
+              {index === 0 && (
+                <Brush
+                  id="1"
+                  class="absolute top-[28px] left-[-80px] z-[-1] w-[237px] h-[281px] rotate-[136.069deg]"
+                  role="presentation"
+                />
+              )}
+
+              {index === 1 && (
+                <Brush
+                  id="4"
+                  class="absolute top-[-39px] left-[481px] z-[-1] w-[490px] h-[487px]"
+                  role="presentation"
+                />
+              )}
+
+              {index === 2 && (
+                <Brush
+                  id="1"
+                  class="absolute top-[-89px] left-[-102px] z-[-1] w-[222px] h-[263px] rotate-[180deg]"
+                  role="presentation"
+                />
+              )}
             </li>
           );
         })
       }
     </ul>
   </Grid>
-
-  <Brush
-    id="1"
-    class="absolute top-0 z-[-1] w-[237px] h-[281px] rotate-[136.069deg] translate-x-[45px] translate-y-[90px]"
-    role="presentation"
-  />
-
-  <Brush
-    id="4"
-    class="absolute top-0 z-[-1] w-[490px] h-[487px] translate-x-[600px] translate-y-[720px]"
-    role="presentation"
-  />
-
-  <Brush
-    id="1"
-    class="absolute top-0 z-[-1] w-[222px] h-[263px] translate-x-[-5px] translate-y-[1400px]"
-    role="presentation"
-  />
 </section>
