@@ -2,7 +2,8 @@
 import { HTMLTag, Polymorphic } from "astro/types";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{
-  class: string;
+  children: any;
+  class?: string;
   outerGap?: boolean;
   as?: Tag;
 }>;
