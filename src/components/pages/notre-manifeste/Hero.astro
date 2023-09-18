@@ -1,0 +1,18 @@
+---
+import CommonPageHero from "../../../components/CommonPageHero.astro";
+import data from "../../../data/notre-manifeste/hero.yaml";
+---
+
+<div>
+  <CommonPageHero
+    showBackgroundForm={false}
+    title={data.title}
+    subtitle={data.content}
+  />
+</div>
+
+<style>
+  div :global(h2) {
+    @apply xl:col-start-2 xl:col-span-7;
+  }
+</style>

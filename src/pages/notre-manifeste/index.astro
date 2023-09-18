@@ -1,8 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
+import Contact from "../../components/Contact.astro";
+import Footer from "../../components/Footer.astro";
+import Hero from "../../components/pages/notre-manifeste/Hero.astro";
+import Introduction from "../../components/pages/notre-manifeste/Introduction.astro";
 ---
 
 <Layout title="Notre manifeste">
   <Breadcrumb />
+  <Hero />
+  <Introduction />
+  <Contact class="xl:mt-[-100px]" />
+  <Footer />
 </Layout>

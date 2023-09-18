@@ -22,7 +22,14 @@ const backgroundFormCSSClasses = showBackgroundForm
   : [];
 ---
 
-<section class:list={[backgroundFormCSSClasses]}>
+<section
+  class:list={[
+    backgroundFormCSSClasses,
+    {
+      "mt-[90px]": !showBackgroundForm,
+    },
+  ]}
+>
   <div class="relative container">
     {
       showBackgroundForm && (
