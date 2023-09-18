@@ -1,0 +1,42 @@
+---
+import Grid from "../@common/Grid.astro";
+import Profile from "../../components/nos-deux-profils/Profile.astro";
+import dataYuna from "../../data/nos-deux-profils/yuna.yaml";
+import dataDaniela from "../../data/nos-deux-profils/daniela.yaml";
+import Yuna from "../images/Yuna.astro";
+import Daniela from "../images/Daniela.astro";
+import Brush from "../@common/Brush.astro";
+---
+
+<section class="container mb-[140px]">
+  <Grid>
+    <div class="xl:col-start-2 xl:col-span-5">
+      <Profile profile={dataYuna}>
+        <div
+          slot="picture"
+          class="flex flex-[0_0_142px] justify-center relative isolate"
+        >
+          <Brush
+            id="1"
+            class="absolute z-[-1] w-[142px] left-0 bottom-0 rotate-[180deg]"
+          />
+          <Yuna slot="picture" width="89" height="220" />
+        </div>
+      </Profile>
+    </div>
+    <div class="xl:col-span-5">
+      <Profile profile={dataDaniela}>
+        <div
+          slot="picture"
+          class="flex flex-[0_0_164px] justify-center relative isolate"
+        >
+          <Brush
+            id="2"
+            class="absolute z-[-1] w-[164px] left-0 bottom-[11px] rotate-[90deg]"
+          />
+          <Daniela width="89" height="220" />
+        </div>
+      </Profile>
+    </div>
+  </Grid>
+</section>

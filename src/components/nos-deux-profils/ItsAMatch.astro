@@ -1,0 +1,156 @@
+---
+import Icon from "../@common/Icon.astro";
+import data from "../../data/nos-deux-profils/match.yaml";
+import Grid from "../@common/Grid.astro";
+import CallToAction from "../@common/CallToAction.astro";
+import Brush from "../@common/Brush.astro";
+---
+
+<section>
+  <Icon name="oval" />
+
+  <div class="bg-neutral4">
+    <div class="container">
+      <svg
+        class="mx-auto svg-match"
+        width="200"
+        height="200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <path
+            id="team-ux"
+            d="M20,100a80,80 0 1,0 160,0a80,80 0 1,0 -160,0"
+            fill="none"></path>
+
+          <path
+            id="dani-yuna"
+            d="M50,100a50,50 0 1,0 100,0a50,50 0 1,0 -100,0"
+            fill="none"></path>
+        </defs>
+
+        <text dx="10" class="team-ux">
+          <textPath href="#team-ux">
+            TEAM UX TEAM UX TEAM UX TEAM UX TEAM UX TEAM UX
+          </textPath>
+        </text>
+
+        <text class="dani-yuna">
+          <textPath href="#dani-yuna"
+            >Yuna & Daniela & Yuna & Daniela & Yuna & Daniela &
+          </textPath>
+        </text>
+      </svg>
+
+      <h3 class="mt-[60px] mb-10 text-display-small text-center">
+        {data.title}
+      </h3>
+      <Grid>
+        <p
+          class="col-start-4 col-span-6 mb-20 text-body-extra-large text-center"
+        >
+          {data.content}
+        </p>
+
+        <div class="col-start-2 col-span-10">
+          <div class="p-10 bg-surface5 rounded-[26px]">
+            <h3 class="mb-10 text-headline-medium-bold">
+              Voici comment nous travaillons
+            </h3>
+            <ul class="flex justify-between isolate">
+              <li>
+                <Brush
+                  id="1"
+                  class="absolute z-[-1] w-[100px] h-[119px] left-0 top-[-7px] translate-x-1/2 opacity-20"
+                />
+                <Icon name="softskill-details" />
+                <span>Sens du travail</span>
+              </li>
+              <li>
+                <Brush
+                  id="1"
+                  class="absolute z-[-1] w-[100px] h-[119px] left-0 top-[-7px] rotate-[180deg] translate-x-1/2 opacity-20"
+                />
+                <Icon name="softskill-kindness" />
+                <span>Bienveillance</span>
+              </li>
+              <li>
+                <Brush
+                  id="1"
+                  class="absolute z-[-1] w-[100px] h-[119px] left-0 top-[-7px] translate-x-1/2 opacity-20"
+                />
+                <Icon name="softskill-fiability" />
+                <span>Fiabilité</span>
+              </li>
+              <li>
+                <Brush
+                  id="1"
+                  class="absolute z-[-1] w-[100px] h-[119px] left-0 top-[-7px] rotate-[180deg] translate-x-1/2 opacity-20"
+                />
+                <Icon name="softskill-sincerity" />
+                <span>Sincerité</span>
+              </li>
+              <li>
+                <Brush
+                  id="1"
+                  class="absolute z-[-1] w-[100px] h-[119px] left-0 top-[-7px] translate-x-1/2 opacity-20"
+                />
+                <Icon name="softskill-creative" />
+                <span>Force de proposition</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Grid>
+      <div class="mt-[60px] pb-[100px]">
+        <CallToAction
+          href="/notre-manifeste"
+          type="primary"
+          rightIcon="forward"
+          class="mx-auto"
+        >
+          Lire notre manifeste
+        </CallToAction>
+      </div>
+    </div>
+  </div>
+  <Icon name="oval" />
+</section>
+
+<style>
+  section :global([astro-icon="oval"]) {
+    width: 100%;
+    height: 145px;
+
+    &:last-of-type {
+      transform: scaleY(-1);
+    }
+  }
+
+  .svg-match :global(text) {
+    @apply fill-primary text-headline-small;
+  }
+
+  .svg-match :global(text.dani-yuna) {
+    @apply fill-primary text-label-small;
+  }
+
+  ul {
+    & li {
+      @apply relative flex flex-col items-center;
+
+      width: 200px;
+
+      span {
+        @apply text-label-large;
+      }
+
+      & :global(svg) {
+        @apply mb-5;
+
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+</style>

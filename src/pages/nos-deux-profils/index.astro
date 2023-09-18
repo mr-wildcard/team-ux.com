@@ -1,8 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
+import Contact from "../../components/Contact.astro";
+import Hero from "../../components/nos-deux-profils/Hero.astro";
+import Profiles from "../../components/nos-deux-profils/Profiles.astro";
+import ItsAMatch from "../../components/nos-deux-profils/ItsAMatch.astro";
 ---
 
-<Layout title="Nos 2 profils">
+<Layout title="Nos 2 profiles">
   <Breadcrumb />
+  <Hero />
+  <Profiles />
+  <ItsAMatch />
+  <Contact class="xl:mt-[-100px]" />
+  <Footer />
 </Layout>

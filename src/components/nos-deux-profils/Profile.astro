@@ -1,0 +1,73 @@
+---
+import Yuna from "../images/Yuna.astro";
+import TagSkill from "../@common/TagSkill.astro";
+import CallToAction from "../@common/CallToAction.astro";
+
+interface Props {
+  profile: {
+    fullName: string;
+    title: string;
+    experience: string;
+    skills: string[];
+    presentation: {
+      title: string;
+      content: string;
+    };
+    linkedInCallToAction: {
+      label: string;
+    };
+  };
+}
+
+const { profile } = Astro.props;
+---
+
+<div class="flex flex-col gap-0 5">
+  <div class="p-10 bg-neutral4 rounded-t-[26px] rounded-b-[4px]">
+    <div class="flex gap-5">
+      <slot name="picture" />
+      <div class="mt-auto">
+        <h3>
+          <span class="block mb-5 text-headline-medium-bold">
+            {profile.fullName}
+          </span>
+          <span class="block text-neutral1 text-body-large"
+            >{profile.title}</span
+          >
+        </h3>
+        <p class="text-body-large text-neutral1">{profile.experience}</p>
+      </div>
+    </div>
+  </div>
+  <div class="p-10 bg-surface6 rounded-[4px]">
+    <h4 class="mb-6 text-headline-small">
+      Diplômée, formée ou certifiée en...
+    </h4>
+    <ul class="flex flex-wrap gap-2.5">
+      {
+        profile.skills.map((skill) => {
+          return (
+            <li>
+              <TagSkill name={skill} />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <div
+    class="flex flex-col gap-8 p-10 bg-neutral4 rounded-t-[4px] rounded-b-[26px]"
+  >
+    <h4 class="text-headline-small">
+      {profile.presentation.title}
+    </h4>
+    <p class="text-body-medium" set:html={profile.presentation.content} />
+    <CallToAction
+      type="secondary"
+      href={profile.linkedInCallToAction.link}
+      rightIcon="open_in_new"
+    >
+      {profile.linkedInCallToAction.label}
+    </CallToAction>
+  </div>
+</div>
