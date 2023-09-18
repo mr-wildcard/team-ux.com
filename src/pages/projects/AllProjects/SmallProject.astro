@@ -1,1 +1,32 @@
-small proect
+---
+import TagSkill from "../../../components/@common/TagSkill.astro";
+interface Props {
+  projects: {
+    name: string;
+    title: string;
+    skills: string[];
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<div class="p-10 bg-surface5 rounded-[26px]">
+  <p class="mb-5 text-label-large">
+    {project.name}
+  </p>
+  <p class="mb-8 text-headline-medium-bold">
+    {project.title}
+  </p>
+  <ul class="flex flex-wrap gap-2.5">
+    {
+      project.skills.map((skill) => {
+        return (
+          <li>
+            <TagSkill name={skill} />
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

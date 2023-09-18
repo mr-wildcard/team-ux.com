@@ -5,18 +5,20 @@ import Icon from "../../../../components/@common/Icon.astro";
 import TagSkill from "../../../../components/@common/TagSkill.astro";
 
 interface Props {
-  title: string;
-  activity: string;
-  skill: string[];
-  description: {
+  project: {
     title: string;
-    content: string;
-  };
-  testimonial?: {
-    content: string;
-    contentLang?: string;
-    author: string;
-    company: string;
+    activity: string;
+    skills: string[];
+    description: {
+      title: string;
+      content: string;
+    };
+    testimonial?: {
+      content: string;
+      contentLang?: string;
+      author: string;
+      company: string;
+    };
   };
 }
 
@@ -83,7 +85,12 @@ const { project } = Astro.props;
     {
       project.testimonial && (
         <details>
-          <CallToAction type="secondary" as="summary" rightIcon="expand_more">
+          <CallToAction
+            type="secondary"
+            as="summary"
+            rightIcon="expand_more"
+            class="cursor-pointer"
+          >
             Déplier le témoignage
           </CallToAction>
 

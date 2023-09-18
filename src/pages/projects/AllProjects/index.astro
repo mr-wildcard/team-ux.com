@@ -1,58 +1,69 @@
 ---
 import data from "../../../data/projects/all-projects.yaml";
 import LargeProject from "./LargeProject/index.astro";
-import SmallProject from "./SmallProject.astro";
 import Brush from "../../../components/@common/Brush.astro";
+import SmallProject from "./SmallProject.astro";
+import Grid from "../../../components/@common/Grid.astro";
 ---
 
 <section class="container">
-  {
-    data.map((projectsGroup, index) => {
-      if (projectsGroup.group_project_display === "large") {
-        return (
-          <div
-            class="relative projects-group isolate"
-            data-group-index={index}
-            data-group-display="large"
-          >
-            <Brush
-              id="4"
-              class:list={[
-                {
-                  hidden: index > 0,
-                },
-                "absolute",
-                "z-[-1]",
-                "right-[-20px]",
-                "top-[-207px]",
-                "w-[490px]",
-                "h-[487px]",
-              ]}
-            />
-            <ul class="flex flex-col gap-8">
-              {projectsGroup.projects.map((project) => {
-                return (
-                  <li>
-                    <LargeProject project={project} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      } else {
-        return (
-          <ul class="grid xl:grid-cols-12 xl:gap-x-8 xl:gap-y-5">
-            {projectsGroup.projects.map((project) => {
-              return (
-                <li class="col-span-5" data-group-display="small">
-                  <SmallProject project={project} />
-                </li>
-              );
-            })}
-          </ul>
-        );
-      }
-    })
-  }
+  <div class="flex flex-col xl:gap-[140px]">
+    {
+      data.map((projectsGroup, index) => {
+        if (projectsGroup.group_project_display === "large") {
+          return (
+            <div
+              class="relative projects-group isolate"
+              data-group-index={index}
+              data-group-display="large"
+            >
+              <Brush
+                id="4"
+                class:list={[
+                  {
+                    hidden: index > 0,
+                  },
+                  "absolute",
+                  "z-[-1]",
+                  "right-[-20px]",
+                  "top-[-207px]",
+                  "w-[490px]",
+                  "h-[487px]",
+                ]}
+              />
+              <ul class="flex flex-col gap-8">
+                {projectsGroup.projects.map((project) => {
+                  return (
+                    <li>
+                      <LargeProject project={project} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        } else {
+          return (
+            <div
+              class="relative projects-group isolate"
+              data-group-index={index}
+              data-group-display="small"
+            >
+              <Grid>
+                <ul class="xl:col-start-2 xl:col-span-10 xl:columns-2 xl:gap-8 xl:space-y-8">
+                  {projectsGroup.projects.map((project) => {
+                    return (
+                      <li class="">
+                        <SmallProject project={project} />
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Grid>
+            </div>
+          );
+        }
+      })
+    }
+  </div>
 </section>
