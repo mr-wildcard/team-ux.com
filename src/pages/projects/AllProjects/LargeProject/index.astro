@@ -2,6 +2,7 @@
 import CallToAction from "../../../../components/@common/CallToAction.astro";
 import Testimonial from "../../../../components/Testimonial.astro";
 import Icon from "../../../../components/@common/Icon.astro";
+import TagSkill from "../../../../components/@common/TagSkill.astro";
 
 interface Props {
   title: string;
@@ -37,9 +38,7 @@ const { project } = Astro.props;
         project.skills.map((skill) => {
           return (
             <li>
-              <span class="inline-block px-3 py-1.5 text-label-small bg-surface1 rounded-lg">
-                {skill}
-              </span>
+              <TagSkill name={skill} />
             </li>
           );
         })
