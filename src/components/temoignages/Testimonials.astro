@@ -1,0 +1,25 @@
+---
+import data from "../../data/temoignages/all-testimonials.yaml";
+import Grid from "../@common/Grid.astro";
+import Testimonial from "../Testimonial.astro";
+---
+
+<section class="container">
+  <Grid as="ul" class="gap-y-5">
+    {
+      data.map((testimonial) => {
+        return (
+          <li class="col-span-4">
+            <Testimonial testimonial={testimonial} />
+          </li>
+        );
+      })
+    }
+  </Grid>
+</section>
+
+<style>
+  li :global(.testimonial) {
+    height: 100%;
+  }
+</style>
