@@ -7,7 +7,7 @@ type BasicHTMLAttrbutes = HTMLAttributes<"a"> & HTMLAttributes<"button">;
 type Props<Tag extends HTMLTag> = BasicHTMLAttrbutes &
   Polymorphic<{
     type?: "primary" | "secondary";
-    variant?: "outlined";
+    variant?: "outlined" | "transparent";
     href?: string;
     leftIcon?: string;
     rightIcon?: string;
@@ -31,18 +31,29 @@ const htmlAttributes = {
     cssClasses,
     "call-to-action",
     {
+      transparent: variant === "transparent",
       outlined: variant === "outlined",
       primary: type === "primary",
       secondary: type === "secondary",
     },
   ],
 };
+
+const iconSize = variant === "transparent" ? 18 : 24;
 ---
 
 <HTMLTag {...htmlAttributes}>
-  {leftIcon && <Icon name={leftIcon} width="24px" height="24px" />}
+  {
+    leftIcon && (
+      <Icon name={leftIcon} width={`${iconSize}px`} height={`${iconSize}px`} />
+    )
+  }
   <slot />
-  {rightIcon && <Icon name={rightIcon} width="24px" height="24px" />}
+  {
+    rightIcon && (
+      <Icon name={rightIcon} width={`${iconSize}px`} height={`${iconSize}px`} />
+    )
+  }
 </HTMLTag>
 
 <style>
@@ -50,44 +61,59 @@ const htmlAttributes = {
     display: flex;
     align-items: center;
     width: fit-content;
-    border-radius: 100px;
 
-    &.primary {
-      @apply px-10 py-4 gap-2.5 text-label-large text-neutral4 bg-primary hover:bg-secondary;
+    &:not(.transparent) {
+      border-radius: 100px;
 
-      &.outlined {
-        @apply text-primary bg-neutral4;
-      }
+      &.primary {
+        @apply px-10 py-4 gap-2.5 text-label-large text-neutral4 bg-primary hover:bg-secondary;
 
-      & :global([astro-icon]) {
-        @apply fill-neutral4;
-      }
-    }
+        &.outlined {
+          @apply text-primary bg-neutral4;
+        }
 
-    &.secondary {
-      @apply px-5	py-2.5 gap-1.5 text-label-medium-bold text-primary bg-neutral4;
-    }
-
-    &.primary.outlined,
-    &.secondary {
-      @apply shadow-primary;
-
-      box-shadow: inset 0 0 0 2px;
-
-      &:hover {
-        @apply border-primary hover:text-neutral4 hover:bg-primary hover:shadow-primary;
-
-        box-shadow: none;
-      }
-
-      & :global([astro-icon]) {
-        @apply fill-primary;
-      }
-
-      &:hover {
         & :global([astro-icon]) {
           @apply fill-neutral4;
         }
+      }
+
+      &.secondary {
+        @apply px-5	py-2.5 gap-1.5 text-label-medium-bold text-primary bg-neutral4;
+      }
+
+      &.primary.outlined,
+      &.secondary {
+        @apply shadow-primary;
+
+        box-shadow: inset 0 0 0 2px;
+
+        &:hover {
+          @apply border-primary hover:text-neutral4 hover:bg-primary hover:shadow-primary;
+
+          box-shadow: none;
+        }
+
+        & :global([astro-icon]) {
+          @apply fill-primary;
+        }
+
+        &:hover {
+          & :global([astro-icon]) {
+            @apply fill-neutral4;
+          }
+        }
+      }
+    }
+
+    &.transparent {
+      @apply gap-2 underline-offset-[4px] hover:underline;
+
+      &.primary {
+        @apply text-primary text-label-medium-bold;
+      }
+
+      &.secondary {
+        @apply text-secondary text-label-medium;
       }
     }
   }
