@@ -5,21 +5,15 @@ import Testimonial from "../Testimonial.astro";
 ---
 
 <section class="container">
-  <Grid as="ul" class="gap-y-5">
+  <ul class="xl:columns-3 xl:gap-8 xl:space-y-5">
     {
       data.map((testimonial) => {
         return (
-          <li class="col-span-4">
+          <li class="break-inside-avoid">
             <Testimonial testimonial={testimonial} />
           </li>
         );
       })
     }
-  </Grid>
+  </ul>
 </section>
-
-<style>
-  li :global(.testimonial) {
-    height: 100%;
-  }
-</style>
