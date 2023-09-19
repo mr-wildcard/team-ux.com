@@ -1,0 +1,58 @@
+- title: Identification
+  blocks:
+    - title: À propos de "Team UX"
+      content:
+        - paragraph: '"Team UX" est un binôme constitué de 2 micro-entrepreneures :'
+        - list:
+            - Yuna Orsini
+            - Daniela Peñaranda
+    - title: À propos de Yuna Orsini
+      content:
+        - list:
+            - "SIRET (Système Informatique pour le Répertoire des Entreprises sur le Territoire): 789 657 202 00030"
+            - "Code APE (Activité Principale de l'Entreprise): 7490B - Activités spécialisées, scientifiques et techniques diverses"
+            - "Adresse: {{{MyBydWUgTGVicnVuIC0gMzMxNDAgVmlsbGVuYXZlIGTigJlPcm5vbiAtIEZyYW5jZQ==}}}"
+            - "Contacts: {{{KzMzIDY0MiAyOSA4NiAzMQ==}}} - {{{eXVuYUB0ZWFtLXV4LmNvbQ==}}}"
+            - Directrice de la publication "team-ux.com"
+    - title: À propos de Daniela Peñaranda
+      content:
+        - list:
+            - "SIRET: 834 402 570 00016"
+            - "Code APE: 7410Z - Activités spécialisées de design"
+            - "Adresse: {{{NDggcnVlIEJvdWZmYXJkIC0gMzMwMDAgQm9yZGVhdXggLSBGcmFuY2U=}}}"
+            - "Contacts: {{{KzMzIDc4MCAzMCA5MCAyNQ==}}} - {{{ZGFuaWVsYUB0ZWFtLXV4LmNvbQ==}}}"
+            - Co-directrice de la publication "team-ux.com"
+- title: Données personnelles
+  blocks:
+    - title: Généralités
+      content:
+        - paragraph: |
+            Vous disposez d'un droit d'accès, de rectification, de modification et de suppression concernant les données qui vous concernent personnellement.
+            Ce droit peut être exercé par voie postale auprès de :
+            Yuna Orsini - {{{MyBydWUgTGVicnVuIC0gMzMxNDAgVmlsbGVuYXZlIGTigJlPcm5vbiAtIEZyYW5jZQ==}}}
+            ou par courrier électronique à l’adresse {{{aGVsbG9AdGVhbS11eC5jb20=}}}.
+            Vous disposez également du droit d'introduire une réclamation auprès de la CNIL.
+    - title: Confidentialité
+      content:
+        - paragraph: Vos données personnelles sont confidentielles et ne seront en aucun cas communiquées à des tiers hormis pour la bonne exécution de la prestation que vous auriez commandée.
+    - title: Cookies
+      content:
+        - paragraph: Un cookie est un petit fichier informatique, un traceur. Il permet d'analyser le comportement des usagers lors de la visite d'un site internet, de la lecture d'un courrier électronique, de l'installation ou de l'utilisation d'un logiciel ou d'une application mobile.Nous avons fait le choix de ne mettre en place aucune solution de tracking ou d’analytics pour ne pas vous importuner avec l’affichage intempestif du formulaire de recueil du consentement pour le dépôt de ces cookies.
+- title: Demandes d'informations
+  blocks:
+    - title: Délai de réponse
+      content:
+        - paragraph: Nous tâcherons de répondre au plus vite à vos demandes d'informations, au maximum dans les 72 heures suivant la réception de votre email.
+- title: Hébergement et développement
+  blocks:
+    - title: Délai de réponse
+      content:
+        - paragraph: TBD
+- title: Crédits
+  blocks:
+    content:
+      - paragraph: |
+          Tout le contenu du présent site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de binôme Team UX, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
+          Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit du binôme Team UX. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.3335-2 et suivants du Code de la propriété intellectuelle.
+          Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des contenus copiés pourraient intenter une action en justice à votre encontre.
+          Pour toute demande d'autorisation ou d'information, veuillez nous contacter par email : {{{aGVsbG9AdGVhbS11eC5jb20=}}}.
