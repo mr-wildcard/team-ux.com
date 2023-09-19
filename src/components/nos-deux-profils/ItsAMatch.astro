@@ -4,6 +4,7 @@ import data from "../../data/nos-deux-profils/match.yaml";
 import Grid from "../@common/Grid.astro";
 import CallToAction from "../@common/CallToAction.astro";
 import Brush from "../@common/Brush.astro";
+import TeamUXStamp from "../TeamUXStamp.astro";
 ---
 
 <section>
@@ -11,36 +12,9 @@ import Brush from "../@common/Brush.astro";
 
   <div class="bg-neutral4">
     <div class="container">
-      <svg
-        class="mx-auto svg-match"
-        width="200"
-        height="200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <path
-            id="team-ux"
-            d="M20,100a80,80 0 1,0 160,0a80,80 0 1,0 -160,0"
-            fill="none"></path>
-
-          <path
-            id="dani-yuna"
-            d="M50,100a50,50 0 1,0 100,0a50,50 0 1,0 -100,0"
-            fill="none"></path>
-        </defs>
-
-        <text dx="10" class="team-ux">
-          <textPath href="#team-ux">
-            TEAM UX TEAM UX TEAM UX TEAM UX TEAM UX TEAM UX
-          </textPath>
-        </text>
-
-        <text class="dani-yuna">
-          <textPath href="#dani-yuna"
-            >Yuna & Daniela & Yuna & Daniela & Yuna & Daniela &
-          </textPath>
-        </text>
-      </svg>
+      <div class="flex justify-center">
+        <TeamUXStamp />
+      </div>
 
       <h3 class="mt-[60px] mb-10 text-display-small text-center">
         {data.title}
@@ -125,14 +99,6 @@ import Brush from "../@common/Brush.astro";
     &:last-of-type {
       transform: scaleY(-1);
     }
-  }
-
-  .svg-match :global(text) {
-    @apply fill-primary text-headline-small;
-  }
-
-  .svg-match :global(text.dani-yuna) {
-    @apply fill-primary text-label-small;
   }
 
   ul {

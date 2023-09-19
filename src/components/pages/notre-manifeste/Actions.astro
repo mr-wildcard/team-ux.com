@@ -1,0 +1,30 @@
+---
+import data from "../../../data/notre-manifeste/actions.yaml";
+import Grid from "../../@common/Grid.astro";
+import Brush from "../../@common/Brush.astro";
+---
+
+<section class="container xl:mb-[60px]">
+  <Grid>
+    <h2 class="xl:col-start-2 xl:col-span-6 mb-10 text-display-small">
+      {data.title}
+    </h2>
+    <p class="xl:col-start-2 xl:col-span-8 text-body-extra-large mb-20">
+      {data.introduction}
+    </p>
+    <div class="xl:col-start-2 xl:col-span-10">
+      <ul class="xl:columns-2 xl:gap-8 xl:space-y-5">
+        {
+          data.actions.map((action) => {
+            return (
+              <li class="break-inside-avoid	flex flex-col gap-5 p-10 bg-surface7 rounded-[26px]">
+                <h3 class="text-headline-medium-bold">{action.title}</h3>
+                <p class="xl:mr-10 text-body-medium">{action.content}</p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </Grid>
+</section>

@@ -6,9 +6,10 @@ interface Props {
   title: string;
   subtitle: string;
   showBackgroundForm?: boolean;
+  class?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, class: cssClasses } = Astro.props;
 
 const { showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
@@ -25,6 +26,7 @@ const backgroundFormCSSClasses = showBackgroundForm
 <section
   class:list={[
     backgroundFormCSSClasses,
+    cssClasses,
     {
       "mt-[90px]": !showBackgroundForm,
     },
