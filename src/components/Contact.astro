@@ -6,21 +6,26 @@ import BackgroundForm1 from "./BackgroundForm1.astro";
 
 interface Props {
   class: string;
+  showBackgroundForm?: boolean;
 }
 
-const { class: cssClasses } = Astro.props;
+const { class: cssClasses, showBackgroundForm = true } = Astro.props;
+const backgroundFormCSSClasses = showBackgroundForm
+  ? ["overflow-hidden", "xl:mt-[-100px]", "pt-[353px]", "pb-[168px]"]
+  : [];
 ---
 
-<section
-  class:list={["overflow-hidden", "pt-[353px]", "pb-[168px]", cssClasses]}
->
+<section class:list={[backgroundFormCSSClasses, cssClasses]}>
   <div id="contact" class="container">
     <Grid>
       <div class="xl:col-start-2 col-span-8">
         <div class="relative p-14 bg-surface3 rounded-[26px]">
-          <BackgroundForm1
-            class="absolute z-[-1] top-[-205px] right-[-860px] rotate-[-31deg]"
-          />
+          {
+            showBackgroundForm && (
+              <BackgroundForm1 class="absolute z-[-1] top-[-205px] right-[-860px] rotate-[-31deg]" />
+            )
+          }
+
           <Brush
             id="2"
             class="absolute z-[-1] top-[-60px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"

@@ -2,6 +2,15 @@
 import Icon from "./@common/Icon.astro";
 
 const { pathname } = Astro.url;
+
+const urlPageTitles = new Map([
+  ["/projects", "Projets"],
+  ["/nos-deux-profils", "Nos deux profils"],
+  ["/notre-manifeste", "Notre manifeste"],
+  ["/temoignages", "Témoignages"],
+  ["/mentions-legles", "Mentions légales"],
+  ["/plan-du-site", "Plan du site"],
+]);
 ---
 
 <nav aria-label="Breadcrumb" class="container">
@@ -12,38 +21,16 @@ const { pathname } = Astro.url;
     </li>
 
     {
-      pathname === "/projects" && (
+      urlPageTitles.has(pathname) && (
         <>
+          {["/nos-deux-profils", "/notre-manifeste"].includes(pathname) && (
+            <li>
+              <span>Team UX</span>
+              <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+            </li>
+          )}
           <li>
-            <span aria-current="page">Projets</span>
-          </li>
-        </>
-      )
-    }
-
-    {
-      pathname === "/nos-deux-profils" && (
-        <>
-          <li>
-            <span>Team UX</span>
-            <Icon name="chevron_right_breadcrumb" width="16" height="16" />
-          </li>
-          <li>
-            <span aria-current="page">Nos deux profils</span>
-          </li>
-        </>
-      )
-    }
-
-    {
-      pathname === "/notre-manifeste" && (
-        <>
-          <li>
-            <span>Team UX</span>
-            <Icon name="chevron_right_breadcrumb" width="16" height="16" />
-          </li>
-          <li>
-            <span aria-current="page">Notre manifeste</span>
+            <span aria-current="page">{urlPageTitles.get(pathname)}</span>
           </li>
         </>
       )
