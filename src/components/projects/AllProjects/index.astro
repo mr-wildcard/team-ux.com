@@ -4,6 +4,7 @@ import LargeProject from "./LargeProject/index.astro";
 import Brush from "../../../components/@common/Brush.astro";
 import SmallProject from "./SmallProject.astro";
 import Grid from "../../../components/@common/Grid.astro";
+import CallToAction from "../../@common/CallToAction.astro";
 ---
 
 <section class="container">
@@ -65,5 +66,10 @@ import Grid from "../../../components/@common/Grid.astro";
         }
       })
     }
+  </div>
+  <div class="flex justify-center mt-[60px]">
+    <CallToAction href="/temoignages" type="secondary" rightIcon="forward">
+      Découvrir les témoignages
+    </CallToAction>
   </div>
 </section>
