@@ -1,0 +1,95 @@
+---
+import Grid from "../@common/Grid.astro";
+import CallToAction from "../@common/CallToAction.astro";
+---
+
+<section class="container mt-20">
+  <Grid>
+    <div class="xl:col-start-2 xl:col-span-6">
+      <div class="flex flex-col gap-5 p-10 bg-neutral4 rounded-[26px]">
+        <h2 class="text-headline-small">Arborescence principale :</h2>
+        <ul class="ml-7 list-disc list-outside">
+          <li>
+            <CallToAction href="/" variant="transparent">
+              Page d’accueil
+            </CallToAction>
+          </li>
+          <li>
+            Références
+            <ul class="ml-7 list-disc list-outside">
+              <li>
+                <CallToAction href="/projets" variant="transparent">
+                  Projets
+                </CallToAction>
+              </li>
+              <li>
+                <CallToAction href="/temoignages" variant="transparent">
+                  Témoignages
+                </CallToAction>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Team UX
+            <ul class="ml-7 list-disc list-outside">
+              <li>
+                <CallToAction href="/nos-deux-profils" variant="transparent">
+                  Nos 2 profils
+                </CallToAction>
+              </li>
+              <li>
+                <CallToAction href="/notre-manifeste" variant="transparent">
+                  Notre manifeste
+                </CallToAction>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2 class="text-headline-small">Arborescence secondaire :</h2>
+        <ul class="ml-7 list-disc list-outside">
+          <li>
+            <CallToAction href="/plan-sute-site" variant="transparent">
+              Plan du site
+            </CallToAction>
+          </li>
+          <li>
+            <CallToAction href="/mentions-legales" variant="transparent">
+              Mentions légales
+            </CallToAction>
+          </li>
+          <li>
+            <CallToAction href="/glossaire-ux" variant="transparent">
+              Glossaire UX
+            </CallToAction>
+          </li>
+          <li>
+            <CallToAction href="/demarche-eco-conception" variant="transparent">
+              Démarche d’éco-conception
+            </CallToAction>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Grid>
+</section>
+
+<style>
+  ul {
+    @apply text-body-medium;
+
+    li {
+      & :global(a) {
+        @apply underline;
+      }
+    }
+
+    li::marker {
+      @apply text-primary;
+    }
+
+    & :global(a) {
+      font-weight: 500 !important;
+    }
+  }
+</style>
