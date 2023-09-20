@@ -3,10 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import Contact from "../../components/Contact.astro";
 import Footer from "../../components/Footer.astro";
+import Hero from "../../components/mentions-legales/Hero.astro";
+import Content from "../../components/mentions-legales/Content.astro";
 ---
 
-<Layout title="Projets">
+<Layout title="Mentions légales">
   <Breadcrumb />
-  <Contact showBackgroundForm={false} />
+  <Hero />
+  <Content />
+  <Contact class="my-40" showBackgroundForm={false} />
   <Footer />
 </Layout>
