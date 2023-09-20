@@ -2,7 +2,7 @@ tokens_to_obfuscate:
   teamUXEmailAddress: <a href="mailto:hello@team-ux.com">hello@team-ux.com</a>
   yunaTeamUXEmailAddress: <a href="mailto:yuna@team-ux.com">yuna@team-ux.com</a>
   yunaPhoneNumber: <a href="tel:+33 642 29 86 31">+33 642 29 86 31</a>
-  yunaPostalAddress: 3 rue Lebrun - 33140 Villenave d’Ornon - France
+  yunaPostalAddress: 3 rue Lebrun - 33140 Villenave d'Ornon - France
   danielaTeamUXEmailAddress: <a href="mailto:daniela@team-ux.com">daniela@team-ux.com</a>
   danielaPhoneNumber: <a href="tel:+33 780 30 90 25">+33 780 30 90 25</a>
   danielaPostalAddress: 48 rue Bouffard - 33000 Bordeaux - France
