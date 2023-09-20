@@ -44,9 +44,10 @@ const backgroundFormCSSClasses = showBackgroundForm
       </h1>
       {
         subtitle && (
-          <h2 class="xl:col-start-2 xl:col-span-6 text-body-extra-large">
-            {subtitle}
-          </h2>
+          <h2
+            class="xl:col-start-2 xl:col-span-6 text-body-extra-large"
+            set:html={subtitle}
+          />
         )
       }
     </Grid>
