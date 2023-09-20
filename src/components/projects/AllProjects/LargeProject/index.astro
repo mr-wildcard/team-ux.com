@@ -1,6 +1,8 @@
 ---
 import CallToAction from "../../../../components/@common/CallToAction.astro";
-import Testimonial from "../../../../components/Testimonial.astro";
+import Testimonial, {
+  type Testimonial,
+} from "../../../../components/Testimonial.astro";
 import Icon from "../../../../components/@common/Icon.astro";
 import TagSkill from "../../../../components/@common/TagSkill.astro";
 
@@ -13,16 +15,13 @@ interface Props {
       title: string;
       content: string;
     };
-    testimonial?: {
-      content: string;
-      contentLang?: string;
-      author: string;
-      company: string;
-    };
+    testimonial?: Testimonial | Array<Testimonial>;
   };
 }
 
 const { project } = Astro.props;
+
+const hasManyTestimonials = Array.isArray(project.testimonial);
 ---
 
 <div class="project flex gap-8 p-10 bg-neutral4 rounded-[26px]">
@@ -91,11 +90,31 @@ const { project } = Astro.props;
             rightIcon="expand_more"
             class="cursor-pointer"
           >
-            Déplier le témoignage
+            Déplier {hasManyTestimonials ? "les témoignages" : "le témoignage"}
           </CallToAction>
 
           <div class="mt-5">
-            <Testimonial viewMode="inline" testimonial={project.testimonial} />
+            {!hasManyTestimonials && (
+              <Testimonial
+                viewMode="inline"
+                testimonial={project.testimonial}
+              />
+            )}
+
+            {hasManyTestimonials && (
+              <ul class="flex flex-col gap-2.5">
+                {project.testimonial.map((testimonial) => {
+                  return (
+                    <li>
+                      <Testimonial
+                        viewMode="inline"
+                        testimonial={testimonial}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </div>
         </details>
       )
