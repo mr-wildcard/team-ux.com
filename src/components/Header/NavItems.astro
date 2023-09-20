@@ -1,0 +1,157 @@
+---
+import NavItem from "./components/NavItem.astro";
+import Icon from "../@common/Icon.astro";
+
+interface Props {
+  title: string;
+  items: Array<{
+    title: string;
+    pathname: string;
+  }>;
+}
+
+const { title, items } = Astro.props;
+---
+
+<NavItem>
+  {title}
+  <Icon name="arrow_drop_down" width="20px" height="20px" />
+
+  <div class="submenu-container" slot="submenu">
+    <ul>
+      {
+        items.map((item) => {
+          return (
+            <li>
+              <NavItem to={item.pathname}>{item.title}</NavItem>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</NavItem>
+
+<script>
+  const buttons =
+    document.querySelectorAll<HTMLButtonElement[]>("button.nav-item");
+
+  buttons.forEach((button) => {
+    const svg = button.querySelector<HTMLOrSVGElement>("svg");
+    const submenu = button.querySelector<HTMLDivElement>(".submenu-container");
+
+    let timer;
+
+    function isSubmenuOpened() {
+      return button.classList.contains("opened");
+    }
+
+    function openSubmenu() {
+      button.classList.add("opened");
+      button.setAttribute("aria-expanded", "true");
+    }
+
+    function closeSubmenu() {
+      button.classList.remove("opened");
+      button.setAttribute("aria-expanded", "false");
+    }
+
+    function toggleSubmenu() {
+      if (isSubmenuOpened()) {
+        closeSubmenu();
+      } else {
+        openSubmenu();
+      }
+    }
+
+    function onClickOnButton() {
+      toggleSubmenu();
+
+      if (isSubmenuOpened()) {
+        submenu.addEventListener("mouseenter", onMouseEntersSubmenu);
+        window.addEventListener("click", onUserClicksOutside);
+      } else {
+        submenu.removeEventListener("mouseenter", onMouseEntersSubmenu);
+        window.removeEventListener("click", onUserClicksOutside);
+      }
+    }
+
+    function onMouseEntersSubmenu() {
+      clearTimeout(timer);
+
+      submenu.addEventListener("mouseleave", onMouseLeavesSubmenu);
+    }
+
+    function onMouseLeavesSubmenu() {
+      clearTimeout(timer);
+
+      submenu.removeEventListener("mouseleave", onMouseLeavesSubmenu);
+
+      timer = setTimeout(closeSubmenu, 1000);
+    }
+
+    function onUserClicksOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (!button.contains(target) && target !== button) {
+        clearTimeout(timer);
+
+        closeSubmenu();
+      }
+    }
+
+    button.addEventListener("click", onClickOnButton);
+  });
+</script>
+
+<style>
+  :global(button.nav-item.opened) {
+    :global([astro-icon="arrow_drop_down"]) {
+      transform: rotateZ(180deg);
+    }
+
+    .submenu-container {
+      display: block;
+    }
+  }
+
+  .submenu-container {
+    @apply bg-neutral4;
+
+    display: none;
+    position: absolute;
+    padding-block: 16px;
+    left: 50%;
+    top: calc(100% + 6px);
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
+  }
+
+  svg {
+    transform-origin: center center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & :global(.nav-item) {
+      padding: 8px 16px;
+
+      &:after {
+        all: unset !important;
+      }
+
+      &:is(.selected),
+      &:hover {
+        @apply bg-surface5;
+      }
+
+      &:not(.selected):hover {
+        @apply text-secondary;
+      }
+    }
+  }
+</style>

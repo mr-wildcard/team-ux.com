@@ -29,6 +29,13 @@ const urlPageTitles = new Map([
               <Icon name="chevron_right_breadcrumb" width="16" height="16" />
             </li>
           )}
+
+          {["/projets", "/temoignages"].includes(pathname) && (
+            <li>
+              <span>Références</span>
+              <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+            </li>
+          )}
           <li>
             <span aria-current="page">{urlPageTitles.get(pathname)}</span>
           </li>
