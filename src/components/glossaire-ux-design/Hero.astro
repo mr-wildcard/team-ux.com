@@ -1,0 +1,17 @@
+---
+import CommonPageHero from "../CommonPageHero.astro";
+---
+
+<div>
+  <CommonPageHero
+    title="Glossaire de l’UX design"
+    subtitle="Vous arrivez dans le monde du design UX et vous trouvez que son vocabulaire est dense ?<br>Pas de panique, nous avons rédigé ce glossaire de l’UX design afin de clarifier certains termes, que nous utilisons parfois sur notre site, dans notre book ou dans le contenu de nos devis pour parler d’un outil, d’un livrable, ou d’une méthode de travail."
+    showBackgroundForm={false}
+  />
+</div>
+
+<style>
+  div :global(h2) {
+    @apply xl:col-start-2 xl:col-span-7 text-body-medium;
+  }
+</style>

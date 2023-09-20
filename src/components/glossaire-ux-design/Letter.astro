@@ -1,0 +1,31 @@
+---
+interface Props {
+  letter: string;
+  hasDefinitions: boolean;
+}
+
+const { letter, hasDefinitions } = Astro.props;
+
+const cssClasses = [
+  "flex",
+  "px-3",
+  "py-1.5",
+  "bg-neutral3",
+  "text-headline-large",
+  "uppercase",
+  "rounded-[4px]",
+  {
+    "text-neutral2": !hasDefinitions,
+  },
+];
+---
+
+{
+  hasDefinitions && (
+    <a href={`#letter-${letter}`} class:list={cssClasses}>
+      {letter}
+    </a>
+  )
+}
+
+{!hasDefinitions && <span class:list={cssClasses}>{letter}</span>}
