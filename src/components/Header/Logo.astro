@@ -4,7 +4,8 @@ import Icon from "../@common/Icon.astro";
 const { pathname } = Astro.url;
 
 const HTMLTag = pathname === "/" ? "div" : "a";
-const htmlAttributes = pathname === "/" ? {} : { href: "/" };
+const htmlAttributes =
+  pathname === "/" ? {} : { href: "/", title: "Retour à l'accueil" };
 ---
 
 <HTMLTag {...htmlAttributes} class="logo">
