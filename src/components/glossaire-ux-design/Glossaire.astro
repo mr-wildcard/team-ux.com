@@ -128,10 +128,16 @@ for (const definition of data) {
                         return (
                           <div class="p-10 bg-neutral4 rounded-[26px]">
                             <h3
-                              id={`#${definition.slug}`}
-                              class="text-headline-small mb-5"
+                              id={definition.slug}
+                              class=" mb-5text-headline-small  scroll-mt-[50vh]"
                             >
-                              {definition.term}
+                              <span>{definition.term}</span>&nbsp;
+                              <a
+                                class="text-label-medium text-primary underline text-underline-offset-[4px]"
+                                href={`#${definition.slug}`}
+                              >
+                                #
+                              </a>
                               {definition.alternative && (
                                 <>
                                   <br />
