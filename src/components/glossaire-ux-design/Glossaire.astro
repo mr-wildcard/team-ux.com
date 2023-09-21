@@ -223,12 +223,11 @@ for (const definition of data) {
   );
 
   letterSections.forEach((section) => {
-    letterSectionsLetterAnchors.set(
-      section,
-      document.querySelector(
-        `.sticky-letters li[data-letter=${section.dataset.letterSection}]`,
-      ),
+    const letterAnchor = document.querySelector(
+      `.sticky-letters li[data-letter=${section.dataset.letterSection}]`,
     );
+
+    letterSectionsLetterAnchors.set(section, letterAnchor);
 
     letterSectionsObserver.observe(section);
   });
