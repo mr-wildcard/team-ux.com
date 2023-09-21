@@ -18,7 +18,7 @@ const urlPageTitles = new Map([
   <ul>
     <li>
       <a href="/">Accueil</a>
-      <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+      <Icon name="chevron_right_breadcrumb" width={16} height={16} />
     </li>
 
     {
@@ -27,14 +27,14 @@ const urlPageTitles = new Map([
           {["/nos-deux-profils", "/notre-manifeste"].includes(pathname) && (
             <li>
               <span>Team UX</span>
-              <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+              <Icon name="chevron_right_breadcrumb" width={16} height={16} />
             </li>
           )}
 
           {["/projets", "/temoignages"].includes(pathname) && (
             <li>
               <span>Références</span>
-              <Icon name="chevron_right_breadcrumb" width="16" height="16" />
+              <Icon name="chevron_right_breadcrumb" width={16} height={16} />
             </li>
           )}
           <li>
