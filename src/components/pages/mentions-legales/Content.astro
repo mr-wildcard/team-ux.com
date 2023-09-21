@@ -1,8 +1,8 @@
 ---
-import data from "../../data/mentions-legales/data.yaml";
+import data from "../../../data/mentions-legales/data.yaml";
+import Grid from "../../@common/Grid.astro";
 import Section from "./Section.astro";
 import Block from "./Block.astro";
-import Grid from "../@common/Grid.astro";
 
 function obfuscateContent(content) {
   const matches = Array.from(content.matchAll(/\{\{\{(.+?)\}\}\}/g));

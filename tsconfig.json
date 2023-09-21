@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strictest.json",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "plugins": [
       {
