@@ -137,7 +137,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
 <script>
   const projects = document.querySelectorAll(".project");
 
-  projects.forEach((project) => {
+  projects?.forEach((project) => {
     const buttonShowGallery = project.querySelector(".show-project-gallery");
     const gallery = project.querySelector(".gallery");
 
