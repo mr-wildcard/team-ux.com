@@ -4,7 +4,7 @@ import Testimonial, {
   type Testimonial,
 } from "../../../../../components/Testimonial.astro";
 import Icon from "../../../../../components/@common/Icon.astro";
-import TagSkill from "../../../../../components/@common/TagSkill.astro";
+import Tag from "../../../../@common/Tag.astro";
 
 interface Props {
   project: {
@@ -39,7 +39,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
         project.skills.map((skill) => {
           return (
             <li>
-              <TagSkill name={skill} />
+              <Tag name={skill} />
             </li>
           );
         })

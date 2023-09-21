@@ -1,5 +1,5 @@
 ---
-import TagSkill from "../../../../components/@common/TagSkill.astro";
+import Tag from "../../../@common/Tag.astro";
 interface Props {
   projects: {
     name: string;
@@ -23,7 +23,7 @@ const { project } = Astro.props;
       project.skills.map((skill) => {
         return (
           <li>
-            <TagSkill name={skill} />
+            <Tag name={skill} />
           </li>
         );
       })

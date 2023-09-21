@@ -1,5 +1,5 @@
 ---
-import TagSkill from "../../@common/TagSkill.astro";
+import Tag from "../../@common/Tag.astro";
 import CallToAction from "../../@common/CallToAction.astro";
 
 interface Props {
@@ -47,7 +47,7 @@ const { profile } = Astro.props;
         profile.skills.map((skill) => {
           return (
             <li>
-              <TagSkill name={skill} />
+              <Tag name={skill} />
             </li>
           );
         })
