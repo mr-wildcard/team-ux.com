@@ -1,8 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "plugins": [
-    {
-      "name": "@astrojs/ts-plugin"
-    }
-  ]
+  "extends": "astro/tsconfigs/strictest.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  }
 }
