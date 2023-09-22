@@ -41,12 +41,20 @@ const { title } = Astro.props;
         @apply bg-surface1 text-secondary;
       }
 
+      details {
+        & summary {
+          list-style: none;
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+        }
+      }
+
       #toast {
         transform: translateX(-50%);
         animation-duration: 3s;
         animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
 
         &.show {
           animation-name: showToastCopyTextSuccess;

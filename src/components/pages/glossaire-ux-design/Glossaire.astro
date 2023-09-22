@@ -2,6 +2,8 @@
 import data from "../../../data/glossaire-design-ux/data.yaml";
 import Grid from "../../@common/Grid.astro";
 import Letter from "./Letter.astro";
+import Icon from "../../@common/Icon.astro";
+import ButtonCopyText from "../../ButtonCopyText.astro";
 
 const totalDefinitions = data.length;
 const allLetters = [
@@ -62,6 +64,8 @@ for (const definition of data) {
     content: definition.content,
   });
 }
+
+const currentPath = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <section class="mt-[60px]">
@@ -126,26 +130,46 @@ for (const definition of data) {
                     {Array.from(groupedDefinitions.get(letter)).map(
                       (definition) => {
                         return (
-                          <div class="p-10 bg-neutral4 rounded-[26px]">
-                            <h3
-                              id={definition.slug}
-                              class=" mb-5text-headline-small  scroll-mt-[50vh]"
-                            >
-                              <span>{definition.term}</span>&nbsp;
-                              <a
-                                class="text-label-medium text-primary underline text-underline-offset-[4px]"
-                                href={`#${definition.slug}`}
-                              >
-                                #
-                              </a>
-                              {definition.alternative && (
-                                <>
-                                  <br />
-                                  {definition.alternative}
-                                </>
-                              )}
-                            </h3>
-                            <p class="text-body-medium">{definition.content}</p>
+                          <div class="bg-neutral4 rounded-[26px]">
+                            <details>
+                              <summary class="p-8 flex items-center justify-between gap-1.5 cursor-pointer">
+                                <h3
+                                  id={definition.slug}
+                                  class="text-headline-small xl:scroll-mt-[190px]"
+                                >
+                                  <span>{definition.term}</span>&nbsp;
+                                  {definition.alternative && (
+                                    <>
+                                      <br />
+                                      {definition.alternative}
+                                    </>
+                                  )}
+                                </h3>
+                                <div class="flex items-center gap-1 h-[34px] px-4 bg-surface5 rounded-[100px] text-label-small">
+                                  <span class="open">Ouvrir</span>
+                                  <span class="close">Fermer</span>
+                                  <Icon
+                                    name="expand_more"
+                                    width={32}
+                                    height={32}
+                                  />
+                                </div>
+                              </summary>
+                              <div class="flex flex-col gap-8 p-8 pt-0">
+                                <p class="text-body-medium">
+                                  {definition.content}
+                                </p>
+
+                                <ButtonCopyText
+                                  type="secondary"
+                                  textToCopy={`${currentPath}#${definition.slug}`}
+                                  toastCopySuccessText="URL Copiée !"
+                                >
+                                  Copier notre adresse email dans votre
+                                  presse-papiers
+                                </ButtonCopyText>
+                              </div>
+                            </details>
                           </div>
                         );
                       },
@@ -173,6 +197,28 @@ for (const definition of data) {
 <style>
   .sticky-letter.active :global(a) {
     @apply text-neutral4 bg-primary underline underline-offset-[4px];
+  }
+
+  details {
+    & :global(svg) {
+      @apply fill-primary;
+    }
+
+    &:not([open]) {
+      .close {
+        display: none;
+      }
+    }
+
+    &[open] {
+      & summary :global(svg) {
+        transform: scaleY(-1);
+      }
+
+      .open {
+        display: none;
+      }
+    }
   }
 </style>
 
