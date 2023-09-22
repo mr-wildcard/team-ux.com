@@ -1,0 +1,60 @@
+---
+import CallToAction from "./@common/CallToAction.astro";
+
+interface Props {
+  label: string;
+  textToCopy: string;
+  toastCopySuccessText: string;
+}
+
+const { label, textToCopy, toastCopySuccessText, ...props } = Astro.props;
+---
+
+<CallToAction
+  {...props}
+  class="copy-text"
+  leftIcon="content_copy"
+  data-text-to-copy={textToCopy}
+  data-toast-copy-success-text={toastCopySuccessText}
+>
+  <slot />
+</CallToAction>
+
+<script>
+  const buttons = document.querySelectorAll("button.copy-text");
+  const toast = document.querySelector("#toast");
+  const toastContent = toast.querySelector("span");
+
+  function showToast(toastCopySuccessText) {
+    toastContent.textContent = toastCopySuccessText;
+
+    toast.classList.add("show");
+  }
+
+  function hideToast() {
+    toast.classList.add("hide");
+  }
+
+  buttons.forEach((button) => {
+    const { textToCopy, toastCopySuccessText } = button.dataset;
+
+    async function onUserClicksOnCopyButton() {
+      button.removeEventListener("click", onUserClicksOnCopyButton);
+
+      toast.classList.remove("show", "hide");
+
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        await showToast(toastCopySuccessText);
+      } catch (err) {
+        console.error("Failed to copy text:", textToCopy, err);
+      } finally {
+        button.addEventListener("click", onUserClicksOnCopyButton);
+      }
+    }
+
+    button.addEventListener("click", onUserClicksOnCopyButton);
+  });
+
+  toast.addEventListener("click", hideToast);
+</script>

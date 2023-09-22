@@ -1,6 +1,7 @@
 ---
 import { Sprite } from "astro-icon";
 import Header from "../components/Header/index.astro";
+import Toast from "../components/Toast.astro";
 
 interface Props {
   title: string;
@@ -25,18 +26,65 @@ const { title } = Astro.props;
       <Header />
 
       <slot />
-    </Sprite.Provider>
-  </body>
-  <style is:global>
-    @font-face {
-      font-family: "SatoshiVariable";
-      src: url("/fonts/satoshi-variable.ttf");
-      font-weight: 500 900;
-      font-display: swap;
-    }
 
-    body {
-      @apply bg-surface1 text-secondary;
-    }
-  </style>
+      <Toast />
+    </Sprite.Provider>
+    <style is:global>
+      @font-face {
+        font-family: "SatoshiVariable";
+        src: url("/fonts/satoshi-variable.ttf");
+        font-weight: 500 900;
+        font-display: swap;
+      }
+
+      body {
+        @apply bg-surface1 text-secondary;
+      }
+
+      #toast {
+        transform: translateX(-50%);
+        animation-duration: 3s;
+        animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        &.show {
+          animation-name: showToastCopyTextSuccess;
+        }
+
+        &.hide {
+          animation-duration: 300ms;
+          animation-name: hideToastCopyTextSuccess;
+        }
+      }
+
+      @keyframes showToastCopyTextSuccess {
+        0% {
+          transform: translateX(-50%) translateY(0);
+        }
+
+        20% {
+          transform: translateX(-50%) translateY(calc(-80px - 100%));
+        }
+
+        80% {
+          transform: translateX(-50%) translateY(calc(-80px - 100%));
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      @keyframes hideToastCopyTextSuccess {
+        from {
+          transform: translateX(-50%) translateY(calc(-80px - 100%));
+        }
+
+        to {
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+    </style>
+  </body>
 </html>

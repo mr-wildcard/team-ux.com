@@ -22,6 +22,7 @@ const {
   rightIcon,
   as,
   class: cssClasses,
+  ...props
 } = Astro.props;
 
 // Specific hack for Github Pages
@@ -32,6 +33,7 @@ const formattedHref =
 
 const HTMLTag = as ? as : href ? "a" : "button";
 const htmlAttributes = {
+  ...props,
   href: formattedHref,
   "class:list": [
     cssClasses,
