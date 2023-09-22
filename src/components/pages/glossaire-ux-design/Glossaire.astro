@@ -128,14 +128,14 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                   </p>
                   <div class="flex flex-col gap-5">
                     {Array.from(groupedDefinitions.get(letter)).map(
-                      (definition) => {
+                      (definition, index) => {
                         return (
                           <div class="bg-neutral4 rounded-[26px]">
-                            <details>
+                            <details open={index === 0 ? "true" : "false"}>
                               <summary class="p-8 flex items-center justify-between gap-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
-                                  class="text-headline-small xl:scroll-mt-[190px]"
+                                  class="text-headline-small xl:scroll-mt-[200px]"
                                 >
                                   <span>{definition.term}</span>&nbsp;
                                   {definition.alternative && (
