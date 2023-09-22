@@ -3,14 +3,16 @@ import Icon from "./@common/Icon.astro";
 
 const { pathname } = Astro.url;
 
+const currentPath = pathname.replaceAll("/", "");
+
 const urlPageTitles = new Map([
-  ["/projets", "Projets"],
-  ["/nos-deux-profils", "Nos deux profils"],
-  ["/notre-manifeste", "Notre manifeste"],
-  ["/temoignages", "Témoignages"],
-  ["/mentions-legles", "Mentions légales"],
-  ["/plan-du-site", "Plan du site"],
-  ["/glossaire-ux-design", "Glossaire de l’UX design\n"],
+  ["projets", "Projets"],
+  ["nos-deux-profils", "Nos deux profils"],
+  ["notre-manifeste", "Notre manifeste"],
+  ["temoignages", "Témoignages"],
+  ["mentions-legles", "Mentions légales"],
+  ["plan-du-site", "Plan du site"],
+  ["glossaire-ux-design", "Glossaire de l’UX design"],
 ]);
 ---
 
@@ -22,27 +24,26 @@ const urlPageTitles = new Map([
     </li>
 
     {
-      urlPageTitles.has(pathname) && (
-        <>
-          {["/nos-deux-profils", "/notre-manifeste"].includes(pathname) && (
-            <li>
-              <span>Team UX</span>
-              <Icon name="chevron_right_breadcrumb" width={16} height={16} />
-            </li>
-          )}
-
-          {["/projets", "/temoignages"].includes(pathname) && (
-            <li>
-              <span>Références</span>
-              <Icon name="chevron_right_breadcrumb" width={16} height={16} />
-            </li>
-          )}
-          <li>
-            <span aria-current="page">{urlPageTitles.get(pathname)}</span>
-          </li>
-        </>
+      currentPath.match(/(nos-deux-profils|notre-manifeste)/) && (
+        <li>
+          <span>Team UX</span>
+          <Icon name="chevron_right_breadcrumb" width={16} height={16} />
+        </li>
       )
     }
+
+    {
+      currentPath.match(/(projets|temoignages)/) && (
+        <li>
+          <span>Références</span>
+          <Icon name="chevron_right_breadcrumb" width={16} height={16} />
+        </li>
+      )
+    }
+
+    <li>
+      <span aria-current="page">{urlPageTitles.get(currentPath)}</span>
+    </li>
   </ul>
 </nav>
 
