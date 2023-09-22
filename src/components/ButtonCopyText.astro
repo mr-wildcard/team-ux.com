@@ -25,9 +25,13 @@ const { label, textToCopy, toastCopySuccessText, ...props } = Astro.props;
   const toast = document.querySelector("#toast");
   const toastContent = toast.querySelector("span");
 
-  function showToast(toastCopySuccessText) {
-    toastContent.textContent = toastCopySuccessText;
+  // Hack for Safari not replaying the animation when we click on the button several times.
+  // Removing classes after the animation allows the toast to appear again.
+  toast.addEventListener("animationend", () => {
+    toast.classList.remove("show", "hide");
+  });
 
+  function showToast() {
     toast.classList.add("show");
   }
 
@@ -42,6 +46,7 @@ const { label, textToCopy, toastCopySuccessText, ...props } = Astro.props;
       button.removeEventListener("click", onUserClicksOnCopyButton);
 
       toast.classList.remove("show", "hide");
+      toastContent.textContent = toastCopySuccessText;
 
       try {
         await navigator.clipboard.writeText(textToCopy);
