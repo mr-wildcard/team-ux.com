@@ -14,14 +14,11 @@ interface Props extends HTMLAttributes<"img"> {
 const { srcSet, ...props } = Astro.props;
 
 const [png, avif, webp] = srcSet;
-
-// Specific hack for Github Pages
-const basePath = process.env.GITHUB_ACTION ? "/team-ux.com/" : "";
 ---
 
 <picture>
-  {avif && <source srcset={`${basePath}${avif}`} type="image/avif" />}
-  {webp && <source srcset={`${basePath}${webp}`} type="image/webp" />}
+  {avif && <source srcset={avif} type="image/avif" />}
+  {webp && <source srcset={webp} type="image/webp" />}
 
-  <img {...props} src={`${basePath}${png}`} loading="lazy" decoding="async" />
+  <img {...props} src={png} loading="lazy" decoding="async" />
 </picture>

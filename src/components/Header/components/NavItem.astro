@@ -11,11 +11,7 @@ if ("submenu" in Astro.slots) {
   ariaExpandedAttribute = "false";
 } else if (to !== pathname) {
   HTMLTag = "a";
-  // Specific hack for Github Pages
-  hrefAttribute =
-    to?.startsWith("/") && process.env.GITHUB_ACTION
-      ? `/team-ux.com${to}`
-      : to ?? undefined;
+  hrefAttribute = to ?? undefined;
 }
 
 const selected = pathname === to;

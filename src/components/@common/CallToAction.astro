@@ -25,16 +25,10 @@ const {
   ...props
 } = Astro.props;
 
-// Specific hack for Github Pages
-const formattedHref =
-  href?.startsWith("/") && process.env.GITHUB_ACTION
-    ? `/team-ux.com${href}`
-    : href ?? undefined;
-
 const HTMLTag = as ? as : href ? "a" : "button";
 const htmlAttributes = {
   ...props,
-  href: formattedHref,
+  href: href ?? undefined,
   "class:list": [
     cssClasses,
     "call-to-action",
