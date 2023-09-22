@@ -5,7 +5,11 @@ const { width, height, class: cssClasses } = Astro.props;
 ---
 
 <Image
-  srcSet={["images/daniela.png", "images/daniela.avif", "images/daniela.webp"]}
+  srcSet={[
+    "/images/daniela.png",
+    "/images/daniela.avif",
+    "/images/daniela.webp",
+  ]}
   alt="Daniela Peñaranda"
   width={width}
   height={height}
