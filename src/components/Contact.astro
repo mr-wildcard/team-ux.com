@@ -1,8 +1,8 @@
 ---
 import Grid from "./@common/Grid.astro";
 import Brush from "./@common/Brush.astro";
-import CallToAction from "./@common/CallToAction.astro";
 import BackgroundForm1 from "./BackgroundForm1.astro";
+import ButtonCopyText from "./ButtonCopyText.astro";
 
 interface Props {
   class?: string;
@@ -44,66 +44,15 @@ const backgroundFormCSSClasses = showBackgroundForm
               href="mailto:hello@team-ux.com">hello@team-ux.com</a
             >
           </p>
-          <CallToAction
-            class="copy-contact relative text-center"
+          <ButtonCopyText
             type="secondary"
-            leftIcon="content_copy"
+            textToCopy="hello@team-ux.com"
+            toastCopySuccessText="Notre adresse e-mail a été copiée dans votre presse-papiers !"
           >
-            <span class="content"
-              >Copier notre adresse email dans votre presse-papiers</span
-            >
-            <span
-              class="sucessful-copy-content hidden absolute left-1/2 translate-x-[-50%] sucess"
-              >C'est dans la boîte !</span
-            >
-          </CallToAction>
+            Copier notre adresse email dans votre presse-papiers
+          </ButtonCopyText>
         </div>
       </div>
     </Grid>
   </div>
 </section>
-
-<script>
-  const section = document.querySelector("#contact");
-  const emailAnchor = section.querySelector("a");
-  const button = section.querySelector("button");
-  const buttonContent = button.querySelector(".content");
-  const buttonSucessfulCopyContent = button.querySelector(
-    ".sucessful-copy-content",
-  );
-
-  const { textContent: email } = emailAnchor;
-
-  let timer;
-  function showCopySuccess() {
-    return new Promise((resolve) => {
-      clearTimeout(timer);
-
-      buttonContent.classList.add("invisible");
-      buttonSucessfulCopyContent.classList.remove("hidden");
-
-      setTimeout(() => {
-        buttonContent.classList.remove("invisible");
-        buttonSucessfulCopyContent.classList.add("hidden");
-
-        console.log("DONE");
-        resolve();
-      }, 2000);
-    });
-  }
-
-  async function onUserClicksOnCopyButton() {
-    button.removeEventListener("click", onUserClicksOnCopyButton);
-
-    try {
-      await navigator.clipboard.writeText(email);
-      await showCopySuccess();
-    } catch (err) {
-      console.error("Failed to copy: ", err);
-    } finally {
-      button.addEventListener("click", onUserClicksOnCopyButton);
-    }
-  }
-
-  button.addEventListener("click", onUserClicksOnCopyButton);
-</script>
