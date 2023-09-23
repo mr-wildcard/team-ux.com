@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-display-large {
+    font-size: 42px;
+    line-height: 43px;
+    font-weight: 700;
+  }
+
+  .text-headline-large {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 900;
+  }
+
+  .text-headline-medium-bold {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 900;
+  }
+
+  .text-headline-medium {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .text-headline-small {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+
+  .text-body-large {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 500;
+  }
+
+  .text-body-large-bold {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+
+  .text-label-large {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .text-label-medium {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+  }
+
+  @media screen(xl) {
+    .text-display-large {
+      font-size: 72px;
+      line-height: 84px;
+      font-weight: 700;
+    }
+
+    .text-display-medium {
+      font-size: 60px;
+      line-height: 82px;
+      font-weight: 700;
+    }
+
+    .text-display-small {
+      font-size: 40px;
+      line-height: 65px;
+      font-weight: 700;
+    }
+
+    .text-headline-large {
+      font-size: 32px;
+      line-height: 43px;
+      font-weight: 900;
+    }
+
+    .text-headline-medium-bold {
+      font-size: 25px;
+      line-height: 34px;
+      font-weight: 900;
+    }
+
+    .text-headline-medium {
+      font-size: 25px;
+      line-height: 34px;
+      font-weight: 700;
+    }
+
+    .text-body-extra-large {
+      font-size: 28px;
+      line-height: 38px;
+      font-weight: 500;
+    }
+
+    .text-body-large {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+    }
+
+    .text-body-medium-bold {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .text-body-medium {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+
+    .text-body-small {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+    }
+
+    .text-label-medium-bold {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+    }
+
+    .text-label-medium {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+
+    .text-label-small {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+  }
+}
