@@ -117,7 +117,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
       <div class="xl:col-start-2 xl:col-span-8">
         <div class="xl:space-y-[100px]">
           {
-            Array.from(groupedDefinitions.keys()).map((letter) => {
+            Array.from(groupedDefinitions.keys()).map((letter, letterIndex) => {
               return (
                 <div data-letter-section={letter} class="letter-section">
                   <p
@@ -128,10 +128,16 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                   </p>
                   <div class="flex flex-col gap-5">
                     {Array.from(groupedDefinitions.get(letter)).map(
-                      (definition, index) => {
+                      (definition, definitionIndex) => {
                         return (
                           <div class="bg-neutral4 rounded-[26px]">
-                            <details open={index === 0 ? "true" : "false"}>
+                            <details
+                              open={
+                                definitionIndex + letterIndex === 0
+                                  ? "true"
+                                  : undefined
+                              }
+                            >
                               <summary class="p-8 flex items-center justify-between gap-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
