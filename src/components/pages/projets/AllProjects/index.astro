@@ -8,7 +8,7 @@ import SmallProject from "./SmallProject.astro";
 ---
 
 <section class="container">
-  <div class="flex flex-col xl:gap-[140px]">
+  <div class="flex flex-col 2xl:gap-[140px]">
     {
       data.map((projectsGroup, index) => {
         if (projectsGroup.group_project_display === "large") {
@@ -51,7 +51,7 @@ import SmallProject from "./SmallProject.astro";
               data-group-display="small"
             >
               <Grid>
-                <ul class="xl:col-start-2 xl:col-span-10 xl:columns-2 xl:gap-8 xl:space-y-5">
+                <ul class="2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 2xl:space-y-5">
                   {projectsGroup.projects.map((project) => {
                     return (
                       <li>

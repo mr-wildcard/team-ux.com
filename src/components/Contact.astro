@@ -11,14 +11,14 @@ interface Props {
 
 const { class: cssClasses, showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
-  ? ["overflow-hidden", "xl:mt-[-100px]", "pt-[353px]", "pb-[168px]"]
+  ? ["overflow-hidden", "2xl:mt-[-100px]", "pt-[353px]", "pb-[168px]"]
   : [];
 ---
 
 <section class:list={[backgroundFormCSSClasses, cssClasses]}>
   <div id="contact" class="container scroll-mt-[50vh]">
     <Grid>
-      <div class="xl:col-start-2 xl:col-span-8">
+      <div class="2xl:col-start-2 2xl:col-span-8">
         <div class="relative p-14 bg-surface3 rounded-[26px]">
           {
             showBackgroundForm && (
