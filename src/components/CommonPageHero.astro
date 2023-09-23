@@ -15,10 +15,10 @@ const { showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
   ? [
       "overflow-hidden",
-      "xl:mt-[-180px]",
-      "xl:mb-[-287px]",
-      "xl:pt-[273px]",
-      "xl:pb-[427px]",
+      "2xl:mt-[-180px]",
+      "2xl:mb-[-287px]",
+      "2xl:pt-[273px]",
+      "2xl:pb-[427px]",
     ]
   : [];
 ---
@@ -39,13 +39,13 @@ const backgroundFormCSSClasses = showBackgroundForm
       )
     }
     <Grid class="gap-y-6">
-      <h1 class="xl:col-start-2 xl:col-span-full text-display-medium">
+      <h1 class="2xl:col-start-2 2xl:col-span-full text-display-medium">
         {title}
       </h1>
       {
         subtitle && (
           <h2
-            class="xl:col-start-2 xl:col-span-6 text-body-extra-large"
+            class="2xl:col-start-2 2xl:col-span-6 text-body-extra-large"
             set:html={subtitle}
           />
         )

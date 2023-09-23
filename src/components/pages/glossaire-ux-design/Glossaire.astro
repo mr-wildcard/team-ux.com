@@ -72,7 +72,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
   <div class="sticky-letters hidden sticky top-[83px] bg-surface1">
     <div class="container">
       <Grid>
-        <div class="xl:col-span-full py-4 border-b border-neutral2">
+        <div class="2xl:col-span-full py-4 border-b border-neutral2">
           <ul class="flex justify-between">
             {
               allLetters.map((letter) => {
@@ -94,7 +94,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
 
   <div class="container">
     <Grid>
-      <div class="xl:col-start-2 xl:col-span-10 mb-[140px]">
+      <div class="2xl:col-start-2 2xl:col-span-10 mb-[140px]">
         <h2 class="mb-5 text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
@@ -114,15 +114,15 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         </ul>
       </div>
 
-      <div class="xl:col-start-2 xl:col-span-8">
-        <div class="xl:space-y-[100px]">
+      <div class="2xl:col-start-2 2xl:col-span-8">
+        <div class="2xl:space-y-[100px]">
           {
             Array.from(groupedDefinitions.keys()).map((letter, letterIndex) => {
               return (
                 <div data-letter-section={letter} class="letter-section">
                   <p
                     id={`letter-${letter}`}
-                    class="mb-6 block text-headline-large uppercase xl:scroll-mt-[190px]"
+                    class="mb-6 block text-headline-large uppercase 2xl:scroll-mt-[190px]"
                   >
                     {letter}
                   </p>
@@ -141,7 +141,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                               <summary class="p-8 flex items-center justify-between gap-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
-                                  class="text-headline-small xl:scroll-mt-[200px]"
+                                  class="text-headline-small 2xl:scroll-mt-[200px]"
                                 >
                                   <span>{definition.term}</span>&nbsp;
                                   {definition.alternative && (
@@ -188,7 +188,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         </div>
       </div>
 
-      <div class="xl:col-start-2 xl:col-span-7 xl:mt-40">
+      <div class="2xl:col-start-2 2xl:col-span-7 2xl:mt-40">
         <p class="text-body-medium">
           Nous espérons que ce glossaire vous aide à mieux comprendre ce qui se
           cache derrière le jargon de l’UX design et ses anglicismes. N’hésitez

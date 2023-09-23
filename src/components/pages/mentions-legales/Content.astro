@@ -27,7 +27,7 @@ function obfuscateContent(content) {
 
 <div class="mentions-legales container mt-20">
   <Grid>
-    <div class="xl:col-start-2 xl:col-span-10 xl:space-y-[140px]">
+    <div class="2xl:col-start-2 2xl:col-span-10 2xl:space-y-[140px]">
       {
         data.content.map((section) => {
           return (
@@ -36,8 +36,8 @@ function obfuscateContent(content) {
                 class:list={[
                   "space-y-5",
                   {
-                    "xl:w-[50%]": section.grid_span === 5,
-                    "xl:w-[69%]": section.grid_span === 7,
+                    "2xl:w-[50%]": section.grid_span === 5,
+                    "2xl:w-[69%]": section.grid_span === 7,
                   },
                 ]}
               >
