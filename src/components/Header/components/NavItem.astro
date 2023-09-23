@@ -14,7 +14,7 @@ if ("submenu" in Astro.slots) {
   hrefAttribute = to ?? undefined;
 }
 
-const selected = pathname === to;
+const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 ---
 
 <HTMLTag
