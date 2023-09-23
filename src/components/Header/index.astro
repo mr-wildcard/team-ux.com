@@ -10,8 +10,11 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
 
 <header id="header" data-menu-opened="true" class="container sticky z-10 top-0">
   <div class="outer isolate">
-    <div id="mobile-menu" class="hidden fixed top-0 w-full h-full bg-surface2">
-      <nav class="px-5 pt-[115px]">
+    <div
+      id="mobile-menu"
+      class="hidden overflow-y-auto fixed top-[84px] w-full h-full bg-surface2"
+    >
+      <nav class="px-5 pt-9 pb-16">
         <ul class="">
           <li>
             <NavItem to="/">Accueil</NavItem>
@@ -137,6 +140,8 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     }
 
     &[data-menu-opened="true"] {
+      @apply bg-surface2;
+
       & #menu-opener {
         @apply gap-2.5 text-primary bg-surface5;
       }
@@ -184,7 +189,11 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     }
   }
 
-  @media screen(2xl) {
+  @media screen(lg) {
+    header {
+      background: none !important;
+    }
+
     #mobile-menu {
       display: none !important;
     }
