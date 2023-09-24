@@ -21,7 +21,13 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
   href={hrefAttribute}
   aria-expanded={ariaExpandedAttribute}
   aria-current={selected ? "page" : undefined}
-  class:list={["nav-item", "text-label-medium", "p-0", { selected }]}
+  class:list={[
+    "nav-item",
+    "text-2xl",
+    "leading-normal",
+    "lg:text-label-medium",
+    { selected },
+  ]}
 >
   <slot />
 
@@ -32,9 +38,6 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
   .nav-item {
     padding-block: 20px;
     display: block;
-
-    font-size: 24px;
-    line-height: normal;
 
     &.selected {
       text-decoration: underline;
@@ -48,6 +51,7 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
       display: flex;
       align-items: center;
       gap: 4px;
+      padding: 0;
     }
 
     .nav-item:is(span, a) {
