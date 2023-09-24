@@ -64,9 +64,7 @@
   }
 
   .text-label-large {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
+    @apply text-[18px] leading-[24px] font-bold;
   }
 
   .text-label-medium {
@@ -75,7 +73,7 @@
     font-weight: 700;
   }
 
-  @media screen(xl) {
+  @screen xl {
     .text-display-large {
       font-size: 72px;
       line-height: 84px;

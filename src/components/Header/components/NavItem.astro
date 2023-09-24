@@ -21,7 +21,7 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
   href={hrefAttribute}
   aria-expanded={ariaExpandedAttribute}
   aria-current={selected ? "page" : undefined}
-  class:list={["nav-item", { selected }]}
+  class:list={["nav-item", "text-label-medium", "p-0", { selected }]}
 >
   <slot />
 
@@ -42,10 +42,8 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
     }
   }
 
-  @media screen(lg) {
+  @screen lg {
     .nav-item {
-      @apply text-label-medium p-0;
-
       position: relative;
       display: flex;
       align-items: center;
