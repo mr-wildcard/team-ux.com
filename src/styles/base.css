@@ -33,6 +33,12 @@
     font-weight: 700;
   }
 
+  .text-headline-small-bold {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 900;
+  }
+
   .text-body-large {
     font-size: 19px;
     line-height: 29px;

@@ -8,14 +8,18 @@ import NavItems from "./NavItems.astro";
 const currentPath = Astro.url.pathname.replaceAll("/", "");
 ---
 
-<header id="header" data-menu-opened="true" class="container sticky z-10 top-0">
+<header
+  id="header"
+  data-menu-opened="false"
+  class="container sticky z-10 top-0"
+>
   <div class="outer isolate">
     <div
       id="mobile-menu"
-      class="hidden overflow-y-auto fixed top-[84px] w-full h-full bg-surface2"
+      class="hidden overflow-y-auto fixed top-[84px] w-full h-[calc(100%-84px)] flex flex-col justify-between px-5 pb-5 pt-9 bg-surface2"
     >
-      <nav class="px-5 pt-9 pb-16">
-        <ul class="">
+      <nav>
+        <ul>
           <li>
             <NavItem to="/">Accueil</NavItem>
           </li>
@@ -62,6 +66,13 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
           </li>
         </ul>
       </nav>
+
+      <p class="mt-14 p-5 text-headline-small-bold rounded-[26px] bg-surface3">
+        Contactez-nous à l’adresse <br />
+        <a class="underline underline-offset-4" href="mailto:hello@team-ux.com"
+          >hello@team-ux.com</a
+        >
+      </p>
     </div>
 
     <div
@@ -146,10 +157,13 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
         @apply gap-2.5 text-primary bg-surface5;
       }
 
-      #mobile-menu,
       .text-opened,
       :global([astro-icon="cross"]) {
         display: block;
+      }
+
+      #mobile-menu {
+        display: flex;
       }
 
       .text-closed,
