@@ -10,19 +10,28 @@ import data from "../../../../data/homepage/derriere-team-ux.yaml";
 const { block1, block2 } = data;
 ---
 
-<section class="mb-[85px]">
+<section class="mb-[100px] 2xl:mb-[85px]">
   <Icon name="oval" />
 
-  <div class="relative flex flex-col gap-8 pb-[100px] bg-neutral4">
+  <div class="relative flex flex-col gap-8 pb-20 2xl:pb-[100px] bg-neutral4">
     <div class="container">
-      <h2 class="mb-20 text-display-small text-center">{data.title}</h2>
       <Grid>
-        <div
-          class="2xl:col-start-2 2xl:col-span-5 p-10 flex flex-col gap-8 bg-surface6 rounded-[26px]"
+        <h2
+          class="col-span-full mt-[60px] 2xl:mt-0 mb-8 2xl:mb-20 text-headline-large 2xl:text-display-small 2xl:text-center"
         >
-          <h3 class="mb-8 text-headline-medium-bold">{block1.title}</h3>
+          {data.title}
+        </h2>
+      </Grid>
 
-          <div class="w-[250px]">
+      <Grid class="gap-y-5">
+        <div
+          class="col-span-full 2xl:col-start-2 2xl:col-span-5 flex flex-col gap-8 p-5 2xl:p-10 bg-surface6 rounded-[26px]"
+        >
+          <h3 class="mb-5 2xl:mb-8 text-headline-medium-bold">
+            {block1.title}
+          </h3>
+
+          <div class="mx-auto 2xl:mx-0 w-[250px]">
             <DuoDeChoc variant="small" />
             <p class="text-label-large text-primary text-center mt-2.5">
               {block1.pictureLegend}
@@ -40,14 +49,17 @@ const { block1, block2 } = data;
           </CallToAction>
         </div>
         <div
-          class="2xl:col-span-5 flex flex-col gap-8 h-fit p-10 bg-surface7 rounded-[26px]"
+          class="col-span-full 2xl:col-span-5 flex flex-col gap-8 h-fit p-5 2xl:p-10 bg-surface7 rounded-[26px]"
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
-          <div class="relative">
-            <Brush id="1" class="w-[173px] h-[206px]" />
+          <div class="relative w-[200px] 2xl:w-auto mx-auto 2xl:mx-0">
+            <Brush
+              id="1"
+              class="w-[133px] h-[160px] 2xl:w-[173px] 2xl:h-[206px]"
+            />
             <Brush
               id="4"
-              class="absolute top-0 left-[52px] w-[207px] h-[206px]"
+              class="absolute top-0 left-[41px] 2xl:left-[52px] w-[160px] h-[160px] 2xl:w-[207px] 2xl:h-[206px]"
             />
           </div>
           <p class="text-body-medium">{block2.paragraph}</p>
@@ -63,14 +75,16 @@ const { block1, block2 } = data;
     </div>
     <div class="container">
       <Grid>
-        <div class="2xl:col-start-2 2xl:col-span-10 flex flex-col gap-0.5">
+        <div
+          class="col-span-full 2xl:col-start-2 2xl:col-span-10 flex flex-col gap-0.5"
+        >
           <div
-            class="flex flex-col gap-10 p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+            class="flex flex-col gap-10 p-5 2xl:p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.certifications.title}
             </h3>
-            <ul class="flex items-center justify-between">
+            <ul class="certifications">
               <li>
                 <Image
                   srcSet={["/images/access42.png"]}
@@ -83,60 +97,62 @@ const { block1, block2 } = data;
                 <Image
                   srcSet={["/images/IDF.png"]}
                   alt=""
-                  width="170"
-                  height="56"
+                  width={170}
+                  height={56}
                   alt="Logo du site de formation Interaction Design Foundation"
                 />
               </li>
               <li>
                 <Image
                   srcSet={["/images/w3c.png"]}
-                  width="90"
-                  height="46"
+                  width={90}
+                  height={46}
                   alt="Logo du W3C"
                 />
               </li>
               <li>
                 <Image
                   srcSet={["/images/opquast.png"]}
-                  width="140"
-                  height="36"
+                  width={140}
+                  height={36}
                   alt="Logo de l'organisme de certification Opquast"
                 />
               </li>
               <li>
                 <Image
                   srcSet={["/images/uxer.png"]}
-                  width="46"
-                  height="47"
+                  width={46}
+                  height={47}
                   alt="Logo de l'agence digitale UXER"
                 />
               </li>
               <li>
                 <Image
                   srcSet={["/images/shifta.png"]}
-                  width="106"
-                  height="40"
+                  width={106}
+                  height={40}
                   alt="Logo de l'université SHIFTA"
                 />
               </li>
               <li>
                 <Image
                   srcSet={["/images/INR.png"]}
-                  width="120"
+                  width={120}
+                  height={44}
                   alt="Logo de l'institut du numérique responsable"
-                  height="44"
                 />
               </li>
             </ul>
           </div>
           <div
-            class="flex flex-col gap-10 p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
+            class="flex flex-col gap-10 p-5 2xl:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.commited.title}
             </h3>
-            <ul class="flex items-center gap-[44px]">
+            <ul
+              class="flex items-center justify-around 2xl:justify-normal gap-[44px]"
+            >
               <li>
                 <Image
                   srcSet={["/images/diseno-etico.png"]}
@@ -166,10 +182,28 @@ const { block1, block2 } = data;
 <style>
   section :global([astro-icon="oval"]) {
     width: 100%;
-    height: 145px;
+    height: 10px;
 
     &:last-of-type {
       transform: scaleY(-1);
+    }
+  }
+
+  .certifications {
+    @apply columns-2 space-y-10;
+
+    img {
+      margin-inline: auto;
+    }
+  }
+
+  @screen 2xl {
+    section :global([astro-icon="oval"]) {
+      height: 145px;
+    }
+
+    .certifications {
+      @apply flex items-center justify-between space-y-0;
     }
   }
 </style>

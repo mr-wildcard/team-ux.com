@@ -1,13 +1,26 @@
 ---
-const props = Astro.props;
+import { HTMLTag, Polymorphic } from "astro/types";
 
-const cssClasses = [
-  "w-[1159px]",
-  "h-[586px]",
-  "bg-surface2",
-  "rounded-[1000px]",
-  props.class,
-];
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  class?: string;
+  as?: Tag;
+}>;
+
+const { as, class: cssClasses } = Astro.props;
+
+const HTMLTag = as || "div";
 ---
 
-<div role="presentation" class:list={cssClasses}></div>
+<HTMLTag
+  role="presentation"
+  class:list={[
+    "w-[600px]",
+    "h-[303px]",
+    "2xl:w-[1159px]",
+    "2xl:h-[586px]",
+    "bg-surface2",
+    "rounded-[1000px]",
+    "rotate-[-30.785deg]",
+    cssClasses,
+  ]}
+/>

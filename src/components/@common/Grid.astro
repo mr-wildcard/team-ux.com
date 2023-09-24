@@ -8,7 +8,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{
   as?: Tag;
 }>;
 
-const { as: HTMLTag = "div", outerGap = true, class: cssClasses } = Astro.props;
+const { as: HTMLTag = "div", class: cssClasses } = Astro.props;
 ---
 
 <HTMLTag
@@ -19,10 +19,8 @@ const { as: HTMLTag = "div", outerGap = true, class: cssClasses } = Astro.props;
     "grid-cols-6",
     "2xl:gap-x-8",
     "2xl:grid-cols-12",
-    {
-      "px-5": outerGap,
-      "2xl:px-0": outerGap,
-    },
+    "px-5",
+    "2xl:px-0",
     cssClasses,
   ]}
 >
