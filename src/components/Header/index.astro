@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
   <div class="outer isolate">
     <div
       id="mobile-menu"
-      class="hidden overflow-y-auto fixed top-[84px] w-full h-[calc(100%-84px)] flex flex-col justify-between px-5 pb-5 pt-9 bg-surface2"
+      class="hidden overflow-y-auto fixed top-[84px] w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
     >
       <nav>
         <ul>
@@ -157,13 +157,10 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
         @apply gap-2.5 text-primary bg-surface5;
       }
 
+      #mobile-menu,
       .text-opened,
       :global([astro-icon="cross"]) {
         display: block;
-      }
-
-      #mobile-menu {
-        display: flex;
       }
 
       .text-closed,
