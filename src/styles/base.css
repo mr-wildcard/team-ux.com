@@ -5,25 +5,25 @@
 @layer utilities {
   .text-display-large {
     font-size: 42px;
-    line-height: 43px;
+    line-height: 57px;
     font-weight: 700;
   }
 
   .text-headline-large {
     font-size: 28px;
-    line-height: 38px;
+    line-height: normal;
     font-weight: 900;
   }
 
   .text-headline-medium-bold {
     font-size: 22px;
-    line-height: 30px;
+    line-height: normal;
     font-weight: 900;
   }
 
   .text-headline-medium {
     font-size: 22px;
-    line-height: 30px;
+    line-height: normal;
     font-weight: 700;
   }
 
@@ -64,7 +64,9 @@
   }
 
   .text-label-large {
-    @apply text-[18px] leading-[24px] font-bold;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
   }
 
   .text-label-medium {
