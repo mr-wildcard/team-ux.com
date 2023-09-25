@@ -8,33 +8,41 @@ import Daniela from "../../images/Daniela.astro";
 import Profile from "./Profile.astro";
 ---
 
-<section class="container mb-[140px]">
-  <Grid>
-    <div class="2xl:col-start-2 2xl:col-span-5">
+<section class="container mb-[100px] 2xl:mb-[140px]">
+  <Grid class="gap-y-8 2xl:gap-y-0">
+    <div class="col-span-full 2xl:col-start-2 2xl:col-span-5">
       <Profile profile={dataYuna}>
         <div
           slot="picture"
-          class="flex flex-[0_0_142px] justify-center relative isolate"
+          class="flex flex-[0_0_129px] 2xl:flex-[0_0_142px] 2xl:justify-center relative isolate"
         >
           <Brush
             id="1"
-            class="absolute z-[-1] w-[142px] left-0 bottom-0 rotate-[180deg]"
+            class="absolute z-[-1] w-[129px] 2xl:w-[142px] left-0 bottom-0 rotate-[180deg]"
           />
-          <Yuna width={89} height={220} />
+          <Yuna
+            width={82}
+            height={204}
+            class="ml-6 2xl:w-[89px] 2xl:h-[220px]"
+          />
         </div>
       </Profile>
     </div>
-    <div class="2xl:col-span-5">
+    <div class="col-span-full 2xl:col-span-5">
       <Profile profile={dataDaniela}>
         <div
           slot="picture"
-          class="flex flex-[0_0_164px] justify-center relative isolate"
+          class="flex flex-[0_0_129px] 2xl:flex-[0_0_164px] 2xl:justify-center relative isolate"
         >
           <Brush
             id="2"
-            class="absolute z-[-1] w-[164px] left-0 bottom-[11px] rotate-[90deg]"
+            class="absolute z-[-1] w-[129px] 2xl:w-[164px] left-0 bottom-[11px] rotate-[90deg]"
           />
-          <Daniela width={89} height={220} />
+          <Daniela
+            width={82}
+            height={204}
+            class="ml-6 2xl:w-[89px] 2xl:h-[220px]"
+          />
         </div>
       </Profile>
     </div>
