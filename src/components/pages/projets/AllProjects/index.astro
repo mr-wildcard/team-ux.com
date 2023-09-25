@@ -8,30 +8,32 @@ import SmallProject from "./SmallProject.astro";
 ---
 
 <section class="container">
-  <div class="flex flex-col 2xl:gap-[140px]">
+  <div class="flex flex-col gap-[120px] 2xl:gap-[140px]">
     {
       data.map((projectsGroup, index) => {
         if (projectsGroup.group_project_display === "large") {
           return (
             <div
-              class="relative projects-group isolate"
+              class="relative projects-group isolate px-5 2xl:px-0"
               data-group-index={index}
               data-group-display="large"
             >
-              <Brush
-                id="4"
-                class:list={[
-                  {
-                    hidden: index > 0,
-                  },
-                  "absolute",
-                  "z-[-1]",
-                  "right-[-20px]",
-                  "top-[-207px]",
-                  "w-[490px]",
-                  "h-[487px]",
-                ]}
-              />
+              {index === 0 && (
+                <Brush
+                  id="4"
+                  class:list={[
+                    "hidden",
+                    "2xl:block",
+                    "absolute",
+                    "z-[-1]",
+                    "right-[-20px]",
+                    "top-[-207px]",
+                    "w-[490px]",
+                    "h-[487px]",
+                  ]}
+                />
+              )}
+
               <ul class="flex flex-col gap-8">
                 {projectsGroup.projects.map((project) => {
                   return (
@@ -51,7 +53,7 @@ import SmallProject from "./SmallProject.astro";
               data-group-display="small"
             >
               <Grid>
-                <ul class="2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 2xl:space-y-5">
+                <ul class="col-span-full 2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 space-y-2.5 2xl:space-y-5">
                   {projectsGroup.projects.map((project) => {
                     return (
                       <li>
@@ -67,7 +69,7 @@ import SmallProject from "./SmallProject.astro";
       })
     }
   </div>
-  <div class="flex justify-center mt-[60px]">
+  <div class="flex justify-center mt-10 2xl:mt-[60px]">
     <CallToAction href="/temoignages" type="secondary" rightIcon="forward">
       Découvrir les témoignages
     </CallToAction>

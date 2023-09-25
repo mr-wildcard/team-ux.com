@@ -24,10 +24,12 @@ const { project } = Astro.props;
 const hasManyTestimonials = Array.isArray(project.testimonial);
 ---
 
-<div class="project flex gap-8 p-10 bg-neutral4 rounded-[26px]">
+<div
+  class="project flex flex-col 2xl:flex-row gap-8 px-5 py-6 2xl:p-10 bg-neutral4 rounded-[26px]"
+>
   <div class="flex flex-col gap-10 2xl:flex-[0_0_40%]">
     <div>
-      <p class="mb-2.5 text-headline-medium-bold">
+      <p class="mb-3 2xl:mb-2.5 text-headline-medium-bold">
         {project.title}
       </p>
       <p class="text-body-large text-neutral1">
@@ -75,8 +77,12 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
       </div>
     </div>
   </div>
-  <div class="flex flex-col gap-5 p-10 bg-surface5 rounded-[20px]">
-    <h3 class="text-headline-large">{project.description.title}</h3>
+  <div
+    class="flex flex-col gap-5 px-5 py-6 2xl:p-10 bg-surface5 rounded-[20px]"
+  >
+    <h3 class="text-headline-medium-bold 2xl:text-headline-large">
+      {project.description.title}
+    </h3>
     <p class="text-body-medium">
       {project.description.content}
     </p>
