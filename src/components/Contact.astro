@@ -11,12 +11,21 @@ interface Props {
 
 const { class: cssClasses, showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
-  ? ["overflow-hidden", "2xl:mt-[-100px]", "2xl:pt-[353px]", "2xl:pb-[168px]"]
+  ? [
+      "overflow-hidden",
+      "mb-[83px]",
+      "2xl:mb-0",
+      "pt-[40px]",
+      "pb-[62px]",
+      "2xl:mt-[-100px]",
+      "2xl:pt-[353px]",
+      "2xl:pb-[168px]",
+    ]
   : [];
 ---
 
 <section class:list={[backgroundFormCSSClasses, cssClasses]}>
-  <div id="contact" class="container mb-[150px] 2xl:mb-0 scroll-mt-[50vh]">
+  <div id="contact" class="container scroll-mt-[50vh]">
     <Grid>
       <div class="col-span-full 2xl:col-start-2 2xl:col-span-8">
         <div class="relative px-5 py-10 2xl:p-14 bg-surface3 rounded-[26px]">
@@ -28,11 +37,11 @@ const backgroundFormCSSClasses = showBackgroundForm
 
           <Brush
             id="2"
-            class="hidden 2xl:block absolute z-[-1] top-[-60px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
+            class="absolute z-[-1] top-[-35px] 2xl:top-[-80px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
           />
           <Brush
             id="2"
-            class="hidden 2xl:block absolute z-[-1] right-[-101px] bottom-[-66px] w-[355px] h-[308px]"
+            class="absolute z-[-1] right-[-15px] bottom-[-60px] 2xl:right-[-101px] 2xl:bottom-[-66px] w-[194px] h-[168px] 2xl:w-[355px] 2xl:h-[308px] rotate-[13deg] 2xl:rotate-0"
           />
 
           <h2
