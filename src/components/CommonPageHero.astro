@@ -14,8 +14,9 @@ const { title, subtitle, class: cssClasses } = Astro.props;
 const { showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
   ? [
-      "2xl:overflow-hidden",
-      "mb-20",
+      "overflow-hidden",
+      "pb-[390px]",
+      "mb-[-310px]",
       "2xl:mt-[-180px]",
       "2xl:mb-[-287px]",
       "2xl:pt-[273px]",
@@ -38,7 +39,7 @@ const backgroundFormCSSClasses = showBackgroundForm
   <div class="relative container">
     {
       showBackgroundForm && (
-        <BackgroundForm1 class="hidden 2xl:block absolute z-[-1] top-[-125px] right-[-540px]" />
+        <BackgroundForm1 class="absolute z-[-1] top-[100px] right-[-370px] 2xl:top-[-125px] 2xl:right-[-540px] w-[600px] h-[303px]" />
       )
     }
     <Grid class="gap-y-5 2xl:gap-y-6">
