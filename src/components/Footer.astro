@@ -9,21 +9,22 @@ interface Props {
 const { class: cssClasses } = Astro.props;
 ---
 
-<footer class:list={["container", "mb-[70px]", cssClasses]}>
-  <Grid as="nav">
-    <div class="2xl:col-start-2 2xl:col-span-2">
+<footer class:list={["container", "mb-[60px]", "2xl:mb-[70px]", cssClasses]}>
+  <Grid as="nav" class="gap-y-5">
+    <div class="col-span-full 2xl:col-start-2 2xl:col-span-2 mb-2.5 2xl:mb-0">
       <CallToAction
         href="https://www.linkedin.com/company/team-ux/"
         target="_blank"
         rightIcon="open_in_new"
         type="primary"
         variant="transparent"
+        class="!text-label-large 2xl:!text-label-medium-bold"
       >
         Team UX sur LinkedIn
       </CallToAction>
     </div>
-    <div class="2xl:col-span-2">
-      <ul class="flex flex-col gap-4">
+    <div class="col-span-full 2xl:col-span-2">
+      <ul class="flex flex-col gap-6 2xl:gap-4">
         <li>
           <CallToAction
             href="/plan-du-site"
@@ -44,8 +45,8 @@ const { class: cssClasses } = Astro.props;
         </li>
       </ul>
     </div>
-    <div class="2xl:col-span-2">
-      <ul class="flex flex-col gap-4">
+    <div class="col-span-full 2xl:col-span-2">
+      <ul class="flex flex-col gap-6 2xl:gap-4">
         <li>
           <CallToAction
             href="/glossaire-ux-design"
