@@ -8,7 +8,7 @@ import CallToAction from "../../@common/CallToAction.astro";
     <div class="2xl:col-start-2 2xl:col-span-6">
       <div class="flex flex-col gap-5 p-10 bg-neutral4 rounded-[26px]">
         <h2 class="text-headline-small">Arborescence principale :</h2>
-        <ul class="ml-7 list-disc list-outside">
+        <ul class="ml-7 list-disc list-outside text-body-medium">
           <li>
             <CallToAction href="/" variant="transparent">
               Page d’accueil
@@ -16,7 +16,7 @@ import CallToAction from "../../@common/CallToAction.astro";
           </li>
           <li>
             Références
-            <ul class="ml-7 list-disc list-outside">
+            <ul class="ml-7 list-disc list-outside text-body-medium">
               <li>
                 <CallToAction href="/projets" variant="transparent">
                   Projets
@@ -47,7 +47,7 @@ import CallToAction from "../../@common/CallToAction.astro";
         </ul>
 
         <h2 class="text-headline-small">Arborescence secondaire :</h2>
-        <ul class="ml-7 list-disc list-outside">
+        <ul class="ml-7 list-disc list-outside text-body-medium">
           <li>
             <CallToAction href="/plan-sute-site" variant="transparent">
               Plan du site
@@ -76,8 +76,6 @@ import CallToAction from "../../@common/CallToAction.astro";
 
 <style>
   ul {
-    @apply text-body-medium;
-
     li {
       & :global(a) {
         @apply underline;
