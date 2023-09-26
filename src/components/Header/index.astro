@@ -31,7 +31,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
             >
               <summary>
                 Références
-                <Icon name="arrow_drop_up" width={30} height={30} />
+                <Icon name="arrow_drop_down" width={30} height={30} />
               </summary>
 
               <ul>
@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
             >
               <summary>
                 Team UX
-                <Icon name="arrow_drop_up" width={30} height={30} />
+                <Icon name="arrow_drop_down" width={30} height={30} />
               </summary>
               <ul>
                 <li>
@@ -171,7 +171,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
   }
 
   #mobile-menu {
-    :global([astro-icon="arrow_drop_up"]) {
+    :global([astro-icon="arrow_drop_down"]) {
       @apply text-primary;
     }
 
@@ -194,7 +194,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     }
 
     details[open] {
-      :global([astro-icon="arrow_drop_up"]) {
+      :global([astro-icon="arrow_drop_down"]) {
         transform: scaleY(-1);
       }
     }
