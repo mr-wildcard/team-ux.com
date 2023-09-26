@@ -11,6 +11,10 @@ interface Props {
     title: string;
     activity: string;
     skills: string[];
+    images?: Array<{
+      small: string;
+      wide: string;
+    }>;
     description: {
       title: string;
       content: string;
@@ -48,34 +52,52 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
       }
     </ul>
 
-    <div class="show-project-gallery">
-      <CallToAction type="primary" variant="transparent" rightIcon="visibility">
-        Afficher la galerie de ce projet
-      </CallToAction>
-    </div>
+    {
+      project.images && (
+        <>
+          <div class="show-project-gallery">
+            <CallToAction
+              type="primary"
+              variant="transparent"
+              rightIcon="visibility"
+            >
+              Afficher la galerie de ce projet
+            </CallToAction>
+          </div>
 
-    <div class="gallery flex flex-col gap-5 hidden">
-      <ul class="flex gap-5">
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-      </ul>
-      <div class="flex gap-2.5">
-        <span role="presentation">
-          <Icon name="photo_prints" width={24} height={24} /></span
-        >
-        <p class="text-neutral1 text-body-small">
-          Dans une démarche d’éco-responsabilité, nous vous proposons de
-          n’ouvrir<br />que les galeries et visuels dont vous avez besoin.
-        </p>
-      </div>
-    </div>
+          <div class="gallery flex flex-col gap-5 hidden">
+            <ul class="flex flex-col 2xl:flex-row gap-4 2xl:gap-5">
+              {project.images.map((image) => {
+                return (
+                  <li>
+                    <a href={image.wide} target="_blank">
+                      <img
+                        src={image.small}
+                        class="w-full 2xl:w-[140px] 2xl:h-[140px] rounded-[6px]"
+                        alt="Image galerie"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <div class="flex gap-2.5">
+              <span role="presentation">
+                <Icon name="photo_prints" width={24} height={24} />
+              </span>
+              <p class="text-neutral1 text-body-small">
+                Dans une démarche d’éco-responsabilité, nous vous proposons de
+                n’ouvrir
+                <br />
+                que les galeries et visuels dont vous avez besoin.
+              </p>
+            </div>
+          </div>
+        </>
+      )
+    }
   </div>
   <div
     class="flex flex-col gap-5 px-5 py-6 2xl:p-10 bg-surface5 rounded-[20px]"

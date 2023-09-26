@@ -8,6 +8,13 @@
         - Site Web
         - Refonte
         - Formation professionnelle
+      images:
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
       description:
         title: Un nouveau site Web pour recruter les futures promotions d’une école formant au changement systémique
         content: |
@@ -28,6 +35,13 @@
         - Outil métier
         - Refonte
         - Dossiers médico-sociaux
+      images:
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
       description:
         title: Une solution numérique repensée pour suivre les dossiers des usagères et usagers dans les établissements médico-sociaux
         content: |
@@ -94,6 +108,13 @@
         - Espace connecté
         - Refonte
         - Habitat social
+      images:
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
       description:
         title: Un site institutionnel et des espaces connectés repensés pour rapprocher un bailleur social et ses cibles multiples
         content: |
@@ -186,6 +207,13 @@
         - Application mobile
         - Interface conversationnelle
         - Santé
+      images:
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
+        - small: http://placekitten.com/640/640
+          wide: http://placekitten.com/1280/720
       description:
         title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
         content: |
