@@ -8,9 +8,11 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Plan du site">
-  <Breadcrumb />
+  <div class="hidden lg:block lg:mb-[90px]">
+    <Breadcrumb />
+  </div>
 
-  <div class="mb-[60px] 2xl:mb-20">
+  <div class="max-sm:mt-[60px] mb-[60px] 2xl:mb-20">
     <Hero />
   </div>
 

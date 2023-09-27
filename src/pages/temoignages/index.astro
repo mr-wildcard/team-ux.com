@@ -8,9 +8,21 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Témoignages">
-  <Breadcrumb />
-  <Hero />
-  <Testimonials />
-  <Contact />
+  <div class="hidden lg:block lg:mb-[90px]">
+    <Breadcrumb />
+  </div>
+
+  <div class="max-sm:mt-[60px] mb-20 2xl:mb-[140px]">
+    <Hero />
+  </div>
+
+  <div class="mb-[200px]">
+    <Testimonials />
+  </div>
+
+  <div class="mb-[150px] 2xl:mb-[170px]">
+    <Contact />
+  </div>
+
   <Footer />
 </Layout>

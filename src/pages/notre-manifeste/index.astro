@@ -11,16 +11,33 @@ import Signature from "../../components/pages/notre-manifeste/Signature.astro";
 ---
 
 <Layout title="Notre manifeste">
-  <Breadcrumb />
-  <Hero />
-  <Introduction />
-  <Convictions />
-  <Actions />
+  <div class="hidden lg:block lg:mb-[90px]">
+    <Breadcrumb />
+  </div>
 
-  <div class="mb-[200px] 2xl:mb-0">
+  <div class="max-sm:mt-[60px] mb-20 2xl:mb-[140px]">
+    <Hero />
+  </div>
+
+  <div class="mb-[335px] 2xl:mb-[240px]">
+    <Introduction />
+  </div>
+
+  <div class="mb-[100px] 2xl:mb-[144px]">
+    <Convictions />
+  </div>
+
+  <div class="mb-[160px] 2xl:mb-[60px]">
+    <Actions />
+  </div>
+
+  <div class="mb-[150px] 2xl:mb-[160px]">
     <Signature />
   </div>
 
-  <Contact />
+  <div class="mb-[150px] 2xl:mb-[170px]">
+    <Contact />
+  </div>
+
   <Footer />
 </Layout>

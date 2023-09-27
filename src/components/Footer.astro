@@ -1,15 +1,9 @@
 ---
 import Grid from "./@common/Grid.astro";
 import CallToAction from "./@common/CallToAction.astro";
-
-interface Props {
-  class?: string;
-}
-
-const { class: cssClasses } = Astro.props;
 ---
 
-<footer class:list={["container", "mb-[60px]", "2xl:mb-[70px]", cssClasses]}>
+<footer class="container mb-[60px] 2xl:mb-[70px]">
   <Grid as="nav" class="gap-y-5">
     <div class="col-span-full 2xl:col-start-2 2xl:col-span-2 mb-2.5 2xl:mb-0">
       <CallToAction

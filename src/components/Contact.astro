@@ -13,13 +13,14 @@ const { class: cssClasses, showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
   ? [
       "overflow-hidden",
-      "mb-[83px]",
-      "2xl:mb-0",
       "pt-[40px]",
       "pb-[62px]",
-      "2xl:mt-[-100px]",
+      "mt-[-40px]",
+      "mb-[-62px]",
       "2xl:pt-[353px]",
       "2xl:pb-[168px]",
+      "2xl:mt-[-353px]",
+      "2xl:mb-[-168px]",
     ]
   : [];
 ---

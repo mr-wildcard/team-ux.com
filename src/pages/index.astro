@@ -10,13 +10,27 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Accueil">
-  <Hero />
-  <Expertises />
-  <DerriereTeamUX />
-  <ProjectsTeasing />
-  <Testimonials />
+  <div class="mt-[60px] 2xl:mt-[129px] mb-[150px] 2xl:mb-[85px]">
+    <Hero />
+  </div>
 
-  <div class="mt-[200px] 2xl:mt-0">
+  <div class="mb-[100px] 2xl:mb-[140px]">
+    <Expertises />
+  </div>
+
+  <div class="mb-[100px] 2xl:mb-[140px]">
+    <DerriereTeamUX />
+  </div>
+
+  <div class="mb-[140px] 2xl:mb-[100px]">
+    <ProjectsTeasing />
+  </div>
+
+  <div class="mb-[200px]">
+    <Testimonials />
+  </div>
+
+  <div class="mb-[150px] 2xl:mb-[170px]">
     <Contact />
   </div>
 

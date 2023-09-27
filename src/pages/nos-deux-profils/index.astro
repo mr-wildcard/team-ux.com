@@ -9,10 +9,24 @@ import ItsAMatch from "../../components/pages/nos-deux-profils/ItsAMatch.astro";
 ---
 
 <Layout title="Nos 2 profils">
-  <Breadcrumb />
-  <Hero />
-  <Profiles />
-  <ItsAMatch />
-  <Contact />
+  <div class="hidden lg:block lg:mb-[90px]">
+    <Breadcrumb />
+  </div>
+  <div class="max-sm:mt-[60px] mb-20 2xl:mb-[140px]">
+    <Hero />
+  </div>
+
+  <div class="mb-[100px] 2xl:mb-[140px]">
+    <Profiles />
+  </div>
+
+  <div class="mb-[180px] 2xl:mb-[160px]">
+    <ItsAMatch />
+  </div>
+
+  <div class="mb-[150px] 2xl:mb-[170px]">
+    <Contact />
+  </div>
+
   <Footer />
 </Layout>

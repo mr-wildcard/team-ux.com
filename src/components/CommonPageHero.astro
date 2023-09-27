@@ -15,27 +15,17 @@ const { showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
   ? [
       "overflow-hidden",
-      "pb-[390px]",
-      "mb-[-310px]",
-      "2xl:mt-[-180px]",
-      "2xl:mb-[-287px]",
-      "2xl:pt-[273px]",
-      "2xl:pb-[427px]",
+      "pb-[178px]",
+      "mb-[-178px]",
+      "2xl:pt-[255px]",
+      "2xl:pb-[439px]",
+      "2xl:mt-[-255px]",
+      "2xl:mb-[-439px]",
     ]
   : [];
 ---
 
-<section
-  class:list={[
-    backgroundFormCSSClasses,
-    cssClasses,
-    "mt-[60px]",
-    "2xl:mt-0",
-    {
-      "2xl:!mt-[90px]": !showBackgroundForm,
-    },
-  ]}
->
+<section class:list={[backgroundFormCSSClasses, cssClasses]}>
   <div class="relative container">
     {
       showBackgroundForm && (
