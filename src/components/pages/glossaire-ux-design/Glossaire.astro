@@ -98,7 +98,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         <h2 class="mb-5 text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
-        <ul class="letters flex flex-wrap gap-x-[7px]">
+        <ul class="hidden 2xl:flex letters flex-wrap gap-x-[7px]">
           {
             allLetters.map((letter) => {
               return (
@@ -228,65 +228,4 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
   }
 </style>
 
-<script>
-  const letters = document.querySelector(".letters");
-  const stickyLetters = document.querySelector(".sticky-letters");
-
-  const stickyLettersObserver = new IntersectionObserver(
-    ([entry]) => {
-      if (
-        entry.intersectionRatio === 0 &&
-        stickyLetters.classList.contains("hidden")
-      ) {
-        stickyLetters.classList.remove("hidden");
-      } else if (
-        entry.intersectionRatio === 1 &&
-        !stickyLetters.classList.contains("hidden")
-      ) {
-        stickyLetters.classList.add("hidden");
-      }
-    },
-    {
-      rootMargin: "0px",
-      threshold: [0, 1],
-    },
-  );
-
-  stickyLettersObserver.observe(letters);
-
-  const letterSections = document.querySelectorAll(".letter-section");
-  const letterSectionsLetterAnchors = new Map();
-
-  const letterSectionsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const stickyLetter = letterSectionsLetterAnchors.get(entry.target);
-
-        if (
-          entry.intersectionRatio === 0 &&
-          stickyLetter.classList.contains("active")
-        ) {
-          stickyLetter.classList.remove("active");
-        } else if (
-          entry.intersectionRatio > 0 &&
-          !stickyLetter.classList.contains("active")
-        ) {
-          stickyLetter.classList.add("active");
-        }
-      });
-    },
-    {
-      threshold: [0, 1],
-    },
-  );
-
-  letterSections.forEach((section) => {
-    const letterAnchor = document.querySelector(
-      `.sticky-letters li[data-letter=${section.dataset.letterSection}]`,
-    );
-
-    letterSectionsLetterAnchors.set(section, letterAnchor);
-
-    letterSectionsObserver.observe(section);
-  });
-</script>
+<script src="./index.ts"></script>
