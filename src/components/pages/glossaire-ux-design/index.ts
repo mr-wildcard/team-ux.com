@@ -1,5 +1,5 @@
 const letters = document.querySelector<HTMLDivElement>(".letters");
-const stickyLetters = document.querySelector(".sticky-letters");
+const stickyLetters = document.querySelector<HTMLDivElement>(".sticky-letters");
 
 const stickyLettersObserver = new IntersectionObserver(
   ([{ intersectionRatio }]) => {
@@ -22,7 +22,9 @@ const stickyLettersObserver = new IntersectionObserver(
   },
 );
 
-const letterSections = document.querySelectorAll(".letter-section");
+const letterSections =
+  document.querySelectorAll<HTMLDivElement>(".letter-section");
+
 const letterSectionsLetterAnchors = new Map();
 
 const letterSectionsObserver = new IntersectionObserver(
