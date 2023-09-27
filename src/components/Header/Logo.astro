@@ -9,5 +9,17 @@ const htmlAttributes =
 ---
 
 <HTMLTag {...htmlAttributes}>
-  <Icon width={170} height={36} name="logo" />
+  <Icon name="logo" />
 </HTMLTag>
+
+<style>
+  :global([astro-icon="logo"]) {
+    width: 170px;
+    height: 36px;
+
+    @screen md {
+      width: 197px;
+      height: 40px;
+    }
+  }
+</style>
