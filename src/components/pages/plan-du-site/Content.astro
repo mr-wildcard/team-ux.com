@@ -3,10 +3,12 @@ import Grid from "../../@common/Grid.astro";
 import CallToAction from "../../@common/CallToAction.astro";
 ---
 
-<section class="container mt-20">
+<section class="container">
   <Grid>
-    <div class="2xl:col-start-2 2xl:col-span-6">
-      <div class="flex flex-col gap-5 p-10 bg-neutral4 rounded-[26px]">
+    <div class="col-span-full 2xl:col-start-2 2xl:col-span-6">
+      <div
+        class="flex flex-col gap-8 2xl:gap-5 p-5 2xl:p-10 bg-neutral4 rounded-[26px]"
+      >
         <h2 class="text-headline-small">Arborescence principale :</h2>
         <ul class="ml-7 list-disc list-outside text-body-medium">
           <li>
@@ -77,6 +79,8 @@ import CallToAction from "../../@common/CallToAction.astro";
 <style>
   ul {
     li {
+      line-height: 44px;
+
       & :global(a) {
         @apply underline;
       }
