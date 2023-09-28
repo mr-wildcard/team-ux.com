@@ -81,7 +81,7 @@
     font-weight: 700;
   }
 
-  @screen xl {
+  @screen lg {
     .text-display-large {
       font-size: 72px;
       line-height: 84px;

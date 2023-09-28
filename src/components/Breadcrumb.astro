@@ -1,5 +1,6 @@
 ---
 import Icon from "./@common/Icon.astro";
+import Grid from "./@common/Grid.astro";
 
 const { pathname } = Astro.url;
 
@@ -17,34 +18,36 @@ const urlPageTitles = new Map([
 ---
 
 <nav aria-label="Breadcrumb" class="container">
-  <ul class="text-label-small">
-    <li>
-      <a href="/">Accueil</a>
-      <Icon name="chevron_right_breadcrumb" width={16} height={16} />
-    </li>
+  <Grid>
+    <ul class="col-span-full text-label-small">
+      <li>
+        <a href="/">Accueil</a>
+        <Icon name="chevron_right_breadcrumb" width={16} height={16} />
+      </li>
 
-    {
-      currentPath.match(/(nos-deux-profils|notre-manifeste)/) && (
-        <li>
-          <span>Team UX</span>
-          <Icon name="chevron_right_breadcrumb" width={16} height={16} />
-        </li>
-      )
-    }
+      {
+        currentPath.match(/(nos-deux-profils|notre-manifeste)/) && (
+          <li>
+            <span>Team UX</span>
+            <Icon name="chevron_right_breadcrumb" width={16} height={16} />
+          </li>
+        )
+      }
 
-    {
-      currentPath.match(/(projets|temoignages)/) && (
-        <li>
-          <span>Références</span>
-          <Icon name="chevron_right_breadcrumb" width={16} height={16} />
-        </li>
-      )
-    }
+      {
+        currentPath.match(/(projets|temoignages)/) && (
+          <li>
+            <span>Références</span>
+            <Icon name="chevron_right_breadcrumb" width={16} height={16} />
+          </li>
+        )
+      }
 
-    <li>
-      <span aria-current="page">{urlPageTitles.get(currentPath)}</span>
-    </li>
-  </ul>
+      <li>
+        <span aria-current="page">{urlPageTitles.get(currentPath)}</span>
+      </li>
+    </ul>
+  </Grid>
 </nav>
 
 <style>
