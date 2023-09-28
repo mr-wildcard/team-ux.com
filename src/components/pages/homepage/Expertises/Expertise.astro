@@ -10,7 +10,7 @@ interface Props {
 const { expertise } = Astro.props;
 ---
 
-<div class="flex gap-5 flex-col p-6 2xl:p-10 rounded-[26px] bg-neutral4">
+<div class="flex gap-5 flex-col p-6 lg:p-10 rounded-[26px] bg-neutral4">
   <h2 class="text-headline-medium-bold">{expertise.name}</h2>
   <p class="text-body-large">{expertise.description}</p>
   <ul class="flex flex-col gap-0.5">
@@ -27,7 +27,7 @@ const { expertise } = Astro.props;
     padding-inline: 20px;
     padding-block: 9px;
 
-    @screen 2xl {
+    @screen lg {
       padding-block: 11px;
     }
   }

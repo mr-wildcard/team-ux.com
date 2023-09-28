@@ -7,23 +7,23 @@ import Expertise from "./Expertise.astro";
 ---
 
 <section
-  class="max-sm:overflow-hidden relative max-sm:pt-[331px] max-sm:mt-[-331px]"
+  class="max-lg:overflow-hidden relative max-lg:pt-[331px] max-lg:mt-[-331px]"
 >
   <div class="container">
     <Grid>
       <h2
-        class="relative 2xl:col-start-2 col-span-full text-headline-medium text-neutral1 mb-6 2xl:mb-10"
+        class="relative lg:col-start-2 col-span-full text-headline-medium text-neutral1 mb-6 lg:mb-10"
       >
         {data.title}
 
         <BackgroundForm1
           as="span"
-          class="bg-red 2xl:hidden absolute z-[-1] top-[-255px] left-[135px]"
+          class="lg:hidden absolute z-[-1] top-[-255px] left-[135px]"
         />
       </h2>
 
       <ul
-        class="col-span-full 2xl:col-start-2 2xl:col-span-5 flex flex-col gap-8"
+        class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col gap-8"
       >
         {
           data.expertises.map((expertise, index) => {
@@ -34,14 +34,14 @@ import Expertise from "./Expertise.astro";
                 {index === 0 && (
                   <Brush
                     id="1"
-                    class="hidden 2xl:block absolute top-[28px] left-[-80px] z-[-1] w-[237px] h-[281px] rotate-[136.069deg]"
+                    class="hidden lg:block absolute top-[28px] left-[-80px] z-[-1] w-[237px] h-[281px] rotate-[136.069deg]"
                   />
                 )}
 
                 {index === 1 && (
                   <Brush
                     id="4"
-                    class="hidden 2xl:block absolute top-[-39px] left-[481px] z-[-1] w-[490px] h-[487px]"
+                    class="hidden lg:block absolute top-[-39px] left-[481px] z-[-1] w-[490px] h-[487px]"
                   />
                 )}
 
