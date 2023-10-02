@@ -8,13 +8,7 @@
         - Site Web
         - Refonte
         - Formation professionnelle
-      images:
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
+      images: desktop-school
       description:
         title: Un nouveau site Web pour recruter les futures promotions d’une école formant au changement systémique
         content: |
@@ -35,13 +29,7 @@
         - Outil métier
         - Refonte
         - Dossiers médico-sociaux
-      images:
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
+      images: desktop-logus
       description:
         title: Une solution numérique repensée pour suivre les dossiers des usagères et usagers dans les établissements médico-sociaux
         content: |
@@ -108,13 +96,7 @@
         - Espace connecté
         - Refonte
         - Habitat social
-      images:
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
+      images: desktop-chalets
       description:
         title: Un site institutionnel et des espaces connectés repensés pour rapprocher un bailleur social et ses cibles multiples
         content: |
@@ -135,6 +117,7 @@
         - Refonte
         - Transport
         - Transformation digitale
+      images: desktop-ekino
       description:
         title: Le système d’information d'un leader du transport entièrement refondu pour faciliter les échanges internes et externes
         content: |
@@ -207,13 +190,7 @@
         - Application mobile
         - Interface conversationnelle
         - Santé
-      images:
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
-        - small: http://placekitten.com/640/640
-          wide: http://placekitten.com/1280/720
+      images: desktop-sacha
       description:
         title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
         content: |
@@ -226,6 +203,7 @@
         - Outil spécialisé
         - Refonte
         - Tech
+      images: desktop-dxomark
       description:
         title: La stratégie UX du site du leader de l’évaluation repensée pour parler à un public aussi bien technophile que novice
         content: |
