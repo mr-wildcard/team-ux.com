@@ -11,46 +11,62 @@ interface Props {
 
 const { class: cssClasses, showBackgroundForm = true } = Astro.props;
 const backgroundFormCSSClasses = showBackgroundForm
-  ? ["overflow-hidden", "2xl:mt-[-100px]", "pt-[353px]", "pb-[168px]"]
+  ? [
+      "overflow-hidden",
+      "pt-[40px]",
+      "pb-[62px]",
+      "mt-[-40px]",
+      "mb-[-62px]",
+      "2xl:pt-[353px]",
+      "2xl:pb-[168px]",
+      "2xl:mt-[-353px]",
+      "2xl:mb-[-168px]",
+    ]
   : [];
 ---
 
 <section class:list={[backgroundFormCSSClasses, cssClasses]}>
   <div id="contact" class="container scroll-mt-[50vh]">
     <Grid>
-      <div class="2xl:col-start-2 2xl:col-span-8">
-        <div class="relative p-14 bg-surface3 rounded-[26px]">
+      <div class="col-span-full 2xl:col-start-2 2xl:col-span-8">
+        <div class="relative px-5 py-10 2xl:p-14 bg-surface3 rounded-[26px]">
           {
             showBackgroundForm && (
-              <BackgroundForm1 class="absolute z-[-1] top-[-205px] right-[-860px] rotate-[-31deg]" />
+              <BackgroundForm1 class="hidden 2xl:block absolute z-[-1] top-[-205px] right-[-860px]" />
             )
           }
 
           <Brush
             id="2"
-            class="absolute z-[-1] top-[-60px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
+            class="absolute z-[-1] top-[-35px] 2xl:top-[-80px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
           />
           <Brush
             id="2"
-            class="absolute z-[-1] right-[-101px] bottom-[-66px] w-[355px] h-[308px]"
+            class="absolute z-[-1] right-[-15px] bottom-[-60px] 2xl:right-[-101px] 2xl:bottom-[-66px] w-[194px] h-[168px] 2xl:w-[355px] 2xl:h-[308px] rotate-[13deg] 2xl:rotate-0"
           />
 
-          <h2 class="text-headline-medium mb-6">
+          <h2
+            class="mb-14 2xl:mb-6 text-headline-small 2xl:text-headline-medium"
+          >
             Envie de travailler avec nous ?
           </h2>
-          <p class="mb-10 text-display-small leading-[normal]">
+          <p
+            class="2xl:mb-10 text-headline-extra-large 2xl:text-display-small leading-[normal]"
+          >
             Contactez-nous à l’adresse <a
               class="block underline underline-offset-[10px]"
               href="mailto:hello@team-ux.com">hello@team-ux.com</a
             >
           </p>
-          <ButtonCopyText
-            type="secondary"
-            textToCopy="hello@team-ux.com"
-            toastCopySuccessText="Notre adresse e-mail a été copiée dans votre presse-papiers !"
-          >
-            Copier notre adresse email dans votre presse-papiers
-          </ButtonCopyText>
+          <div class="hidden 2xl:block">
+            <ButtonCopyText
+              type="secondary"
+              textToCopy="hello@team-ux.com"
+              toastCopySuccessText="Notre adresse e-mail a été copiée dans votre presse-papiers !"
+            >
+              Copier notre adresse email dans votre presse-papiers
+            </ButtonCopyText>
+          </div>
         </div>
       </div>
     </Grid>

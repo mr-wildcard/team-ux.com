@@ -8,9 +8,21 @@ import Footer from "../../components/Footer.astro";
 ---
 
 <Layout title="Projets">
-  <Breadcrumb />
-  <Hero />
-  <AllProjects />
-  <Contact />
+  <div class="hidden md:block mb-[90px]">
+    <Breadcrumb />
+  </div>
+
+  <div class="max-md:mt-[60px] mb-20 2xl:mb-[140px]">
+    <Hero />
+  </div>
+
+  <div class="mb-40 2xl:mb-[170px]">
+    <AllProjects />
+  </div>
+
+  <div class="mb-[150px] 2xl:mb-[170px]">
+    <Contact />
+  </div>
+
   <Footer />
 </Layout>

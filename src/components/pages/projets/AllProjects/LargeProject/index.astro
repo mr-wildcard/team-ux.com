@@ -5,12 +5,14 @@ import Testimonial, {
 } from "../../../../../components/Testimonial.astro";
 import Icon from "../../../../../components/@common/Icon.astro";
 import Tag from "../../../../@common/Tag.astro";
+import Image from "../../../../@common/Image.astro";
 
 interface Props {
   project: {
     title: string;
     activity: string;
     skills: string[];
+    images?: string[];
     description: {
       title: string;
       content: string;
@@ -24,136 +26,185 @@ const { project } = Astro.props;
 const hasManyTestimonials = Array.isArray(project.testimonial);
 ---
 
-<div class="project flex gap-8 p-10 bg-neutral4 rounded-[26px]">
-  <div class="flex flex-col gap-10 2xl:flex-[0_0_40%]">
-    <div>
-      <p class="mb-2.5 text-headline-medium-bold">
-        {project.title}
-      </p>
-      <p class="text-body-large text-neutral1">
-        {project.activity}
-      </p>
-    </div>
-    <ul class="flex flex-wrap gap-2.5">
-      {
-        project.skills.map((skill) => {
-          return (
-            <li>
-              <Tag name={skill} />
-            </li>
-          );
-        })
-      }
-    </ul>
-
-    <div class="show-project-gallery">
-      <CallToAction type="primary" variant="transparent" rightIcon="visibility">
-        Afficher la galerie de ce projet
-      </CallToAction>
-    </div>
-
-    <div class="gallery flex flex-col gap-5 hidden">
-      <ul class="flex gap-5">
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-        <li>
-          <div class="w-[140px] h-[140px] bg-neutral3 rounded-[6px]"></div>
-        </li>
-      </ul>
-      <div class="flex gap-2.5">
-        <span role="presentation">
-          <Icon name="photo_prints" width={24} height={24} /></span
-        >
-        <p class="text-neutral1 text-body-small">
-          Dans une démarche d’éco-responsabilité, nous vous proposons de
-          n’ouvrir<br />que les galeries et visuels dont vous avez besoin.
+<div
+  class="project flex flex-col gap-8 lg:gap-0 px-5 py-6 2xl:p-10 bg-neutral4 rounded-[26px]"
+>
+  <div class="flex flex-col lg:flex-row gap-8">
+    <div class="flex flex-col gap-10 lg:flex-[0_0_40%]">
+      <div>
+        <p class="mb-3 lg:mb-2.5 text-headline-medium-bold">
+          {project.title}
+        </p>
+        <p class="text-body-large text-neutral1">
+          {project.activity}
         </p>
       </div>
+      <ul class="flex flex-wrap gap-2.5">
+        {
+          project.skills.map((skill) => {
+            return (
+              <li>
+                <Tag name={skill} />
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+    <div
+      class="flex flex-col gap-5 px-5 py-6 2xl:p-10 bg-surface5 rounded-[20px]"
+    >
+      <h3 class="text-headline-medium-bold lg:text-headline-large">
+        {project.description.title}
+      </h3>
+      <p class="text-body-medium">
+        {project.description.content}
+      </p>
+
+      {
+        project.testimonial && (
+          <details>
+            <CallToAction
+              type="secondary"
+              as="summary"
+              rightIcon="expand_more"
+              class="cursor-pointer"
+            >
+              Déplier
+              {hasManyTestimonials ? "les témoignages" : "le témoignage"}
+            </CallToAction>
+
+            <div class="mt-5">
+              {!hasManyTestimonials && (
+                <Testimonial
+                  viewMode="inline"
+                  testimonial={project.testimonial}
+                />
+              )}
+
+              {hasManyTestimonials && (
+                <ul class="flex flex-col gap-2.5">
+                  {project.testimonial.map((testimonial) => {
+                    return (
+                      <li>
+                        <Testimonial
+                          viewMode="inline"
+                          testimonial={testimonial}
+                        />
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+          </details>
+        )
+      }
     </div>
   </div>
-  <div class="flex flex-col gap-5 p-10 bg-surface5 rounded-[20px]">
-    <h3 class="text-headline-large">{project.description.title}</h3>
-    <p class="text-body-medium">
-      {project.description.content}
-    </p>
 
-    {
-      project.testimonial && (
-        <details>
-          <CallToAction
-            type="secondary"
-            as="summary"
-            rightIcon="expand_more"
-            class="cursor-pointer"
-          >
-            Déplier {hasManyTestimonials ? "les témoignages" : "le témoignage"}
-          </CallToAction>
+  {
+    project.images && (
+      <!-- 22px: height of the title "open gallery" -->
+      <details class="lg:-translate-y-[22px]">
+        <CallToAction
+          as="summary"
+          type="primary"
+          variant="transparent"
+          class="underline w-full cursor-pointer"
+        >
+          <span class="closed flex gap-1.5 ">
+            Afficher la galerie de ce projet
+            <Icon name="visibility" width={22} height={22} />
+          </span>
 
-          <div class="mt-5">
-            {!hasManyTestimonials && (
-              <Testimonial
-                viewMode="inline"
-                testimonial={project.testimonial}
-              />
-            )}
+          <span class="opened flex gap-1.5">
+            Fermer la galerie
+            <Icon name="cross" width={22} height={22} />
+          </span>
+        </CallToAction>
 
-            {hasManyTestimonials && (
-              <ul class="flex flex-col gap-2.5">
-                {project.testimonial.map((testimonial) => {
-                  return (
-                    <li>
-                      <Testimonial
-                        viewMode="inline"
-                        testimonial={testimonial}
-                      />
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+        <div class="gallery flex flex-col gap-5 mt-8">
+          <ul class="flex flex-col lg:flex-row gap-4 lg:gap-5">
+            {new Array(3).fill(0).map((_, index) => {
+              const imageIndex= index+1;
+              return (
+                <li>
+                  <a
+                    href={`/images/projets/${project.images}-${imageIndex}.png`}
+                    target="_blank"
+                    class="project-image-link relative flex overflow-hidden rounded-md lg:rounded-lg"
+                  >
+                    <CallToAction class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" type="secondary" rightIcon="open_in_new">
+                      Ouvrir l'image
+                    </CallToAction>
+
+                    <Image
+                      srcSet={[
+                        `/images/projets/${project.images}-${imageIndex}.png`,
+                        `/images/projets/${project.images}-${imageIndex}.avif`,
+                        `/images/projets/${project.images}-${imageIndex}.webp`
+                      ]}
+                      alt={`${project.title} - Image gallerie ${imageIndex} sur ${project.images.length}`}
+                    />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <div class="flex gap-2.5">
+            <span role="presentation">
+              <Icon name="photo_prints" width={24} height={24} />
+            </span>
+            <p class="text-neutral1 text-body-small">
+              Dans une <a href="/demarche-eco-conception" class="text-primary underline underline-offset-[4px]">démarche d’éco-responsabilité</a>, nous vous proposons de
+              n’ouvrir
+              <br />
+              que les galeries et visuels dont vous avez besoin.
+            </p>
           </div>
-        </details>
-      )
+        </div>
+      </details>
+    )
     }
-  </div>
 </div>
 
 <style>
   details {
-    &[open] :global(svg) {
-      transform: scaleY(-1);
+    .opened {
+      display: none;
+    }
+
+    &[open] {
+      .closed {
+        display: none;
+      }
+
+      .opened {
+        display: flex;
+      }
+    }
+  }
+
+  @screen lg {
+    .project-image-link {
+      &:before {
+        @apply bg-primary;
+        position: absolute;
+        opacity: 0;
+        content: "";
+        inset: 0;
+      }
+
+      &:hover {
+        button {
+          opacity: 1;
+        }
+
+        &:before {
+          opacity: 80%;
+        }
+      }
     }
   }
 </style>
-
-<script>
-  const projects = document.querySelectorAll(".project");
-
-  projects?.forEach((project) => {
-    const buttonShowGallery = project.querySelector(".show-project-gallery");
-    const gallery = project.querySelector(".gallery");
-
-    if (!buttonShowGallery) {
-      return;
-    }
-
-    function onUserClicksOnShowGalleryButton() {
-      buttonShowGallery.classList.add("hidden");
-      gallery.classList.remove("hidden");
-
-      buttonShowGallery.removeEventListener(
-        "click",
-        onUserClicksOnShowGalleryButton,
-      );
-    }
-
-    buttonShowGallery.addEventListener(
-      "click",
-      onUserClicksOnShowGalleryButton,
-    );
-  });
-</script>

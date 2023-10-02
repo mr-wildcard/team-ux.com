@@ -8,30 +8,28 @@ import SmallProject from "./SmallProject.astro";
 ---
 
 <section class="container">
-  <div class="flex flex-col 2xl:gap-[140px]">
+  <div class="flex flex-col gap-[120px] 2xl:gap-[140px]">
     {
-      data.map((projectsGroup, index) => {
+      data.map((projectsGroup, projectGroupIndex) => {
         if (projectsGroup.group_project_display === "large") {
           return (
-            <div
-              class="relative projects-group isolate"
-              data-group-index={index}
-              data-group-display="large"
-            >
-              <Brush
-                id="4"
-                class:list={[
-                  {
-                    hidden: index > 0,
-                  },
-                  "absolute",
-                  "z-[-1]",
-                  "right-[-20px]",
-                  "top-[-207px]",
-                  "w-[490px]",
-                  "h-[487px]",
-                ]}
-              />
+            <div class="relative isolate px-5 2xl:px-0">
+              {projectGroupIndex === 0 && (
+                <Brush
+                  id="4"
+                  class:list={[
+                    "hidden",
+                    "2xl:block",
+                    "absolute",
+                    "z-[-1]",
+                    "right-[-20px]",
+                    "top-[-207px]",
+                    "w-[490px]",
+                    "h-[487px]",
+                  ]}
+                />
+              )}
+
               <ul class="flex flex-col gap-8">
                 {projectsGroup.projects.map((project) => {
                   return (
@@ -46,12 +44,57 @@ import SmallProject from "./SmallProject.astro";
         } else {
           return (
             <div
-              class="relative projects-group isolate"
-              data-group-index={index}
-              data-group-display="small"
+              class:list={[
+                "overflow-hidden",
+                "relative",
+                "isolate",
+                {
+                  // top left brush first small projects group
+                  // + top left brush first second projects group
+                  "pt-[55px]":
+                    projectGroupIndex === 1 || projectGroupIndex === 3,
+                  "mt-[-55px]":
+                    projectGroupIndex === 1 || projectGroupIndex === 3,
+
+                  // bottom right brush first small projects group
+                  // + bottom right brush first second projects group
+                  "pb-[55px]":
+                    projectGroupIndex === 1 || projectGroupIndex === 3,
+                  "mb-[-55px]":
+                    projectGroupIndex === 1 || projectGroupIndex === 3,
+                },
+              ]}
             >
+              {projectGroupIndex === 1 && (
+                <Brush
+                  id="3"
+                  class="absolute z-[-1] w-[150.5px] h-[140px] 2xl:w-[200px] 2xl:h-[186px] top-2.5 2xl:left-[35px] rotate-[106.935deg]"
+                />
+              )}
+
+              {projectGroupIndex === 1 && (
+                <Brush
+                  id="3"
+                  class="2xl:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                />
+              )}
+
+              {projectGroupIndex === 3 && (
+                <Brush
+                  id="3"
+                  class="absolute z-[-1] w-[150.5px] h-[140px] 2xl:w-[215px] 2xl:h-[200px] left-0 2xl:left-auto 2xl:right-2.5 top-2 rotate-[106.935deg] 2xl:rotate-0"
+                />
+              )}
+
+              {projectGroupIndex === 3 && (
+                <Brush
+                  id="3"
+                  class="2xl:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                />
+              )}
+
               <Grid>
-                <ul class="2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 2xl:space-y-5">
+                <ul class="col-span-full 2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 space-y-2.5 2xl:space-y-5">
                   {projectsGroup.projects.map((project) => {
                     return (
                       <li>
@@ -67,8 +110,8 @@ import SmallProject from "./SmallProject.astro";
       })
     }
   </div>
-  <div class="flex justify-center mt-[60px]">
-    <CallToAction href="/temoignages" type="secondary" rightIcon="forward">
+  <div class="flex justify-center mt-10 2xl:mt-[60px]">
+    <CallToAction href="/temoignages" type="primary" rightIcon="forward">
       Découvrir les témoignages
     </CallToAction>
   </div>

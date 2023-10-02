@@ -8,9 +8,21 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Plan du site">
-  <Breadcrumb />
-  <Hero />
-  <Content />
-  <Contact class="my-40" showBackgroundForm={false} />
+  <div class="hidden md:block mb-[90px]">
+    <Breadcrumb />
+  </div>
+
+  <div class="max-md:mt-[60px] mb-[60px] 2xl:mb-20">
+    <Hero />
+  </div>
+
+  <div class="mb-[200px] 2xl:mb-20">
+    <Content />
+  </div>
+
+  <div class="mb-[150px]">
+    <Contact showBackgroundForm={false} />
+  </div>
+
   <Footer />
 </Layout>

@@ -14,14 +14,19 @@ if ("submenu" in Astro.slots) {
   hrefAttribute = to ?? undefined;
 }
 
-const selected = pathname === to;
+const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 ---
 
 <HTMLTag
   href={hrefAttribute}
   aria-expanded={ariaExpandedAttribute}
   aria-current={selected ? "page" : undefined}
-  class:list={["nav-item", { selected }]}
+  class:list={[
+    "nav-item",
+    "text-headline-large",
+    "lg:text-label-medium",
+    { selected },
+  ]}
 >
   <slot />
 
@@ -30,33 +35,48 @@ const selected = pathname === to;
 
 <style>
   .nav-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
+    padding-block: 20px;
+    display: block;
 
-  .nav-item:is(span, a) {
-    position: relative;
-    white-space: nowrap;
-
-    &.selected,
-    &:hover {
-      @apply text-primary;
+    &.selected {
+      text-decoration: underline;
+      text-underline-offset: 10px;
     }
   }
 
-  .nav-item:is(span, a).selected:after,
-  .nav-item:is(span, a):hover:after,
-  .nav-item:is(button):not(.opened):hover:after {
-    @apply bg-primary;
+  @screen lg {
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0;
+    }
 
-    content: "";
-    position: absolute;
-    left: -1px;
-    right: -1px;
-    bottom: -4px;
-    height: 2px;
-    border-radius: 2px;
+    .nav-item:is(span, a) {
+      position: relative;
+      white-space: nowrap;
+
+      &.selected,
+      &:hover {
+        @apply text-primary;
+
+        text-decoration: none;
+      }
+    }
+
+    .nav-item:is(span, a).selected:after,
+    .nav-item:is(span, a):hover:after,
+    .nav-item:is(button):not(.opened):hover:after {
+      @apply bg-primary;
+
+      content: "";
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      bottom: -4px;
+      height: 2px;
+      border-radius: 2px;
+    }
   }
 </style>

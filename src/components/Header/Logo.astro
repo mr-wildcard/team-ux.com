@@ -8,24 +8,18 @@ const htmlAttributes =
   pathname === "/" ? {} : { href: "/", title: "Retour à l'accueil" };
 ---
 
-<HTMLTag {...htmlAttributes} class="logo">
-  <Icon width={56} height={40} name="logo" />
-  <span>Team UX</span>
+<HTMLTag {...htmlAttributes}>
+  <Icon name="logo" />
 </HTMLTag>
 
 <style>
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  :global([astro-icon="logo"]) {
+    width: 170px;
+    height: 36px;
 
-    & span {
-      @apply text-primary;
-
-      font-size: 28px;
-      letter-spacing: 0.42px;
-      line-height: normal;
-      font-weight: 700;
+    @screen lg {
+      width: 189px;
+      height: 40px;
     }
   }
 </style>

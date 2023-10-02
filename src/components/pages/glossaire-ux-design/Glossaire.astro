@@ -68,9 +68,9 @@ for (const definition of data) {
 const currentPath = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<section class="mt-[60px]">
+<section>
   <div class="sticky-letters hidden sticky top-[83px] bg-surface1">
-    <div class="container">
+    <div class="hidden 2xl:block container">
       <Grid>
         <div class="2xl:col-span-full py-4 border-b border-neutral2">
           <ul class="flex justify-between">
@@ -94,11 +94,13 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
 
   <div class="container">
     <Grid>
-      <div class="2xl:col-start-2 2xl:col-span-10 mb-[140px]">
-        <h2 class="mb-5 text-headline-medium text-neutral1">
+      <div
+        class="col-span-full 2xl:col-start-2 2xl:col-span-10 flex flex-col gap-5 mb-[50px] 2xl:mb-[140px]"
+      >
+        <h2 class="text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
-        <ul class="letters flex flex-wrap gap-x-[7px]">
+        <ul class="hidden 2xl:flex letters flex-wrap gap-x-[7px]">
           {
             allLetters.map((letter) => {
               return (
@@ -114,34 +116,28 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         </ul>
       </div>
 
-      <div class="2xl:col-start-2 2xl:col-span-8">
-        <div class="2xl:space-y-[100px]">
+      <div class="col-span-full 2xl:col-start-2 2xl:col-span-8">
+        <div class="space-y-[50px] 2xl:space-y-[100px]">
           {
-            Array.from(groupedDefinitions.keys()).map((letter, letterIndex) => {
+            Array.from(groupedDefinitions.keys()).map((letter) => {
               return (
                 <div data-letter-section={letter} class="letter-section">
                   <p
                     id={`letter-${letter}`}
-                    class="mb-6 block text-headline-large uppercase 2xl:scroll-mt-[190px]"
+                    class="mb-6 block text-headline-extra-large sm:text-headline-large uppercase 2xl:scroll-mt-[190px]"
                   >
                     {letter}
                   </p>
                   <div class="flex flex-col gap-5">
                     {Array.from(groupedDefinitions.get(letter)).map(
-                      (definition, definitionIndex) => {
+                      (definition) => {
                         return (
                           <div class="bg-neutral4 rounded-[26px]">
-                            <details
-                              open={
-                                definitionIndex + letterIndex === 0
-                                  ? "true"
-                                  : undefined
-                              }
-                            >
-                              <summary class="p-8 flex items-center justify-between gap-1.5 cursor-pointer">
+                            <details>
+                              <summary class="px-5 py-4 sm:p-8 flex items-center justify-between gap-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
-                                  class="text-headline-small 2xl:scroll-mt-[200px]"
+                                  class="text-headline-small scroll-mt-[200px]"
                                 >
                                   <span>{definition.term}</span>&nbsp;
                                   {definition.alternative && (
@@ -151,9 +147,15 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                                     </>
                                   )}
                                 </h3>
-                                <div class="flex items-center gap-1 h-[34px] px-4 bg-surface5 rounded-[100px] text-label-small">
-                                  <span class="open">Ouvrir</span>
-                                  <span class="close">Fermer</span>
+                                <div class="flex items-center gap-1 h-[34px] px-2 sm:px-4 bg-surface5 rounded-[100px] text-label-small">
+                                  <span class="hidden sm:inline open">
+                                    Ouvrir
+                                  </span>
+
+                                  <span class="hidden sm:inline close">
+                                    Fermer
+                                  </span>
+
                                   <Icon
                                     name="expand_more"
                                     width={32}
@@ -161,7 +163,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                                   />
                                 </div>
                               </summary>
-                              <div class="flex flex-col gap-8 p-8 pt-0">
+                              <div class="flex flex-col gap-8 px-5 py-4 sm:p-8 pt-0">
                                 <p class="text-body-medium">
                                   {definition.content}
                                 </p>
@@ -188,7 +190,9 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         </div>
       </div>
 
-      <div class="2xl:col-start-2 2xl:col-span-7 2xl:mt-40">
+      <div
+        class="col-span-full 2xl:col-start-2 2xl:col-span-7 mt-[50px] 2xl:mt-40"
+      >
         <p class="text-body-medium">
           Nous espérons que ce glossaire vous aide à mieux comprendre ce qui se
           cache derrière le jargon de l’UX design et ses anglicismes. N’hésitez
@@ -228,65 +232,4 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
   }
 </style>
 
-<script>
-  const letters = document.querySelector(".letters");
-  const stickyLetters = document.querySelector(".sticky-letters");
-
-  const stickyLettersObserver = new IntersectionObserver(
-    ([entry]) => {
-      if (
-        entry.intersectionRatio === 0 &&
-        stickyLetters.classList.contains("hidden")
-      ) {
-        stickyLetters.classList.remove("hidden");
-      } else if (
-        entry.intersectionRatio === 1 &&
-        !stickyLetters.classList.contains("hidden")
-      ) {
-        stickyLetters.classList.add("hidden");
-      }
-    },
-    {
-      rootMargin: "0px",
-      threshold: [0, 1],
-    },
-  );
-
-  stickyLettersObserver.observe(letters);
-
-  const letterSections = document.querySelectorAll(".letter-section");
-  const letterSectionsLetterAnchors = new Map();
-
-  const letterSectionsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const stickyLetter = letterSectionsLetterAnchors.get(entry.target);
-
-        if (
-          entry.intersectionRatio === 0 &&
-          stickyLetter.classList.contains("active")
-        ) {
-          stickyLetter.classList.remove("active");
-        } else if (
-          entry.intersectionRatio > 0 &&
-          !stickyLetter.classList.contains("active")
-        ) {
-          stickyLetter.classList.add("active");
-        }
-      });
-    },
-    {
-      threshold: [0, 1],
-    },
-  );
-
-  letterSections.forEach((section) => {
-    const letterAnchor = document.querySelector(
-      `.sticky-letters li[data-letter=${section.dataset.letterSection}]`,
-    );
-
-    letterSectionsLetterAnchors.set(section, letterAnchor);
-
-    letterSectionsObserver.observe(section);
-  });
-</script>
+<script src="./index.ts"></script>

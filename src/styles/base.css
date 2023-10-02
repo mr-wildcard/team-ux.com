@@ -5,25 +5,31 @@
 @layer utilities {
   .text-display-large {
     font-size: 42px;
-    line-height: 43px;
+    line-height: 57px;
     font-weight: 700;
   }
 
-  .text-headline-large {
+  .text-headline-extra-large {
     font-size: 28px;
     line-height: 38px;
     font-weight: 900;
   }
 
+  .text-headline-large {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
   .text-headline-medium-bold {
     font-size: 22px;
-    line-height: 30px;
+    line-height: normal;
     font-weight: 900;
   }
 
   .text-headline-medium {
     font-size: 22px;
-    line-height: 30px;
+    line-height: normal;
     font-weight: 700;
   }
 
@@ -31,6 +37,12 @@
     font-size: 20px;
     line-height: 27px;
     font-weight: 700;
+  }
+
+  .text-headline-small-bold {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 900;
   }
 
   .text-body-large {
@@ -42,6 +54,18 @@
   .text-body-large-bold {
     font-size: 19px;
     line-height: 29px;
+    font-weight: 700;
+  }
+
+  .text-body-medium {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  .text-body-medium-bold {
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 700;
   }
 
@@ -57,7 +81,7 @@
     font-weight: 700;
   }
 
-  @media screen(xl) {
+  @screen lg {
     .text-display-large {
       font-size: 72px;
       line-height: 84px;
