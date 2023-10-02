@@ -200,6 +200,12 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     }
   }
 
+  @screen 2xl {
+    .outer {
+      margin-inline: -40px;
+    }
+  }
+
   @screen lg {
     header {
       background: none !important;
@@ -210,7 +216,6 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     }
 
     .outer {
-      margin-inline: -40px;
       border-radius: 0 0 16px 16px;
       animation: sticky-bg-white-header 1s linear forwards;
       animation-timeline: scroll();

@@ -17,7 +17,7 @@ const { block1, block2 } = data;
     <div class="container">
       <Grid>
         <h2
-          class="col-span-full mt-[60px] 2xl:mt-0 mb-8 2xl:mb-20 text-headline-extra-large 2xl:text-display-small 2xl:text-center"
+          class="col-span-full mt-[60px] 2xl:mt-0 mb-8 2xl:mb-20 text-headline-extra-large 2xl:text-display-small lg:text-center"
         >
           {data.title}
         </h2>
@@ -25,7 +25,7 @@ const { block1, block2 } = data;
 
       <Grid class="gap-y-5">
         <div
-          class="col-span-full 2xl:col-start-2 2xl:col-span-5 flex flex-col gap-8 p-5 2xl:p-10 bg-surface6 rounded-[26px]"
+          class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col gap-8 p-5 lg:p-10 bg-surface6 rounded-[26px]"
         >
           <h3 class="mb-5 2xl:mb-8 text-headline-medium-bold">
             {block1.title}
@@ -49,7 +49,7 @@ const { block1, block2 } = data;
           </CallToAction>
         </div>
         <div
-          class="col-span-full 2xl:col-span-5 flex flex-col gap-8 h-fit p-5 2xl:p-10 bg-surface7 rounded-[26px]"
+          class="col-span-full lg:col-span-5 flex flex-col gap-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
           <div class="relative w-[200px] 2xl:w-auto mx-auto 2xl:mx-0">
@@ -76,10 +76,10 @@ const { block1, block2 } = data;
     <div class="container">
       <Grid>
         <div
-          class="col-span-full 2xl:col-start-2 2xl:col-span-10 flex flex-col gap-0.5"
+          class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col gap-0.5"
         >
           <div
-            class="flex flex-col gap-10 p-5 2xl:p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+            class="flex flex-col gap-10 p-5 lg:p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.certifications.title}
@@ -145,14 +145,12 @@ const { block1, block2 } = data;
             </ul>
           </div>
           <div
-            class="flex flex-col gap-10 p-5 2xl:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
+            class="flex flex-col gap-10 p-5 lg:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.commited.title}
             </h3>
-            <ul
-              class="flex items-center justify-around 2xl:justify-normal gap-[44px]"
-            >
+            <ul class="flex items-center max-lg:justify-around gap-[44px]">
               <li>
                 <Image
                   srcSet={["/images/diseno-etico.png"]}
@@ -201,7 +199,9 @@ const { block1, block2 } = data;
     section :global([astro-icon="oval"]) {
       height: 145px;
     }
+  }
 
+  @screen lg {
     .certifications {
       @apply flex items-center justify-between space-y-0;
     }

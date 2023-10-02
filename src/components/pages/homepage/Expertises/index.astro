@@ -6,13 +6,11 @@ import BackgroundForm1 from "../../../BackgroundForm1.astro";
 import Expertise from "./Expertise.astro";
 ---
 
-<section
-  class="max-lg:overflow-hidden relative max-lg:pt-[331px] max-lg:mt-[-331px]"
->
+<section class="overflow-hidden relative max-lg:pt-[331px] max-lg:mt-[-331px]">
   <div class="container">
     <Grid>
       <h2
-        class="relative lg:col-start-2 col-span-full text-headline-medium text-neutral1 mb-6 lg:mb-10"
+        class="col-span-full lg:col-start-2 relative text-headline-medium text-neutral1 mb-6 lg:mb-10"
       >
         {data.title}
 
@@ -41,7 +39,7 @@ import Expertise from "./Expertise.astro";
                 {index === 1 && (
                   <Brush
                     id="4"
-                    class="hidden lg:block absolute top-[-39px] left-[481px] z-[-1] w-[490px] h-[487px]"
+                    class="max-lg:hidden absolute top-[-39px] lg:left-[300px] xl:left-[481px] z-[-1] w-[490px] lg:h-auto h-[487px]"
                   />
                 )}
 
