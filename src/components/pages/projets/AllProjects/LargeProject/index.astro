@@ -127,7 +127,8 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
         <div class="gallery flex flex-col gap-5 mt-8">
           <ul class="flex flex-col lg:flex-row gap-4 lg:gap-5">
             {new Array(3).fill(0).map((_, index) => {
-              const imageIndex= index+1;
+              const imageIndex = index + 1;
+
               return (
                 <li>
                   <a
@@ -145,7 +146,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                         `/images/projets/${project.images}-${imageIndex}.avif`,
                         `/images/projets/${project.images}-${imageIndex}.webp`
                       ]}
-                      alt={`${project.title} - Image gallerie ${imageIndex} sur ${project.images.length}`}
+                      alt={`${project.title} - Image galerie ${imageIndex} sur 3`}
                     />
                   </a>
                 </li>
@@ -191,6 +192,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
       &:before {
         @apply bg-primary;
         position: absolute;
+        pointer-events: none;
         opacity: 0;
         content: "";
         inset: 0;
