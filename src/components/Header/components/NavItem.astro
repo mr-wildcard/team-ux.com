@@ -1,6 +1,6 @@
 ---
 const { pathname } = Astro.url;
-const { to } = Astro.props;
+const { to, class: cssClasses } = Astro.props;
 
 let HTMLTag = "span";
 let hrefAttribute = undefined;
@@ -26,6 +26,7 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
     "text-headline-large",
     "lg:text-label-medium",
     { selected },
+    cssClasses,
   ]}
 >
   <slot />

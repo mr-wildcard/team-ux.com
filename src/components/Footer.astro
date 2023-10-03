@@ -1,6 +1,7 @@
 ---
 import Grid from "./@common/Grid.astro";
 import CallToAction from "./@common/CallToAction.astro";
+import NavItem from "./Header/components/NavItem.astro";
 ---
 
 <footer class="container mb-[60px] 2xl:mb-[70px]">
@@ -17,49 +18,45 @@ import CallToAction from "./@common/CallToAction.astro";
         Team UX sur LinkedIn
       </CallToAction>
     </div>
-    <div class="col-span-full 2xl:col-span-2">
+    <nav class="col-span-full 2xl:col-span-2">
       <ul class="flex flex-col gap-6 2xl:gap-4">
         <li>
-          <CallToAction
-            href="/plan-du-site"
-            type="secondary"
-            variant="transparent"
-          >
-            Plan du site
-          </CallToAction>
+          <NavItem to="/plan-du-site" class="">Plan du site</NavItem>
         </li>
         <li>
-          <CallToAction
-            href="/mentions-legales"
-            type="secondary"
-            variant="transparent"
-          >
-            Mentions légales
-          </CallToAction>
+          <NavItem to="/mentions-legales">Mentions légales</NavItem>
         </li>
       </ul>
-    </div>
+    </nav>
     <div class="col-span-full 2xl:col-span-2">
       <ul class="flex flex-col gap-6 2xl:gap-4">
         <li>
-          <CallToAction
-            href="/glossaire-ux-design"
-            type="secondary"
-            variant="transparent"
-          >
-            Glossaire UX
-          </CallToAction>
+          <NavItem to="/glossaire-ux-design">Glossaire UX</NavItem>
         </li>
         <li>
-          <CallToAction
-            href="/demarche-eco-conception"
-            type="secondary"
-            variant="transparent"
-          >
+          <NavItem to="/demarche-eco-conception">
             Démarche d’éco-conception
-          </CallToAction>
+          </NavItem>
         </li>
       </ul>
     </div>
   </Grid>
 </footer>
+
+<style>
+  footer :global(.nav-item) {
+    width: fit-content;
+
+    &:after {
+      bottom: -2px !important;
+    }
+
+    &:hover:not(.selected) {
+      @apply text-secondary;
+
+      &:after {
+        @apply bg-secondary;
+      }
+    }
+  }
+</style>
