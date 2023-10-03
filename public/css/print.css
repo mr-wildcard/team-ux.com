@@ -1,0 +1,31 @@
+#toast,
+#header,
+#footer,
+img,
+.bg-form {
+  display: none !important;
+}
+
+* {
+  color: black !important;
+}
+
+svg {
+  fill: black !important;
+}
+
+.call-to-action {
+  text-decoration: underline !important;
+}
+
+.call-to-action:not(.transparent) {
+  display: none !important;
+}
+
+[aria-label="Breadcrumb"] {
+  display: none;
+}
+
+.project .gallery {
+  display: none !important;
+}

@@ -4,8 +4,10 @@ import "../styles/base.css";
 import { Sprite } from "astro-icon";
 import Header from "../components/Header/index.astro";
 import Toast from "../components/Toast.astro";
+
 interface Props {
   title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -18,6 +20,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="stylesheet" href="/css/print.css" media="print" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
