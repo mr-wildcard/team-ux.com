@@ -1,8 +1,8 @@
 ---
 import data from "../../../data/glossaire-design-ux/data.yaml";
 import Grid from "../../@common/Grid.astro";
-import Letter from "./Letter.astro";
 import Icon from "../../@common/Icon.astro";
+import Letter from "./Letter.astro";
 import ButtonCopyText from "../../ButtonCopyText.astro";
 
 const totalDefinitions = data.length;
@@ -147,12 +147,10 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                                     </>
                                   )}
                                 </h3>
-                                <div class="flex items-center gap-1 h-[34px] px-2 sm:px-4 bg-surface5 rounded-[100px] text-label-small">
-                                  <span class="hidden sm:inline open">
-                                    Ouvrir
-                                  </span>
+                                <div class="flex items-center gap-1 h-[34px] px-2 sm:px-4 bg-surface5 rounded-[100px] text-label-small hover:shadow-[inset_0_0_0_1px] hover:shadow-primary focus:outline focus:outline-offset-[3px] focus:outline-[3px] focus:outline-secondary">
+                                  <span class="max-sm:hidden open">Ouvrir</span>
 
-                                  <span class="hidden sm:inline close">
+                                  <span class="max-sm:hidden close">
                                     Fermer
                                   </span>
 
