@@ -63,7 +63,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
 
       {
         project.testimonial && (
-          <details>
+          <details class="testimonials">
             <CallToAction
               type="secondary"
               as="summary"
@@ -106,7 +106,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
   {
     project.images && (
       <!-- 22px: height of the title "open gallery" -->
-      <details class="lg:-translate-y-[22px]">
+      <details class="gallery lg:-translate-y-[22px]">
         <CallToAction
           as="summary"
           type="primary"
@@ -171,7 +171,13 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
 </div>
 
 <style>
-  details {
+    .testimonials[open] {
+        :global([astro-icon="expand_more"]) {
+            transform: scaleY(-1);
+        }
+    }
+
+  .gallery {
     .opened {
       display: none;
     }

@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer utilities {
+  .text-inherit {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
   .text-display-large {
     font-size: 42px;
     line-height: 57px;

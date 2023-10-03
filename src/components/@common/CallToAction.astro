@@ -31,7 +31,6 @@ const htmlAttributes = {
   ...props,
   href: href ?? undefined,
   "class:list": [
-    cssClasses,
     "call-to-action",
     {
       transparent: variant === "transparent",
@@ -46,6 +45,7 @@ const htmlAttributes = {
         (variant !== "transparent" && type === "secondary") ||
         (variant === "transparent" && type === "primary"),
     },
+    cssClasses,
   ],
 };
 
@@ -66,6 +66,12 @@ const iconSize = variant === "transparent" ? 18 : 24;
 
     &:not(.transparent) {
       border-radius: 100px;
+
+      &:focus {
+        @apply outline outline-offset-[3px] outline-[3px] outline-secondary;
+
+        box-shadow: 0 0 0 3px white;
+      }
 
       &.primary {
         @apply px-10 py-4 gap-2.5 text-neutral4 bg-primary hover:bg-secondary;
@@ -109,6 +115,10 @@ const iconSize = variant === "transparent" ? 18 : 24;
 
     &.transparent {
       @apply gap-2 underline-offset-[4px] hover:underline;
+
+      &:focus {
+        @apply rounded-[1px] outline outline-offset-[2px] outline-[3px] outline-secondary;
+      }
 
       &.primary {
         @apply text-primary;

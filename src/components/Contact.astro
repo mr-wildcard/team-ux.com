@@ -3,6 +3,7 @@ import Grid from "./@common/Grid.astro";
 import Brush from "./@common/Brush.astro";
 import BackgroundForm1 from "./BackgroundForm1.astro";
 import ButtonCopyText from "./ButtonCopyText.astro";
+import CallToAction from "./@common/CallToAction.astro";
 
 interface Props {
   class?: string;
@@ -55,10 +56,15 @@ const backgroundFormCSSClasses = showBackgroundForm
           <p
             class="2xl:mb-10 text-headline-extra-large 2xl:text-display-small leading-[normal]"
           >
-            Contactez-nous à l’adresse <a
-              class="block underline underline-offset-[10px]"
-              href="mailto:hello@team-ux.com">hello@team-ux.com</a
+            Contactez-nous à l’adresse
+            <CallToAction
+              class="underline !text-inherit !underline-offset-[10px]"
+              variant="transparent"
+              type="secondary"
+              href="mailto:hello@team-ux.com"
             >
+              hello@team-ux.com
+            </CallToAction>
           </p>
           <div class="hidden 2xl:block">
             <ButtonCopyText
