@@ -26,7 +26,10 @@ const { viewMode = "block", testimonial } = Astro.props;
         </span>
         {testimonial.content}&rdquo;
       </p>
-      <footer class="2xl:mt-10 text-body-medium-bold">
+      <footer
+        lang={testimonial.contentLang ?? undefined}
+        class="2xl:mt-10 text-body-medium-bold"
+      >
         {testimonial.author}
         <cite class="not-italic">
           <span class="text-primary">&nbsp;{testimonial.company}</span>
@@ -48,7 +51,10 @@ const { viewMode = "block", testimonial } = Astro.props;
         <p lang={testimonial.contentLang ?? undefined} class="text-body-medium">
           {testimonial.content}&rdquo;
         </p>
-        <footer class="text-body-medium-bold">
+        <footer
+          lang={testimonial.contentLang ?? undefined}
+          class="text-body-medium-bold"
+        >
           {testimonial.author}
           <cite>
             <span class="text-primary">&nbsp;{testimonial.company}</span>
