@@ -11,11 +11,17 @@ interface Props {
   }>;
 }
 
+const { pathname } = Astro.url;
 const { title, items } = Astro.props;
+
 const ariaControlsValue = `controls-${slugify(title)}`;
+
+const isSelected = items.some(
+  (item) => pathname.replaceAll("/", "") === item.pathname?.replaceAll("/", ""),
+);
 ---
 
-<NavItem ariaControlsValue={ariaControlsValue}>
+<NavItem isSelected={isSelected} ariaControlsValue={ariaControlsValue}>
   {title}
   <Icon name="arrow_drop_down" width={20} height={20} />
 
@@ -107,6 +113,12 @@ const ariaControlsValue = `controls-${slugify(title)}`;
 
 <style>
   :global(button.nav-item) {
+    &:not(.selected):hover {
+      :global(.title) {
+        @apply text-secondary !important;
+      }
+    }
+
     :global([astro-icon="arrow_drop_down"]) {
       @apply text-primary;
     }
@@ -133,6 +145,10 @@ const ariaControlsValue = `controls-${slugify(title)}`;
     transform: translateX(-50%);
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
+
+    :global(.nav-item .title) {
+      @apply text-secondary !important;
+    }
   }
 
   svg {
@@ -143,6 +159,7 @@ const ariaControlsValue = `controls-${slugify(title)}`;
     display: flex;
     flex-direction: column;
     gap: 4px;
+    text-align: left;
 
     & :global(.nav-item) {
       padding: 8px 16px;
@@ -154,10 +171,6 @@ const ariaControlsValue = `controls-${slugify(title)}`;
       &:is(.selected),
       &:hover {
         @apply bg-surface5;
-      }
-
-      &:not(.selected):hover {
-        @apply text-secondary;
       }
     }
   }

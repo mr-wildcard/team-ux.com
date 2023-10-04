@@ -1,13 +1,15 @@
 ---
 const { pathname } = Astro.url;
-const { ariaControlsValue, to, class: cssClasses } = Astro.props;
+const { ariaControlsValue, to, class: cssClasses, isSelected } = Astro.props;
 
 let HTMLTag = "span";
 let hrefAttribute = undefined;
 let ariaExpandedAttribute = undefined;
 let ariaControlsAttribute = undefined;
 
-if ("submenu" in Astro.slots) {
+const hasSubmenu = "submenu" in Astro.slots;
+
+if (hasSubmenu) {
   HTMLTag = "button";
   ariaExpandedAttribute = "false";
   ariaControlsAttribute = ariaControlsValue;
@@ -16,7 +18,8 @@ if ("submenu" in Astro.slots) {
   hrefAttribute = to ?? undefined;
 }
 
-const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
+const selected =
+  isSelected || pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 ---
 
 <HTMLTag
@@ -32,7 +35,9 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
     cssClasses,
   ]}
 >
-  <slot />
+  <span class:list={["title", { "flex items-center gap-1": hasSubmenu }]}>
+    <slot />
+  </span>
 
   <slot name="submenu" />
 </HTMLTag>
@@ -51,36 +56,29 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
   @screen lg {
     .nav-item {
       position: relative;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 0;
-    }
-
-    .nav-item:is(span, a) {
-      position: relative;
       white-space: nowrap;
+      padding: 0;
 
       &.selected,
       &:hover {
-        @apply text-primary;
-
         text-decoration: none;
+
+        &:after {
+          @apply bg-primary;
+
+          content: "";
+          position: absolute;
+          left: -1px;
+          right: -1px;
+          bottom: -4px;
+          height: 2px;
+          border-radius: 2px;
+        }
+
+        .title {
+          @apply text-primary;
+        }
       }
-    }
-
-    .nav-item:is(span, a).selected:after,
-    .nav-item:is(span, a):hover:after,
-    .nav-item:is(button):not(.opened):hover:after {
-      @apply bg-primary;
-
-      content: "";
-      position: absolute;
-      left: -1px;
-      right: -1px;
-      bottom: -4px;
-      height: 2px;
-      border-radius: 2px;
     }
   }
 </style>
