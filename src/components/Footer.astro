@@ -5,7 +5,7 @@ import NavItem from "./Header/components/NavItem.astro";
 ---
 
 <footer id="footer" class="container mb-[60px] 2xl:mb-[70px]">
-  <Grid as="nav" class="gap-y-5">
+  <Grid as="nav" class="gap-y-10">
     <div class="col-span-full 2xl:col-start-2 2xl:col-span-2 mb-2.5 2xl:mb-0">
       <CallToAction
         href="https://www.linkedin.com/company/team-ux/"
@@ -19,22 +19,28 @@ import NavItem from "./Header/components/NavItem.astro";
       </CallToAction>
     </div>
     <nav class="col-span-full 2xl:col-span-2">
-      <ul class="flex flex-col gap-6 2xl:gap-4">
+      <ul class="flex flex-col gap-10 2xl:gap-4">
         <li>
-          <NavItem to="/plan-du-site" class="">Plan du site</NavItem>
+          <NavItem class="text-label-large" to="/plan-du-site">
+            Plan du site
+          </NavItem>
         </li>
         <li>
-          <NavItem to="/mentions-legales">Mentions légales</NavItem>
+          <NavItem class="text-label-large" to="/mentions-legales">
+            Mentions légales
+          </NavItem>
         </li>
       </ul>
     </nav>
     <div class="col-span-full 2xl:col-span-2">
-      <ul class="flex flex-col gap-6 2xl:gap-4">
+      <ul class="flex flex-col gap-10 2xl:gap-4">
         <li>
-          <NavItem to="/glossaire-ux-design">Glossaire de l’UX design</NavItem>
+          <NavItem class="text-label-large" to="/glossaire-ux-design">
+            Glossaire de l’UX design
+          </NavItem>
         </li>
         <li>
-          <NavItem to="/demarche-eco-conception">
+          <NavItem class="text-label-large" to="/demarche-eco-conception">
             Démarche d’éco-conception
           </NavItem>
         </li>
@@ -46,6 +52,7 @@ import NavItem from "./Header/components/NavItem.astro";
 <style>
   footer :global(.nav-item) {
     width: fit-content;
+    padding: 0;
 
     &:after {
       bottom: -2px !important;
@@ -58,6 +65,8 @@ import NavItem from "./Header/components/NavItem.astro";
 
       &:after {
         @apply bg-secondary;
+
+        bottom: -2px;
       }
     }
   }

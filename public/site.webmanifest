@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Team UX",
+    "short_name": "Team UX",
+    "start_url": "./index.html",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

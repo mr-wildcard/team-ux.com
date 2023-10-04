@@ -7,12 +7,18 @@ interface Props {
   toastCopySuccessText: string;
 }
 
-const { label, textToCopy, toastCopySuccessText, ...props } = Astro.props;
+const {
+  label,
+  textToCopy,
+  toastCopySuccessText,
+  class: cssClasses,
+  ...props
+} = Astro.props;
 ---
 
 <CallToAction
   {...props}
-  class="copy-text"
+  class:list={["copy-text", cssClasses]}
   leftIcon="content_copy"
   data-text-to-copy={textToCopy}
   data-toast-copy-success-text={toastCopySuccessText}
