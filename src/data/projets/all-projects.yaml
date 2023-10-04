@@ -209,7 +209,7 @@
         content: |
           Pour que les utilisatrices et utilisateurs de smartphones, appareils photo et autres enceintes puissent faire un choix de matériel éclairé et autonome, DXOMARK a mis en place une méthodologie d’évaluation et des scores, publiés régulièrement et attendus voire redoutés des fabricants. La société a fait appel à Team UX pour refondre son site, avec un enjeu très fort d’architecture de l’information. Nous avons particulièrement travaillé sur la simplification de l’affichage des données techniques et des fameux “scores DXOMARK” ainsi que sur l’optimisation des tableaux comparatifs dynamiques devant s’adresser aussi bien à un public novice qu’à un public averti. Enfin, nous avons oeuvré à l’intégration d’une dimension éditoriale avec l’enrichissement des fiches produits et la création de contenus de type “tops”.
       testimonial:
-        - content: |
-            Chaque livrable démontre la capacité de Team UX à faire des propositions mûrement réfléchies, sur tous les aspects, toujours pertinentes et cohérentes.
-          author: Etienne Knauer, SVP sales & marketing de
-          company: DXOMARK
+        content: |
+          Chaque livrable démontre la capacité de Team UX à faire des propositions mûrement réfléchies, sur tous les aspects, toujours pertinentes et cohérentes.
+        author: Etienne Knauer, SVP sales & marketing de
+        company: DXOMARK
