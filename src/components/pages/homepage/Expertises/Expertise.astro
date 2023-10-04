@@ -11,12 +11,16 @@ const { expertise } = Astro.props;
 ---
 
 <div class="flex gap-5 flex-col p-6 lg:p-10 rounded-[26px] bg-neutral4">
-  <h2 class="text-headline-medium-bold">{expertise.name}</h2>
+  <h3 class="text-headline-medium-bold">{expertise.name}</h3>
   <p class="text-body-large">{expertise.description}</p>
   <ul class="flex flex-col gap-0.5">
     {
       expertise.skills.map((skill) => {
-        return <li class="text-body-medium bg-surface5 rounded">{skill}</li>;
+        return (
+          <li class="text-body-medium bg-surface5 rounded">
+            <h4>{skill}</h4>
+          </li>
+        );
       })
     }
   </ul>
