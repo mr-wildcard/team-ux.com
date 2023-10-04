@@ -18,7 +18,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
       id="mobile-menu"
       class="hidden overflow-y-auto fixed top-[84px] w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
     >
-      <nav>
+      <nav role="navigation">
         <ul>
           <li>
             <NavItem to="/">Accueil</NavItem>
@@ -80,7 +80,7 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
     >
       <Logo />
 
-      <nav class="hidden lg:block">
+      <nav role="navigation" class="hidden lg:block">
         <ul class="flex items-center gap-10">
           <li>
             <NavItem to="/">Accueil</NavItem>

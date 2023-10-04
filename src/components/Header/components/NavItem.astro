@@ -1,14 +1,16 @@
 ---
 const { pathname } = Astro.url;
-const { to, class: cssClasses } = Astro.props;
+const { ariaControlsValue, to, class: cssClasses } = Astro.props;
 
 let HTMLTag = "span";
 let hrefAttribute = undefined;
 let ariaExpandedAttribute = undefined;
+let ariaControlsAttribute = undefined;
 
 if ("submenu" in Astro.slots) {
   HTMLTag = "button";
   ariaExpandedAttribute = "false";
+  ariaControlsAttribute = ariaControlsValue;
 } else if (to !== pathname) {
   HTMLTag = "a";
   hrefAttribute = to ?? undefined;
@@ -20,6 +22,7 @@ const selected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 <HTMLTag
   href={hrefAttribute}
   aria-expanded={ariaExpandedAttribute}
+  aria-controls={ariaControlsAttribute}
   aria-current={selected ? "page" : undefined}
   class:list={[
     "nav-item",
