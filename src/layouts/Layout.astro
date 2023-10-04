@@ -68,7 +68,7 @@ const { title, description } = Astro.props;
 
       #toast {
         transform: translateX(-50%);
-        animation-duration: 3s;
+        animation-duration: 6s;
         animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 
         &.show {
@@ -86,11 +86,11 @@ const { title, description } = Astro.props;
           transform: translateX(-50%) translateY(0);
         }
 
-        20% {
+        10% {
           transform: translateX(-50%) translateY(calc(-80px - 100%));
         }
 
-        80% {
+        90% {
           transform: translateX(-50%) translateY(calc(-80px - 100%));
         }
 
