@@ -130,11 +130,11 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
               const imageIndex = index + 1;
 
               return (
-                <li>
+                <li class="flex-1">
                   <a
                     href={`/images/projets/${project.images}-${imageIndex}.png`}
                     target="_blank"
-                    class="project-image-link relative flex overflow-hidden rounded-md lg:rounded-lg"
+                    class="project-image-link aspect-[431/361] relative flex overflow-hidden rounded-md lg:rounded-lg"
                   >
                     <CallToAction tabindex="-1" class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" type="secondary" rightIcon="open_in_new">
                       Ouvrir l'image
@@ -146,6 +146,9 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                         `/images/projets/${project.images}-${imageIndex}.avif`,
                         `/images/projets/${project.images}-${imageIndex}.webp`
                       ]}
+                      style="opacity: 0"
+                      class="opacity-0 transition-opacity"
+                      onload="this.style.opacity = '1'"
                       alt={`${project.title} - Image galerie ${imageIndex} sur 3`}
                     />
                   </a>
