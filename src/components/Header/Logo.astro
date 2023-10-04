@@ -5,10 +5,12 @@ const { pathname } = Astro.url;
 
 const HTMLTag = pathname === "/" ? "div" : "a";
 const htmlAttributes =
-  pathname === "/" ? {} : { href: "/", title: "Retour à l'accueil" };
+  pathname === "/"
+    ? { class: "cursor-pointer" }
+    : { href: "/", title: "Retour à l'accueil" };
 ---
 
-<HTMLTag {...htmlAttributes}>
+<HTMLTag id="logo" {...htmlAttributes}>
   <Icon name="logo" />
 </HTMLTag>
 
@@ -23,3 +25,15 @@ const htmlAttributes =
     }
   }
 </style>
+
+<script>
+  const logo = document.querySelector<HTMLElement>("#logo");
+
+  if (!logo.hasAttribute("href")) {
+    logo.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+      });
+    });
+  }
+</script>
