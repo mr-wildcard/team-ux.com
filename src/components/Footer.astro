@@ -52,7 +52,9 @@ import NavItem from "./Header/components/NavItem.astro";
     }
 
     &:hover:not(.selected) {
-      @apply text-secondary;
+      :global(.title) {
+        @apply text-secondary !important;
+      }
 
       &:after {
         @apply bg-secondary;
