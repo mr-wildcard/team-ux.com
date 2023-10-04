@@ -15,9 +15,9 @@ const { project } = Astro.props;
   <p class="mb-5 text-headline-small 2xl:text-label-large">
     {project.name}
   </p>
-  <p class="mb-8 text-headline-medium-bold">
+  <h3 class="mb-8 text-headline-medium-bold">
     {project.title}
-  </p>
+  </h3>
   <ul class="flex flex-wrap gap-2.5">
     {
       project.skills.map((skill) => {
