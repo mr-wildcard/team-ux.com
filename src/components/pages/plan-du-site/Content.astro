@@ -10,7 +10,7 @@ import CallToAction from "../../@common/CallToAction.astro";
         class="flex flex-col gap-8 2xl:gap-5 p-5 2xl:p-10 bg-neutral4 rounded-[26px]"
       >
         <h2 class="text-headline-small">Arborescence principale :</h2>
-        <ul class="ml-7 list-disc list-outside text-body-medium">
+        <ul class="ml-7 list-disc list-outside !text-body-medium">
           <li>
             <CallToAction href="/" variant="transparent">
               Page d’accueil
@@ -91,6 +91,7 @@ import CallToAction from "../../@common/CallToAction.astro";
     }
 
     & :global(a) {
+      @apply text-inherit;
       font-weight: 500 !important;
     }
   }
