@@ -23,12 +23,20 @@ import TeamUXStamp from "../../TeamUXStamp.astro";
       </h3>
       <Grid>
         <p
-          class="col-span-full 2xl:col-start-4 2xl:col-span-6 mb-20 text-body-large 2xl:text-body-extra-large 2xl:text-center"
+          class="col-span-full 2xl:col-start-4 2xl:col-span-6 mb-10 text-body-large 2xl:text-body-extra-large 2xl:text-center"
         >
           {data.content}
         </p>
 
         <div class="col-span-full 2xl:col-start-2 2xl:col-span-10">
+          <CallToAction
+            type="secondary"
+            rightIcon="open_in_new"
+            class="mx-auto mb-20"
+          >
+            Page LinkedIn de Team UX
+          </CallToAction>
+
           <div class="px-5 py-6 2xl:p-10 bg-surface5 rounded-[26px]">
             <h3 class="mb-10 text-headline-medium-bold">
               Voici comment nous travaillons
