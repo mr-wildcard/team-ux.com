@@ -1,13 +1,13 @@
 ---
 import Image from "../@common/Image.astro";
 
-const { width, height, class: cssClasses } = Astro.props;
+const { width, height, class: cssClasses, alt = "" } = Astro.props;
 ---
 
 <Image
   srcSet={["/images/yuna.png", "/images/yuna.avif", "/images/yuna.webp"]}
   width={width}
   height={height}
-  alt=""
+  alt={alt}
   class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
 />
