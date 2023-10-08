@@ -63,7 +63,10 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <section>
-  <div id="sticky-letters-nav" class="hidden sticky top-[83px] bg-surface1">
+  <div
+    id="sticky-letters-nav"
+    class="hidden sticky top-[83px] bg-surface1 z-[1]"
+  >
     <div class="hidden 2xl:block container">
       <Grid>
         <div class="2xl:col-span-full py-4 border-b border-neutral2">
