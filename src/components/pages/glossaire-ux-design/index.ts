@@ -42,8 +42,10 @@ const letterSectionsObserver = new IntersectionObserver(
   },
   {
     threshold: 0,
-    // When window's height is 885px, the bottom root margin is 616px.
-    rootMargin: `-172px 0px -${(window.innerHeight * 616) / 885}px 0px`,
+    // 172: height of sticky header + sticky letters
+    // 100: space between two letters section
+    // Adding those values, makes theorically impossible for the intersection observer to detect two letter sections intersecting.
+    rootMargin: `-172px 0px -${window.innerHeight - (172 + 100)}px 0px`,
   },
 );
 
