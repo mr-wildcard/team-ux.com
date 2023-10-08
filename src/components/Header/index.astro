@@ -9,14 +9,14 @@ import NavItems from "./NavItems.astro";
 <header
   id="header"
   data-menu-opened="false"
-  class="container sticky z-10 top-0 text-headline-large"
+  class="container sticky z-10 top-0"
 >
   <div class="outer isolate">
     <div
       id="mobile-menu"
       class="hidden overflow-y-auto overflow-x-hidden fixed top-[84px] w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
     >
-      <nav role="navigation">
+      <nav role="navigation" class="text-headline-large">
         <ul class="flex flex-col gap-8">
           <li>
             <NavItem to="/">Accueil</NavItem>
