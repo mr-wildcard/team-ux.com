@@ -63,7 +63,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <section>
-  <div class="sticky-letters hidden sticky top-[83px] bg-surface1">
+  <div id="sticky-letters-nav" class="hidden sticky top-[83px] bg-surface1">
     <div class="hidden 2xl:block container">
       <Grid>
         <div class="2xl:col-span-full py-4 border-b border-neutral2">
@@ -94,7 +94,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         <h2 class="text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
-        <ul class="hidden 2xl:flex letters flex-wrap gap-x-[7px]">
+        <ul id="letters-nav" class="hidden 2xl:flex flex-wrap gap-x-[7px]">
           {
             allLetters.map((letter) => {
               return (

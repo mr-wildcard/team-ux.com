@@ -1,7 +1,13 @@
-const letters = document.querySelector<HTMLDivElement>(".letters");
-const stickyLetters = document.querySelector<HTMLDivElement>(".sticky-letters");
+const letters = document.querySelector<HTMLDivElement>("#letters-nav");
+const stickyLetters = document.querySelector<HTMLDivElement>(
+  "#sticky-letters-nav",
+);
+const letterSections =
+  document.querySelectorAll<HTMLDivElement>(".letter-section");
 
-const stickyLettersObserver = new IntersectionObserver(
+const letterSectionsLetterAnchors = new Map();
+
+const lettersObserver = new IntersectionObserver(
   ([{ intersectionRatio }]) => {
     if (!stickyLetters) {
       return;
@@ -17,49 +23,42 @@ const stickyLettersObserver = new IntersectionObserver(
     }
   },
   {
-    rootMargin: "0px",
+    rootMargin: "-90px 0px 0px 0px",
     threshold: [0, 1],
   },
 );
 
-const letterSections =
-  document.querySelectorAll<HTMLDivElement>(".letter-section");
-
-const letterSectionsLetterAnchors = new Map();
-
 const letterSectionsObserver = new IntersectionObserver(
   (entries) => {
-    entries.forEach(({ intersectionRatio, target }) => {
+    entries.forEach(({ isIntersecting, target }) => {
       const stickyLetter = letterSectionsLetterAnchors.get(target);
 
-      if (
-        intersectionRatio === 0 &&
-        stickyLetter.classList.contains("active")
-      ) {
+      if (!isIntersecting && stickyLetter.classList.contains("active")) {
         stickyLetter.classList.remove("active");
-      } else if (
-        intersectionRatio > 0 &&
-        !stickyLetter.classList.contains("active")
-      ) {
+      } else if (isIntersecting && !stickyLetter.classList.contains("active")) {
         stickyLetter.classList.add("active");
       }
     });
   },
   {
-    threshold: [0, 1],
+    threshold: 0,
+    // When window's height is 885px, the bottom root margin is 616px.
+    rootMargin: `-172px 0px -${(window.innerHeight * 616) / 885}px 0px`,
   },
 );
 
-if (letters) {
-  stickyLettersObserver.observe(letters);
+if (letters && stickyLetters) {
+  lettersObserver.observe(letters);
+
+  for (const letterSection of letterSections) {
+    const stickyLetter = stickyLetters.querySelector(
+      `li[data-letter=${letterSection.dataset.letterSection}]`,
+    );
+
+    if (stickyLetter) {
+      letterSectionsLetterAnchors.set(letterSection, stickyLetter);
+
+      letterSectionsObserver.observe(letterSection);
+    }
+  }
 }
-
-letterSections.forEach((section) => {
-  const letterAnchor = document.querySelector(
-    `.sticky-letters li[data-letter=${section.dataset.letterSection}]`,
-  );
-
-  letterSectionsLetterAnchors.set(section, letterAnchor);
-
-  letterSectionsObserver.observe(section);
-});
