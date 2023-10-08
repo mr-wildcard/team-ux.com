@@ -62,3 +62,11 @@ if (letters && stickyLetters) {
     }
   }
 }
+
+if (window.matchMedia("(min-width: 1280px)").matches) {
+  const firstDefinition = document.querySelector(".letter-section details");
+
+  if (firstDefinition) {
+    firstDefinition.setAttribute("open", "");
+  }
+}
