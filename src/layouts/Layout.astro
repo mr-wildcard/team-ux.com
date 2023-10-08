@@ -65,49 +65,6 @@ const { title, description } = Astro.props;
           }
         }
       }
-
-      #toast {
-        transform: translateX(-50%);
-        animation-duration: 6s;
-        animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-
-        &.show {
-          animation-name: showToastCopyTextSuccess;
-        }
-
-        &.hide {
-          animation-duration: 300ms;
-          animation-name: hideToastCopyTextSuccess;
-        }
-      }
-
-      @keyframes showToastCopyTextSuccess {
-        0% {
-          transform: translateX(-50%) translateY(0);
-        }
-
-        10% {
-          transform: translateX(-50%) translateY(calc(-80px - 100%));
-        }
-
-        90% {
-          transform: translateX(-50%) translateY(calc(-80px - 100%));
-        }
-
-        100% {
-          transform: translateX(-50%) translateY(0);
-        }
-      }
-
-      @keyframes hideToastCopyTextSuccess {
-        from {
-          transform: translateX(-50%) translateY(calc(-80px - 100%));
-        }
-
-        to {
-          transform: translateX(-50%) translateY(0);
-        }
-      }
     </style>
   </body>
 </html>
