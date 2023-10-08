@@ -1,14 +1,14 @@
-title: Nos expertises
+title: Nos expertises pour vous accompagner
 expertises:
   - name: Stratégie & design UX/UI
     description: On intervient sur toutes les phases d’un projet de conception centrée autour des personnes utilisatrices.
     skills:
       - Cadrage stratégique et méthodologique
       - Benchmarks et audits
-      - Recherche UX
+      - Méthodes de recherche qualitatives et quantitatives auprès des personnes utilisatrices
       - Ateliers UX, de co-création et de design thinking
-      - Wireframes et prototypes
-      - Maquettes UI
+      - Wireframes et prototypes de sites Web, d’applications mobile/tablette et d’outils métiers
+      - Maquettes graphiques et bibliothèques UI
       - UX writing
       - Tests d’utilisabilité
   - name: Conception de produits complexes
@@ -25,6 +25,7 @@ expertises:
     description: On est formées en accessibilité et en éco-conception numériques. On vous accompagne dans cette direction !
     skills:
       - Éco-conception de sites Web, d’applications mobile et d’outils métiers
+      - Audit et référentiels d’éco-conception et d’accessibilité
       - Sensibilisation aux questionnements éthiques liés au design numérique (“numérique responsable”)
       - UX writing inclusif
       - Design UX et UI intégrant les règles d’accessibilité relatives au design
