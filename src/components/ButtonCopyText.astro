@@ -31,12 +31,6 @@ const {
   const toast = document.querySelector("#toast");
   const toastContent = toast.querySelector("span");
 
-  // Hack for Safari not replaying the animation when we click on the button several times.
-  // Removing classes after the animation allows the toast to appear again.
-  toast.addEventListener("animationend", () => {
-    toast.classList.remove("show", "hide");
-  });
-
   function showToast() {
     toast.classList.add("show");
   }
@@ -44,6 +38,17 @@ const {
   function hideToast() {
     toast.classList.add("hide");
   }
+
+  function onUserScrolls() {
+    toast.classList.add("hide");
+  }
+
+  // Hack for Safari not replaying the animation when we click on the button several times.
+  // Removing classes after the animation allows the toast to appear again.
+  toast.addEventListener("animationend", () => {
+    toast.classList.remove("show", "hide");
+    window.removeEventListener("scroll", onUserScrolls);
+  });
 
   buttons.forEach((button) => {
     const { textToCopy, toastCopySuccessText } = button.dataset;
@@ -61,6 +66,7 @@ const {
         console.error("Failed to copy text:", textToCopy, err);
       } finally {
         button.addEventListener("click", onUserClicksOnCopyButton);
+        window.addEventListener("scroll", onUserScrolls);
       }
     }
 
