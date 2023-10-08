@@ -215,23 +215,21 @@ const { block1, block2 } = data;
     }
   }
 
-  .certifications {
-    @apply columns-2 space-y-10;
-
-    img {
-      margin-inline: auto;
-    }
-  }
-
   @screen 2xl {
     section :global([astro-icon="oval"]) {
       height: 145px;
     }
   }
 
-  @screen lg {
-    .certifications {
-      @apply flex items-center justify-between space-y-0;
+  .certifications {
+    @apply flex items-center flex-wrap justify-between space-y-0 gap-10;
+
+    li {
+      width: 120px;
+
+      img {
+        margin-inline: auto;
+      }
     }
   }
 </style>
