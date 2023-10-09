@@ -149,12 +149,6 @@ import NavItems from "./NavItems.astro";
     }
   }
 
-  header:not([data-menu-opened="true"]) .outer {
-    animation: mobile-sticky-bg-white-header 1ms linear forwards;
-    animation-timeline: scroll();
-    animation-range: 0px 1px;
-  }
-
   #mobile-menu {
     :global([astro-icon="arrow_drop_down"]) {
       @apply text-primary;
@@ -184,10 +178,22 @@ import NavItems from "./NavItems.astro";
 
     .outer {
       border-radius: 0 0 16px 16px;
+    }
+  }
 
-      animation: desktop-sticky-bg-white-header 1ms linear forwards;
+  @supports (animation-timeline: scroll()) {
+    header:not([data-menu-opened="true"]) .outer {
+      animation: mobile-sticky-bg-white-header 1ms linear forwards;
       animation-timeline: scroll();
       animation-range: 0px 1px;
+    }
+
+    @screen lg {
+      .outer {
+        animation: desktop-sticky-bg-white-header 1ms linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0px 1px;
+      }
     }
   }
 
