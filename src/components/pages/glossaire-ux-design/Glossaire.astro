@@ -125,7 +125,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                   >
                     {letter}
                   </p>
-                  <div class="flex flex-col gap-5">
+                  <div class="flex flex-col gap-5 scroll-mt-[100px] 2xl:scroll-mt-[190px]">
                     {Array.from(groupedDefinitions.get(letter)).map(
                       (definition) => {
                         return (
