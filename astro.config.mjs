@@ -4,7 +4,7 @@ import yaml from "@rollup/plugin-yaml";
 import sitemap from "@astrojs/sitemap";
 
 const LOCAL_PORT = 4321;
-const LOCAL_HOST = "0.0.0.0";
+const LOCAL_HOST = true;
 
 function getSiteURL() {
   if (process.env.CF_PAGES) {
@@ -14,7 +14,7 @@ function getSiteURL() {
       return "https://team-ux.com/";
     }
   } else {
-    return `http://${LOCAL_HOST}:${LOCAL_PORT}/`;
+    return `http://localhost:${LOCAL_PORT}/`;
   }
 }
 
