@@ -44,7 +44,13 @@ const urlPageTitles = new Map([
       }
 
       <li>
-        <span aria-current="page">{urlPageTitles.get(currentPath)}</span>
+        <span aria-current="page"
+          >{
+            urlPageTitles.has(currentPath)
+              ? urlPageTitles.get(currentPath)
+              : "Page non trouvée"
+          }</span
+        >
       </li>
     </ul>
   </Grid>

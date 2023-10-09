@@ -3,12 +3,17 @@ import CommonPageHero from "../components/CommonPageHero.astro";
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <Layout
   title="Team UX ▷ Page non trouvée"
   description="Nous sommes Yuna & Daniela, un binôme de designers UX seniors. Nous adorons (dé)construire des produits complexes. ✓ UX design ✓ Éco-conception ✓ Accessibilité"
 >
+  <div class="hidden md:block mb-[90px]">
+    <Breadcrumb />
+  </div>
+
   <div class="mt-[60px] 2xl:mt-[129px] mb-[200px] 2xl:mb-56">
     <CommonPageHero
       title="Page non trouvée..."
