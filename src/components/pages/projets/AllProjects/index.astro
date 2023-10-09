@@ -8,18 +8,18 @@ import SmallProject from "./SmallProject.astro";
 ---
 
 <section class="container">
-  <div class="flex flex-col gap-[120px] 2xl:gap-[140px]">
+  <div class="flex flex-col gap-[120px] lg:gap-[140px]">
     {
       data.map((projectsGroup, projectGroupIndex) => {
         if (projectsGroup.group_project_display === "large") {
           return (
-            <div class="relative isolate px-5 2xl:px-0">
+            <div class="relative isolate px-5 lg:px-0">
               {projectGroupIndex === 0 && (
                 <Brush
                   id="4"
                   class:list={[
                     "hidden",
-                    "2xl:block",
+                    "lg:block",
                     "absolute",
                     "z-[-1]",
                     "right-[-20px]",
@@ -68,33 +68,33 @@ import SmallProject from "./SmallProject.astro";
               {projectGroupIndex === 1 && (
                 <Brush
                   id="3"
-                  class="absolute z-[-1] w-[150.5px] h-[140px] 2xl:w-[200px] 2xl:h-[186px] top-2.5 2xl:left-[35px] rotate-[106.935deg]"
+                  class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[200px] lg:h-[186px] top-2.5 lg:left-[35px] rotate-[106.935deg]"
                 />
               )}
 
               {projectGroupIndex === 1 && (
                 <Brush
                   id="3"
-                  class="2xl:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                  class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
                 />
               )}
 
               {projectGroupIndex === 3 && (
                 <Brush
                   id="3"
-                  class="absolute z-[-1] w-[150.5px] h-[140px] 2xl:w-[215px] 2xl:h-[200px] left-0 2xl:left-auto 2xl:right-2.5 top-2 rotate-[106.935deg] 2xl:rotate-0"
+                  class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[215px] lg:h-[200px] left-0 lg:left-auto lg:right-2.5 top-2 rotate-[106.935deg] lg:rotate-0"
                 />
               )}
 
               {projectGroupIndex === 3 && (
                 <Brush
                   id="3"
-                  class="2xl:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                  class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
                 />
               )}
 
               <Grid>
-                <ul class="col-span-full 2xl:col-start-2 2xl:col-span-10 2xl:columns-2 2xl:gap-8 space-y-5">
+                <ul class="col-span-full lg:col-start-2 lg:col-span-10 lg:columns-2 lg:gap-8 space-y-5">
                   {projectsGroup.projects.map((project) => {
                     return (
                       <li>
@@ -110,7 +110,7 @@ import SmallProject from "./SmallProject.astro";
       })
     }
   </div>
-  <div class="flex justify-center mt-10 2xl:mt-[60px]">
+  <div class="flex justify-center mt-10 lg:mt-[60px]">
     <CallToAction href="/temoignages" type="primary" rightIcon="forward">
       Découvrir les témoignages
     </CallToAction>

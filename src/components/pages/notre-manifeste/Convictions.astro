@@ -7,30 +7,30 @@ import Brush from "../../@common/Brush.astro";
 <section class="container">
   <Grid>
     <h2
-      class="col-span-full 2xl:col-start-2 2xl:col-span-6 mb-10 text-headline-extra-large 2xl:text-display-small"
+      class="col-span-full lg:col-start-2 lg:col-span-6 mb-10 text-headline-extra-large lg:text-display-small"
     >
       {data.title}
     </h2>
-    <div class="col-span-full 2xl:col-start-2 2xl:col-span-5 relative isolate">
+    <div class="col-span-full lg:col-start-2 lg:col-span-5 relative isolate">
       <Brush
         id="1"
-        class="hidden 2xl:block absolute z-[-1] w-[250px] h-[297px] top-[260px] right-[-110px] rotate-[-45deg]"
+        class="hidden lg:block absolute z-[-1] w-[250px] h-[297px] top-[260px] right-[-110px] rotate-[-45deg]"
       />
 
       <Brush
         id="4"
-        class="hidden 2xl:block absolute z-[-1] w-[330px] h-[328px] top-[965px] left-[-95px]"
+        class="hidden lg:block absolute z-[-1] w-[330px] h-[328px] top-[965px] left-[-95px]"
       />
 
       <ul class="flex flex-col gap-1">
         {
           data.convictions.map((conviction) => {
             return (
-              <li class="flex flex-col gap-5 p-5 2xl:p-10 bg-surface5 rounded-[4px] first:rounded-[26px_26px_4px_4px] last:rounded-[4px_4px_26px_26px]">
-                <h3 class="text-headline-medium 2xl:text-headline-medium-bold">
+              <li class="flex flex-col gap-5 p-5 lg:p-10 bg-surface5 rounded-[4px] first:rounded-[26px_26px_4px_4px] last:rounded-[4px_4px_26px_26px]">
+                <h3 class="text-headline-medium lg:text-headline-medium-bold">
                   {conviction.title}
                 </h3>
-                <p class="2xl:mr-10 text-body-medium">{conviction.content}</p>
+                <p class="lg:mr-10 text-body-medium">{conviction.content}</p>
               </li>
             );
           })

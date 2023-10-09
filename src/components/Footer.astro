@@ -4,22 +4,22 @@ import CallToAction from "./@common/CallToAction.astro";
 import NavItem from "./Header/components/NavItem.astro";
 ---
 
-<footer id="footer" class="container mb-[60px] 2xl:mb-[70px]">
+<footer id="footer" class="container mb-[60px] lg:mb-[70px]">
   <Grid as="nav" class="gap-y-10">
-    <div class="col-span-full 2xl:col-start-2 2xl:col-span-2 mb-2.5 2xl:mb-0">
+    <div class="col-span-full lg:col-start-2 lg:col-span-2 mb-2.5 lg:mb-0">
       <CallToAction
         href="https://www.linkedin.com/company/team-ux/"
         target="_blank"
         rightIcon="open_in_new"
         type="primary"
         variant="transparent"
-        class="!text-label-large 2xl:!text-label-medium-bold"
+        class="!text-label-large lg:!text-label-medium-bold"
       >
         Team UX sur LinkedIn
       </CallToAction>
     </div>
-    <nav class="col-span-full 2xl:col-span-2">
-      <ul class="flex flex-col gap-10 2xl:gap-4">
+    <nav class="col-span-full lg:col-span-2">
+      <ul class="flex flex-col gap-10 lg:gap-4">
         <li>
           <NavItem class="text-label-large" to="/plan-du-site">
             Plan du site
@@ -32,8 +32,8 @@ import NavItem from "./Header/components/NavItem.astro";
         </li>
       </ul>
     </nav>
-    <div class="col-span-full 2xl:col-span-2">
-      <ul class="flex flex-col gap-10 2xl:gap-4">
+    <div class="col-span-full lg:col-span-2">
+      <ul class="flex flex-col gap-10 lg:gap-4">
         <li>
           <NavItem class="text-label-large" to="/glossaire-ux-design">
             Glossaire de l’UX design

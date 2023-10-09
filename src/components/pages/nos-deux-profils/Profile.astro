@@ -22,15 +22,15 @@ const { profile } = Astro.props;
 ---
 
 <div class="flex flex-col gap-0.5">
-  <div class="px-5 py-6 2xl:p-10 bg-neutral4 rounded-t-[26px] rounded-b-[4px]">
-    <div class="flex flex-col 2xl:flex-row gap-5">
+  <div class="px-5 py-6 lg:p-10 bg-neutral4 rounded-t-[26px] rounded-b-[4px]">
+    <div class="flex flex-col lg:flex-row gap-5">
       <slot name="picture" />
-      <div class="2xl:mt-auto">
+      <div class="lg:mt-auto">
         <h3>
-          <span class="block mb-3 2xl:mb-5 text-headline-medium-bold">
+          <span class="block mb-3 lg:mb-5 text-headline-medium-bold">
             {profile.fullName}
           </span>
-          <span class="block text-neutral1 text-label-large 2xl:text-body-large"
+          <span class="block text-neutral1 text-label-large lg:text-body-large"
             >{profile.title}</span
           >
         </h3>
@@ -38,7 +38,7 @@ const { profile } = Astro.props;
       </div>
     </div>
   </div>
-  <div class="px-5 py-6 2xl:p-10 bg-surface6 rounded-[4px]">
+  <div class="px-5 py-6 lg:p-10 bg-surface6 rounded-[4px]">
     <h4 class="mb-6 text-headline-small">
       Diplômée, formée ou certifiée en...
     </h4>
@@ -55,7 +55,7 @@ const { profile } = Astro.props;
     </ul>
   </div>
   <div
-    class="flex flex-col gap-8 px-5 py-6 2xl:p-10 bg-neutral4 rounded-t-[4px] rounded-b-[26px]"
+    class="flex flex-col gap-8 px-5 py-6 lg:p-10 bg-neutral4 rounded-t-[4px] rounded-b-[26px]"
   >
     <h4 class="text-headline-small">
       {profile.presentation.title}

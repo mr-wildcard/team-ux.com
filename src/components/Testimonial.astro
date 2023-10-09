@@ -16,19 +16,19 @@ const { viewMode = "block", testimonial } = Astro.props;
 
 {
   viewMode === "block" && (
-    <bloquote class="testimonial flex flex-col gap-5 2xl:gap-0 px-5 py-6 2xl:p-[50px] bg-neutral4 rounded-[26px]">
+    <bloquote class="testimonial flex flex-col gap-5 lg:gap-0 px-5 py-6 lg:p-[50px] bg-neutral4 rounded-[26px]">
       <p
         lang={testimonial.contentLang ?? undefined}
-        class="text-body-medium 2xl:mt-[50px] mb-auto"
+        class="text-body-medium lg:mt-[50px] mb-auto"
       >
-        <span class="block mb-10 2xl:mb-[40px] text-primary text-[200px] 2xl:text-[240px] translate-x-[-12px] translate-y-[56px] 2xl:translate-x-[-15px] 2xl:translate-y-[20px]">
+        <span class="block mb-10 lg:mb-[40px] text-primary text-[200px] lg:text-[240px] translate-x-[-12px] translate-y-[56px] lg:translate-x-[-15px] lg:translate-y-[20px]">
           &ldquo;
         </span>
         {testimonial.content}&rdquo;
       </p>
       <footer
         lang={testimonial.contentLang ?? undefined}
-        class="2xl:mt-10 text-body-medium-bold"
+        class="lg:mt-10 text-body-medium-bold"
       >
         {testimonial.author}
         <cite class="not-italic">
@@ -41,8 +41,8 @@ const { viewMode = "block", testimonial } = Astro.props;
 
 {
   viewMode === "inline" && (
-    <bloquote class="testimonial flex flex-col 2xl:flex-row gap-6 px-5 py-6 2xl:p-10 bg-neutral4 rounded-[26px]">
-      <div class="2xl:flex-[0_0_78px] h-[47px] 2xl:h-[54px] overflow-hidden">
+    <bloquote class="testimonial flex flex-col lg:flex-row gap-6 px-5 py-6 lg:p-10 bg-neutral4 rounded-[26px]">
+      <div class="lg:flex-[0_0_78px] h-[47px] lg:h-[54px] overflow-hidden">
         <span class="block text-primary text-[200px] translate-x-[-12px] translate-y-[-79px]">
           &ldquo;
         </span>

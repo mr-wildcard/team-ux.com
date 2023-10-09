@@ -17,10 +17,10 @@ const backgroundFormCSSClasses = showBackgroundForm
       "overflow-hidden",
       "pb-[178px]",
       "mb-[-178px]",
-      "2xl:pt-[255px]",
-      "2xl:pb-[439px]",
-      "2xl:mt-[-255px]",
-      "2xl:mb-[-439px]",
+      "lg:pt-[255px]",
+      "lg:pb-[439px]",
+      "lg:mt-[-255px]",
+      "lg:mb-[-439px]",
     ]
   : [];
 ---
@@ -29,19 +29,19 @@ const backgroundFormCSSClasses = showBackgroundForm
   <div class="relative container">
     {
       showBackgroundForm && (
-        <BackgroundForm1 class="absolute z-[-1] top-[100px] right-[-370px] 2xl:top-[-125px] 2xl:right-[-540px] w-[600px] h-[303px]" />
+        <BackgroundForm1 class="absolute z-[-1] top-[100px] right-[-370px] lg:top-[-125px] lg:right-[-540px] w-[600px] h-[303px]" />
       )
     }
-    <Grid class="gap-y-5 2xl:gap-y-6">
+    <Grid class="gap-y-5 lg:gap-y-6">
       <h1
-        class="col-span-full 2xl:col-start-2 2xl:col-span-full text-display-large 2xl:text-display-medium"
+        class="col-span-full lg:col-start-2 lg:col-span-full text-display-large lg:text-display-medium"
       >
         {title}
       </h1>
       {
         subtitle && (
           <h2
-            class="col-span-full 2xl:col-start-2 2xl:col-span-6 text-body-large 2xl:text-body-extra-large"
+            class="col-span-full lg:col-start-2 lg:col-span-6 text-body-large lg:text-body-extra-large"
             set:html={subtitle}
           />
         )

@@ -18,10 +18,10 @@ const backgroundFormCSSClasses = showBackgroundForm
       "pb-[62px]",
       "mt-[-40px]",
       "mb-[-62px]",
-      "2xl:pt-[353px]",
-      "2xl:pb-[168px]",
-      "2xl:mt-[-353px]",
-      "2xl:mb-[-168px]",
+      "lg:pt-[353px]",
+      "lg:pb-[168px]",
+      "lg:mt-[-353px]",
+      "lg:mb-[-168px]",
     ]
   : [];
 ---
@@ -31,32 +31,30 @@ const backgroundFormCSSClasses = showBackgroundForm
 >
   <div id="contact" class="container">
     <Grid>
-      <div class="col-span-full 2xl:col-start-2 2xl:col-span-8">
+      <div class="col-span-full lg:col-start-2 lg:col-span-8">
         <div
-          class="relative px-5 pb-10 pt-9 2xl:p-14 bg-surface3 rounded-[26px]"
+          class="relative px-5 pb-10 pt-9 lg:p-14 bg-surface3 rounded-[26px]"
         >
           {
             showBackgroundForm && (
-              <BackgroundForm1 class="hidden 2xl:block absolute z-[-1] top-[-205px] right-[-860px]" />
+              <BackgroundForm1 class="hidden lg:block absolute z-[-1] top-[-205px] right-[-860px]" />
             )
           }
 
           <Brush
             id="2"
-            class="absolute z-[-1] top-[-35px] 2xl:top-[-80px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
+            class="absolute z-[-1] top-[-35px] lg:top-[-80px] left-[15px] w-[232px] h-[202px] rotate-[8.837deg]"
           />
           <Brush
             id="2"
-            class="absolute z-[-1] right-[-15px] bottom-[-60px] 2xl:right-[-101px] 2xl:bottom-[-66px] w-[194px] h-[168px] 2xl:w-[355px] 2xl:h-[308px] rotate-[13deg] 2xl:rotate-0"
+            class="absolute z-[-1] right-[-15px] bottom-[-60px] lg:right-[-101px] lg:bottom-[-66px] w-[194px] h-[168px] lg:w-[355px] lg:h-[308px] rotate-[13deg] lg:rotate-0"
           />
 
-          <h2
-            class="mb-10 2xl:mb-6 text-headline-small 2xl:text-headline-medium"
-          >
+          <h2 class="mb-10 lg:mb-6 text-headline-small lg:text-headline-medium">
             Envie de travailler avec nous ?
           </h2>
           <p
-            class="2xl:mb-10 text-headline-extra-large 2xl:text-display-small leading-[normal]"
+            class="lg:mb-10 text-headline-extra-large lg:text-display-small leading-[normal]"
           >
             Contactez-nous à l’adresse
             <CallToAction
@@ -68,7 +66,7 @@ const backgroundFormCSSClasses = showBackgroundForm
               hello@team-ux.com
             </CallToAction>
           </p>
-          <div class="hidden 2xl:block">
+          <div class="hidden lg:block">
             <ButtonCopyText
               type="secondary"
               textToCopy="hello@team-ux.com"

@@ -9,40 +9,40 @@ import Profile from "./Profile.astro";
 ---
 
 <section class="container">
-  <Grid class="gap-y-8 2xl:gap-y-0">
-    <div class="col-span-full 2xl:col-start-2 2xl:col-span-5">
+  <Grid class="gap-y-8 lg:gap-y-0">
+    <div class="col-span-full lg:col-start-2 lg:col-span-5">
       <Profile profile={dataYuna}>
         <div
           slot="picture"
-          class="flex flex-[0_0_129px] 2xl:flex-[0_0_142px] 2xl:justify-center relative isolate"
+          class="flex flex-[0_0_129px] lg:flex-[0_0_142px] lg:justify-center relative isolate"
         >
           <Brush
             id="1"
-            class="absolute z-[-1] w-[129px] 2xl:w-[142px] left-0 bottom-0 rotate-[180deg]"
+            class="absolute z-[-1] w-[129px] lg:w-[142px] left-0 bottom-0 rotate-[180deg]"
           />
           <Yuna
             width={82}
             height={204}
-            class="ml-6 2xl:w-[89px] 2xl:h-[220px]"
+            class="ml-6 lg:w-[89px] lg:h-[220px]"
             alt="Portrait de Yuna Orsini"
           />
         </div>
       </Profile>
     </div>
-    <div class="col-span-full 2xl:col-span-5">
+    <div class="col-span-full lg:col-span-5">
       <Profile profile={dataDaniela}>
         <div
           slot="picture"
-          class="flex flex-[0_0_129px] 2xl:flex-[0_0_164px] 2xl:justify-center relative isolate"
+          class="flex flex-[0_0_129px] lg:flex-[0_0_164px] lg:justify-center relative isolate"
         >
           <Brush
             id="2"
-            class="absolute z-[-1] w-[129px] 2xl:w-[164px] left-0 bottom-[11px] rotate-[90deg]"
+            class="absolute z-[-1] w-[129px] lg:w-[164px] left-0 bottom-[11px] rotate-[90deg]"
           />
           <Daniela
             width={82}
             height={204}
-            class="ml-6 2xl:w-[89px] 2xl:h-[220px]"
+            class="ml-6 lg:w-[89px] lg:h-[220px]"
             alt="Portrait de Daniela Peñaranda"
           />
         </div>

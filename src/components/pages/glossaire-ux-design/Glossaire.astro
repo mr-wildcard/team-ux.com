@@ -67,9 +67,9 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
     id="sticky-letters-nav"
     class="hidden sticky top-[83px] bg-surface1 z-[1]"
   >
-    <div class="hidden 2xl:block container">
+    <div class="hidden lg:block container">
       <Grid>
-        <div class="2xl:col-span-full py-4 border-b border-neutral2">
+        <div class="lg:col-span-full py-4 border-b border-neutral2">
           <ul class="flex justify-between">
             {
               allLetters.map((letter) => {
@@ -92,12 +92,12 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
   <div class="container">
     <Grid>
       <div
-        class="col-span-full 2xl:col-start-2 2xl:col-span-10 flex flex-col gap-5 mb-[50px] 2xl:mb-[140px]"
+        class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col gap-5 mb-[50px] lg:mb-[140px]"
       >
         <h2 class="text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
-        <ul id="letters-nav" class="hidden 2xl:flex flex-wrap gap-x-[7px]">
+        <ul id="letters-nav" class="hidden lg:flex flex-wrap gap-x-[7px]">
           {
             allLetters.map((letter) => {
               return (
@@ -113,19 +113,19 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
         </ul>
       </div>
 
-      <div class="col-span-full 2xl:col-start-2 2xl:col-span-8">
-        <div class="space-y-[50px] 2xl:space-y-[100px]">
+      <div class="col-span-full lg:col-start-2 lg:col-span-8">
+        <div class="space-y-[50px] lg:space-y-[100px]">
           {
             Array.from(groupedDefinitions.keys()).map((letter) => {
               return (
                 <div data-letter-section={letter} class="letter-section">
                   <p
                     id={`letter-${letter}`}
-                    class="mb-6 block text-headline-extra-large sm:text-headline-large uppercase 2xl:scroll-mt-[190px]"
+                    class="mb-6 block text-headline-extra-large sm:text-headline-large uppercase lg:scroll-mt-[190px]"
                   >
                     {letter}
                   </p>
-                  <div class="flex flex-col gap-5 scroll-mt-[100px] 2xl:scroll-mt-[190px]">
+                  <div class="flex flex-col gap-5 scroll-mt-[100px] lg:scroll-mt-[190px]">
                     {Array.from(groupedDefinitions.get(letter)).map(
                       (definition) => {
                         return (
@@ -187,7 +187,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
       </div>
 
       <div
-        class="col-span-full 2xl:col-start-2 2xl:col-span-7 mt-[50px] 2xl:mt-40"
+        class="col-span-full lg:col-start-2 lg:col-span-7 mt-[50px] lg:mt-40"
       >
         <p class="text-body-medium">
           Nous espérons que ce glossaire vous aide à mieux comprendre ce qui se

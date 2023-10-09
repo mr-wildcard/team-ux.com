@@ -8,7 +8,7 @@ import Testimonial from "../../../Testimonial.astro";
 <section class="container">
   <Grid>
     <h2
-      class="col-span-full text-headline-small 2xl:text-headline-medium text-neutral1 mb-6 2xl:mb-10"
+      class="col-span-full text-headline-small lg:text-headline-medium text-neutral1 mb-6 lg:mb-10"
     >
       {data.title}
     </h2>
@@ -17,14 +17,14 @@ import Testimonial from "../../../Testimonial.astro";
     {
       data.testimonials.map((testimonial) => {
         return (
-          <li class="col-span-full 2xl:col-span-4">
+          <li class="col-span-full lg:col-span-4">
             <Testimonial testimonial={testimonial} />
           </li>
         );
       })
     }
   </Grid>
-  <div class="flex justify-center mt-10 2xl:mt-[60px]">
+  <div class="flex justify-center mt-10 lg:mt-[60px]">
     <CallToAction href="/temoignages" type="secondary" rightIcon="forward">
       {data.callToAction.label}
     </CallToAction>

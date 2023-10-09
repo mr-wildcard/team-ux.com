@@ -13,11 +13,11 @@ const { block1, block2 } = data;
 <section>
   <Icon name="oval" />
 
-  <div class="relative flex flex-col gap-8 pb-20 2xl:pb-[100px] bg-neutral4">
+  <div class="relative flex flex-col gap-8 pb-20 lg:pb-[100px] bg-neutral4">
     <div class="container">
       <Grid>
         <h2
-          class="col-span-full mt-[60px] 2xl:mt-0 mb-8 2xl:mb-20 text-headline-extra-large 2xl:text-display-small lg:text-center"
+          class="col-span-full mt-[60px] lg:mt-0 mb-8 lg:mb-20 text-headline-extra-large lg:text-display-small lg:text-center"
         >
           {data.title}
         </h2>
@@ -31,7 +31,7 @@ const { block1, block2 } = data;
             {block1.title}
           </h3>
 
-          <div class="mx-auto 2xl:mx-0 w-[250px]">
+          <div class="mx-auto lg:mx-0 w-[250px]">
             <DuoDeChoc variant="small" />
             <p class="text-label-large text-primary text-center mt-2.5">
               {block1.pictureLegend}
@@ -52,16 +52,16 @@ const { block1, block2 } = data;
           class="col-span-full lg:col-span-5 flex flex-col gap-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
-          <div class="relative w-[200px] 2xl:w-auto mx-auto 2xl:mx-0">
+          <div class="relative w-[200px] lg:w-auto mx-auto lg:mx-0">
             <Brush
               alt=""
               id="1"
-              class="w-[133px] h-[160px] 2xl:w-[173px] 2xl:h-[206px]"
+              class="w-[133px] h-[160px] lg:w-[173px] lg:h-[206px]"
             />
             <Brush
               alt=""
               id="4"
-              class="absolute top-0 left-[41px] 2xl:left-[52px] w-[160px] h-[160px] 2xl:w-[207px] 2xl:h-[206px]"
+              class="absolute top-0 left-[41px] lg:left-[52px] w-[160px] h-[160px] lg:w-[207px] lg:h-[206px]"
             />
           </div>
           <p class="text-body-medium">{block2.paragraph}</p>

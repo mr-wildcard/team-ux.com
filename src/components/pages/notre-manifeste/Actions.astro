@@ -7,25 +7,25 @@ import Brush from "../../@common/Brush.astro";
 <section class="container">
   <Grid>
     <h2
-      class="col-span-full 2xl:col-start-2 2xl:col-span-6 mb-8 2xl:mb-10 text-headline-extra-large 2xl:text-display-small"
+      class="col-span-full lg:col-start-2 lg:col-span-6 mb-8 lg:mb-10 text-headline-extra-large lg:text-display-small"
     >
       {data.title}
     </h2>
     <p
-      class="col-span-full 2xl:col-start-2 2xl:col-span-8 text-body-large 2xl:text-body-extra-large mb-10 2xl:mb-20"
+      class="col-span-full lg:col-start-2 lg:col-span-8 text-body-large lg:text-body-extra-large mb-10 lg:mb-20"
     >
       {data.introduction}
     </p>
-    <div class="col-span-full 2xl:col-start-2 2xl:col-span-10">
-      <ul class="2xl:columns-2 2xl:gap-8 space-y-2.5 2xl:space-y-5">
+    <div class="col-span-full lg:col-start-2 lg:col-span-10">
+      <ul class="lg:columns-2 lg:gap-8 space-y-2.5 lg:space-y-5">
         {
           data.actions.map((action) => {
             return (
-              <li class="break-inside-avoid	flex flex-col gap-5 p-5 2xl:p-10 bg-surface7 rounded-[26px]">
-                <h3 class="text-headline-medium 2xl:text-headline-medium-bold">
+              <li class="break-inside-avoid	flex flex-col gap-5 p-5 lg:p-10 bg-surface7 rounded-[26px]">
+                <h3 class="text-headline-medium lg:text-headline-medium-bold">
                   {action.title}
                 </h3>
-                <p class="2xl:mr-10 text-body-medium">{action.content}</p>
+                <p class="lg:mr-10 text-body-medium">{action.content}</p>
               </li>
             );
           })
