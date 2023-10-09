@@ -1,7 +1,19 @@
-/** @type {import('tailwindcss').Config} */
+import { type Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+
 export default {
   content: ["./src/**/*.{astro,ts}"],
-  plugins: ["tailwindcss/nesting"],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-inherit": {
+          "font-size": "inherit",
+          "line-height": "inherit",
+          "font-weight": "inherit",
+        },
+      });
+    }),
+  ],
   theme: {
     container: {
       center: true,
@@ -33,4 +45,4 @@ export default {
       neutral4: "#FFF",
     },
   },
-};
+} satisfies Config;
