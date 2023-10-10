@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+  .responsive-wrapper {
+    @apply px-5 md:px-8 lg:px-[50px];
+  }
+
   .text-display-large {
     font-size: 42px;
     line-height: 57px;
