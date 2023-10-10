@@ -10,7 +10,9 @@ import Profile from "./Profile.astro";
 
 <section class="container">
   <Grid class="gap-y-8 lg:gap-y-0">
-    <div class="col-span-full lg:col-start-2 lg:col-span-5">
+    <div
+      class="col-span-full lg:col-start-1 lg:col-span-6 2xl:col-start-2 2xl:col-span-5"
+    >
       <Profile profile={dataYuna}>
         <div
           slot="picture"
@@ -29,7 +31,7 @@ import Profile from "./Profile.astro";
         </div>
       </Profile>
     </div>
-    <div class="col-span-full lg:col-span-5">
+    <div class="col-span-full lg:col-span-6 2xl:col-span-5">
       <Profile profile={dataDaniela}>
         <div
           slot="picture"

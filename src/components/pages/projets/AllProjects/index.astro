@@ -13,7 +13,7 @@ import SmallProject from "./SmallProject.astro";
       data.map((projectsGroup, projectGroupIndex) => {
         if (projectsGroup.group_project_display === "large") {
           return (
-            <div class="overflow-hidden relative isolate px-5 lg:px-0 lg:pt-[207px] lg:-mt-[207px]">
+            <div class="responsive-wrapper overflow-hidden relative isolate lg:pt-[207px] lg:-mt-[207px]">
               {projectGroupIndex === 0 && (
                 <Brush
                   id="4"
