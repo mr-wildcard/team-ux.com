@@ -62,13 +62,15 @@ import Grid from "../@common/Grid.astro";
       class="hidden overflow-y-auto overflow-x-hidden fixed top-[84px] left-0 w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
     >
       <nav role="navigation" class="text-headline-large">
-        <ul class="flex flex-col gap-8">
+        <ul class="flex flex-col gap-11">
           <li>
             <NavItem to="/">Accueil</NavItem>
           </li>
           <li>
-            <span class="block pb-5">Références</span>
-            <ul class="flex flex-col gap-8">
+            <span class="block mb-3.5 text-body-medium-bold text-neutral1"
+              >Références</span
+            >
+            <ul class="flex flex-col gap-6 ml-5">
               <li>
                 <NavItem to="/projets">Projets</NavItem>
               </li>
@@ -78,8 +80,10 @@ import Grid from "../@common/Grid.astro";
             </ul>
           </li>
           <li>
-            <span class="block pb-5">Team UX</span>
-            <ul class="flex flex-col gap-8">
+            <span class="block mb-3.5 text-body-medium-bold text-neutral1"
+              >Team UX</span
+            >
+            <ul class="flex flex-col gap-6 ml-5">
               <li>
                 <NavItem to="/nos-deux-profils">Nos 2 profils</NavItem>
               </li>
@@ -161,12 +165,6 @@ import Grid from "../@common/Grid.astro";
 
       &.selected:after {
         opacity: 1;
-      }
-    }
-
-    ul {
-      & ul {
-        margin-left: 70px;
       }
     }
   }
