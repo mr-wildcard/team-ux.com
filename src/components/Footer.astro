@@ -54,6 +54,14 @@ import NavItem from "./Header/components/NavItem.astro";
     width: fit-content;
     padding: 0;
 
+    display: inline;
+    position: relative;
+    text-decoration: none !important;
+
+    &.selected:after {
+      opacity: 1;
+    }
+
     &:after {
       bottom: -2px !important;
     }

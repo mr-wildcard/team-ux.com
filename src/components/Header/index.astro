@@ -154,6 +154,16 @@ import Grid from "../@common/Grid.astro";
       @apply text-primary;
     }
 
+    :global(.nav-item) {
+      display: inline;
+      position: relative;
+      text-decoration: none;
+
+      &.selected:after {
+        opacity: 1;
+      }
+    }
+
     ul {
       & ul {
         margin-left: 70px;

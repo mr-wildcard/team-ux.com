@@ -49,6 +49,10 @@ const selected =
     &.selected {
       text-decoration: underline;
       text-underline-offset: 10px;
+
+      .title {
+        @apply text-primary;
+      }
     }
 
     &:after {
@@ -74,10 +78,6 @@ const selected =
       &.selected,
       &:hover {
         text-decoration: none;
-
-        .title {
-          @apply text-primary;
-        }
 
         &:after {
           opacity: 1;
