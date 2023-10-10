@@ -17,13 +17,13 @@ export default {
   theme: {
     container: {
       center: true,
+      screens: {
+        "2xl": "1413px",
+      },
     },
     extend: {
       spacing: {
         8: "30px",
-      },
-      screens: {
-        "2xl": "1413px",
       },
     },
     fontFamily: {
