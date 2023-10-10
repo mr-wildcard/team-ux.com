@@ -16,7 +16,7 @@ const { viewMode = "block", testimonial } = Astro.props;
 
 {
   viewMode === "block" && (
-    <bloquote class="testimonial flex flex-col gap-5 lg:gap-0 px-5 py-6 lg:p-[50px] bg-neutral4 rounded-[26px]">
+    <bloquote class="testimonial flex flex-col gap-5 xl:gap-0 px-5 py-6 lg:p-8 xl:p-[50px] bg-neutral4 rounded-[26px]">
       <p
         lang={testimonial.contentLang ?? undefined}
         class="text-body-medium lg:mt-[50px] mb-auto"
