@@ -2,7 +2,7 @@ import { type Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
 export default {
-  content: ["./src/**/*.{astro,ts}"],
+  content: ["./src/**/*.{astro,ts}", "./public/**/*.html", "./public/**/*.css"],
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
