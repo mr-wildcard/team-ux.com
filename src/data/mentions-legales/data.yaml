@@ -59,14 +59,14 @@ content:
     blocks:
       - content:
           - paragraph: |
-              Site développé avec talent et passion par <a href='https://www.linkedin.com/in/julien-viala-b1657a91/' target='_blank'>Julien Viala</a>.
-              Hébergement chez <a href='https://infomaniak.com/' target='_blank'>Infomaniak</a>.
+              Site développé avec talent et passion par <a class="text-primary underline underline-offset-[4px]" href='https://www.linkedin.com/in/julien-viala-b1657a91/' target='_blank'>Julien Viala</a>.<br />
+              Hébergement chez <a class="text-primary underline underline-offset-[4px]" href='https://infomaniak.com/' target='_blank'>Infomaniak</a>.
           - list:
               - "Adresse postale : Infomaniak Network SA - rue Eugène Marziano 25 - 1227 Les Acacias (GE)"
               - "Siège social : Les Acacias, Genève, Suisse"
               - "Registre du commerce du canton de Genève : CH-660.0.059.996-1"
               - "Numéro IDE : CHE-103.167.648"
-              - "Contact sur leur rubrique Aide : <a href='https://www.infomaniak.com/fr/aide' target='_blank'>https://www.infomaniak.com/fr/aide (nouvelle fenêtre)</a>"
+              - "Contact sur leur rubrique Aide : <a class='text-primary underline underline-offset-[4px]' href='https://www.infomaniak.com/fr/aide' target='_blank'>https://www.infomaniak.com/fr/aide (nouvelle fenêtre)</a>"
     grid_span: 7
   - title: Crédits
     blocks:

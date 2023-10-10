@@ -48,7 +48,9 @@ function obfuscateContent(content) {
                     <Block title={block.title}>
                       {block.content.map((content) => {
                         if ("paragraph" in content) {
-                          return <p>{obfuscateContent(content.paragraph)}</p>;
+                          return (
+                            <p set:html={obfuscateContent(content.paragraph)} />
+                          );
                         }
 
                         if ("list" in content) {
@@ -56,7 +58,10 @@ function obfuscateContent(content) {
                             <ul class="ml-7 list-disc list-outside">
                               {content.list.map((item) => (
                                 <li>
-                                  <p class="ml-1">{obfuscateContent(item)}</p>
+                                  <p
+                                    class="ml-1"
+                                    set:html={obfuscateContent(item)}
+                                  />
                                 </li>
                               ))}
                             </ul>
