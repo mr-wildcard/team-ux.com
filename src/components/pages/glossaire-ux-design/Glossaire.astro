@@ -210,6 +210,10 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
       @apply fill-primary;
     }
 
+    :global(a) {
+      @apply text-primary underline underline-offset-[4px];
+    }
+
     &:not([open]) {
       .close {
         display: none;
