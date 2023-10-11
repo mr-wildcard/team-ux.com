@@ -3,7 +3,9 @@ content:
     blocks:
       - content:
           - paragraph: |
-              Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” contenant quelques pages internes complémentaires qui n’appartenaient pas à la navigation principale. <br />
+              Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” contenant quelques pages internes complémentaires qui n’appartenaient pas à la navigation principale.
+      - content:
+          - paragraph: |
               Après plusieurs grosses mises à jour de contenus, la refonte était cependant devenue nécessaire dans le but de :
           - list:
               - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué en presque 4 ans et la structure n’était plus adaptée"
@@ -17,20 +19,21 @@ content:
           - list:
               - |
                 Redéfinir les besoins des personnes potentiellement utilisatrices de notre site et surtout les hiérarchiser. <br />
-                Par exemple, nous contacter, comprendre notre offre, découvrir nos références..."
+                &#129042; <i>Par exemple, nous contacter, comprendre notre offre, découvrir nos références...</i>
               - |
                 Pour les unités fonctionnelles conservées, imaginer un chemin critique plus radical et avec moins d’impact environnemental, ce qui se traduit par :
                 <ul>
-                  <li>des choix fonctionnels et ergonomiques différents <br />Par exemple, la suppression du gabarit d’étude de cas</li>
-                  <li>une traduction graphique spécifique <br />Par exemple, la réutilisation de certaines images décoratives</li>
-                  <li>un développement technique optimisé <br />Par exemple, la mise en place d’un site statique</li>
+                  <li>des choix fonctionnels et ergonomiques différents <br />&#129042; <i>Par exemple, la suppression du gabarit d’étude de cas</i></li>
+                  <li>une traduction graphique spécifique <br />&#129042; <i>Par exemple, la réutilisation de certaines images décoratives</i></li>
+                  <li>un développement technique optimisé <br />&#129042; <i>Par exemple, la mise en place d’un site statique</i></li>
                 </ul>
+      - content:
           - paragraph: "Pour tout cela, nous nous sommes fondées sur les inspirantes recommandations déjà rédigées par des personnes engagées, comme :"
           - list:
-              - "Éco-conception web - les 115 bonnes pratiques par Frédéric Bordage"
-              - "RGESN (Référentiel Général d’Écoconception de Services Numériques) par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable"
-              - "Web Sustainability Guidelines par un W3C Community Group"
-              - "Guide d’écoconception de services numériques des Designers Éthiques"
+              - <a href="https://ecoconceptionweb.com/" target="_blank">Éco-conception web - les 115 bonnes pratiques (nouvel onglet)</a> par Frédéric Bordage
+              - <a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank">RGESN (nouvel onglet)</a> (Référentiel Général d’Écoconception de Services Numériques) par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable
+              - <a href="https://w3c.github.io/sustyweb/" target="_blank">Web Sustainability Guidelines (nouvel onglet)</a> par un W3C Community Group
+              - <a href="https://eco-conception.designersethiques.org/guide/fr/" target="_blank">Guide d’écoconception de services numériques (nouvel onglet)</a> des Designers Éthiques
     grid_span: 7
   - title: "Démarche détaillée"
     blocks:
@@ -41,6 +44,7 @@ content:
               - "Conservation de l’absence de collecte de données"
               - "Pas d’utilisation de médias riches et lourds comme les vidéos"
               - "Pas d’intégration de scripts tiers"
+       - content:
           - paragraph: "À noter que nous avons tout de même intégré deux contenus qui n’existaient pas sur l’ancienne version :"
           - list:
               - "La page Témoignages pour répondre à notre besoin business (108 ko - EcoIndex A)"
@@ -111,7 +115,7 @@ content:
               - "Devices : iPad Air (2013), iPhone 7 (2016), Pixel 3a (2018), Samsung Galaxy S10e (2019)"
       - title: "Axes d’amélioration"
         content:
-          - paragraph: "À ce jour, nous avons d’ores-et-déjà identifié des axes d’amélioration."
+          - paragraph: "L'éco-conception est une démarche d'amélioration continue. À ce jour, nous avons d’ores-et-déjà identifié des axes d’amélioration."
           - list:
               - "Retravail ergonomique de la page Projets pour simplifier le DOM"
               - "Intégration du menu mobile en HTML/CSS uniquement"
