@@ -1,0 +1,67 @@
+---
+import data from "../../../data/demarche-eco-conception/data.yaml";
+import Grid from "../../@common/Grid.astro";
+import Section from "./Section.astro";
+import Block from "./Block.astro";
+---
+
+<div class="demarche-eco-conception container">
+  <Grid>
+    <div
+      class="col-span-full lg:col-start-2 lg:col-span-10 space-y-[60px] lg:space-y-[140px]"
+    >
+      {
+        data.content.map((section) => {
+          return (
+            <Section title={section.title}>
+              <div
+                class:list={[
+                  "space-y-5",
+                  {
+                    "lg:w-[50%]": section.grid_span === 5,
+                    "lg:w-[69%]": section.grid_span === 7,
+                  },
+                ]}
+              >
+                {section.blocks.map((block) => {
+                  return (
+                    <Block title={block.title}>
+                      {block.content.map((content) => {
+                        if ("paragraph" in content) {
+                          return <p set:html={content.paragraph} />;
+                        }
+
+                        if ("list" in content) {
+                          return (
+                            <ul class="ml-7 list-disc list-outside">
+                              {content.list.map((item) => (
+                                <li>
+                                  <p class="ml-1" set:html={item} />
+                                </li>
+                              ))}
+                            </ul>
+                          );
+                        }
+                      })}
+                    </Block>
+                  );
+                })}
+              </div>
+            </Section>
+          );
+        })
+      }
+    </div>
+  </Grid>
+</div>
+
+<style>
+  .demarche-eco-conception {
+    & :global(ul) {
+      & :global(ul) {
+        list-style-type: "- ";
+        margin-left: 20px;
+      }
+    }
+  }
+</style>

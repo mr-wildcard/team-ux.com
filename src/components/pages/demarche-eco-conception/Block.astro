@@ -1,0 +1,15 @@
+---
+interface Props {
+  title?: string;
+  children: any;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="p-5 lg:p-10 bg-neutral4 rounded-[26px]">
+  {title && <h3 class="text-headline-small mb-5">{title}</h3>}
+  <div class="block-content text-body-medium">
+    <slot />
+  </div>
+</div>

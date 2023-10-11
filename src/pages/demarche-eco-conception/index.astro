@@ -1,5 +1,28 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Contact from "../../components/Contact.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import Content from "../../components/pages/demarche-eco-conception/Content.astro";
+import Hero from "../../components/pages/demarche-eco-conception/Hero.astro";
+import Footer from "../../components/Footer.astro";
 ---
 
-<Layout title="Démarche d'éco-conception">coucou la démarche</Layout>
+<Layout title="Démarche d'éco-conception">
+  <div class="hidden md:block mb-[90px]">
+    <Breadcrumb />
+  </div>
+
+  <div class="max-md:mt-[60px] mb-[60px]">
+    <Hero />
+  </div>
+
+  <div class="mb-[200px] lg:mb-[160px]">
+    <Content />
+  </div>
+
+  <div class="mb-[150px] lg:mb-[170px]">
+    <Contact showBackgroundForm={false} />
+  </div>
+
+  <Footer />
+</Layout>

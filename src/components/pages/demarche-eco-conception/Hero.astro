@@ -1,0 +1,17 @@
+---
+import CommonPageHero from "../../CommonPageHero.astro";
+---
+
+<div>
+  <CommonPageHero
+    title="Démarche d’éco-conception"
+    subtitle="Ce site est éco-conçu. Cette page décrit la démarche d’éco-conception que nous suivons.<br>Dernière mise à jour : <time datetime='2023-10-10'>10 octobre 2023</time>."
+    showBackgroundForm={false}
+  />
+</div>
+
+<style>
+  div :global(h2) {
+    @apply col-span-full lg:col-start-2 lg:col-span-7;
+  }
+</style>
