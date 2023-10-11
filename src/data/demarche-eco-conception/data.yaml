@@ -6,10 +6,10 @@ content:
               Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” contenant quelques pages internes complémentaires qui n’appartenaient pas à la navigation principale.
       - content:
           - paragraph: |
-              Après plusieurs grosses mises à jour de contenus, la refonte était cependant devenue nécessaire dans le but de :
+              Cepenant, après plusieurs grosses mises à jour de contenus réalisées en presque 4 ans, la refonte était  devenue nécessaire dans le but de :
           - list:
-              - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué en presque 4 ans et la structure n’était plus adaptée"
-              - "se défaire de la dépendance à l’outil Webflow et retrouver l’autonomie nous permettant d’implémenter des choix techniques forts au service de l’éco-conception"
+              - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué en presque 4 ans et dont la structure n’était plus adaptée"
+              - "se défaire de la dépendance à l’outil SaaS Webflow et retrouver l’autonomie nous permettant d’implémenter des choix techniques forts au service de l’éco-conception"
               - "communiquer clairement nos spécialisations et faire de notre site Web une vitrine de ces expertises."
     grid_span: 7
   - title: "Méthodologie suivie"
@@ -31,9 +31,9 @@ content:
           - paragraph: "Pour tout cela, nous nous sommes fondées sur les inspirantes recommandations déjà rédigées par des personnes engagées, comme :"
           - list:
               - <a href="https://ecoconceptionweb.com/" target="_blank">Éco-conception web - les 115 bonnes pratiques (nouvel onglet)</a> par Frédéric Bordage
-              - <a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank">RGESN (nouvel onglet)</a> (Référentiel Général d’Écoconception de Services Numériques) par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable
+              - <a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank">RGESN (nouvel onglet)</a> par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable
               - <a href="https://w3c.github.io/sustyweb/" target="_blank">Web Sustainability Guidelines (nouvel onglet)</a> par un W3C Community Group
-              - <a href="https://eco-conception.designersethiques.org/guide/fr/" target="_blank">Guide d’écoconception de services numériques (nouvel onglet)</a> des Designers Éthiques
+              - <a href="https://eco-conception.designersethiques.org/guide/fr/" target="_blank">Guide d’écoconception de services numériques (nouvel onglet)</a> par les Designers Éthiques
     grid_span: 7
   - title: "Démarche détaillée"
     blocks:
@@ -47,12 +47,12 @@ content:
       - content:
           - paragraph: "À noter que nous avons tout de même intégré deux contenus qui n’existaient pas sur l’ancienne version :"
           - list:
-              - "La page Témoignages pour répondre à notre besoin business (108 ko - EcoIndex A)"
+              - "La page Témoignages pour répondre à notre besoin business de réassurance (108 ko - EcoIndex A)"
               - "Cette page Démarche d’éco-conception pour soutenir le processus et la pédagogie (109 ko - EcoIndex A)"
       - title: "Choix ergonomiques"
         content:
           - list:
-              - "Choix d’un site à plusieurs pages pour répondre à des unités fonctionnelles précises sans obliger l’internaute à charger tous les contenus (contrairement au site one page précédent)"
+              - "Choix d’un site à plusieurs pages pour répondre à des unités fonctionnelles précises sans obliger l’internaute à charger tous les contenus, contrairement au site one page précédent"
               - "La prise de contact -unité fonctionnelle principale- est facilitée quelle que soit la page en question sans avoir à charger une nouvelle page, grâce au lien omniprésent vers une ancre en bas de page"
               - "Masquage par défaut des images d’un projet et affichage d’un message de prévention lorsque la personne utilisatrice fait le choix d’afficher les images en plus grande taille"
               - "Limitation dans la dimension et donc le poids des images projets car elles ne sont là que pour suggérer le contenu de nos livrables"
@@ -60,7 +60,7 @@ content:
       - title: "Choix graphiques"
         content:
           - list:
-              - "Allègement du nombre de requêtes et de dépendances extérieures en choisissant d’intégrer 1 police personnalisée (contrairement aux 2 webfonts Google et Adobe précédemment utilisées)"
+              - "Allègement du nombre de requêtes et de dépendances extérieures en choisissant d’intégrer 1 police personnalisée, contrairement aux 2 webfonts Google et Adobe précédemment utilisées"
               - "Diminution du travail du CPU en écartant finalement l’utilisation de CSS gourmand comme “blur” initialement prévu en fond de page dans le design"
               - |
                 Design graphique avec gestion maline des images<br>
@@ -69,15 +69,15 @@ content:
                   <li>Certaines formes décoratives simples ont été pensées pour être directement intégrées en HTML/CSS : la forme capsule jaune en fond, la courbe séparatrice blanche</li>
                   <li>Les tâches bleues décoratives du site sont 4 uniques images, réutilisées en fond sur tout le site, à des tailles, orientations et opacités différentes</li>
                   <li>Nos 2 photos de nos profils sont réutilisées plusieurs fois sur la page d’accueil puis réutilisées sur une page interne</li>
-                  <li>Les visuels pour chaque projet ne sont pas chargés de prime abord, seulement par la volonté de la personne utilisatrice d’afficher une galerie précise</li>
+                  <li>Les visuels pour chaque projet ne sont pas chargés de prime abord, mais seulement par la volonté de la personne utilisatrice d’afficher une galerie précise</li>
                 </ul>
       - title: "Choix techniques"
         content:
           - list:
-              - "Abandon de Webflow pour diminuer notre dépendance à un outil externe et supprimer plusieurs requêtes gourmandes en ressources"
+              - "Abandon de Webflow pour diminuer notre dépendance à un outil SaaS externe et supprimer plusieurs requêtes gourmandes en ressources"
               - "Bascule sur un site statique avec la technologie Astro : il n’y a plus de requêtes vers une base de données pour charger le contenu"
               - "Choix de ne servir que le CSS réellement utilisé grâce au framework Tailwind"
-              - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko)."
+              - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses utilisées sur le site depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko)."
               - "Gestion sur-mesure des images : selon les résultats de formatage et compression obtenus pour chaque image, nous avons soit choisi le format PNG s’il était plus performant, soit fourni aux navigateurs 2 formats Web ultra optimisés : AVIF et WEBP"
               - "Mise en place du lazy loading (“chargement fainéant”) pour ne charger les médias que lorsqu’ils sont réellement consultés sur la page"
               - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
@@ -125,7 +125,7 @@ content:
               - "Dropdown HTML/CSS sur l'état actif uniquement"
       - title: "Autres évolutions"
         content:
-          - paragraph: "Nous avons profité de ce temps de réflexion et d’action pour opérer également des changements sur nos supports de communication et outils de travail du quotidien :"
+          - paragraph: "Nous avons profité de ce temps de réflexion et d’action pour opérer également des changements sur nos supports de communication et nos outils de travail du quotidien :"
           - list:
               - "Bascule des outils Google vers la kSuite d’Infomaniak pour le stockage de nos documents, les réunions et visioconférences, notre messagerie..."
               - |
