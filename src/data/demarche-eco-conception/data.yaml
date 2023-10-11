@@ -19,13 +19,13 @@ content:
           - list:
               - |
                 Redéfinir les besoins des personnes potentiellement utilisatrices de notre site et surtout les hiérarchiser. <br />
-                &#129042; <i>Par exemple, nous contacter, comprendre notre offre, découvrir nos références...</i>
+                → <i>Par exemple, nous contacter, comprendre notre offre, découvrir nos références...</i>
               - |
                 Pour les unités fonctionnelles conservées, imaginer un chemin critique plus radical et avec moins d’impact environnemental, ce qui se traduit par :
                 <ul>
-                  <li>des choix fonctionnels et ergonomiques différents <br />&#129042; <i>Par exemple, la suppression du gabarit d’étude de cas</i></li>
-                  <li>une traduction graphique spécifique <br />&#129042; <i>Par exemple, la réutilisation de certaines images décoratives</i></li>
-                  <li>un développement technique optimisé <br />&#129042; <i>Par exemple, la mise en place d’un site statique</i></li>
+                  <li>des choix fonctionnels et ergonomiques différents <br />→ <i>Par exemple, la suppression du gabarit d’étude de cas</i></li>
+                  <li>une traduction graphique spécifique <br />→ <i>Par exemple, la réutilisation de certaines images décoratives</i></li>
+                  <li>un développement technique optimisé <br />→ <i>Par exemple, la mise en place d’un site statique</i></li>
                 </ul>
       - content:
           - paragraph: "Pour tout cela, nous nous sommes fondées sur les inspirantes recommandations déjà rédigées par des personnes engagées, comme :"
@@ -44,7 +44,7 @@ content:
               - "Conservation de l’absence de collecte de données"
               - "Pas d’utilisation de médias riches et lourds comme les vidéos"
               - "Pas d’intégration de scripts tiers"
-       - content:
+      - content:
           - paragraph: "À noter que nous avons tout de même intégré deux contenus qui n’existaient pas sur l’ancienne version :"
           - list:
               - "La page Témoignages pour répondre à notre besoin business (108 ko - EcoIndex A)"
