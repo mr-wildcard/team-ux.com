@@ -1,0 +1,123 @@
+content:
+  - title: Avant-propos
+    blocks:
+      - content:
+          - paragraph: |
+          "Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” contenant quelques pages internes complémentaires qui n’appartenaient pas à la navigation principale. <br />
+Après plusieurs grosses mises à jour de contenus, la refonte était cependant devenue nécessaire dans le but de :"
+          - list:
+              - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué en presque 4 ans et la structure n’était plus adaptée"
+              - "se défaire de la dépendance à l’outil Webflow et retrouver l’autonomie nous permettant d’implémenter des choix techniques forts au service de l’éco-conception"
+              - "communiquer clairement nos spécialisations et faire de notre site Web une vitrine de ces expertises."
+    grid_span: 5
+  - title: "Méthodologie suivie"
+        content:
+          - paragraph: "Notre méthodologie d’éco-conception a consisté à :"
+          - list:
+              - "Redéfinir les besoins des personnes potentiellement utilisatrices de notre site et surtout les hiérarchiser. <br />
+Par exemple, nous contacter, comprendre notre offre, découvrir nos références..."
+              - "Pour les unités fonctionnelles conservées, imaginer un chemin critique plus radical et avec moins d’impact environnemental, ce qui se traduit par :
+              - list:
+                - "des choix fonctionnels et ergonomiques différents <br />
+                Par exemple, la suppression du gabarit d’étude de cas"
+                - "une traduction graphique spécifique <br />
+                Par exemple, la réutilisation de certaines images décoratives"
+                - "un développement technique optimisé <br />
+                Par exemple, la mise en place d’un site statique"
+          - paragraph: "Pour tout cela, nous nous sommes fondées sur les inspirantes recommandations déjà rédigées par des personnes engagées, comme :"
+          - list:
+              - "Éco-conception web - les 115 bonnes pratiques par Frédéric Bordage"
+              - "RGESN (Référentiel Général d’Écoconception de Services Numériques) par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable"
+              - "Web Sustainability Guidelines par un W3C Community Group"
+              - "Guide d’écoconception de services numériques des Designers Éthiques"
+    grid_span: 5
+  - title: "Démarche détaillée"
+      - title: "Choix fonctionnels"
+        content:
+          - list:
+              - "Suppression de nos études de cas, qui étaient les pages les plus lourdes de notre précédent site"
+              - "Conservation de l’absence de collecte de données"
+              - "Pas d’utilisation de médias riches et lourds comme les vidéos"
+              - "Pas d’intégration de scripts tiers"
+          - paragraph: "À noter que nous avons tout de même intégré deux contenus qui n’existaient pas sur l’ancienne version :"
+          - list:
+              - "La page Témoignages pour répondre à notre besoin business (108 ko - EcoIndex A)"
+              - "Cette page Démarche d’éco-conception pour soutenir le processus et la pédagogie (109 ko - EcoIndex A)"
+       - title: "Choix ergonomiques"
+         content:
+          - list:
+              - "Choix d’un site à plusieurs pages pour répondre à des unités fonctionnelles précises sans obliger l’internaute à charger tous les contenus (contrairement au site one page précédent)"
+              - "La prise de contact -unité fonctionnelle principale- est facilitée quelque soit la page en question sans avoir à charger une nouvelle page, grâce au lien omniprésent vers une ancre en bas de page"
+              - "Masquage par défaut des images d’un projet et affichage d’un message de prévention lorsque la personne utilisatrice fait le choix d’afficher les images en plus grande taille"
+              - "Limitation dans la dimension et donc le poids des images projets car elles ne sont là que pour suggérer le contenu de nos livrables"
+              - "Respect des règles d’accessibilité relatives au design"
+       - title: "Choix graphiques"
+         content:
+          - list:
+              - "Allègement du nombre de requêtes et de dépendances extérieures en choisissant d’intégrer 1 police personnalisée (contrairement aux 2 webfonts Google et Adobe précédemment utilisées)"
+              - "Diminution du travail du CPU en écartant finalement l’utilisation de CSS gourmand comme “blur” initialement prévu en fond de page dans le design"
+              - "Design graphique avec gestion maline des images :"
+                  - list:
+                      - "Certains visuels sont des images vectorielles très légères : le logo, le tampon du logo, les pictogrammes de nos valeurs, les logotypes clients"
+                      - "Certaines formes décoratives simples ont été pensées pour être directement intégrées en HTML/CSS : la forme capsule jaune en fond, la courbe séparatrice blanche"
+                      - "Les tâches bleues décoratives du site sont 4 uniques images, réutilisées en fond sur tout le site, à des tailles, orientations et opacités différentes"
+                      - "Nos 2 photos de nos profils sont réutilisées plusieurs fois sur la page d’accueil puis réutilisées sur une page interne"
+                      - "Les visuels pour chaque projet ne sont pas chargés de prime abord, seulement par la volonté de la personne utilisatrice d’afficher une galerie précise"
+       - title: "Choix techniques"
+         content:
+          - list:
+              - "Abandon de Webflow pour diminuer notre dépendance à un outil externe et supprimer plusieurs requêtes gourmandes en ressources"
+              - "Bascule sur un site statique avec la technologie Astro : il n’y a plus de requêtes vers une base de données pour charger le contenu"
+              - "Choix de ne servir que le CSS réellement utilisé grâce au framework Tailwind" 
+              - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko)."
+              - "Gestion sur-mesure des images : selon les résultats de formatage et compression obtenus pour chaque image, nous avons soit choisi le format PNG s’il était plus performant, soit fourni aux navigateurs 2 formats Web ultra optimisés : AVIF et WEBP"
+              - "Mise en place du lazy loading (“chargement fainéant”) pour ne charger les médias que lorsqu’ils sont réellement consultés sur la page"
+              - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
+              - "Travail main dans la main entre développement et design pour implémenter au maximum l’accessibilité"
+              - "Diminution du travail du CPU en écartant le plus possible les solutions techniques nécessitant des appels/recalculs Javascript. Les cas d’utilisation de JS restants sont les suivants :"
+                  - list:
+                      - "Copier notre adresse email de contact dans le presse-papier"
+                      - "Copier l’URL directe vers une définition du glossaire dans le presse-papier"
+                      - "Désobfusquer nos adresses emails et numéros de téléphone dans les mentions légales"
+                      - "Gérer le comportement d’ouverture/fermeture du dropdown dans le menu"
+                      - "Afficher le menu mobile"
+                      - "Afficher la galerie d’un projet"
+                      - "Proposer une alternative pour afficher le menu sticky sur Firefox et iOS"
+              - 'Hébergement par Infomaniak, "le cloud éthique"'
+                  - list:
+                      - "Certification ISO 50'001 (gestion de l'énergie) depuis 2015"
+                      - "Consommation d’énergie renouvelable locale (60% d'énergie d'origine hydraulique 'TUV SUD EE01' et 40% d'énergie d'origines renouvelables 'Naturemade Star')"
+                      - "Power Usage Effectiveness (PUE) de 1,09 (vs moyenne européenne de 1,8)"
+                      - "Refroidissement des data centers à l’air extérieur naturel, sans climatisation"
+                      - "Durée de vie des serveurs entre 5 et 15 ans"
+                      - "Allocation à d’autres tâches des ressources non-utilisées"
+                      - "Onduleurs d’énergie en mode veille"
+                      - "Compensation de toutes leurs émissions de gaz à effet de serre à 200%"
+                      - "Source : https://www.infomaniak.com/fr/ecologie"
+    - title: "Tests et compatibilité devices"
+      content:  
+        - paragraph: "Ce site a été conçu et développé pour être correctement affiché et utilisable sur des devices variés, récents et anciens. Nos tests ont été réalisés sur :"
+        - list:
+          - "Navigateurs : Chrome/macOS, Firefox/macOS, Safari/macOS, Windows"
+          - "Résolutions : mobile et desktop, toutes résolutions (site responsive)"
+          - "Devices : iPad Air (2013), iPhone 7 (2016), Pixel 3a (2018), Samsung Galaxy S10e (2019)"
+    - title: "Axes d’amélioration"
+      content: 
+        - paragraph: "À ce jour, nous avons d’ores-et-déjà identifié des axes d’amélioration."
+        - list:
+          - "Retravail ergonomique de la page Projets pour simplifier le DOM"
+          - "Intégration du menu mobile en HTML/CSS uniquement"
+          - "Affichage de la galerie en HTML/CSS uniquement"
+          - "Suppression des glyphes non-utilisés dans la font"
+          - "Optimisation ergonomique de la feuille de style d’impression"
+          - "Dropdown HTML/CSS sur l'état actif uniquement"
+    - title: "Autres évolutions"
+      content:  
+         - paragraph: "Nous avons profité de ce temps de réflexion et d’action pour opérer également des changements sur nos supports de communication et outils de travail du quotidien :"
+        - list:
+          - "Bascule des outils Google vers la kSuite d’Infomaniak pour le stockage de nos documents, les réunions et visioconférences, notre messagerie..."
+          - "Refonte de notre book PDF :"
+            list:
+              - "Diminution drastique du nombre de slides et d’images utilisées : poids total diminué de 50% (16 Mo au lieu de 32 Mo)"
+              - "Prochaine action à fort impact attendu : remplacement des multiples screenshots présentant chaque projet par un seul montage optimisé pour chaque projet"
+    grid_span: 7
