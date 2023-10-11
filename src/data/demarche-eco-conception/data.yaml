@@ -53,7 +53,7 @@ content:
         content:
           - list:
               - "Choix d’un site à plusieurs pages pour répondre à des unités fonctionnelles précises sans obliger l’internaute à charger tous les contenus (contrairement au site one page précédent)"
-              - "La prise de contact -unité fonctionnelle principale- est facilitée quelque soit la page en question sans avoir à charger une nouvelle page, grâce au lien omniprésent vers une ancre en bas de page"
+              - "La prise de contact -unité fonctionnelle principale- est facilitée quelle que soit la page en question sans avoir à charger une nouvelle page, grâce au lien omniprésent vers une ancre en bas de page"
               - "Masquage par défaut des images d’un projet et affichage d’un message de prévention lorsque la personne utilisatrice fait le choix d’afficher les images en plus grande taille"
               - "Limitation dans la dimension et donc le poids des images projets car elles ne sont là que pour suggérer le contenu de nos livrables"
               - "Respect des règles d’accessibilité relatives au design"
@@ -104,7 +104,7 @@ content:
                   <li>Allocation à d’autres tâches des ressources non-utilisées</li>
                   <li>Onduleurs d’énergie en mode veille</li>
                   <li>Compensation de toutes leurs émissions de gaz à effet de serre à 200%</li>
-                  <li><a href="https://www.infomaniak.com/fr/ecologie" target="_blank">Source Infomaniak (nouvel onglet)</li>
+                  <li><a href="https://www.infomaniak.com/fr/ecologie" target="_blank">Source Infomaniak (nouvel onglet)</a></li>
                 </ul>
       - title: "Tests et compatibilité devices"
         content:
