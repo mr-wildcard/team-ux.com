@@ -11,7 +11,7 @@ function getSiteURL() {
     if (process.env.CF_PAGES_BRANCH !== "main") {
       return `https://${process.env.CF_PAGES_BRANCH}.team-ux.pages.dev/`;
     } else {
-      return "https://team-ux.com/";
+      return "https://team-ux-com.pages.dev/";
     }
   } else {
     return `http://localhost:${LOCAL_PORT}/`;
