@@ -10,6 +10,7 @@ import Image from "../../../../@common/Image.astro";
 interface Props {
   project: {
     title: string;
+    logo: string;
     activity: string;
     skills: string[];
     images?: string[];
@@ -30,7 +31,19 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
   class="project flex flex-col gap-8 lg:gap-0 px-5 py-6 lg:p-10 bg-neutral4 rounded-[26px]"
 >
   <div class="flex flex-col lg:flex-row gap-8">
-    <div class="flex flex-col gap-10 lg:flex-[0_0_40%]">
+    <div class="flex flex-col gap-8 lg:flex-[0_0_40%]">
+      <Image
+        class="rounded-[12px] border border-neutral3"
+        srcSet={[
+          `/images/projets/logo-${project.logo}.png`,
+          `/images/projets/logo-${project.logo}.avif`,
+          `/images/projets/logo-${project.logo}.webp`
+        ]}
+        width={200}
+        height={80}
+      />
+
+
       <div>
         <p class="mb-3 lg:mb-2.5 text-headline-medium-bold">
           {project.title}

@@ -1,6 +1,7 @@
 - group_project_display: large
   projects:
     - title: School of System Change
+      logo: school
       activity: Marque de l’ONG Forum for the Future
       skills:
         - Éco-conception
@@ -22,6 +23,7 @@
         author: Saskia Rysenbry, curator at
         company: School of System Change
     - title: Sys1
+      logo: sys1
       activity: Éditeur de la solution Logus
       skills:
         - Accessibilité
@@ -42,6 +44,7 @@
 - group_project_display: small
   projects:
     - name: MeyerDOM, avec l’agence Mink
+      logo: meyerdom
       title: Une nouvelle appli de domotique dédiée aux personnes handicapées et aux institutions médicalisées
       skills:
         - Accessibilité
@@ -50,6 +53,7 @@
         - MVP
         - Domotique
     - name: Journey (aujourd’hui Dynamo Bordeaux)
+      logo: journey
       title: Une identité et un site e-commerce pour le nouveau concept d’indoor cycling s’adressant aux Bordelaises et Bordelais
       skills:
         - Design UX/UI
@@ -59,6 +63,7 @@
         - E-commerce
         - Sport
     - name: Canal+ International, avec l’agence Ekino
+      logo: canal+
       title: Un outil interne repensé pour que des équipes distribuées configurent et diffusent des messages par satellite
       skills:
         - Accessibilité
@@ -67,12 +72,14 @@
         - Refonte
         - Médias
     - name: Cap Atlantique, avec les cabinets Satori&co et Sous le sens
+      logo: cap-atlantique
       title: Un outil de cartographie collaborative des parcours des usagères et usagers pour développer l’empathie des équipes de l’agglomération
       skills:
         - Recherche UX
         - Design thinking
         - Communication territoriale
     - name: IMA Tech, avec l’agence Conserto
+      logo: imatech
       title: Une plateforme co-conçue pour aider les sociétaires des assurances à prévenir et gérer les sinistres du quotidien
       skills:
         - Design thinking
@@ -80,6 +87,7 @@
         - Espace connecté
         - Assurances
     - name: Upp! by Place de Seine, avec l’agence Snapp’
+      logo: snapp
       title: Un concept d’appli pour proposer des services aux personnes employées et usagères d’un immeuble connecté
       skills:
         - Design UX
@@ -88,6 +96,7 @@
 - group_project_display: large
   projects:
     - title: Groupe des Chalets
+      logo: chalets
       activity: Entreprise Sociale de l’Habitat
       skills:
         - Accessibilité
@@ -108,6 +117,7 @@
         author: Jade Vincent, co-fondatrice de
         company: Rose Primaire
     - title: Société de transport
+      logo: ekino
       activity: Projet confidentiel
       skills:
         - Accessibilité
@@ -134,6 +144,7 @@
 - group_project_display: small
   projects:
     - name: L’Oréal, avec l’agence Content Factory
+      logo: l-oreal
       title: Une architecture de l’information optimisée sur un site grand public dédié à la composition des produits
       skills:
         - Accessibilité
@@ -142,6 +153,7 @@
         - Audit
         - Cosmétique
     - name: Poool, en tant que salariées
+      logo: poool
       title: Une suite de produits conçue pour proposer aux internautes un nouveau moyen d’accéder à la presse en ligne
       skills:
         - Accessibilité
@@ -151,6 +163,7 @@
         - Dashboard
         - Tech
     - name: Ville de Mérignac, avec l’agence Transo Systémique
+      logo: ville-de-merignac
       title: Une expérience de stand co-conçue pour convaincre les habitantes et habitants d’intégrer un projet sur le changement climatique
       skills:
         - Design thinking
@@ -158,6 +171,7 @@
         - Innovation sociale
         - Communication territoriale
     - name: Orange
+      logo: orange
       title: Les parcours des personnes utilisatrices optimisés sur tous les points de contact “jeux mobile” du Groupe
       skills:
         - Stratégie UX
@@ -165,6 +179,7 @@
         - Application mobile
         - Jeux
     - name: Sézane, avec l’UX/UI designer Thibaud Mischler
+      logo: sezane
       title: Des outils internes à imaginer pour que les équipes de la marque de mode collaborent sur les plans de collection
       skills:
         - Design UX/UI
@@ -173,6 +188,7 @@
         - Mode
         - Outil de collaboration
     - name: Groupe FIMECO, en collaboration avec l’éditeur Acropole Expert Informatique
+      logo: fimeco
       title: Un logiciel de gestion interne créé pour fusionner plusieurs solutions dédiées aux métiers de l’expertise comptable et de l’entrepreneuriat
       skills:
         - Accessibilité
@@ -183,6 +199,7 @@
 - group_project_display: large
   projects:
     - title: HF Prévention Santé
+      logo: hf-prevention-sante
       activity: Association Nationale de Prévention Santé
       skills:
         - Accessibilité
@@ -196,6 +213,7 @@
         content: |
           En tant que prestataires de l'agence Content Factory, notre mission principale pour ce projet était de concevoir différents parcours dans l’application mobile pour aider les personnes utilisatrices à trouver des ressources et des informations pertinentes en matière de santé sexuelle, tout en minimisant les frictions entre le mode vocal et la messagerie pour interagir avec l'IA (intelligence artificielle). Pour cela, nous avons défini les cas d'utilisation sur la base des dialogues élaborés par l’agence, HF Prévention et des équipes expertes de la santé. Nous avons créé différents parcours  en intégrant les meilleures pratiques en matière de conception Web et d'accessibilité. Tout au long du processus de conception, nous avons accordé une attention particulière à l'éthique. Notre objectif principal était de sensibiliser l'équipe et l’association cliente pour nous assurer que le service soit transparent et respectueux de la vie privée des personnes utilisatrices, tout en minimisant les risques potentiels liés à l'utilisation de l'IA.
     - title: DXOMARK
+      logo: dxomark
       activity: Leader de l’évaluation de produits électroniques
       skills:
         - Design UX

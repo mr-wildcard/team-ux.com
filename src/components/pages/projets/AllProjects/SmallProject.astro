@@ -1,5 +1,6 @@
 ---
 import Tag from "../../../@common/Tag.astro";
+import Image from "../../../@common/Image.astro";
 interface Props {
   projects: {
     name: string;
@@ -12,6 +13,17 @@ const { project } = Astro.props;
 ---
 
 <div class="p-5 lg:p-10 bg-surface5 rounded-[26px]">
+  <Image
+    class="mb-8 rounded-[12px] border border-neutral3"
+    srcSet={[
+      `/images/projets/logo-${project.logo}.png`,
+      `/images/projets/logo-${project.logo}.avif`,
+      `/images/projets/logo-${project.logo}.webp`,
+    ]}
+    width={200}
+    height={80}
+  />
+
   <p class="mb-5 text-headline-small lg:text-label-large">
     {project.name}
   </p>
