@@ -70,7 +70,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
     <div class="hidden lg:block container">
       <Grid>
         <div class="lg:col-span-full py-4 border-b border-neutral2">
-          <ul class="flex justify-between">
+          <ul class="flex gap-2 flex-wrap 2xl:gap-0 2xl:justify-between">
             {
               allLetters.map((letter) => {
                 return (
