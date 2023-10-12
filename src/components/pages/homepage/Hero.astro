@@ -9,13 +9,15 @@ import DuoDeChoc from "../../DuoDeChoc.astro";
   <div class="container">
     <Grid>
       <h1
-        class="col-span-full lg:col-start-2 lg:col-span-9 mb-10 lg:mb-8 text-display-large"
+        class="col-span-full lg:col-start-1 lg:col-span-10 2xl:lg-col-start-2 2xl:col-span-9 mb-10 lg:mb-8 text-display-large"
       >
         Nous sommes Yuna & Daniela, <span class="text-primary"
           >l’extension UX freelance</span
         > de votre équipe produit
       </h1>
-      <div class="col-span-full lg:col-start-2 lg:col-span-6">
+      <div
+        class="col-span-full lg:col-start-1 lg:col-span-8 2xl:col-start-2 2xl:col-span-6"
+      >
         <p class="our-work mb-5 text-body-large lg:text-body-extra-large">
           Binôme de designers UX/UI seniors, notre travail est reconnu pour son
           efficacité et sa pertinence, en particulier sur les produits
@@ -31,7 +33,7 @@ import DuoDeChoc from "../../DuoDeChoc.astro";
         </CallToAction>
       </div>
       <div class="max-lg:hidden col-start-9 col-span-3">
-        <div class="relative mt-[67px]">
+        <div class="relative lg:mt-[250px] 2xl:mt-[67px]">
           <BackgroundForm1
             class="max-lg:hidden absolute top-[-184px] right-[-580px] z-[-1]"
           />
@@ -42,3 +44,21 @@ import DuoDeChoc from "../../DuoDeChoc.astro";
     </Grid>
   </div>
 </section>
+
+<style>
+  @screen lg {
+    h1 {
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 65px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+    }
+  }
+</style>

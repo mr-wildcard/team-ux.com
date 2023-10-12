@@ -10,7 +10,7 @@ import Expertise from "./Expertise.astro";
   <div class="container">
     <Grid>
       <h2
-        class="col-span-full lg:col-start-2 relative text-headline-medium text-neutral1 mb-6 lg:mb-10"
+        class="col-span-full lg:col-start-1 2xl:col-start-2 relative text-headline-medium text-neutral1 mb-6 lg:mb-10"
       >
         {data.title}
 
@@ -21,7 +21,7 @@ import Expertise from "./Expertise.astro";
       </h2>
 
       <ul
-        class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col gap-8"
+        class="col-span-full lg:col-start-1 2xl:col-start-2 lg:col-span-7 2xl:col-span-5 flex flex-col gap-8"
       >
         {
           data.expertises.map((expertise, index) => {
