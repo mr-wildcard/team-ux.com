@@ -1,3 +1,5 @@
+import { listenToMediaQueryChange } from "../../../scripts/helpers/listenToMediaQueryChange.ts";
+
 const letters = document.querySelector<HTMLDivElement>("#letters-nav");
 const stickyLetters = document.querySelector<HTMLDivElement>(
   "#sticky-letters-nav",
@@ -13,10 +15,12 @@ const lettersObserver = new IntersectionObserver(
       return;
     }
 
+    console.log(intersectionRatio);
+
     if (intersectionRatio === 0 && stickyLetters.classList.contains("hidden")) {
       stickyLetters.classList.remove("hidden");
     } else if (
-      intersectionRatio === 1 &&
+      intersectionRatio > 0 &&
       !stickyLetters.classList.contains("hidden")
     ) {
       stickyLetters.classList.add("hidden");
@@ -44,7 +48,8 @@ const letterSectionsObserver = new IntersectionObserver(
     threshold: 0,
     // 172: height of sticky header + sticky letters
     // 100: space between two letters section
-    // Adding those values, makes theorically impossible for the intersection observer to detect two letter sections intersecting.
+    // Adding those values makes theorically impossible for the intersection observer
+    // to detect two letter sections intersecting at the same time.
     rootMargin: `-172px 0px -${window.innerHeight - (172 + 100)}px 0px`,
   },
 );
@@ -65,10 +70,14 @@ if (letters && stickyLetters) {
   }
 }
 
-if (window.matchMedia("(min-width: 1280px)").matches) {
-  const firstDefinition = document.querySelector(".letter-section details");
+const firstDefinition = document.querySelector(".letter-section details");
 
-  if (firstDefinition) {
-    firstDefinition.setAttribute("open", "");
-  }
+if (firstDefinition) {
+  listenToMediaQueryChange("(min-width: 1280px)", { fireOnInit: true }).onMatch(
+    (matches) => {
+      if (matches && !firstDefinition.hasAttribute("open")) {
+        firstDefinition.setAttribute("open", "");
+      }
+    },
+  );
 }
