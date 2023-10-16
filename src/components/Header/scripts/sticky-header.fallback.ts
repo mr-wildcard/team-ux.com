@@ -1,6 +1,6 @@
 import { listenToMediaQueryChange } from "../../../scripts/helpers/listenToMediaQueryChange.ts";
 
-const header = document.querySelector<HTMLElement>("#header .outer");
+const header = document.querySelector<HTMLElement>("#header");
 
 function onMediaQueryMatches(isDesktop: boolean) {
   let headerHasBackground = false;

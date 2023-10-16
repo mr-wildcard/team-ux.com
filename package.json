@@ -10,12 +10,6 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "browserslist": {
-    "production": [
-      "ios_saf 7",
-      "Safari 7"
-    ]
-  },
   "dependencies": {
     "astro": "^3.3.0",
     "astro-icon": "0.8.1",
