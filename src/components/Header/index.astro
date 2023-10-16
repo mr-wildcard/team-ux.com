@@ -7,106 +7,108 @@ import NavItems from "./NavItems.astro";
 import Grid from "../@common/Grid.astro";
 ---
 
-<header id="header" data-menu-opened="false" class="sticky z-10 top-0">
-  <div class="outer isolate py-5 lg:py-0">
-    <div class="container">
-      <Grid>
-        <div
-          class="col-span-full relative z-10 flex items-center justify-between lg:px-0 lg:py-[22px]"
+<header
+  id="header"
+  data-menu-opened="false"
+  class="sticky z-10 top-0 isolate py-5 lg:py-0"
+>
+  <div class="container">
+    <Grid>
+      <div
+        class="col-span-full relative z-10 flex items-center justify-between lg:px-0 lg:py-[22px]"
+      >
+        <Logo />
+
+        <nav role="navigation" class="hidden lg:block">
+          <ul class="flex items-center gap-10">
+            <li>
+              <NavItem to="/">Accueil</NavItem>
+            </li>
+            <li>
+              <NavItems
+                title="Références"
+                items={[
+                  { title: "Projets", pathname: "/projets" },
+                  { title: "Témoignages", pathname: "/temoignages" },
+                ]}
+              />
+            </li>
+            <li>
+              <NavItems
+                title="Team UX"
+                items={[
+                  { title: "Nos 2 profils", pathname: "/nos-deux-profils" },
+                  { title: "Notre manifeste", pathname: "/notre-manifeste" },
+                ]}
+              />
+            </li>
+            <li>
+              <NavItemContact />
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          id="menu-opener"
+          class="lg:hidden flex items-center gap-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
         >
-          <Logo />
-
-          <nav role="navigation" class="hidden lg:block">
-            <ul class="flex items-center gap-10">
-              <li>
-                <NavItem to="/">Accueil</NavItem>
-              </li>
-              <li>
-                <NavItems
-                  title="Références"
-                  items={[
-                    { title: "Projets", pathname: "/projets" },
-                    { title: "Témoignages", pathname: "/temoignages" },
-                  ]}
-                />
-              </li>
-              <li>
-                <NavItems
-                  title="Team UX"
-                  items={[
-                    { title: "Nos 2 profils", pathname: "/nos-deux-profils" },
-                    { title: "Notre manifeste", pathname: "/notre-manifeste" },
-                  ]}
-                />
-              </li>
-              <li>
-                <NavItemContact />
-              </li>
-            </ul>
-          </nav>
-
-          <button
-            id="menu-opener"
-            class="lg:hidden flex items-center gap-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
+          <span class="text-closed">Menu</span>
+          <span class="text-opened">Fermer</span>
+          <Icon name="cross" width={26} height={20} />
+          <Icon name="hamburger" width={26} height={20} />
+        </button>
+      </div>
+    </Grid>
+  </div>
+  <div
+    id="mobile-menu"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-[84px] left-0 w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
+  >
+    <nav role="navigation" class="text-headline-large">
+      <ul class="flex flex-col gap-11">
+        <li>
+          <NavItem to="/">Accueil</NavItem>
+        </li>
+        <li>
+          <span class="block mb-3.5 text-body-medium-bold text-neutral1"
+            >Références</span
           >
-            <span class="text-closed">Menu</span>
-            <span class="text-opened">Fermer</span>
-            <Icon name="cross" width={26} height={20} />
-            <Icon name="hamburger" width={26} height={20} />
-          </button>
-        </div>
-      </Grid>
-    </div>
-    <div
-      id="mobile-menu"
-      class="hidden overflow-y-auto overflow-x-hidden fixed top-[84px] left-0 w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
-    >
-      <nav role="navigation" class="text-headline-large">
-        <ul class="flex flex-col gap-11">
-          <li>
-            <NavItem to="/">Accueil</NavItem>
-          </li>
-          <li>
-            <span class="block mb-3.5 text-body-medium-bold text-neutral1"
-              >Références</span
-            >
-            <ul class="flex flex-col gap-6 ml-5">
-              <li>
-                <NavItem to="/projets">Projets</NavItem>
-              </li>
-              <li>
-                <NavItem to="/temoignages">Témoignages</NavItem>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span class="block mb-3.5 text-body-medium-bold text-neutral1"
-              >Team UX</span
-            >
-            <ul class="flex flex-col gap-6 ml-5">
-              <li>
-                <NavItem to="/nos-deux-profils">Nos 2 profils</NavItem>
-              </li>
-              <li>
-                <NavItem to="/notre-manifeste">Notre manifeste</NavItem>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+          <ul class="flex flex-col gap-6 ml-5">
+            <li>
+              <NavItem to="/projets">Projets</NavItem>
+            </li>
+            <li>
+              <NavItem to="/temoignages">Témoignages</NavItem>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="block mb-3.5 text-body-medium-bold text-neutral1"
+            >Team UX</span
+          >
+          <ul class="flex flex-col gap-6 ml-5">
+            <li>
+              <NavItem to="/nos-deux-profils">Nos 2 profils</NavItem>
+            </li>
+            <li>
+              <NavItem to="/notre-manifeste">Notre manifeste</NavItem>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-      <p class="mt-12 p-5 text-headline-small-bold rounded-[26px] bg-surface3">
-        Contactez-nous à l’adresse <br />
-        <a class="underline underline-offset-4" href="mailto:hello@team-ux.com"
-          >hello@team-ux.com</a
-        >
-      </p>
-    </div>
+    <p class="mt-12 p-5 text-headline-small-bold rounded-[26px] bg-surface3">
+      Contactez-nous à l’adresse <br />
+      <a class="underline underline-offset-4" href="mailto:hello@team-ux.com"
+        >hello@team-ux.com</a
+      >
+    </p>
   </div>
 </header>
 
 <script>
-  if (!CSS.supports("animation-timeline", "scroll()")) {
+  if (!CSS.supports("animation-timeline", "scroll(y root)")) {
     import("./scripts/sticky-header.fallback");
   }
 
@@ -170,56 +172,58 @@ import Grid from "../@common/Grid.astro";
   }
 
   @screen 2xl {
-    .outer {
+    header {
       margin-inline: -40px;
     }
   }
 
   @screen lg {
     header {
-      background: none !important;
+      margin-inline: 9px;
+      border-radius: 0 0 16px 16px;
     }
 
     #mobile-menu {
       display: none !important;
     }
-
-    .outer {
-      margin-inline: 9px;
-      border-radius: 0 0 16px 16px;
-    }
   }
 
-  @supports (animation-timeline: scroll()) {
-    header:not([data-menu-opened="true"]) .outer {
-      animation: mobile-sticky-bg-white-header 1ms linear forwards;
-      animation-timeline: scroll();
+  @supports (animation-timeline: scroll(y root)) {
+    header {
+      animation-duration: 1ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
       animation-range: 0px 1px;
+      animation-timeline: scroll(y root);
+    }
+
+    header:not([data-menu-opened="true"]) {
+      animation-name: mobile-sticky-bg-white-header;
     }
 
     @screen lg {
-      .outer {
-        animation: desktop-sticky-bg-white-header 1ms linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0px 1px;
+      header {
+        animation-name: desktop-sticky-bg-white-header;
       }
     }
   }
 
   @keyframes mobile-sticky-bg-white-header {
     from {
+      box-shadow: none;
       background: rgba(255, 255, 255, 0);
     }
 
     to {
       background: rgba(255, 255, 255, 1);
-      box-shadow: 0px 2px 4px 0px rgba(8, 18, 79, 0.25);
+      box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
     }
   }
 
   @keyframes desktop-sticky-bg-white-header {
     from {
       background: rgba(255, 255, 255, 0);
+      box-shadow: none;
     }
 
     to {
