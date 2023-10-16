@@ -17,10 +17,16 @@ const backgroundFormCSSClasses = showBackgroundForm
       "overflow-hidden",
       "pb-[178px]",
       "mb-[-178px]",
-      "lg:pt-[255px]",
-      "lg:pb-[439px]",
-      "lg:mt-[-255px]",
-      "lg:mb-[-439px]",
+      "sm:pt-[76px]",
+      "sm:mt-[-76px]",
+      "lg:pt-[60px]",
+      "lg:mt-[-60px]",
+      "lg:pb-[415px]",
+      "lg:mb-[-415px]",
+      "2xl:pt-[255px]",
+      "2xl:mt-[-255px]",
+      "2xl:pb-[439px]",
+      "2xl:mb-[-439px]",
     ]
   : [];
 ---
@@ -29,7 +35,7 @@ const backgroundFormCSSClasses = showBackgroundForm
   <div class="relative container">
     {
       showBackgroundForm && (
-        <BackgroundForm1 class="absolute z-[-1] top-[100px] right-[-370px] lg:top-[-125px] lg:right-[-540px] w-[600px] h-[303px]" />
+        <BackgroundForm1 class="absolute z-[-1] top-[100px] right-[-370px] sm:top-0 sm:right-[-60px] lg:top-[50px] lg:right-[-250px] 2xl:top-[-125px] 2xl:right-[-540px]" />
       )
     }
     <Grid class="gap-y-5 lg:gap-y-6">
