@@ -9,15 +9,13 @@ import DuoDeChoc from "../../DuoDeChoc.astro";
   <div class="container">
     <Grid>
       <h1
-        class="col-span-full lg:col-start-1 lg:col-span-10 2xl:lg-col-start-2 2xl:col-span-9 mb-10 lg:mb-8 text-display-large"
+        class="col-span-full lg:col-span-10 2xl:col-start-2 2xl:col-span-9 mb-10 lg:mb-8"
       >
         Nous sommes Yuna & Daniela, <span class="text-primary"
           >l’extension UX freelance</span
         > de votre équipe produit
       </h1>
-      <div
-        class="col-span-full lg:col-start-1 lg:col-span-8 2xl:col-start-2 2xl:col-span-6"
-      >
+      <div class="col-span-full lg:col-span-8 2xl:col-start-2 2xl:col-span-6">
         <p class="our-work mb-5 text-body-large lg:text-body-extra-large">
           Binôme de designers UX/UI seniors, notre travail est reconnu pour son
           efficacité et sa pertinence, en particulier sur les produits
@@ -46,19 +44,45 @@ import DuoDeChoc from "../../DuoDeChoc.astro";
 </section>
 
 <style>
-  @screen lg {
-    h1 {
+  .our-work {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+
+    @screen lg {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+    }
+
+    @screen 2xl {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 38px;
+    }
+  }
+
+  h1 {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px;
+
+    @screen lg {
       font-size: 52px;
       font-style: normal;
       font-weight: 700;
       line-height: 65px;
     }
 
-    h2 {
-      font-size: 22px;
+    @screen 2xl {
+      font-size: 72px;
       font-style: normal;
-      font-weight: 500;
-      line-height: 36px;
+      font-weight: 700;
+      line-height: 84px;
     }
   }
 </style>
