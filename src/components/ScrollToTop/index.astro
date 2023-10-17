@@ -2,6 +2,32 @@
 import Icon from "../@common/Icon.astro";
 ---
 
+<button
+  id="scroll-to-top-button"
+  class="fixed
+    right-[20px]
+    bottom-[20px]
+    w-[102px]
+    max-md:hidden
+    hidden
+    items-center
+    gap-[7px]
+    px-2
+    py-[5px]
+    text-label-small
+    text-neutral4
+    text-right
+    rounded-[10px]
+    bg-primary
+    lg:flex
+    lg:transition
+    lg:hover:bg-secondary"
+  title="Revenir en haut de la page"
+>
+  <span class="hidden flex-1 md:block">revenir<br />en haut</span>
+  <Icon name="arrow_up" width={24} height={24} />
+</button>
+
 <style>
   #scroll-to-top-button {
     pointer-events: none;
@@ -23,30 +49,5 @@ import Icon from "../@common/Icon.astro";
     transform: translateY(0);
   }
 </style>
-
-<button
-  id="scroll-to-top-button"
-  class="fixed
-    right-[20px]
-    bottom-[20px]
-    w-[102px]
-    max-md:hidden
-    flex
-    items-center
-    gap-[7px]
-    px-2
-    py-[5px]
-    text-label-small
-    text-neutral4
-    text-right
-    rounded-[10px]
-    bg-primary
-    lg:transition
-    lg:hover:bg-secondary"
-  title="Revenir en haut de la page"
->
-  <span class="hidden flex-1 md:block">revenir<br />en haut</span>
-  <Icon name="arrow_up" width={24} height={24} />
-</button>
 
 <script src="./index.ts"></script>
