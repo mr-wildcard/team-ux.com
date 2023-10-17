@@ -174,7 +174,9 @@ const { block1, block2 } = data;
             <h3 class="text-headline-medium-bold">
               {data.commited.title}
             </h3>
-            <ul class="flex items-center max-lg:justify-around gap-[44px]">
+            <ul
+              class="flex items-center justify-around sm:justify-start gap-[44px]"
+            >
               <li>
                 <span class="hidden print:inline">Desino Etico</span>
 
@@ -222,7 +224,7 @@ const { block1, block2 } = data;
   }
 
   .certifications {
-    @apply flex items-center flex-wrap justify-between space-y-0 gap-10;
+    @apply flex items-center flex-wrap justify-around sm:justify-start 2xl:justify-between space-y-0 gap-10;
 
     li {
       width: 120px;
