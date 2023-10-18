@@ -46,78 +46,84 @@ import Block from "./Block.astro";
         </p>
       </div>
     </div>
+  </Grid>
 
-    <div
-      class="overflow-x-auto col-span-full lg:col-start-2 lg:col-span-9 my-20 lg:mb-[120px]"
-    >
-      <table class="w-full border-collapse border border-neutral2">
-        <thead class="bg-neutral4">
-          <tr>
-            <th class="w-[310px] whitespace-nowrap">Page</th>
-            <th class="w-[193px] whitespace-nowrap">Poids</th>
-            <th class="w-[274px] whitespace-nowrap">Scores EcoIndex</th>
-            <th class="w-[274px] whitespace-nowrap">Scores EcoGrader</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Accueil</td>
-            <td>196 ko</td>
-            <td>B (77/100)</td>
-            <td>98/100</td>
-          </tr>
-          <tr>
-            <td>Projets</td>
-            <td>151 ko</td>
-            <td>C (64/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Témoignages</td>
-            <td>108 ko</td>
-            <td>A (85/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Nos 2 profils</td>
-            <td>158 ko</td>
-            <td>A (82/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Notre manifeste</td>
-            <td>181 ko</td>
-            <td>A (84/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Mentions légales</td>
-            <td>109 ko</td>
-            <td>A (86/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Plan du site</td>
-            <td>106 ko</td>
-            <td>A (87/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Glossaire UX design</td>
-            <td>124 ko</td>
-            <td>C (59/100)</td>
-            <td>99/100</td>
-          </tr>
-          <tr>
-            <td>Démarche d’éco-conception</td>
-            <td>109 ko</td>
-            <td>A (85/100)</td>
-            <td>99/100</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="my-20 lg:mb-[120px]">
+    <Grid class="max-sm:!px-0">
+      <div
+        class="overflow-x-auto col-span-full lg:col-start-2 lg:col-span-9 px-5 sm:px-0"
+      >
+        <table class="w-full border-collapse border border-neutral2">
+          <thead class="bg-neutral4">
+            <tr>
+              <th class="w-[310px] whitespace-nowrap">Page</th>
+              <th class="w-[193px] whitespace-nowrap">Poids</th>
+              <th class="w-[274px] whitespace-nowrap">Scores EcoIndex</th>
+              <th class="w-[274px] whitespace-nowrap">Scores EcoGrader</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accueil</td>
+              <td>196 ko</td>
+              <td>B (77/100)</td>
+              <td>98/100</td>
+            </tr>
+            <tr>
+              <td>Projets</td>
+              <td>151 ko</td>
+              <td>C (64/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Témoignages</td>
+              <td>108 ko</td>
+              <td>A (85/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Nos 2 profils</td>
+              <td>158 ko</td>
+              <td>A (82/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Notre manifeste</td>
+              <td>181 ko</td>
+              <td>A (84/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Mentions légales</td>
+              <td>109 ko</td>
+              <td>A (86/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Plan du site</td>
+              <td>106 ko</td>
+              <td>A (87/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Glossaire UX design</td>
+              <td>124 ko</td>
+              <td>C (59/100)</td>
+              <td>99/100</td>
+            </tr>
+            <tr>
+              <td>Démarche d’éco-conception</td>
+              <td>109 ko</td>
+              <td>A (85/100)</td>
+              <td>99/100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Grid>
+  </div>
 
+  <Grid>
     <div
       class="col-span-full lg:col-start-2 lg:col-span-10 space-y-[60px] lg:space-y-[140px]"
     >
@@ -183,7 +189,7 @@ import Block from "./Block.astro";
   table {
     th,
     td {
-      @apply p-2.5 text-left;
+      @apply p-2.5 text-left whitespace-nowrap;
     }
 
     thead,
