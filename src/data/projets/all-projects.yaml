@@ -10,6 +10,10 @@
         - Refonte
         - Formation professionnelle
       images: desktop-school
+      imagesLegends:
+        - Analyse des besoins, benchmark concurrentiel et définition d’une stratégie UX pour atteindre les objectifs d’image et de recrutement. Atelier de co-création pour valider les parcours-clés.
+        - Conception des wireframes desktop des gabarits-clés du site, en respectant les bonnes pratiques d’accessibilité et d’éco-conception.
+        - Optimisation des parcours de conversion du site (inscription aux formations). Transformation de nos wireframes en maquettes UI et intégration par le studio de design bas carbone Hey Low.
       description:
         title: Un nouveau site Web pour recruter les futures promotions d’une école formant au changement systémique
         content: |
@@ -32,6 +36,10 @@
         - Refonte
         - Dossiers médico-sociaux
       images: desktop-logus
+      imagesLegends:
+        - Analyse des besoins par cartographie fonctionnelle, entretiens parties prenantes, focus group... Réalisation d’un audit expert UX/UI et définition de la nouvelle arborescence.
+        - Conception des wireframes desktop des fonctionnalités-phares de l’outil, en respectant les bonnes pratiques d’accessibilité et les contraintes techniques du projet. Prototypage interactif.
+        - Transformation du travail UX en maquettes UI, entre tonalité ludique et interfaces claires et accessibles. Travail de composants avec livraison d’une bibliothèque UI pour rendre les équipes techniques autonomes.
       description:
         title: Une solution numérique repensée pour suivre les dossiers des usagères et usagers dans les établissements médico-sociaux
         content: |
@@ -106,6 +114,10 @@
         - Refonte
         - Habitat social
       images: desktop-chalets
+      imagesLegends:
+        - Analyse des besoins recensés pour chaque persona. Travail d’arborescence des contenus. Atelier de co-conception d’un formulaire dynamique multi-cible.
+        - Conception des wireframes de dizaines de gabarits de pages desktop et mobile pour traiter les unités fonctionnelles retenues sur le site institutionnel.
+        - Prototypage dynamique de parcours-clés sur des espaces connectés et sur la déclinaison du site institutionnel pour une cible jeune spécifique.
       description:
         title: Un site institutionnel et des espaces connectés repensés pour rapprocher un bailleur social et ses cibles multiples
         content: |
@@ -128,6 +140,10 @@
         - Transport
         - Transformation digitale
       images: desktop-ekino
+      imagesLegends:
+        - Ateliers de design thinking et design sprints pour l’idéation et la co-conception de solutions, auprès des équipes de tous les services. Création de plusieurs POCs (preuves de concept) sur plusieurs mois.
+        - Travail de recherche UX fondé sur des entretiens téléphoniques, du shadowing, des focus groups et des questionnaires. Réalisation de personas et d’user journey mappings, assimilés en ateliers avec des exercices créatifs.
+        - Production itérative hebdomadaire de zonings, wireframes, prototypes et maquettes UI pendant 1 an et demi de projet. Création d’outils métiers sous forme d’intranets, espace clientèle, application mobile... Tests d’utilisabilité.
       description:
         title: Le système d’information d'un leader du transport entièrement refondu pour faciliter les échanges internes et externes
         content: |
@@ -208,6 +224,10 @@
         - Interface conversationnelle
         - Santé
       images: desktop-sacha
+      imagesLegends:
+        - Travail de recherche pour sensibiliser l’équipe aux enjeux éthiques autour de la conversation avec une IA. Conception des wireflows de l’application mobile.
+        - Conception des wireframes pour les écrans-clés de cette application mobile conversationnelle. Importance de l’UX writing dans le déroulé de l’expérience.
+        - Prototypage interactif de parcours sensibles autour de l’interaction avec l’IA et du modèle conversationnel. L’expérience doit être simple et fluide, quand le sujet abordé est pointu et délicat.
       description:
         title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
         content: |
@@ -222,6 +242,10 @@
         - Refonte
         - Tech
       images: desktop-dxomark
+      imagesLegends:
+        - Audit expert UX/UI pour identifier les axes de travail principaux de la mission. Formulation de préconisations détaillées. Présentations itératives d’une nouvelle stratégie UX pour ce site riche en contenus.
+        - "Conception des wireframes desktop et mobile pour la nouvelle version du site : rubriques éditoriales à intégrer, fonctionnalités dynamiques type outil avec de grandes quantités de données techniques à afficher, pages plus corporate..."
+        - L’enjeu principal du travail de conception UX a résidé dans la prise en compte de la double cible du produit numérique, soit spécialisée (presse technique, profils geeks...) soit néophyte (grand public à la recherche de comparatifs).
       description:
         title: La stratégie UX du site du leader de l’évaluation repensée pour parler à un public aussi bien technophile que novice
         content: |

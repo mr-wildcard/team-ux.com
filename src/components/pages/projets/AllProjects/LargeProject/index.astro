@@ -14,6 +14,7 @@ interface Props {
     activity: string;
     skills: string[];
     images?: string[];
+    imagesLegends?: string[];
     description: {
       title: string;
       content: string;
@@ -137,9 +138,9 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
           </span>
         </CallToAction>
 
-        <div class="gallery flex flex-col gap-5 mt-8">
-          <ul class="flex flex-col lg:flex-row gap-4 lg:gap-5">
-            {new Array(3).fill(0).map((_, index) => {
+        <div class="gallery flex flex-col gap-14 mt-8">
+          <ul class="flex flex-col lg:flex-row max-lg:gap-12 gap-4">
+            {new Array(3).fill(0).map((_, index, array) => {
               const imageIndex = index + 1;
 
               return (
@@ -147,7 +148,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                   <a
                     href={`/images/projets/${project.images}-${imageIndex}.png`}
                     target="_blank"
-                    class="project-image-link aspect-[431/361] relative flex overflow-hidden rounded-md lg:rounded-lg"
+                    class="project-image-link lg:aspect-[431/361] relative flex overflow-hidden rounded-md lg:rounded-lg"
                   >
                     <CallToAction tabindex="-1" class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" type="secondary" rightIcon="open_in_new">
                       Ouvrir l'image
@@ -162,9 +163,14 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                       style="opacity: 0"
                       class="opacity-0 transition-opacity"
                       onload="this.style.opacity = '1'"
-                      alt={`${project.title} - Image galerie ${imageIndex} sur 3`}
+                      alt={`${project.title} - Image galerie ${imageIndex} sur ${array.length}`}
+                      longdesc={`#longdesc-${project.images}`}
                     />
                   </a>
+
+                  {project.imagesLegends[index] && (
+                    <p id={`longdesc-${project.images}`} class="mt-5 text-body-medium">{project.imagesLegends[index]}</p>
+                  )}
                 </li>
               );
             })}
