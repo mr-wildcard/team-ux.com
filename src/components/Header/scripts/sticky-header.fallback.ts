@@ -41,6 +41,7 @@ function onMediaQueryMatches(isDesktop: boolean) {
   }
 
   window.addEventListener("scroll", onUserScrolls);
+  window.dispatchEvent(new Event("scroll"));
 }
 
 listenToMediaQueryChange("(min-width: 1024px)", { fireOnInit: true }).onMatch(
