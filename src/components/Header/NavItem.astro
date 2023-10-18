@@ -67,6 +67,10 @@ const selected =
       border-radius: 2px;
       opacity: 0;
     }
+
+    &:focus {
+      @apply rounded-[1px] outline outline-offset-[2px] outline-[3px] outline-secondary;
+    }
   }
 
   @screen lg {
