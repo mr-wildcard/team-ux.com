@@ -25,6 +25,9 @@ export default {
       spacing: {
         8: "30px",
       },
+      screens: {
+        "2xl": "1512px",
+      },
     },
     fontFamily: {
       sans: ["SatoshiVariable", "sans-serif"],
