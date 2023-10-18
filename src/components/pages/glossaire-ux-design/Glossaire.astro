@@ -130,11 +130,11 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                       (definition) => {
                         return (
                           <div class="bg-neutral4 rounded-[26px]">
-                            <details>
+                            <details data-anchor={`#${definition.slug}`}>
                               <summary class="px-5 py-4 sm:p-8 flex items-center justify-between gap-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
-                                  class="text-headline-small scroll-mt-[200px]"
+                                  class="text-headline-small scroll-mt-[220px]"
                                 >
                                   <span>{definition.term}</span>&nbsp;
                                   {definition.alternative && (

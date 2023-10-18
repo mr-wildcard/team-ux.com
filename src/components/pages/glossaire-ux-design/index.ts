@@ -15,8 +15,6 @@ const lettersObserver = new IntersectionObserver(
       return;
     }
 
-    console.log(intersectionRatio);
-
     if (intersectionRatio === 0 && stickyLetters.classList.contains("hidden")) {
       stickyLetters.classList.remove("hidden");
     } else if (
@@ -81,3 +79,19 @@ if (firstDefinition) {
     },
   );
 }
+
+function openDefinitionFromURLHash(urlHash: string): void {
+  const definition = document.querySelector<HTMLDetailsElement>(
+    `[data-anchor='${urlHash}']`,
+  );
+
+  if (definition) {
+    definition.setAttribute("open", "true");
+  }
+}
+
+window.addEventListener("hashchange", () => {
+  openDefinitionFromURLHash(window.location.hash);
+});
+
+openDefinitionFromURLHash(window.location.hash);
