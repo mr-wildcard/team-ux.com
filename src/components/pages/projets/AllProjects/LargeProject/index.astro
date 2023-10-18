@@ -15,6 +15,7 @@ interface Props {
     skills: string[];
     images?: string[];
     imagesLegends?: string[];
+    imagesAlts?: string[];
     description: {
       title: string;
       content: string;
@@ -164,7 +165,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                       style="opacity: 0"
                       class="opacity-0 transition-opacity"
                       onload="this.style.opacity = '1'"
-                      alt={`${project.title} - Image galerie ${imageIndex} sur ${array.length}`}
+                      alt={project.imagesAlts[index] ?? ""}
                       longdesc={`#longdesc-${project.images}`}
                     />
                   </a>
