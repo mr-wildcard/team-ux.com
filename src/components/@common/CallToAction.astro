@@ -53,11 +53,29 @@ const iconSize = variant === "transparent" ? 18 : 24;
 ---
 
 <HTMLTag {...htmlAttributes}>
-  {leftIcon && <Icon name={leftIcon} width={iconSize} height={iconSize} />}
+  {
+    leftIcon && (
+      <Icon
+        class="contents"
+        name={leftIcon}
+        width={iconSize}
+        height={iconSize}
+      />
+    )
+  }
   <span>
     <slot />
   </span>
-  {rightIcon && <Icon name={rightIcon} width={iconSize} height={iconSize} />}
+  {
+    rightIcon && (
+      <Icon
+        class="contents"
+        name={rightIcon}
+        width={iconSize}
+        height={iconSize}
+      />
+    )
+  }
 </HTMLTag>
 
 <style>

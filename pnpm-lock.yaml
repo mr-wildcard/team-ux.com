@@ -37,9 +37,6 @@ devDependencies:
   postcss-cli:
     specifier: 10.1.0
     version: 10.1.0(postcss@8.4.31)
-  postcss-flexbugs-fixes:
-    specifier: 5.0.2
-    version: 5.0.2(postcss@8.4.31)
   postcss-import:
     specifier: 15.1.0
     version: 15.1.0(postcss@8.4.31)
@@ -3236,14 +3233,6 @@ packages:
     engines: {node: ^14 || ^16 || >=18.0}
     peerDependencies:
       postcss: ^8.2.15
-    dependencies:
-      postcss: 8.4.31
-    dev: true
-
-  /postcss-flexbugs-fixes@5.0.2(postcss@8.4.31):
-    resolution: {integrity: sha512-18f9voByak7bTktR2QgDveglpn9DTbBWPUzSOe9g0N4WR/2eSt6Vrcbf0hmspvMI6YWGywz6B9f7jzpFNJJgnQ==}
-    peerDependencies:
-      postcss: ^8.1.4
     dependencies:
       postcss: 8.4.31
     dev: true
