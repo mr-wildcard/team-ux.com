@@ -80,15 +80,17 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
       {
         project.testimonial && (
           <details class="testimonials">
-            <CallToAction
-              type="secondary"
-              as="summary"
-              rightIcon="expand_more"
-              class="cursor-pointer"
-            >
-              Déplier
-              {hasManyTestimonials ? "les témoignages" : "le témoignage"}
-            </CallToAction>
+            <summary>
+              <CallToAction
+                type="secondary"
+                as="div"
+                rightIcon="expand_more"
+                class="cursor-pointer"
+              >
+                Déplier
+                {hasManyTestimonials ? "les témoignages" : "le témoignage"}
+              </CallToAction>
+            </summary>
 
             <div class="mt-5">
               {!hasManyTestimonials && (
