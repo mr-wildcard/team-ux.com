@@ -8,9 +8,9 @@ import Image from "../../@common/Image.astro";
     <TeamUXStamp />
   </div>
   <div
-    class="flex flex-col lg:flex-row items-center justify-center gap-[60px] lg:gap-8"
+    class="flex flex-col lg:flex-row items-center justify-center max-lg:space-y-[60px] lg:space-x-8"
   >
-    <div class="flex flex-col items-center gap-2.5 lg:gap-4">
+    <div class="flex flex-col items-center max-lg:space-y-2.5 lg:space-y-4">
       <Image
         srcSet={["/images/signature-yuna.png"]}
         width={210}
@@ -19,7 +19,7 @@ import Image from "../../@common/Image.astro";
       />
       <span class="text-label-medium-bold">Yuna Orsini</span>
     </div>
-    <div class="flex flex-col items-center gap-4">
+    <div class="flex flex-col items-center space-y-4">
       <Image
         srcSet={["/images/signature-daniela.png"]}
         width={210}

@@ -21,9 +21,9 @@ interface Props {
 const { profile } = Astro.props;
 ---
 
-<div class="flex flex-col gap-0.5">
+<div class="flex flex-col space-y-0.5">
   <div class="px-5 py-6 lg:p-10 bg-neutral4 rounded-t-[26px] rounded-b-[4px]">
-    <div class="flex flex-col lg:flex-row gap-5">
+    <div class="flex flex-col max-lg:space-y-5 lg:space-x-5 lg:flex-row">
       <slot name="picture" />
       <div class="lg:mt-auto">
         <h3>
@@ -42,11 +42,11 @@ const { profile } = Astro.props;
     <h4 class="mb-6 text-headline-small">
       Diplômée, formée ou certifiée en...
     </h4>
-    <ul class="flex flex-wrap gap-2.5">
+    <ul class="flex flex-wrap -mx-[5px]">
       {
         profile.skills.map((skill) => {
           return (
-            <li>
+            <li class="m-[5px]">
               <Tag name={skill} />
             </li>
           );
@@ -55,7 +55,7 @@ const { profile } = Astro.props;
     </ul>
   </div>
   <div
-    class="flex flex-col gap-8 px-5 py-6 lg:p-10 bg-neutral4 rounded-t-[4px] rounded-b-[26px]"
+    class="flex flex-col space-y-8 px-5 py-6 lg:p-10 bg-neutral4 rounded-t-[4px] rounded-b-[26px]"
   >
     <h4 class="text-headline-small">
       {profile.presentation.title}

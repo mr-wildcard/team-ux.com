@@ -125,13 +125,13 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                   >
                     {letter}
                   </p>
-                  <div class="flex flex-col gap-5 scroll-mt-[100px] lg:scroll-mt-[190px]">
+                  <div class="flex flex-col space-y-5 scroll-mt-[100px] lg:scroll-mt-[190px]">
                     {Array.from(groupedDefinitions.get(letter)).map(
                       (definition) => {
                         return (
                           <div class="bg-neutral4 rounded-[26px]">
                             <details data-anchor={`#${definition.slug}`}>
-                              <summary class="px-5 py-4 sm:p-8 flex items-center justify-between gap-1.5 cursor-pointer">
+                              <summary class="px-5 py-4 sm:p-8 flex items-center justify-between space-x-1.5 cursor-pointer">
                                 <h3
                                   id={definition.slug}
                                   class="text-headline-small scroll-mt-[135px] lg:scroll-mt-[280px] 2xl:scroll-mt-[220px]"
@@ -144,7 +144,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                                     </>
                                   )}
                                 </h3>
-                                <div class="flex items-center gap-1 h-[34px] px-2 sm:px-4 bg-surface5 rounded-[100px] text-label-small hover:shadow-[inset_0_0_0_1px] hover:shadow-primary focus:outline focus:outline-offset-[3px] focus:outline-[3px] focus:outline-secondary">
+                                <div class="flex items-center space-x-1 h-[34px] px-2 sm:px-4 bg-surface5 rounded-[100px] text-label-small hover:shadow-[inset_0_0_0_1px] hover:shadow-primary focus:outline focus:outline-offset-[3px] focus:outline-[3px] focus:outline-secondary">
                                   <span class="max-sm:hidden open">Ouvrir</span>
 
                                   <span class="max-sm:hidden close">
@@ -158,7 +158,7 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
                                   />
                                 </div>
                               </summary>
-                              <div class="flex flex-col gap-8 px-5 py-4 sm:px-8 sm:pb-8 pt-0">
+                              <div class="flex flex-col space-y-8 px-5 py-4 sm:px-8 sm:pb-8 pt-0">
                                 <p
                                   class="text-body-medium"
                                   set:html={definition.content}

@@ -22,11 +22,11 @@ import Brush from "../../@common/Brush.astro";
         class="hidden lg:block absolute z-[-1] w-[330px] h-[328px] top-[965px] left-[-95px]"
       />
 
-      <ul class="flex flex-col gap-1">
+      <ul class="flex flex-col space-y-1">
         {
           data.convictions.map((conviction) => {
             return (
-              <li class="flex flex-col gap-5 p-5 lg:p-10 bg-surface5 rounded-[4px] first:rounded-[26px_26px_4px_4px] last:rounded-[4px_4px_26px_26px]">
+              <li class="flex flex-col space-y-5 p-5 lg:p-10 bg-surface5 rounded-[4px] first:rounded-[26px_26px_4px_4px] last:rounded-[4px_4px_26px_26px]">
                 <h3 class="text-headline-medium lg:text-headline-medium-bold">
                   {conviction.title}
                 </h3>

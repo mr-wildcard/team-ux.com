@@ -8,102 +8,106 @@ import SmallProject from "./SmallProject.astro";
 ---
 
 <section class="container">
-  <div class="flex flex-col gap-[120px] lg:gap-[140px]">
+  <div class="flex flex-col max-lg:space-y-[120px] lg:space-y-[140px]">
     {
       data.map((projectsGroup, projectGroupIndex) => {
         if (projectsGroup.group_project_display === "large") {
           return (
-            <div class="responsive-wrapper overflow-hidden relative isolate lg:pt-[207px] lg:-mt-[207px]">
-              {projectGroupIndex === 0 && (
-                <Brush
-                  id="4"
-                  class:list={[
-                    "hidden",
-                    "lg:block",
-                    "absolute",
-                    "z-[-1]",
-                    "right-[-20px]",
-                    "top-0",
-                    "w-[490px]",
-                    "h-[487px]",
-                  ]}
-                />
-              )}
+            <div>
+              <div class="responsive-wrapper overflow-hidden relative isolate lg:pt-[207px] lg:-mt-[207px]">
+                {projectGroupIndex === 0 && (
+                  <Brush
+                    id="4"
+                    class:list={[
+                      "hidden",
+                      "lg:block",
+                      "absolute",
+                      "z-[-1]",
+                      "right-[-20px]",
+                      "top-0",
+                      "w-[490px]",
+                      "h-[487px]",
+                    ]}
+                  />
+                )}
 
-              <ul class="flex flex-col gap-8">
-                {projectsGroup.projects.map((project) => {
-                  return (
-                    <li>
-                      <LargeProject project={project} />
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          );
-        } else {
-          return (
-            <div
-              class:list={[
-                "overflow-hidden",
-                "relative",
-                "isolate",
-                {
-                  // top left brush first small projects group
-                  // + top left brush first second projects group
-                  "pt-[55px]":
-                    projectGroupIndex === 1 || projectGroupIndex === 3,
-                  "mt-[-55px]":
-                    projectGroupIndex === 1 || projectGroupIndex === 3,
-
-                  // bottom right brush first small projects group
-                  // + bottom right brush first second projects group
-                  "pb-[55px]":
-                    projectGroupIndex === 1 || projectGroupIndex === 3,
-                  "mb-[-55px]":
-                    projectGroupIndex === 1 || projectGroupIndex === 3,
-                },
-              ]}
-            >
-              {projectGroupIndex === 1 && (
-                <Brush
-                  id="3"
-                  class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[200px] lg:h-[186px] top-2.5 lg:left-[35px] rotate-[106.935deg]"
-                />
-              )}
-
-              {projectGroupIndex === 1 && (
-                <Brush
-                  id="3"
-                  class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
-                />
-              )}
-
-              {projectGroupIndex === 3 && (
-                <Brush
-                  id="3"
-                  class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[215px] lg:h-[200px] left-0 lg:left-auto lg:right-2.5 top-2 rotate-[106.935deg] lg:rotate-0"
-                />
-              )}
-
-              {projectGroupIndex === 3 && (
-                <Brush
-                  id="3"
-                  class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
-                />
-              )}
-
-              <Grid>
-                <ul class="col-span-full lg:col-start-2 lg:col-span-10 lg:columns-2 lg:gap-8 space-y-5">
+                <ul class="flex flex-col space-y-8">
                   {projectsGroup.projects.map((project) => {
                     return (
                       <li>
-                        <SmallProject project={project} />
+                        <LargeProject project={project} />
                       </li>
                     );
                   })}
                 </ul>
-              </Grid>
+              </div>
+            </div>
+          );
+        } else {
+          return (
+            <div>
+              <div
+                class:list={[
+                  "overflow-hidden",
+                  "relative",
+                  "isolate",
+                  {
+                    // top left brush first small projects group
+                    // + top left brush first second projects group
+                    "pt-[55px]":
+                      projectGroupIndex === 1 || projectGroupIndex === 3,
+                    "mt-[-55px]":
+                      projectGroupIndex === 1 || projectGroupIndex === 3,
+
+                    // bottom right brush first small projects group
+                    // + bottom right brush first second projects group
+                    "pb-[55px]":
+                      projectGroupIndex === 1 || projectGroupIndex === 3,
+                    "mb-[-55px]":
+                      projectGroupIndex === 1 || projectGroupIndex === 3,
+                  },
+                ]}
+              >
+                {projectGroupIndex === 1 && (
+                  <Brush
+                    id="3"
+                    class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[200px] lg:h-[186px] top-2.5 lg:left-[35px] rotate-[106.935deg]"
+                  />
+                )}
+
+                {projectGroupIndex === 1 && (
+                  <Brush
+                    id="3"
+                    class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                  />
+                )}
+
+                {projectGroupIndex === 3 && (
+                  <Brush
+                    id="3"
+                    class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[215px] lg:h-[200px] left-0 lg:left-auto lg:right-2.5 top-2 rotate-[106.935deg] lg:rotate-0"
+                  />
+                )}
+
+                {projectGroupIndex === 3 && (
+                  <Brush
+                    id="3"
+                    class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
+                  />
+                )}
+
+                <Grid>
+                  <ul class="col-span-full lg:col-start-2 lg:col-span-10 lg:columns-2 lg:gap-8 space-y-5">
+                    {projectsGroup.projects.map((project) => {
+                      return (
+                        <li>
+                          <SmallProject project={project} />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Grid>
+              </div>
             </div>
           );
         }

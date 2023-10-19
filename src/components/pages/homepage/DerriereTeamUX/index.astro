@@ -13,7 +13,7 @@ const { block1, block2 } = data;
 <section>
   <Icon name="oval" />
 
-  <div class="relative flex flex-col gap-8 pb-20 lg:pb-[100px] bg-neutral4">
+  <div class="relative flex flex-col space-y-8 pb-20 lg:pb-[100px] bg-neutral4">
     <div class="container">
       <Grid>
         <h2
@@ -25,7 +25,7 @@ const { block1, block2 } = data;
 
       <Grid class="gap-y-5">
         <div
-          class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col gap-8 p-5 lg:p-10 bg-surface6 rounded-[26px]"
+          class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col space-y-8 p-5 lg:p-10 bg-surface6 rounded-[26px]"
         >
           <h3 class="text-headline-medium-bold">
             {block1.title}
@@ -49,7 +49,7 @@ const { block1, block2 } = data;
           </CallToAction>
         </div>
         <div
-          class="col-span-full lg:col-span-5 flex flex-col gap-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
+          class="col-span-full lg:col-span-5 flex flex-col space-y-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
           <div class="relative w-[200px] lg:w-auto mx-auto lg:mx-0">
@@ -78,10 +78,10 @@ const { block1, block2 } = data;
     <div class="container">
       <Grid>
         <div
-          class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col gap-0.5"
+          class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col space-y-0.5"
         >
           <div
-            class="flex flex-col gap-10 p-5 lg:p-10 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+            class="flex flex-col p-5 lg:px-10 lg:pt-10 space-y-5 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.certifications.title}
@@ -169,13 +169,13 @@ const { block1, block2 } = data;
             </ul>
           </div>
           <div
-            class="flex flex-col gap-10 p-5 lg:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
+            class="flex flex-col space-y-10 p-5 lg:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
           >
             <h3 class="text-headline-medium-bold">
               {data.commited.title}
             </h3>
             <ul
-              class="flex items-center justify-around sm:justify-start gap-[44px]"
+              class="flex items-center justify-around sm:justify-start space-x-[44px]"
             >
               <li>
                 <span class="hidden print:inline">Desino Etico</span>
@@ -224,9 +224,11 @@ const { block1, block2 } = data;
   }
 
   .certifications {
-    @apply flex items-center flex-wrap justify-around sm:justify-start 2xl:justify-between space-y-0 gap-10;
+    @apply flex items-center flex-wrap justify-around sm:justify-start 2xl:justify-between -mx-5;
 
     li {
+      @apply m-5;
+
       width: 120px;
 
       img {
