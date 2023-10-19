@@ -54,7 +54,9 @@ const iconSize = variant === "transparent" ? 18 : 24;
 
 <HTMLTag {...htmlAttributes}>
   {leftIcon && <Icon name={leftIcon} width={iconSize} height={iconSize} />}
-  <slot />
+  <span>
+    <slot />
+  </span>
   {rightIcon && <Icon name={rightIcon} width={iconSize} height={iconSize} />}
 </HTMLTag>
 
@@ -74,7 +76,7 @@ const iconSize = variant === "transparent" ? 18 : 24;
       }
 
       &.primary {
-        @apply px-10 py-4 gap-2.5 text-neutral4 bg-primary hover:bg-secondary;
+        @apply px-10 py-4 space-x-2.5 text-neutral4 bg-primary hover:bg-secondary;
 
         &.outlined {
           @apply text-primary bg-neutral4;
@@ -86,7 +88,7 @@ const iconSize = variant === "transparent" ? 18 : 24;
       }
 
       &.secondary {
-        @apply px-5	py-2.5 gap-1.5 text-primary bg-neutral4;
+        @apply px-5	py-2.5 space-x-1.5 text-primary bg-neutral4;
       }
 
       &.primary.outlined,
@@ -114,7 +116,7 @@ const iconSize = variant === "transparent" ? 18 : 24;
     }
 
     &.transparent {
-      @apply gap-2 underline-offset-[4px] hover:underline;
+      @apply space-x-2 underline-offset-[4px] hover:underline;
 
       &:focus {
         @apply rounded-[1px] outline outline-offset-[2px] outline-[3px] outline-secondary;

@@ -22,7 +22,7 @@ const isSelected = items.some(
 ---
 
 <NavItem isSelected={isSelected} ariaControlsValue={ariaControlsValue}>
-  {title}
+  <span>{title}</span>
   <Icon name="arrow_drop_down" width={20} height={20} />
 
   <div id={ariaControlsValue} class="submenu-container" slot="submenu">

@@ -20,7 +20,7 @@ import NavItems from "./NavItems.astro";
         <Logo />
 
         <nav role="navigation" class="hidden lg:block">
-          <ul class="flex items-center gap-10">
+          <ul class="flex items-center space-x-10">
             <li>
               <NavItem to="/">Accueil</NavItem>
             </li>
@@ -50,7 +50,7 @@ import NavItems from "./NavItems.astro";
 
         <button
           id="menu-opener"
-          class="lg:hidden flex items-center gap-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
+          class="lg:hidden flex items-center space-x-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
           aria-expanded="false"
         >
           <span class="text-closed">Menu</span>
@@ -66,7 +66,7 @@ import NavItems from "./NavItems.astro";
     class="hidden overflow-y-auto overflow-x-hidden fixed top-[84px] left-0 w-full h-[calc(100%-84px)] px-5 pb-5 pt-9 bg-surface2"
   >
     <nav role="navigation" class="text-headline-large">
-      <ul class="flex flex-col gap-11">
+      <ul class="flex flex-col space-y-11">
         <li>
           <NavItem to="/">Accueil</NavItem>
         </li>
@@ -74,7 +74,7 @@ import NavItems from "./NavItems.astro";
           <span class="block mb-3.5 text-body-medium-bold text-neutral1"
             >Références</span
           >
-          <ul class="flex flex-col gap-6 ml-5">
+          <ul class="flex flex-col space-y-6 ml-5">
             <li>
               <NavItem to="/projets">Projets</NavItem>
             </li>
@@ -87,7 +87,7 @@ import NavItems from "./NavItems.astro";
           <span class="block mb-3.5 text-body-medium-bold text-neutral1"
             >Team UX</span
           >
-          <ul class="flex flex-col gap-6 ml-5">
+          <ul class="flex flex-col space-y-6 ml-5">
             <li>
               <NavItem to="/nos-deux-profils">Nos 2 profils</NavItem>
             </li>
@@ -142,7 +142,7 @@ import NavItems from "./NavItems.astro";
       @apply bg-surface2 !important;
 
       & #menu-opener {
-        @apply gap-2.5 text-primary bg-surface5;
+        @apply space-x-2.5 text-primary bg-surface5;
       }
 
       #mobile-menu,
