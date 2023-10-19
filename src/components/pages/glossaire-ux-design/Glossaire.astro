@@ -70,11 +70,11 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
     <div class="hidden lg:block container">
       <Grid>
         <div class="lg:col-span-full py-4 border-b border-neutral2">
-          <ul class="flex gap-2 flex-wrap 2xl:gap-0 2xl:justify-between">
+          <ul class="max-2xl:-mx-1 flex flex-wrap 2xl:justify-between">
             {
               allLetters.map((letter) => {
                 return (
-                  <li class="sticky-letter" data-letter={letter}>
+                  <li class="sticky-letter max-2xl:m-1" data-letter={letter}>
                     <Letter
                       letter={letter}
                       hasDefinitions={groupedDefinitions.has(letter)}
@@ -201,6 +201,10 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
 </section>
 
 <style>
+  .sticky-letter {
+    @apply mt-2;
+  }
+
   .sticky-letter.active :global(a) {
     @apply text-neutral4 bg-primary underline underline-offset-[4px];
   }
