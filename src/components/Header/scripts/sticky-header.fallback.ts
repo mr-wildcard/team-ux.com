@@ -18,8 +18,7 @@ function onMediaQueryMatches(isDesktop: boolean) {
   }
 
   function hideHeaderBackground(header: HTMLElement) {
-    header.style.backgroundColor = "";
-    header.style.boxShadow = "";
+    header.style.cssText = "";
 
     headerHasBackground = false;
   }
