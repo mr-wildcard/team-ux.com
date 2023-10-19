@@ -3,16 +3,23 @@ import Icon from "../@common/Icon.astro";
 
 const { pathname } = Astro.url;
 
-const HTMLTag = pathname === "/" ? "div" : "a";
+const href = pathname === "/" ? "#" : "/";
+
 const htmlAttributes =
   pathname === "/"
-    ? { class: "cursor-pointer" }
-    : { href: "/", title: "Retour à l'accueil" };
+    ? { title: "Retour en haut de page" }
+    : { title: "Retour à l’accueil" };
 ---
 
-<HTMLTag id="logo" {...htmlAttributes}>
-  <Icon name="logo" />
-</HTMLTag>
+<a id="logo" href={href} {...htmlAttributes}>
+  <Icon
+    role="img"
+    aria-label="Retour à l’accueil"
+    focusable="true"
+    aria-hidden="false"
+    name="logo"
+  />
+</a>
 
 <style>
   :global([astro-icon="logo"]) {
@@ -25,15 +32,3 @@ const htmlAttributes =
     }
   }
 </style>
-
-<script>
-  const logo = document.querySelector<HTMLElement>("#logo");
-
-  if (!logo.hasAttribute("href")) {
-    logo.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-      });
-    });
-  }
-</script>

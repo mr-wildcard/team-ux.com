@@ -20,7 +20,14 @@ export interface Props {
   height: number;
 }
 
-const { name, width, height } = Astro.props;
+const { name, width, height, ...props } = Astro.props;
 ---
 
-<Sprite width={width} height={height} name={name} />
+<Sprite
+  focusable="false"
+  aria-hidden="true"
+  width={width}
+  height={height}
+  name={name}
+  {...props}
+/>

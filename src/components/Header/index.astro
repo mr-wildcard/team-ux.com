@@ -51,6 +51,7 @@ import NavItems from "./NavItems.astro";
         <button
           id="menu-opener"
           class="lg:hidden flex items-center gap-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
+          aria-expanded="false"
         >
           <span class="text-closed">Menu</span>
           <span class="text-opened">Fermer</span>
@@ -120,9 +121,11 @@ import NavItems from "./NavItems.astro";
 
     if (menuOpened === "true") {
       header.setAttribute("data-menu-opened", "false");
+      menuButton.setAttribute("aria-expanded", "false");
       document.body.classList.remove("overflow-hidden");
     } else {
       header.setAttribute("data-menu-opened", "true");
+      menuButton.setAttribute("aria-expanded", "true");
       document.body.classList.add("overflow-hidden");
     }
   });
