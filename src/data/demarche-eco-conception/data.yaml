@@ -65,7 +65,7 @@ content:
               - |
                 Design graphique avec gestion maline des images<br>
                 <ul>
-                  <li>Certains visuels sont des images vectorielles très légères : le logo, le tampon du logo, les pictogrammes de nos valeurs, les logotypes clients</li>
+                  <li>Certains visuels sont des images vectorielles très légères : le logo, les pictogrammes de nos valeurs</li>
                   <li>Certaines formes décoratives simples ont été pensées pour être directement intégrées en HTML/CSS : la forme capsule jaune en fond, la courbe séparatrice blanche</li>
                   <li>Les tâches bleues décoratives du site sont 4 uniques images, réutilisées en fond sur tout le site, à des tailles, orientations et opacités différentes</li>
                   <li>Nos 2 photos de nos profils sont réutilisées plusieurs fois sur la page d’accueil puis réutilisées sur une page interne</li>
@@ -75,12 +75,11 @@ content:
         content:
           - list:
               - "Abandon de Webflow pour diminuer notre dépendance à un outil SaaS externe et supprimer plusieurs requêtes gourmandes en ressources"
-              - "Bascule sur un site statique avec la technologie Astro : il n’y a plus de requêtes vers une base de données pour charger le contenu"
+              - "Bascule sur un site statique avec le framework Astro : il n’y a plus de requêtes vers une base de données pour charger le contenu"
               - "Choix de ne servir que le CSS réellement utilisé grâce au framework Tailwind"
               - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses utilisées sur le site depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko)."
-              - "Gestion sur-mesure des images : selon les résultats de formatage et compression obtenus pour chaque image, nous avons soit choisi le format PNG s’il était plus performant, soit fourni aux navigateurs 2 formats Web ultra optimisés : AVIF et WEBP"
-              - "Mise en place du lazy loading (“chargement fainéant”) pour ne charger les médias que lorsqu’ils sont réellement consultés sur la page"
-              - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
+              - "Gestion sur-mesure des images : selon les résultats de formatage et compression obtenus pour chaque image, nous avons soit choisi le format PNG s’il était plus performant, soit fourni aux navigateurs 2 formats Web ultra optimisés : AVIF et WebP"
+              - "Mise en place du lazy loading (“chargement fainéant”) pour ne charger les médias que lorsqu’ils dépassent la ligne de flottaison et donc que s’ils sont réellement consultés"
               - "Travail main dans la main entre développement et design pour implémenter au maximum l’accessibilité"
               - |
                 Diminution du travail du CPU en écartant le plus possible les solutions techniques nécessitant des appels/recalculs Javascript. Les cas d’utilisation de JS restants sont les suivants :
@@ -88,10 +87,10 @@ content:
                   <li>Copier notre adresse email de contact dans le presse-papier</li>
                   <li>Copier l’URL directe vers une définition du glossaire dans le presse-papier</li>
                   <li>Désobfusquer nos adresses emails et numéros de téléphone dans les mentions légales</li>
-                  <li>Gérer le comportement d’ouverture/fermeture du dropdown dans le menu</li>
-                  <li>Afficher le menu mobile</li>
-                  <li>Afficher la galerie d’un projet</li>
-                  <li>Proposer une alternative pour afficher le menu sticky sur Firefox et iOS</li>
+                  <li>Gérer le comportement d’ouverture/fermeture du dropdown dans le menu et les états pour l’accessibilité</li>
+                  <li>Proposer une alternative pour afficher le menu sticky sur les navigateurs non compatibles</li>
+                  <li>Scroller en haut de page sur les pages Projets et Glossaire UX</li>
+                  <li>Gérer la navigation spécifique du Glossaire UX</li>
                 </ul>
               - |
                 Hébergement par Infomaniak, "le cloud éthique"
@@ -108,9 +107,9 @@ content:
                 </ul>
       - title: "Tests et compatibilité devices"
         content:
-          - paragraph: "Ce site a été conçu et développé pour être correctement affiché et utilisable sur des devices variés, récents et anciens. Nos tests ont été réalisés sur :"
+          - paragraph: "Ce site a été conçu et développé pour être correctement affiché et utilisable sur des devices variés, récents et anciens. Nous testons le site avec le puissant outil <a href='https://www.browserstack.com/' target='_blank'>BrowserStack</a> que nous utilisons grâce à leur programme Open Source. Nos tests ont été réalisés sur :"
           - list:
-              - "Navigateurs : Chrome/macOS, Firefox/macOS, Safari/macOS, Windows"
+              - "Navigateurs : Chrome/macOS, Firefox/macOS, Safari/macOS, Edge/Windows"
               - "Résolutions : mobile et desktop, toutes résolutions (site responsive)"
               - "Devices : iPad Air (2013), iPhone 7 (2016), Pixel 3a (2018), Samsung Galaxy S10e (2019)"
       - title: "Axes d’amélioration"
@@ -118,11 +117,10 @@ content:
           - paragraph: "L'éco-conception est une démarche d'amélioration continue. À ce jour, nous avons d’ores-et-déjà identifié des axes d’amélioration."
           - list:
               - "Retravail ergonomique de la page Projets pour simplifier le DOM"
-              - "Intégration du menu mobile en HTML/CSS uniquement"
               - "Affichage de la galerie en HTML/CSS uniquement"
               - "Suppression des glyphes non-utilisés dans la font"
               - "Optimisation ergonomique de la feuille de style d’impression"
-              - "Dropdown HTML/CSS sur l'état actif uniquement"
+              - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
       - title: "Autres évolutions"
         content:
           - paragraph: "Nous avons profité de ce temps de réflexion et d’action pour opérer également des changements sur nos supports de communication et nos outils de travail du quotidien :"
