@@ -139,8 +139,8 @@ const isSelected = items.some(
 
     display: none;
     position: absolute;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     left: 50%;
     top: calc(100% + 6px);
     transform: translateX(-50%);
@@ -157,9 +157,10 @@ const isSelected = items.some(
   }
 
   ul {
+    @apply space-y-[4px];
+
     display: flex;
     flex-direction: column;
-    gap: 4px;
     text-align: left;
 
     & :global(.nav-item) {
