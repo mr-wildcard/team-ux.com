@@ -92,16 +92,16 @@ const currentPath = new URL(Astro.url.pathname, Astro.site);
   <div class="container">
     <Grid>
       <div
-        class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col gap-5 mb-[50px] lg:mb-[140px]"
+        class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col space-y-5 mb-[50px] lg:mb-[140px]"
       >
         <h2 class="text-headline-medium text-neutral1">
           {totalDefinitions} définitions de l’UX design
         </h2>
-        <ul id="letters-nav" class="hidden lg:flex flex-wrap gap-x-[7px]">
+        <ul id="letters-nav" class="hidden lg:flex lg:-mx-[3.5px] flex-wrap">
           {
             allLetters.map((letter) => {
               return (
-                <li class="pb-[15px]">
+                <li class="mx-[3.5px] pb-[15px]">
                   <Letter
                     letter={letter}
                     hasDefinitions={groupedDefinitions.has(letter)}
