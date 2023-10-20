@@ -10,9 +10,10 @@ interface Props extends HTMLAttributes<"img"> {
   alt: string;
   width?: number;
   height?: number;
+  loading?: string;
 }
 
-const { srcSet, ...props } = Astro.props;
+const { srcSet, loading = "lazy", ...props } = Astro.props;
 
 const [png, avif, webp] = srcSet;
 ---
@@ -21,5 +22,5 @@ const [png, avif, webp] = srcSet;
   {avif && <source srcset={avif} type="image/avif" />}
   {webp && <source srcset={webp} type="image/webp" />}
 
-  <img {...props} src={png} loading="lazy" decoding="async" />
+  <img {...props} src={png} loading={loading} decoding="async" />
 </picture>

@@ -6,7 +6,7 @@ interface Props {
   variant: "small" | "big";
 }
 
-const { variant } = Astro.props;
+const { variant, ...props } = Astro.props;
 ---
 
 {
