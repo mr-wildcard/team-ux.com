@@ -21,8 +21,6 @@ function getSiteURL() {
 }
 
 /** @type {import('astro').AstroUserConfig} */
-
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind({
@@ -34,6 +32,7 @@ export default defineConfig({
   vite: {
     plugins: [yaml()],
     build: {
+      // mainly for transpiling optional chaining for iOS 12, ffs
       target: "es2019",
     },
   },
