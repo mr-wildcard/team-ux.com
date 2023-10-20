@@ -24,7 +24,7 @@ const { viewMode = "block", testimonial } = Astro.props;
         <span class="block mb-10 lg:mb-[40px] text-primary text-[200px] lg:text-[240px] translate-x-[-12px] translate-y-[56px] lg:translate-x-[-15px] lg:translate-y-[20px]">
           &ldquo;
         </span>
-        {testimonial.content}&rdquo;
+        {testimonial.content.trim()}&rdquo;
       </p>
       <footer
         lang={testimonial.contentLang ?? undefined}
@@ -49,7 +49,7 @@ const { viewMode = "block", testimonial } = Astro.props;
       </div>
       <div class="flex flex-col space-y-5">
         <p lang={testimonial.contentLang ?? undefined} class="text-body-medium">
-          {testimonial.content}&rdquo;
+          {testimonial.content.trim()}&rdquo;
         </p>
         <footer
           lang={testimonial.contentLang ?? undefined}
