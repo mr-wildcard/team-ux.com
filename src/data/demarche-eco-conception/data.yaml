@@ -47,8 +47,8 @@ content:
       - content:
           - paragraph: "À noter que nous avons tout de même intégré deux contenus qui n’existaient pas sur l’ancienne version :"
           - list:
-              - "La page Témoignages pour répondre à notre besoin business de réassurance (108 ko - EcoIndex A)"
-              - "Cette page Démarche d’éco-conception pour soutenir le processus et la pédagogie (109 ko - EcoIndex A)"
+              - "La page Témoignages pour répondre à notre besoin business de réassurance"
+              - "Cette page Démarche d’éco-conception pour soutenir le processus et la pédagogie"
       - title: "Choix ergonomiques"
         content:
           - list:
@@ -107,7 +107,7 @@ content:
                 </ul>
       - title: "Tests et compatibilité devices"
         content:
-          - paragraph: "Ce site a été conçu et développé pour être correctement affiché et utilisable sur des devices variés, récents et anciens. Nous testons le site avec le puissant outil <a href='https://www.browserstack.com/' target='_blank'>BrowserStack</a> que nous utilisons grâce à leur programme Open Source. Nos tests ont été réalisés sur :"
+          - paragraph: "Ce site a été conçu et développé pour être correctement affiché et utilisable sur des devices variés, récents et anciens. Nous testons le site avec l’outil <a href='https://www.browserstack.com/' target='_blank'>BrowserStack</a> que nous utilisons grâce à leur programme Open Source. Nos tests ont été réalisés sur :"
           - list:
               - "Navigateurs : Chrome/macOS, Firefox/macOS, Safari/macOS, Edge/Windows"
               - "Résolutions : mobile et desktop, toutes résolutions (site responsive)"
