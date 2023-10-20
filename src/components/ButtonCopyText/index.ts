@@ -16,14 +16,8 @@ function onUserScrolls() {
   hideToast();
 }
 
-async function copyText(textToCopy: string): Promise<void> {
-  if (!navigator.clipboard) {
-    return import("./fallback.copyText").then(({ fallbackCopyText }) => {
-      return fallbackCopyText(textToCopy);
-    });
-  } else {
-    return navigator.clipboard.writeText(textToCopy);
-  }
+function copyText(textToCopy: string): Promise<void> {
+  return navigator.clipboard.writeText(textToCopy);
 }
 
 // Hack for Safari not replaying the animation when we click on the button several times.
@@ -35,6 +29,10 @@ toast?.addEventListener("animationend", () => {
 });
 
 buttons.forEach((button) => {
+  if (!navigator.clipboard) {
+    return button.remove();
+  }
+
   const { textToCopy, toastCopySuccessText } = button.dataset;
 
   async function onUserClicksOnCopyButton() {

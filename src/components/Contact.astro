@@ -71,15 +71,14 @@ const backgroundFormCSSClasses = showBackgroundForm
               hello@team-ux.com
             </CallToAction>
           </p>
-          <div class="hidden lg:block">
-            <ButtonCopyText
-              type="secondary"
-              textToCopy="hello@team-ux.com"
-              toastCopySuccessText="Notre adresse e-mail a été copiée dans votre presse-papiers !"
-            >
-              Copier notre adresse email dans votre presse-papiers
-            </ButtonCopyText>
-          </div>
+          <ButtonCopyText
+            type="secondary"
+            textToCopy="hello@team-ux.com"
+            toastCopySuccessText="Notre adresse e-mail a été copiée dans votre presse-papiers !"
+            class="max-lg:hidden"
+          >
+            Copier notre adresse email dans votre presse-papiers
+          </ButtonCopyText>
         </div>
       </div>
     </Grid>

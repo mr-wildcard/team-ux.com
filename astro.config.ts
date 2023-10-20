@@ -33,6 +33,9 @@ export default defineConfig({
   site: getSiteURL(),
   vite: {
     plugins: [yaml()],
+    build: {
+      target: "es2019",
+    },
   },
   server: {
     host: LOCAL_HOST,
