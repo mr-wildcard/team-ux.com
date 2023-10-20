@@ -6,9 +6,17 @@ import Testimonial from "../../Testimonial.astro";
 <section class="container mb-[200px] lg:mb-0">
   <ul class="responsive-wrapper md:columns-2 xl:columns-3 xl:gap-8 space-y-5">
     {
-      data.map((testimonial) => {
+      data.map((testimonial, index) => {
         return (
-          <li class="break-inside-avoid">
+          <li
+            class:list={[
+              "break-inside-avoid",
+              {
+                "md:max-xl:!mt-0": index === Math.ceil(data.length / 2),
+                "xl:!mt-0": index === Math.ceil(data.length / 3),
+              },
+            ]}
+          >
             <Testimonial testimonial={testimonial} />
           </li>
         );
