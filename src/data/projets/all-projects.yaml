@@ -165,14 +165,18 @@
         content: |
           Confié par l’agence Ekino, ce projet visait initialement à créer un nouveau moyen de réservation de courses pour et par la clientèle de cette société de transport historique. Rapidement, la recherche UX ainsi que les ateliers de co-création nous ont permis de recentrer l’objectif du projet et d’aider les équipes à améliorer l’efficacité et surtout la transparence des échanges internes et externes de l’entreprise. Des preuves de concept aux maquettes UI, nous avons travaillé pendant un an et demi sur la refonte itérative de tous les outils internes, en collaboration étroite avec les personnes utilisatrices.
       testimonial:
-        - content: |
-            Tout simplement ravis de la collaboration avec Yuna et Daniela. La qualité de leur travail, de l'accompagnement de clients novices en la matière, des livrables et des analyses constructives et leur dynamisme ont été un vrai plus pour ce projet.
-          author: Alexandre Pronine, manager technique chez
-          company: Ekino
-        - content: |
+         - content: |
             Comment arriver à travailler tous ensemble autour d’un si gros projet ? Daniela et Yuna, par leur expérience, leur bienveillance, leur écoute et leur méthodologie, ont complètement réussi leur challenge. Nous avons été impressionnés par la complicité qui est née entre nos collaborateurs et par les idées qui sont ressorties.
           author: Co-gérante d'une
           company: société de transport
+         - content: |
+            Tout simplement ravis de la collaboration avec Yuna et Daniela. La qualité de leur travail, de l'accompagnement de clients novices en la matière, des livrables et des analyses constructives et leur dynamisme ont été un vrai plus pour ce projet.
+          author: Alexandre Pronine, manager technique chez
+          company: Ekino
+         - content:  |
+            Merci à vous les filles pour ce superbe travail, c’était une joie de faire ce projet avec vous. Vous avez toujours été d’une rigueur et d’une motivation sans faille.
+          author: Camille Fion, consultante technique chez 
+          company: Ekino
 - group_project_display: small
   projects:
     - name: L’Oréal, avec l’agence Content Factory
