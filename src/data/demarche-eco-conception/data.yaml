@@ -3,12 +3,12 @@ content:
     blocks:
       - content:
           - paragraph: |
-              Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” contenant quelques pages internes complémentaires qui n’appartenaient pas à la navigation principale.
+              Notre site précédent n’était ni très lourd, ni très riche. Il s’agissait d’un simili “one-page” qui contenait quelques pages internes complémentaires n’appartenant pas à la navigation principale.
       - content:
           - paragraph: |
-              Cependant, après plusieurs grosses mises à jour de contenus réalisées en presque 4 ans, la refonte était devenue nécessaire dans le but de :
+              Cependant, après plusieurs grosses mises à jour de contenu réalisées sur les presque 4 ans d'existence du site, la refonte était devenue nécessaire dans le but de :
           - list:
-              - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué en presque 4 ans et dont la structure n’était plus adaptée"
+              - "revoir l’ergonomie de notre site dont le contenu avait beaucoup évolué pendant ces années et dont la structure n’était plus adaptée"
               - "se défaire de la dépendance à l’outil SaaS Webflow et retrouver l’autonomie nous permettant d’implémenter des choix techniques forts au service de l’éco-conception"
               - "communiquer clairement nos spécialisations et faire de notre site Web une vitrine de ces expertises."
     grid_span: 7
@@ -28,7 +28,7 @@ content:
                   <li>un développement technique optimisé <br />→ <i>Par exemple, la mise en place d’un site statique</i></li>
                 </ul>
       - content:
-          - paragraph: "Pour tout cela, nous nous sommes fondées sur les inspirantes recommandations déjà rédigées par des personnes engagées, comme :"
+          - paragraph: "Pour tout cela, nous nous sommes fondées sur les recommandations déjà rédigées par des personnes engagées, comme :"
           - list:
               - <a href="https://ecoconceptionweb.com/" target="_blank">Éco-conception web - les 115 bonnes pratiques (nouvel onglet)</a> par Frédéric Bordage
               - <a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank">RGESN (nouvel onglet)</a> par la DINUM, le Ministère de la Transition Écologique, l’ADEME et l’Institut du Numérique Responsable
