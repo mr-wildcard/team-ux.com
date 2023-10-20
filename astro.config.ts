@@ -13,6 +13,8 @@ function getSiteURL() {
     } else {
       return "https://team-ux-com.pages.dev/";
     }
+  } else if (process.env.GITHUB_ACTION) {
+    return "https://team-ux.com/";
   } else {
     return `http://localhost:${LOCAL_PORT}/`;
   }
