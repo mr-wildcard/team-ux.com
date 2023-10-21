@@ -2,15 +2,12 @@
 import Picture from "./@common/Picture.astro";
 import Daniela from "../images/daniela.png";
 
-const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
+const { width, height, class: cssClasses, alt = "" } = Astro.props;
 ---
 
 <Picture
   src={Daniela}
   alt={alt}
   class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
-  width={width}
-  height={height}
   loading="eager"
-  {...props}
 />
