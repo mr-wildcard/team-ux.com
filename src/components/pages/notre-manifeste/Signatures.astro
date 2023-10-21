@@ -1,6 +1,9 @@
 ---
+import Picture from "../../@common/Picture.astro";
 import TeamUXStamp from "../../TeamUXStamp.astro";
-import Image from "../../@common/Image.astro";
+
+import SignatureYuna from "../../../images/signature-yuna.png";
+import SignatureDaniela from "../../../images/signature-daniela.png";
 ---
 
 <section class="container">
@@ -11,8 +14,8 @@ import Image from "../../@common/Image.astro";
     class="flex flex-col lg:flex-row items-center justify-center max-lg:space-y-[60px] lg:space-x-8"
   >
     <div class="flex flex-col items-center max-lg:space-y-2.5 lg:space-y-4">
-      <Image
-        srcSet={["/images/signature-yuna.png"]}
+      <Picture
+        src={SignatureYuna}
         width={210}
         height={111}
         alt="Signature de Yuna Orsini"
@@ -20,8 +23,8 @@ import Image from "../../@common/Image.astro";
       <span class="text-label-medium-bold">Yuna Orsini</span>
     </div>
     <div class="flex flex-col items-center space-y-4">
-      <Image
-        srcSet={["/images/signature-daniela.png"]}
+      <Picture
+        srcSet={SignatureDaniela}
         width={210}
         height={111}
         alt="Signature de Yuna Orsini"
