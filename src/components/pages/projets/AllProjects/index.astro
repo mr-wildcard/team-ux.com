@@ -3,7 +3,7 @@ import data from "../../../../data/projets/all-projects.yaml";
 import Brush from "../../../../components/@common/Brush.astro";
 import Grid from "../../../../components/@common/Grid.astro";
 import CallToAction from "../../../@common/CallToAction.astro";
-import LargeProject from "./LargeProject/index.astro";
+import LargeProject from "./LargeProject.astro";
 import SmallProject from "./SmallProject.astro";
 ---
 
@@ -17,7 +17,7 @@ import SmallProject from "./SmallProject.astro";
               <div class="responsive-wrapper overflow-hidden relative isolate lg:pt-[207px] lg:-mt-[207px]">
                 {projectGroupIndex === 0 && (
                   <Brush
-                    id="4"
+                    id={4}
                     class:list={[
                       "hidden",
                       "lg:block",
@@ -70,28 +70,28 @@ import SmallProject from "./SmallProject.astro";
               >
                 {projectGroupIndex === 1 && (
                   <Brush
-                    id="3"
+                    id={3}
                     class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[200px] lg:h-[186px] top-2.5 lg:left-[35px] rotate-[106.935deg]"
                   />
                 )}
 
                 {projectGroupIndex === 1 && (
                   <Brush
-                    id="3"
+                    id={3}
                     class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
                   />
                 )}
 
                 {projectGroupIndex === 3 && (
                   <Brush
-                    id="3"
+                    id={3}
                     class="absolute z-[-1] w-[150.5px] h-[140px] lg:w-[215px] lg:h-[200px] left-0 lg:left-auto lg:right-2.5 top-2 rotate-[106.935deg] lg:rotate-0"
                   />
                 )}
 
                 {projectGroupIndex === 3 && (
                   <Brush
-                    id="3"
+                    id={3}
                     class="lg:hidden absolute z-[-1] w-[150.5px] h-[140px] bottom-[7px] right-0 rotate-[-90deg]"
                   />
                 )}

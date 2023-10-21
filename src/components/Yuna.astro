@@ -1,13 +1,12 @@
 ---
-import Image from "./@common/Image.astro";
+import Yuna from "../images/yuna.png";
+import Picture from "./@common/Picture.astro";
 
 const { width, height, class: cssClasses, alt = "" } = Astro.props;
 ---
 
-<Image
-  srcSet={["/images/yuna.png", "/images/yuna.avif", "/images/yuna.webp"]}
-  width={width}
-  height={height}
+<Picture
+  src={Yuna}
   alt={alt}
   class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
   loading="eager"

@@ -1,11 +1,11 @@
 ---
-import CallToAction from "../../../../../components/@common/CallToAction.astro";
+import CallToAction from "../../../../components/@common/CallToAction.astro";
 import Testimonial, {
   type Testimonial,
-} from "../../../../../components/Testimonial.astro";
-import Icon from "../../../../../components/@common/Icon.astro";
-import Tag from "../../../../@common/Tag.astro";
-import Image from "../../../../@common/Image.astro";
+} from "../../../../components/Testimonial.astro";
+import Icon from "../../../../components/@common/Icon.astro";
+import Tag from "../../../@common/Tag.astro";
+import Picture from "../../../@common/Picture.astro";
 
 interface Props {
   project: {
@@ -34,18 +34,12 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
 >
   <div class="flex flex-col max-lg:space-y-8 lg:flex-row lg:space-x-8">
     <div class="flex flex-col space-y-8 lg:flex-[0_0_40%]">
-      <Image
+      <Picture
         class="rounded-[12px] border border-neutral3"
-        srcSet={[
-          `/images/projets/logo-${project.logo}.png`,
-          `/images/projets/logo-${project.logo}.avif`,
-          `/images/projets/logo-${project.logo}.webp`
-        ]}
+        src={import(`../../../../images/projets/logos/logo-${project.logo}.png`)}
         width={200}
         height={80}
-        alt=""
       />
-
 
       <div>
         <p class="mb-3 lg:mb-2.5 text-headline-medium-bold">
@@ -158,12 +152,8 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                       Ouvrir l'image
                     </CallToAction>
 
-                    <Image
-                      srcSet={[
-                        `/images/projets/${project.images}-${imageIndex}.png`,
-                        `/images/projets/${project.images}-${imageIndex}.avif`,
-                        `/images/projets/${project.images}-${imageIndex}.webp`
-                      ]}
+                    <Picture
+                      src={import(`../../../../images/projets/screenshots/${project.images}-${imageIndex}.png`)}
                       style="opacity: 0"
                       class="opacity-0 transition-opacity"
                       onload="this.style.opacity = '1'"

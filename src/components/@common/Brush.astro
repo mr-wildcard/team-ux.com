@@ -1,19 +1,23 @@
 ---
-import Image from "../@common/Image.astro";
+import Picture from "../@common/Picture.astro";
+
+import Brush1 from "../../images/brushes/brush-1.png";
+import Brush2 from "../../images/brushes/brush-2.png";
+import Brush3 from "../../images/brushes/brush-3.png";
+import Brush4 from "../../images/brushes/brush-4.png";
 
 interface Props {
-  id: string;
+  id: 1 | 2 | 3 | 4;
 }
 
 const { id, ...props } = Astro.props;
+
+const brushesById = new Map([
+  [1, Brush1],
+  [2, Brush2],
+  [3, Brush3],
+  [4, Brush4],
+]);
 ---
 
-<Image
-  role="presentation"
-  srcSet={[
-    `/images/brush${id}.png`,
-    `/images/brush${id}.avif`,
-    `/images/brush${id}.webp`,
-  ]}
-  {...props}
-/>
+<Picture role="presentation" alt="" src={brushesById.get(id)} {...props} />

@@ -1,11 +1,21 @@
 ---
 import Brush from "../../../@common/Brush.astro";
-import Image from "../../../@common/Image.astro";
+import Picture from "../../../@common/Picture.astro";
 import Grid from "../../../@common/Grid.astro";
 import Icon from "../../../@common/Icon.astro";
 import CallToAction from "../../../@common/CallToAction.astro";
 import DuoDeChoc from "../../../../components/DuoDeChoc.astro";
 import data from "../../../../data/homepage/derriere-team-ux.yaml";
+
+import Certif_Access42 from "../../../../images/certifications/access42.png";
+import Certif_IDF from "../../../../images/certifications/idf.png";
+import Certif_W3C from "../../../../images/certifications/w3c.png";
+import Certif_Opquast from "../../../../images/certifications/opquast.png";
+import Certif_Uxer from "../../../../images/certifications/uxer.png";
+import Certif_Shifta from "../../../../images/certifications/shifta.png";
+import Certif_INR from "../../../../images/certifications/inr.png";
+import Commit_DesignEthico from "../../../../images/certifications/diseno-etico.png";
+import Commit_DesignEthique from "../../../../images/certifications/designers-ethiques.png";
 
 const { block1, block2 } = data;
 ---
@@ -53,14 +63,9 @@ const { block1, block2 } = data;
         >
           <h3 class="text-headline-medium-bold">{block2.title}</h3>
           <div class="relative w-[200px] lg:w-auto mx-auto lg:mx-0">
+            <Brush id={1} class="w-[133px] lg:w-[173px] aspect-[16/19]" />
             <Brush
-              alt=""
-              id="1"
-              class="w-[133px] lg:w-[173px] aspect-[16/19]"
-            />
-            <Brush
-              alt=""
-              id="4"
+              id={4}
               class="absolute top-0 left-[41px] lg:left-[52px] w-[160px] lg:w-[207px] aspect-[490/487]"
             />
           </div>
@@ -90,11 +95,11 @@ const { block1, block2 } = data;
               <li>
                 <span class="hidden print:inline">Access 42</span>
 
-                <Image
-                  srcSet={["/images/access42.png"]}
-                  width="80"
-                  height="58"
+                <Picture
+                  src={Certif_Access42}
                   alt="Access42"
+                  width={80}
+                  height={58}
                 />
               </li>
               <li>
@@ -102,12 +107,8 @@ const { block1, block2 } = data;
                   >Interaction Design Foundation</span
                 >
 
-                <Image
-                  srcSet={[
-                    "/images/certifications/IDF.png",
-                    "/images/certifications/IDF.avif",
-                    "/images/certifications/IDF.webp",
-                  ]}
+                <Picture
+                  src={Certif_IDF}
                   width={170}
                   height={56}
                   alt="Interaction Design Foundation"
@@ -116,18 +117,13 @@ const { block1, block2 } = data;
               <li>
                 <span class="hidden print:inline">W3C</span>
 
-                <Image
-                  srcSet={["/images/w3c.png"]}
-                  width={90}
-                  height={46}
-                  alt="W3C"
-                />
+                <Picture src={Certif_W3C} width={90} height={46} alt="W3C" />
               </li>
               <li>
                 <span class="hidden print:inline">Opquast</span>
 
-                <Image
-                  srcSet={["/images/opquast.png"]}
+                <Picture
+                  src={Certif_Opquast}
                   width={140}
                   height={36}
                   alt="Opquast"
@@ -136,18 +132,13 @@ const { block1, block2 } = data;
               <li>
                 <span class="hidden print:inline">UXer</span>
 
-                <Image
-                  srcSet={["/images/uxer.png"]}
-                  width={46}
-                  height={47}
-                  alt="UXER"
-                />
+                <Picture src={Certif_Uxer} width={46} height={47} alt="UXER" />
               </li>
               <li>
                 <span class="hidden print:inline">SHIFTA by Elisava</span>
 
-                <Image
-                  srcSet={["/images/shifta.png"]}
+                <Picture
+                  src={Certif_Shifta}
                   width={106}
                   height={40}
                   alt="Shifta by ELISAVA"
@@ -157,9 +148,8 @@ const { block1, block2 } = data;
                 <span class="hidden print:inline"
                   >Institut du Numérique Responsable</span
                 >
-
-                <Image
-                  srcSet={["/images/INR.png"]}
+                <Picture
+                  src={Certif_INR}
                   width={120}
                   height={44}
                   alt="Institut du Numérique Responsable"
@@ -179,20 +169,20 @@ const { block1, block2 } = data;
               <li>
                 <span class="hidden print:inline">Desino Etico</span>
 
-                <Image
-                  srcSet={["/images/diseno-etico.png"]}
-                  width="90"
-                  height="49"
+                <Picture
+                  src={Commit_DesignEthico}
+                  width={90}
+                  height={49}
                   alt="Desino Etico"
                 />
               </li>
               <li>
                 <span class="hidden print:inline">Designers Éthiques</span>
 
-                <Image
-                  srcSet={["/images/designers-ethiques.png"]}
-                  width="105"
-                  height="49"
+                <Picture
+                  src={Commit_DesignEthique}
+                  width={105}
+                  height={49}
                   alt="Designers Éthiques"
                 />
               </li>
