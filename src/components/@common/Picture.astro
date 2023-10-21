@@ -7,9 +7,18 @@ interface Props {
   height?: number;
   alt?: string;
   densities?: number[];
+  loading?: string;
 }
 
-const { src, width, height, alt = "", densities = [2], ...props } = Astro.props;
+const {
+  src,
+  width,
+  height,
+  alt = "",
+  densities = [2],
+  loading = "lazy",
+  ...props
+} = Astro.props;
 ---
 
 <Picture
@@ -19,5 +28,6 @@ const { src, width, height, alt = "", densities = [2], ...props } = Astro.props;
   alt={alt}
   formats={["avif", "webp"]}
   densities={densities}
+  loading={loading}
   {...props}
 />
