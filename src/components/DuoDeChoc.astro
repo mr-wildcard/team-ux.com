@@ -34,11 +34,22 @@ const { variant, ...props } = Astro.props;
         width={352}
         height={418}
         class="absolute z-0 top-[-30px] left-0 rotate-[-165.467deg] translate-x-[-10px]"
+        loading="eager"
       />
 
       <div class="flex space-x-4">
-        <PictureYuna width={156} height={384} class="relative z-10" />
-        <PictureDaniela width={156} height={384} class="relative z-10" />
+        <PictureYuna
+          width={156}
+          height={384}
+          class="relative z-10"
+          loading="eager"
+        />
+        <PictureDaniela
+          width={156}
+          height={384}
+          class="relative z-10"
+          loading="eager"
+        />
       </div>
     </div>
   )

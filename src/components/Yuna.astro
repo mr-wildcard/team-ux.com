@@ -1,6 +1,6 @@
 ---
-import Yuna from "../images/yuna.png";
 import Picture from "./@common/Picture.astro";
+import Yuna from "../images/yuna.png";
 
 const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
 ---
@@ -12,4 +12,5 @@ const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
   loading="eager"
   width={width}
   height={height}
+  {...props}
 />

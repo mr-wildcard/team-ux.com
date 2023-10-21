@@ -2,7 +2,7 @@
 import Picture from "./@common/Picture.astro";
 import Daniela from "../images/daniela.png";
 
-const { width, height, class: cssClasses, alt = "" } = Astro.props;
+const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
 ---
 
 <Picture
@@ -12,4 +12,5 @@ const { width, height, class: cssClasses, alt = "" } = Astro.props;
   loading="eager"
   width={width}
   height={height}
+  {...props}
 />
