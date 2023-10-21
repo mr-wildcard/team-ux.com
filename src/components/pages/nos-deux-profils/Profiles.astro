@@ -14,18 +14,17 @@ import Profile from "./Profile.astro";
       class="col-span-full lg:col-start-1 lg:col-span-6 2xl:col-start-2 2xl:col-span-5"
     >
       <Profile profile={dataYuna}>
-        <div
-          slot="picture"
-          class="flex lg:flex-[0_0_142px] lg:justify-center relative isolate"
-        >
+        <div slot="picture" class="relative isolate lg:w-[142px]">
           <Brush
             id={1}
-            class="absolute z-[-1] w-[129px] lg:w-[142px] left-[13px] bottom-0 rotate-[180deg]"
+            width={142}
+            height={169}
+            class="absolute z-[-1] max-lg:w-[129px] left-0 bottom-0 rotate-[180deg]"
           />
           <Yuna
-            width={82}
-            height={204}
-            class="ml-6 lg:w-[89px] lg:h-[220px]"
+            width={89}
+            height={220}
+            class="max-lg:w-[82px] max-lg:h-[204px] max-lg:ml-[24px] lg:mx-auto"
             alt="Portrait de Yuna Orsini"
           />
         </div>
@@ -33,18 +32,17 @@ import Profile from "./Profile.astro";
     </div>
     <div class="col-span-full lg:col-span-6 2xl:col-span-5">
       <Profile profile={dataDaniela}>
-        <div
-          slot="picture"
-          class="flex lg:flex-[0_0_164px] lg:justify-center relative isolate"
-        >
+        <div slot="picture" class="relative isolate lg:w-[164px]">
           <Brush
             id={2}
-            class="absolute z-[-1] w-[129px] lg:w-[164px] left-[10px] bottom-[11px] rotate-[90deg]"
+            width={164}
+            height={142}
+            class="absolute z-[-1] max-lg:w-[150px] left-[-10px] lg:left-0 bottom-[11px] rotate-[90deg]"
           />
           <Daniela
-            width={82}
-            height={204}
-            class="ml-6 lg:w-[89px] lg:h-[220px]"
+            width={89}
+            height={220}
+            class="max-lg:w-[82px] max-lg:h-[204px] max-lg:ml-[24px] mx-auto"
             alt="Portrait de Daniela Peñaranda"
           />
         </div>
