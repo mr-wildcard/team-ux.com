@@ -15,7 +15,6 @@ const {
   width,
   height,
   alt = "",
-  densities = [1, 2],
   loading = "lazy",
   ...props
 } = Astro.props;
@@ -27,7 +26,6 @@ const {
   height={height}
   alt={alt}
   formats={["avif", "webp"]}
-  densities={densities}
   loading={loading}
   {...props}
 />
