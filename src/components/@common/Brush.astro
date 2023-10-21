@@ -1,11 +1,4 @@
 ---
-import Picture from "../@common/Picture.astro";
-
-import Brush1 from "../../images/brushes/brush-1.png";
-import Brush2 from "../../images/brushes/brush-2.png";
-import Brush3 from "../../images/brushes/brush-3.png";
-import Brush4 from "../../images/brushes/brush-4.png";
-
 interface Props {
   id: 1 | 2 | 3 | 4;
 }
@@ -13,11 +6,18 @@ interface Props {
 const { id, ...props } = Astro.props;
 
 const brushesById = new Map([
-  [1, Brush1],
-  [2, Brush2],
-  [3, Brush3],
-  [4, Brush4],
+  [1, "/images/raw/brush-1"],
+  [2, "/images/raw/brush-2"],
+  [3, "/images/raw/brush-3"],
+  [4, "/images/raw/brush-4"],
 ]);
+
+const brush = brushesById.get(id);
 ---
 
-<Picture role="presentation" alt="" src={brushesById.get(id)} {...props} />
+<picture>
+  <source srcset={`${brush}.avif`} type="image/avif" />
+  <source srcset={`${brush}.webp`} type="image/webp" />
+
+  <img src={`${brush}.png`} decoding="async" {...props} />
+</picture>

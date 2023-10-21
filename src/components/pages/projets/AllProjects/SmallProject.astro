@@ -15,11 +15,8 @@ const { project } = Astro.props;
 
 <div class="p-5 lg:p-10 bg-surface5 rounded-[26px]">
   <Picture
-    class="mb-8 rounded-[12px] border border-neutral3"
+    class="w-[200px] h-[80px] mb-8 rounded-[12px] border border-neutral3"
     src={import(`../../../../images/projets/logos/logo-${project.logo}.png`)}
-    width={200}
-    height={80}
-    densities={[1, 2]}
   />
 
   <p class="mb-5 text-headline-small lg:text-label-large">

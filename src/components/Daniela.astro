@@ -1,13 +1,17 @@
 ---
-import Picture from "./@common/Picture.astro";
-import Daniela from "../images/daniela.png";
-
-const { width, height, class: cssClasses, alt = "" } = Astro.props;
+const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
 ---
 
-<Picture
-  src={Daniela}
-  alt={alt}
-  class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
-  loading="eager"
-/>
+<picture>
+  <source srcset="/images/raw/daniela.avif" type="image/avif" />
+  <source srcset="/images/raw/daniela.webp" type="image/webp" />
+
+  <img
+    src="/images/raw/daniela.png"
+    decoding="async"
+    loading="eager"
+    class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
+    alt={alt}
+    {...props}
+  />
+</picture>
