@@ -19,8 +19,8 @@ const { variant, ...props } = Astro.props;
         class="absolute z-0 top-0 left-0 rotate-[-90deg] translate-x-[20px] translate-y-[-20px]"
       />
       <div class="flex justify-center space-x-3">
-        <PictureYuna width={85} height={210} class="relative z-10" />
-        <PictureDaniela width={85} height={210} class="relative z-10" />
+        <PictureYuna class="relative z-10 w-[85px] h-[210px]" />
+        <PictureDaniela class="relative z-10 w-[85px] h-[210px]" />
       </div>
     </div>
   )
@@ -31,25 +31,13 @@ const { variant, ...props } = Astro.props;
     <div class="relative isolate">
       <Brush
         id={1}
-        width={352}
-        height={418}
-        class="absolute z-0 top-[-30px] left-0 rotate-[-165.467deg] translate-x-[-10px]"
+        class="absolute z-0 top-[-30px] left-0 w-[352] h-[418] rotate-[-165.467deg] translate-x-[-10px]"
         loading="eager"
       />
 
       <div class="flex space-x-4">
-        <PictureYuna
-          width={156}
-          height={384}
-          class="relative z-10"
-          loading="eager"
-        />
-        <PictureDaniela
-          width={156}
-          height={384}
-          class="relative z-10"
-          loading="eager"
-        />
+        <PictureYuna class="relative z-10 w-[156px] h-[384px]" />
+        <PictureDaniela class="relative z-10 w-[156px] h-[384px]" />
       </div>
     </div>
   )
