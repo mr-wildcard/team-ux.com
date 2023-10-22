@@ -1,3 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://team-ux.com/$1 [R=301,L]
+
 ErrorDocument 404 /404.html
 
 Redirect 301 /manifeste /notre-manifeste/
