@@ -1,4 +1,6 @@
 ---
+import { AstroGlobalPartial } from "astro";
+import { getImage } from "astro:assets";
 import CallToAction from "../../../../components/@common/CallToAction.astro";
 import Testimonial, {
   type Testimonial,
@@ -7,26 +9,49 @@ import Icon from "../../../../components/@common/Icon.astro";
 import Tag from "../../../@common/Tag.astro";
 import Picture from "../../../@common/Picture.astro";
 
-interface Props {
-  project: {
-    title: string;
-    logo: string;
-    activity: string;
-    skills: string[];
-    images?: string[];
-    imagesLegends?: string[];
-    imagesAlts?: string[];
-    description: {
-      title: string;
-      content: string;
-    };
-    testimonial?: Testimonial | Array<Testimonial>;
-  };
+export type LargeProjectImage = {
+  name: string;
+  legend: string;
+  alt: string;
 }
 
-const { project } = Astro.props;
+export type LargeProjectProps = {
+  title: string;
+  logo: string;
+  activity: string;
+  skills: string[];
+  images: LargeProjectImage[];
+  description: {
+    title: string;
+    content: string;
+  };
+  testimonial?: Testimonial | Array<Testimonial>
+}
 
-const hasManyTestimonials = Array.isArray(project.testimonial);
+interface Props {
+  project: LargeProjectProps;
+  allProjectsImages: ReturnType<AstroGlobalPartial["glob"]>[]
+}
+
+const { project, allProjectsImages } = Astro.props;
+
+const projectImages = [];
+
+for (const { name } of project.images) {
+  const projectImage = allProjectsImages.find((image) =>
+    image.default.src.includes(name),
+  );
+
+  if (projectImage) {
+    projectImages.push(projectImage);
+  } else {
+    throw new Error(
+      `Image ${name} for project ${project.title} couldn't be found.`,
+    );
+  }
+}
+
+const hasManyTestimonials = Array.isArray(project.testimonial) && project.testimonial.length > 0;
 ---
 
 <div
@@ -69,7 +94,6 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
         {project.description.content}
       </p>
 
-      <!--
       {
         project.testimonial && (
           <details class="testimonials">
@@ -111,7 +135,6 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
           </details>
         )
       }
-      -->
     </div>
   </div>
 
@@ -138,13 +161,13 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
 
         <div class="gallery flex flex-col space-y-14 mt-8">
           <ul class="flex flex-col max-lg:space-y-12 lg:flex-row lg:space-x-4">
-            {new Array(3).fill(0).map((_, index, array) => {
-              const imageIndex = index + 1;
+            {projectImages.map(async (projectImage, index) => {
+              const { src: hrefPNG } = await getImage({ src: projectImage.default, format: 'png' });
 
               return (
                 <li class="flex-1">
                   <a
-                    href={`/images/projets/${project.images}-${imageIndex}.png`}
+                    href={hrefPNG}
                     target="_blank"
                     class="project-image-link lg:aspect-[431/361] relative flex overflow-hidden rounded-md lg:rounded-lg"
                   >
@@ -153,17 +176,17 @@ const hasManyTestimonials = Array.isArray(project.testimonial);
                     </CallToAction>
 
                     <Picture
-                      src={import(`../../../../images/projets/screenshots/${project.images}-${imageIndex}.png`)}
+                      src={projectImage.default}
                       style="opacity: 0"
                       class="opacity-0 transition-opacity"
                       onload="this.style.opacity = '1'"
-                      alt={project.imagesAlts[index] ?? ""}
+                      alt={project.images[index].alt ?? ""}
                       longdesc={`#longdesc-${project.images}`}
                     />
                   </a>
 
-                  {project.imagesLegends[index] && (
-                    <p id={`longdesc-${project.images}`} class="mt-5 text-body-medium">{project.imagesLegends[index]}</p>
+                  {project.images[index].legend && (
+                    <p id={`longdesc-${project.images}`} class="mt-5 text-body-medium">{project.images[index].legend}</p>
                   )}
                 </li>
               );

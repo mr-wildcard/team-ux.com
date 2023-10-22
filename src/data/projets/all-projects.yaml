@@ -9,15 +9,16 @@
         - Site Web
         - Refonte
         - Formation professionnelle
-      images: desktop-school
-      imagesLegends:
-        - Analyse des besoins, benchmark concurrentiel et définition d’une stratégie UX pour atteindre les objectifs d’image et de recrutement. Atelier de co-création pour valider les parcours-clés.
-        - Conception des wireframes desktop des gabarits-clés du site, en respectant les bonnes pratiques d’accessibilité et d’éco-conception.
-        - Optimisation des parcours de conversion du site (inscription aux formations). Transformation de nos wireframes en maquettes UI et intégration par le studio de design bas carbone Hey Low.
-      imagesAlts:
-        - Captures d’écran de plusieurs livrables de stratégie UX (synthèse d’audit, proposition stratégique, arborescence de menu).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (listing de formations, page formation).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (profil de speaker, page de contenu éditorial) ainsi que la maquette graphique produite par Hey Low.
+      images:
+        - name: desktop-school-1
+          legend: Analyse des besoins, benchmark concurrentiel et définition d’une stratégie UX pour atteindre les objectifs d’image et de recrutement. Atelier de co-création pour valider les parcours-clés.
+          alt: Captures d’écran de plusieurs livrables de stratégie UX (synthèse d’audit, proposition stratégique, arborescence de menu).
+        - name: desktop-school-2
+          legend: Conception des wireframes desktop des gabarits-clés du site, en respectant les bonnes pratiques d’accessibilité et d’éco-conception.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (listing de formations, page formation).
+        - name: desktop-school-3
+          legend: Optimisation des parcours de conversion du site (inscription aux formations). Transformation de nos wireframes en maquettes UI et intégration par le studio de design bas carbone Hey Low.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (profil de speaker, page de contenu éditorial) ainsi que la maquette graphique produite par Hey Low.
       description:
         title: Un nouveau site Web pour recruter les futures promotions d’une école formant au changement systémique
         content: |
@@ -39,15 +40,16 @@
         - Outil métier
         - Refonte
         - Dossiers médico-sociaux
-      images: desktop-logus
-      imagesLegends:
-        - Analyse des besoins par cartographie fonctionnelle, entretiens parties prenantes, focus group... Réalisation d’un audit expert UX/UI et définition de la nouvelle arborescence.
-        - Conception des wireframes desktop des fonctionnalités-phares de l’outil, en respectant les bonnes pratiques d’accessibilité et les contraintes techniques du projet. Prototypage interactif.
-        - Transformation du travail UX en maquettes UI, entre tonalité ludique et interfaces claires et accessibles. Travail de composants avec livraison d’une bibliothèque UI pour rendre les équipes techniques autonomes.
-      imagesAlts:
-        - Captures d’écran de plusieurs livrables de stratégie UX (recommandations UX, arborescence de contenus, compte-rendu de focus group) et d’une photo d’un atelier.
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (plan de soins, transmissions narratives).
-        - Montage illustratif suggérant plusieurs maquettes graphiques créées pendant ce projet (tableau de bord, listing des personnes accompagnées).
+      images:
+        - name: desktop-logus-1
+          legend: Analyse des besoins par cartographie fonctionnelle, entretiens parties prenantes, focus group... Réalisation d’un audit expert UX/UI et définition de la nouvelle arborescence.
+          alt: Captures d’écran de plusieurs livrables de stratégie UX (recommandations UX, arborescence de contenus, compte-rendu de focus group) et d’une photo d’un atelier.
+        - name: desktop-logus-2
+          legend: Conception des wireframes desktop des fonctionnalités-phares de l’outil, en respectant les bonnes pratiques d’accessibilité et les contraintes techniques du projet. Prototypage interactif.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (plan de soins, transmissions narratives).
+        - name: desktop-logus-3
+          legend: Transformation du travail UX en maquettes UI, entre tonalité ludique et interfaces claires et accessibles. Travail de composants avec livraison d’une bibliothèque UI pour rendre les équipes techniques autonomes.
+          alt: Montage illustratif suggérant plusieurs maquettes graphiques créées pendant ce projet (tableau de bord, listing des personnes accompagnées).
       description:
         title: Une solution numérique repensée pour suivre les dossiers des usagères et usagers dans les établissements médico-sociaux
         content: |
@@ -121,15 +123,16 @@
         - Espace connecté
         - Refonte
         - Habitat social
-      images: desktop-chalets
-      imagesLegends:
-        - Analyse des besoins recensés pour chaque persona. Travail d’arborescence des contenus. Atelier de co-conception d’un formulaire dynamique multi-cible.
-        - Conception des wireframes de dizaines de gabarits de pages desktop et mobile pour traiter les unités fonctionnelles retenues sur le site institutionnel.
-        - Prototypage dynamique de parcours-clés sur des espaces connectés et sur la déclinaison du site institutionnel pour une cible jeune spécifique.
-      imagesAlts:
-        - Captures d’écran de plusieurs livrables de stratégie UX (personas, liste de besoins, arborescence, atelier de co-conception).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit d’écran d’accueil, gabarit du formulaire de contact et version mobile du module d’accès rapides multicible).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit de carte interactive, gabarit de tunnel de paiement, gabarit desktop du module d’accès rapides multicontexte, version mobile du dashboard).
+      images:
+        - name: desktop-chalets-1
+          legend: Analyse des besoins recensés pour chaque persona. Travail d’arborescence des contenus. Atelier de co-conception d’un formulaire dynamique multi-cible.
+          alt: Captures d’écran de plusieurs livrables de stratégie UX (personas, liste de besoins, arborescence, atelier de co-conception).
+        - name: desktop-chalets-2
+          legend: Conception des wireframes de dizaines de gabarits de pages desktop et mobile pour traiter les unités fonctionnelles retenues sur le site institutionnel.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit d’écran d’accueil, gabarit du formulaire de contact et version mobile du module d’accès rapides multicible).
+        - name: desktop-chalets-3
+          legend: Prototypage dynamique de parcours-clés sur des espaces connectés et sur la déclinaison du site institutionnel pour une cible jeune spécifique.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit de carte interactive, gabarit de tunnel de paiement, gabarit desktop du module d’accès rapides multicontexte, version mobile du dashboard).
       description:
         title: Un site institutionnel et des espaces connectés repensés pour rapprocher un bailleur social et ses cibles multiples
         content: |
@@ -151,15 +154,16 @@
         - Refonte
         - Transport
         - Transformation digitale
-      images: desktop-ekino
-      imagesLegends:
-        - Ateliers de design thinking et design sprints pour l’idéation et la co-conception de solutions, auprès des équipes de tous les services. Création de plusieurs POCs (preuves de concept) sur plusieurs mois.
-        - Travail de recherche UX fondé sur des entretiens téléphoniques, du shadowing, des focus groups et des questionnaires. Réalisation de personas et d’user journey mappings, assimilés en ateliers avec des exercices créatifs.
-        - Production itérative hebdomadaire de zonings, wireframes, prototypes et maquettes UI pendant 1 an et demi de projet. Création d’outils métiers sous forme d’intranets, espace clientèle, application mobile... Tests d’utilisabilité.
-      imagesAlts:
-        - "Montage illustratif suggérant plusieurs étapes de conception collaborative : atelier d’empathie, atelier d’idéation, atelier de conception, réunion d’échanges."
-        - Montage illustratif suggérant plusieurs livrables de la phase de recherche UX (codage des entretiens individuels, personas, user journey mappings).
-        - "Montage illustratif suggérant plusieurs actions-phares de ce projet : shadowing des personnes utilisatrices, facilitation d’exercices d’idéation, recommandations UX et tests d’utilisabilité à distance."
+      images:
+        - name: desktop-ekino-1
+          legend: Ateliers de design thinking et design sprints pour l’idéation et la co-conception de solutions, auprès des équipes de tous les services. Création de plusieurs POCs (preuves de concept) sur plusieurs mois.
+          alt: "Montage illustratif suggérant plusieurs étapes de conception collaborative : atelier d’empathie, atelier d’idéation, atelier de conception, réunion d’échanges."
+        - name: desktop-ekino-2
+          legend: Travail de recherche UX fondé sur des entretiens téléphoniques, du shadowing, des focus groups et des questionnaires. Réalisation de personas et d’user journey mappings, assimilés en ateliers avec des exercices créatifs.
+          alt: Montage illustratif suggérant plusieurs livrables de la phase de recherche UX (codage des entretiens individuels, personas, user journey mappings).
+        - name: desktop-ekino-3
+          legend: Production itérative hebdomadaire de zonings, wireframes, prototypes et maquettes UI pendant 1 an et demi de projet. Création d’outils métiers sous forme d’intranets, espace clientèle, application mobile... Tests d’utilisabilité.
+          alt: "Montage illustratif suggérant plusieurs actions-phares de ce projet : shadowing des personnes utilisatrices, facilitation d’exercices d’idéation, recommandations UX et tests d’utilisabilité à distance."
       description:
         title: Le système d’information d'un leader du transport entièrement refondu pour faciliter les échanges internes et externes
         content: |
@@ -243,15 +247,16 @@
         - Application mobile
         - Interface conversationnelle
         - Santé
-      images: desktop-sacha
-      imagesLegends:
-        - Travail de recherche pour sensibiliser l’équipe aux enjeux éthiques autour de la conversation avec une IA. Conception des wireflows de l’application mobile.
-        - Conception des wireframes pour les écrans-clés de cette application mobile conversationnelle. Importance de l’UX writing dans le déroulé de l’expérience.
-        - Prototypage interactif de parcours sensibles autour de l’interaction avec l’IA et du modèle conversationnel. L’expérience doit être simple et fluide, quand le sujet abordé est pointu et délicat.
-      imagesAlts:
-        - Captures d’écran de plusieurs livrables de stratégie UX (use cases identifiés, sensibilisation éthique, parcours et user flows).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (écran d’accueil, démarrage d’une discussion).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (discussion en cours, liste de ressources, états d’attente et de relance, écran de prévention).
+      images:
+        - name: desktop-sacha-1
+          legend: Travail de recherche pour sensibiliser l’équipe aux enjeux éthiques autour de la conversation avec une IA. Conception des wireflows de l’application mobile.
+          alt: Captures d’écran de plusieurs livrables de stratégie UX (use cases identifiés, sensibilisation éthique, parcours et user flows).
+        - name: desktop-sacha-2
+          legend: Conception des wireframes pour les écrans-clés de cette application mobile conversationnelle. Importance de l’UX writing dans le déroulé de l’expérience.
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (écran d’accueil, démarrage d’une discussion).
+        - name: desktop-sacha-3
+          legend: Prototypage interactif de parcours sensibles autour de l’interaction avec l’IA et du modèle conversationnel. L’expérience doit être simple et fluide, quand le suj
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (discussion en cours, liste de ressources, états d’attente et de relance, écran de prévention).
       description:
         title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
         content: |
@@ -265,15 +270,16 @@
         - Outil spécialisé
         - Refonte
         - Tech
-      images: desktop-dxomark
-      imagesLegends:
-        - Audit expert UX/UI pour identifier les axes de travail principaux de la mission. Formulation de préconisations détaillées. Présentations itératives d’une nouvelle stratégie UX pour ce site riche en contenus.
-        - "Conception des wireframes desktop et mobile pour la nouvelle version du site : rubriques éditoriales à intégrer, fonctionnalités dynamiques type outil avec de grandes quantités de données techniques à afficher, pages plus corporate..."
-        - L’enjeu principal du travail de conception UX a résidé dans la prise en compte de la double cible du produit numérique, soit spécialisée (presse technique, profils geeks...) soit néophyte (grand public à la recherche de comparatifs).
-      imagesAlts:
-        - Captures d’écran de plusieurs livrables de stratégie UX (recommandations UX, annotations suite à un audit UX, UI et accessibilité).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit d’écran d’accueil sur desktop et mobile, gabarit de page produit, fonctionnalité de comparatif de produits).
-        - Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (tableau dynamique des scores desktop et mobile, tunnel de comparatif).
+      images:
+        - name: desktop-dxomark-1
+          legend: Audit expert UX/UI pour identifier les axes de travail principaux de la mission. Formulation de préconisations détaillées. Présentations itératives d’une nouvelle stratégie UX pour ce site riche en contenus.
+          alt: Captures d’écran de plusieurs livrables de stratégie UX (recommandations UX, annotations suite à un audit UX, UI et accessibilité).
+        - name: desktop-dxomark-2
+          legend: "Conception des wireframes desktop et mobile pour la nouvelle version du site : rubriques éditoriales à intégrer, fonctionnalités dynamiques type outil avec de grandes quantités de données techniques à afficher, pages plus corporate..."
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (gabarit d’écran d’accueil sur desktop et mobile, gabarit de page produit, fonctionnalité de comparatif de produits).
+        - name: desktop-dxomark-3
+          legend: L’enjeu principal du travail de conception UX a résidé dans la prise en compte de la double cible du produit numérique, soit spécialisée (presse technique, profils geeks...) soit néophyte (grand public à la recherche de comparatifs).
+          alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (tableau dynamique des scores desktop et mobile, tunnel de comparatif).
       description:
         title: La stratégie UX du site du leader de l’évaluation repensée pour parler à un public aussi bien technophile que novice
         content: |
