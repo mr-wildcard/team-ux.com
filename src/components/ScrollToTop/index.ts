@@ -1,7 +1,7 @@
 import {
   ScrollDirection,
   watchScrollDirection,
-} from "../../scripts/helpers/watchScrollDirection";
+} from "scripts/helpers/watchScrollDirection";
 
 const scrollToTopButton = document.querySelector<HTMLElement>(
   "#scroll-to-top-button",

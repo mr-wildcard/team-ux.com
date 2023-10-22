@@ -1,4 +1,4 @@
-import { listenToMediaQueryChange } from "../../../scripts/helpers/listenToMediaQueryChange.ts";
+import { listenToMediaQueryChange } from "scripts/helpers/listenToMediaQueryChange.ts";
 
 const header = document.querySelector<HTMLElement>("#header");
 

@@ -1,4 +1,4 @@
-import { listenToMediaQueryChange } from "../../../scripts/helpers/listenToMediaQueryChange.ts";
+import { listenToMediaQueryChange } from "scripts/helpers/listenToMediaQueryChange.ts";
 
 const letters = document.querySelector<HTMLDivElement>("#letters-nav");
 const stickyLetters = document.querySelector<HTMLDivElement>(

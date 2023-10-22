@@ -1,10 +1,10 @@
 ---
-import data from "../../../data/glossaire-design-ux/data.yaml";
-import { slugify } from "../../../scripts/helpers/slugify";
-import Grid from "../../@common/Grid.astro";
-import Icon from "../../@common/Icon.astro";
+import data from "data/glossaire-design-ux/data.yaml";
+import { slugify } from "scripts/helpers/slugify";
+import Grid from "components/@common/Grid.astro";
+import Icon from "components/@common/Icon.astro";
+import ButtonCopyText from "components/ButtonCopyText/index.astro";
 import Letter from "./Letter.astro";
-import ButtonCopyText from "../../ButtonCopyText/index.astro";
 
 const totalDefinitions = data.length;
 const allLetters = [
