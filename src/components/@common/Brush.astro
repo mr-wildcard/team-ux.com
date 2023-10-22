@@ -3,7 +3,7 @@ interface Props {
   id: 1 | 2 | 3 | 4;
 }
 
-const { id, ...props } = Astro.props;
+const { id, loading = "lazy", ...props } = Astro.props;
 
 const brushesById = new Map([
   [1, "/images/raw/brush-1"],
@@ -19,5 +19,5 @@ const brush = brushesById.get(id);
   <source srcset={`${brush}.avif`} type="image/avif" />
   <source srcset={`${brush}.webp`} type="image/webp" />
 
-  <img src={`${brush}.png`} decoding="async" {...props} />
+  <img src={`${brush}.png`} loading={loading} decoding="async" {...props} />
 </picture>

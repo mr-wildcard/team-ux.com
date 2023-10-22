@@ -9,7 +9,6 @@ const { width, height, class: cssClasses, alt = "", ...props } = Astro.props;
   <img
     src="/images/raw/daniela.png"
     decoding="async"
-    loading="eager"
     class:list={["rounded-t-full", "rounded-b-full", cssClasses]}
     alt={alt}
     {...props}
