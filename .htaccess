@@ -1,1 +1,8 @@
 ErrorDocument 404 /404.html
+
+Redirect 302 /manifeste /notre-manifeste
+Redirect 302 /manifesto /notre-manifeste
+Redirect 302 /expertises /glossaire-ux-design
+Redirect 302 /projects/transformation-client-transformation-digitale-trexpress /projets
+Redirect 302 /project/transformation-client-transformation-digitale-trexpress /projets
+Redirect 302 /project/experience-client-journey-indoor-cycling-bordeaux /projets
