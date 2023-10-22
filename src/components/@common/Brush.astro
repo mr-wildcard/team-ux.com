@@ -19,5 +19,12 @@ const brush = brushesById.get(id);
   <source srcset={`${brush}.avif`} type="image/avif" />
   <source srcset={`${brush}.webp`} type="image/webp" />
 
-  <img src={`${brush}.png`} loading={loading} decoding="async" {...props} />
+  <img
+    src={`${brush}.png`}
+    loading={loading}
+    decoding="async"
+    {...props}
+    alt=""
+    role="presentation"
+  />
 </picture>
