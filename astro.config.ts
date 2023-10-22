@@ -14,7 +14,7 @@ function getSiteURL() {
       return `https://${process.env.CF_PAGES_BRANCH}.team-ux.pages.dev/`;
     }
   } else if (process.env.GITHUB_ACTION) {
-    return "https://289zdbdlnp.preview.infomaniak.website/";
+    return "https://www.team-ux.com/";
   } else {
     return `http://localhost:${LOCAL_PORT}/`;
   }
