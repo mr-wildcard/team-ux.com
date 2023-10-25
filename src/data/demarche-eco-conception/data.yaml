@@ -77,9 +77,10 @@ content:
               - "Abandon de Webflow pour diminuer notre dépendance à un outil SaaS externe et supprimer plusieurs requêtes gourmandes en ressources"
               - "Bascule sur un site statique avec le framework Astro : il n’y a plus de requêtes vers une base de données pour charger le contenu"
               - "Choix de ne servir que le CSS réellement utilisé grâce au framework Tailwind"
-              - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses utilisées sur le site depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko)."
+              - "Choix de la variante “Variable” de la font Satoshi pour pouvoir accéder aux 3 graisses utilisées sur le site depuis un seul fichier (127ko au lieu 73+73+74=220ko) puis remplacement du format TTF par le format Woff2 lorsqu’il a été rendu disponible (43ko au lieu de 127ko) puis suppression des glyphes non utilisés dans la font via l’outil en ligne de commande pyftsubset (22ko au lieu de 43ko)"
               - "Gestion sur-mesure des images : selon les résultats de formatage et compression obtenus pour chaque image, nous avons soit choisi le format PNG s’il était plus performant, soit fourni aux navigateurs 2 formats Web ultra optimisés : AVIF et WebP"
               - "Mise en place du lazy loading (“chargement fainéant”) pour ne charger les médias que lorsqu’ils dépassent la ligne de flottaison et donc que s’ils sont réellement consultés"
+              - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
               - "Travail main dans la main entre développement et design pour implémenter au maximum l’accessibilité"
               - |
                 Diminution du travail du CPU en écartant le plus possible les solutions techniques nécessitant des appels/recalculs Javascript. Les cas d’utilisation de JS restants sont les suivants :
@@ -118,9 +119,7 @@ content:
           - list:
               - "Retravail ergonomique de la page Projets pour simplifier le DOM"
               - "Affichage de la galerie en HTML/CSS uniquement"
-              - "Suppression des glyphes non-utilisés dans la font"
               - "Optimisation ergonomique de la feuille de style d’impression"
-              - "Configuration d’un temps de cache long sur les ressources faiblement mises à jour"
       - title: "Autres évolutions"
         content:
           - paragraph: "Nous avons profité de ce temps de réflexion et d’action pour opérer également des changements sur nos supports de communication et nos outils de travail du quotidien :"
