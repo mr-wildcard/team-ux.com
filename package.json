@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "check": "astro check",
-    "build": "astro build",
+    "build": "astro build && cp .htaccess dist",
     "preview": "astro preview",
     "astro": "astro"
   },
