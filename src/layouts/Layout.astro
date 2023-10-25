@@ -56,16 +56,7 @@ const { title, description, og_description, og_title } = Astro.props;
       color="#0f24f7"
     />
     <title>{title}</title>
-  </head>
-  <body>
-    <Sprite.Provider>
-      <Header />
-
-      <slot />
-
-      <Toast />
-    </Sprite.Provider>
-    <style is:global>
+    <style is:inline>
       @font-face {
         font-family: "SatoshiVariable";
         src: url("/fonts/satoshi-variable.woff2") format("woff2");
@@ -78,6 +69,21 @@ const { title, description, og_description, og_title } = Astro.props;
         -moz-osx-font-smoothing: grayscale;
       }
 
+      html,
+      body {
+        font-family: "SatoshiVariable", "sans-serif";
+      }
+    </style>
+  </head>
+  <body>
+    <Sprite.Provider>
+      <Header />
+
+      <slot />
+
+      <Toast />
+    </Sprite.Provider>
+    <style is:global>
       body {
         @apply bg-surface1 text-secondary;
       }

@@ -29,9 +29,6 @@ export default {
         "2xl": "1512px",
       },
     },
-    fontFamily: {
-      sans: ["SatoshiVariable", "sans-serif"],
-    },
     colors: {
       primary: "#0F24F7",
       secondary: "#08124F",
