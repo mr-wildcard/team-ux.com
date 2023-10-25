@@ -68,9 +68,9 @@ const { title, description, og_description, og_title } = Astro.props;
     <style is:global>
       @font-face {
         font-family: "SatoshiVariable";
-        src: url("/fonts/satoshi-variable.woff2");
+        src: url("/fonts/satoshi-variable.woff2") format("woff2");
         font-weight: 500 900;
-        font-display: swap;
+        font-display: optional;
       }
 
       html {
