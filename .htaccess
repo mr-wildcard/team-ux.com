@@ -16,3 +16,15 @@ Redirect 301 /project/groupe-des-chalets /projets/
 Redirect 301 /project/dxomark /projets/
 Redirect 301 /project/logus-sys1 /projets/
 Redirect 301 /project/meyerdom /projets/
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+
+    <FilesMatch "\.(js|css|ico|png|avif|webp|woff2|webmanifest)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </FilesMatch>
+</IfModule>
