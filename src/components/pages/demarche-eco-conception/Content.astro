@@ -6,7 +6,7 @@ import Block from "./Block.astro";
 ---
 
 <div class="demarche-eco-conception container">
-  <Grid>
+  <Grid class="gap-y-5">
     <h2 class="col-span-full lg:col-start-2 mb-10 text-headline-large">
       Mesures sur ce site <span class="text-headline-small"
         >&bull; en date du 22 octobre 2023</span
@@ -16,7 +16,7 @@ import Block from "./Block.astro";
     <div
       class="col-span-full md:col-span-2 lg:col-start-2 lg:col-span-3 mb-5 md:mb-0"
     >
-      <div class="bg-surface5 p-8 rounded-[26px]">
+      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Score EcoIndex moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">B (76,4/100)</p>
         <p class="text-label-medium">
@@ -27,7 +27,7 @@ import Block from "./Block.astro";
     </div>
 
     <div class="col-span-full md:col-span-2 lg:col-span-3 mb-5 md:mb-0">
-      <div class="bg-surface5 p-8 rounded-[26px]">
+      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Score EcoGrader moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">99/100</p>
         <p class="text-label-medium">
@@ -36,14 +36,26 @@ import Block from "./Block.astro";
       </div>
     </div>
 
-    <div class="col-span-full md:col-span-2 lg:col-span-3">
-      <div class="bg-surface5 p-8 rounded-[26px]">
+    <div class="col-span-full md:col-span-2 lg:col-span-3 mb-5 md:mb-0">
+      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Poids moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">138,7 ko</p>
         <p class="text-label-medium">
           Un poids 94% inférieur au poids médian d’une page Web desktop selon
           HTTPArchive
         </p>
+      </div>
+    </div>
+
+    <div class="col-span-full lg:col-start-2 lg:lg:col-span-9 mb-5">
+      <div class="bg-surface5 p-8 rounded-[26px]">
+        <h3 class="text-label-large mb-2.5">
+          Scores PageSpeed de la page d’accueil
+        </h3>
+        <h3 class="text-label-small mb-5">
+          Performance - Accessibilité - Bonnes pratiques
+        </h3>
+        <p class="text-headline-medium-bold">100/100 - 100/100 - 100/100</p>
       </div>
     </div>
   </Grid>
