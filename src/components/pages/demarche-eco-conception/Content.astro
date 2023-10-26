@@ -8,15 +8,13 @@ import Block from "./Block.astro";
 <div class="demarche-eco-conception container">
   <Grid class="gap-y-5">
     <h2 class="col-span-full lg:col-start-2 mb-10 text-headline-large">
-      Mesures sur ce site <span class="text-headline-small"
-        >&bull; en date du 22 octobre 2023</span
-      >
+      Mesures sur ce site
     </h2>
 
     <div
       class="col-span-full md:col-span-2 lg:col-start-2 lg:col-span-3 mb-5 md:mb-0"
     >
-      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
+      <div class="md:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Score EcoIndex moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">B (76,4/100)</p>
         <p class="text-label-medium">
@@ -27,7 +25,7 @@ import Block from "./Block.astro";
     </div>
 
     <div class="col-span-full md:col-span-2 lg:col-span-3 mb-5 md:mb-0">
-      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
+      <div class="md:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Score EcoGrader moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">99/100</p>
         <p class="text-label-medium">
@@ -37,7 +35,7 @@ import Block from "./Block.astro";
     </div>
 
     <div class="col-span-full md:col-span-2 lg:col-span-3 mb-5 md:mb-0">
-      <div class="lg:h-full bg-surface5 p-8 rounded-[26px]">
+      <div class="md:h-full bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-5">Poids moyen d’une page</h3>
         <p class="text-headline-medium-bold mb-8">138,7 ko</p>
         <p class="text-label-medium">
@@ -50,7 +48,7 @@ import Block from "./Block.astro";
     <div class="col-span-full lg:col-start-2 lg:lg:col-span-9 mb-5">
       <div class="bg-surface5 p-8 rounded-[26px]">
         <h3 class="text-label-large mb-2.5">
-          Scores PageSpeed de la page d’accueil
+          Scores PageSpeed moyens d’une page
         </h3>
         <h3 class="text-label-small mb-5">
           Performance - Accessibilité - Bonnes pratiques
@@ -61,11 +59,16 @@ import Block from "./Block.astro";
   </Grid>
 
   <div class="my-20 lg:mb-[120px]">
+    <Grid>
+      <h3 class="col-span-full lg:col-start-2 mb-5 text-headline-small">
+        Détail par page
+      </h3>
+    </Grid>
     <Grid class="max-sm:!px-0">
       <div
         class="overflow-x-auto col-span-full lg:col-start-2 lg:col-span-9 px-5 sm:px-0"
       >
-        <table class="w-full border-collapse border border-neutral2">
+        <table class="w-full mb-5 border-collapse border border-neutral2">
           <thead class="bg-neutral4">
             <tr>
               <th class="w-[310px] whitespace-nowrap">Page</th>
@@ -132,6 +135,12 @@ import Block from "./Block.astro";
           </tbody>
         </table>
       </div>
+    </Grid>
+
+    <Grid>
+      <p class="col-span-full lg:col-start-2 text-body-medium">
+        Scores mesurés le 26 octobre 2023.
+      </p>
     </Grid>
   </div>
 
