@@ -181,12 +181,12 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
                       class="opacity-0 transition-opacity"
                       onload="this.style.opacity = '1'"
                       alt={project.images[index].alt ?? ""}
-                      longdesc={`#longdesc-${project.images}`}
+                      longdesc={`#project-image-desc-${project.images[index].name}`}
                     />
                   </a>
 
                   {project.images[index].legend && (
-                    <p id={`longdesc-${project.images}`} class="mt-5 text-body-medium">{project.images[index].legend}</p>
+                    <p id={`project-image-desc-${project.images[index].name}`} class="mt-5 text-body-medium">{project.images[index].legend}</p>
                   )}
                 </li>
               );
