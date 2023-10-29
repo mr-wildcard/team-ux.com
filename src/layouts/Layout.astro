@@ -88,6 +88,10 @@ const { title, description, og_description, og_title } = Astro.props;
 
       details {
         & summary {
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
           list-style: none;
 
           &::-webkit-details-marker {
