@@ -1,13 +1,28 @@
 ---
 import Icon from "./@common/Icon.astro";
+
+const cssClasses = [
+  "fixed",
+  "flex",
+  "items-center",
+  "top-[calc(100%+50px)]",
+  "left-1/2",
+  "w-[calc(100%-40px)]",
+  "sm:w-auto",
+  "space-x-1",
+  "sm:space-x-2",
+  "p-4",
+  "sm:px-8",
+  "sm:py-4",
+  "text-label-medium",
+  "sm:text-body-medium",
+  "rounded-md",
+  "bg-surface6",
+  "shadow-[0_2px_4px_0_rgba(8,18,79,0.25)]",
+];
 ---
 
-<div
-  id="toast"
-  role="alert"
-  aria-live="assertive"
-  class="fixed flex items-center top-[100%] left-1/2 w-[calc(100%-40px)] sm:w-auto space-x-1 sm:space-x-2 p-4 sm:px-8 sm:py-4 text-label-medium sm:text-body-medium rounded-md bg-surface6 shadow-[0_2px_4px_0_rgba(8,18,79,0.25)]"
->
+<div id="toast" role="alert" aria-live="assertive" class:list={cssClasses}>
   <Icon name="check_circle" width={24} height={24} />
   <span class="flex-1"></span>
 </div>
@@ -34,11 +49,11 @@ import Icon from "./@common/Icon.astro";
     }
 
     10% {
-      transform: translateX(-50%) translateY(calc(-80px - 100%)) translateZ(0);
+      transform: translateX(-50%) translateY(calc(-130px - 100%)) translateZ(0);
     }
 
     90% {
-      transform: translateX(-50%) translateY(calc(-80px - 100%)) translateZ(0);
+      transform: translateX(-50%) translateY(calc(-130px - 100%)) translateZ(0);
     }
 
     100% {
@@ -48,7 +63,7 @@ import Icon from "./@common/Icon.astro";
 
   @keyframes hideToastCopyTextSuccess {
     from {
-      transform: translateX(-50%) translateY(calc(-80px - 100%)) translateZ(0);
+      transform: translateX(-50%) translateY(calc(-130px - 100%)) translateZ(0);
     }
 
     to {
