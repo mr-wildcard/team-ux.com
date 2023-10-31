@@ -11,7 +11,7 @@ function getSiteURL() {
     if (process.env.CF_PAGES_BRANCH === "main") {
       return "https://team-ux-com.pages.dev/";
     } else {
-      return `https://${process.env.CF_PAGES_BRANCH}.team-ux.pages.dev/`;
+      return `https://${process.env.CF_PAGES_BRANCH}.team-ux-com.pages.dev/`;
     }
   } else if (process.env.GITHUB_ACTION) {
     return "https://www.team-ux.com/";
