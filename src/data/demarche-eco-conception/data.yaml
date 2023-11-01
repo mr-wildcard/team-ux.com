@@ -113,7 +113,7 @@ content:
           - list:
               - "Navigateurs et systèmes : Chrome/macOS, Firefox/macOS, Safari/macOS, Edge/Windows, Firefox/Windows, Firefox/Android, Edge/Android, Chrome/Android, Safari/iOS"
               - "Résolutions : mobile et desktop, toutes résolutions (site responsive)"
-              - "Devices mobile : iPad Air (2013), iPhone 7 (2016), Pixel 3a (2018), Samsung Galaxy S10e (2019), Pixel 4 (2019)"
+              - "Devices mobile : iPad Air (2013), iPhone 7 (2016), Pixel 3a (2018), Samsung Galaxy S10e (2019), Pixel 4 (2019), Oppo Find X2 Neo (2020)"
           - paragraph: "Nous testons également le site sur des systèmes complémentaires avec l’outil <a href='https://www.browserstack.com/' target='_blank'>BrowserStack</a> que nous utilisons grâce à leur programme Open Source."
       - title: "Axes d’amélioration"
         content:
