@@ -16,6 +16,7 @@ Redirect 301 /project/groupe-des-chalets /projets/
 Redirect 301 /project/dxomark /projets/
 Redirect 301 /project/logus-sys1 /projets/
 Redirect 301 /project/meyerdom /projets/
+Redirect 302 /ressources-ecoconception https://kdrive.infomaniak.com/app/share/840086/063a5cdc-c5a9-4920-98e2-a3b4f7b5a9da
 
 <IfModule mod_headers.c>
     <FilesMatch "\.(html)$">
