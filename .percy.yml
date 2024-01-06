@@ -1,0 +1,22 @@
+version: 2
+snapshot:
+  widths:
+    - 640
+    - 768
+    - 1024
+    - 1280
+    - 1512
+  minHeight: 1024
+  percyCSS: ""
+  enableJavaScript: true
+  cliEnableJavaScript: true
+  disableShadowDOM: false
+discovery:
+  allowedHostnames: []
+  disallowedHostnames: []
+  networkIdleTimeout: 100
+  captureMockedServiceWorker: false
+upload:
+  files: "**/*.{png,jpg,jpeg}"
+  ignore: ""
+  stripExtensions: false

@@ -1,0 +1,21 @@
+name: Run visual testing
+
+on:
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  build:
+    if: ${{ github.event.label.name == 'visual-testing' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build team-ux.com with Astro
+        uses: withastro/action@v1
+        with:
+          package-manager: pnpm@8
+      - name: Take team-ux.com screenshots and upload them to Percy
+        run: pnpm percy snapshot dist/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
