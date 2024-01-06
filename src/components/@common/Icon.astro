@@ -1,5 +1,5 @@
 ---
-import { Sprite } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   name:
@@ -23,7 +23,7 @@ export interface Props {
 const { name, width, height, ...props } = Astro.props;
 ---
 
-<Sprite
+<Icon
   focusable="false"
   aria-hidden="true"
   width={width}
