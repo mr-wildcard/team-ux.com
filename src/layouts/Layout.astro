@@ -1,7 +1,6 @@
 ---
 import "styles/base.css";
 
-import { Sprite } from "astro-icon";
 import Header from "components/Header/index.astro";
 import Toast from "components/Toast.astro";
 
@@ -74,13 +73,12 @@ const { title, description, og_description, og_title } = Astro.props;
     </style>
   </head>
   <body>
-    <Sprite.Provider>
-      <Header />
+    <Header />
 
-      <slot />
+    <slot />
 
-      <Toast />
-    </Sprite.Provider>
+    <Toast />
+
     <style is:global>
       body {
         @apply bg-surface1 text-secondary;
