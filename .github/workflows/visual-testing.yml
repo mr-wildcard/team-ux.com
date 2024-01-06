@@ -15,7 +15,7 @@ jobs:
         uses: withastro/action@v1
         with:
           package-manager: pnpm@8
-      - name: Run Percy
+      - name: Take website screenshots and upload to Percy
         run: pnpm percy snapshot dist/
         env:
-          PERCY_TOKEN: $
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
