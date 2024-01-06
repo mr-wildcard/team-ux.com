@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
 const LOCAL_PORT = 4321;
-const LOCAL_HOST = true;
+const LOCAL_HOST = "localhost";
 
 function getSiteURL() {
   if (process.env.CF_PAGES) {
@@ -17,7 +17,7 @@ function getSiteURL() {
   } else if (process.env.GITHUB_ACTION) {
     return "https://www.team-ux.com/";
   } else {
-    return `http://localhost:${LOCAL_PORT}/`;
+    return `http://${LOCAL_HOST}:${LOCAL_PORT}/`;
   }
 }
 
@@ -27,6 +27,7 @@ export default defineConfig({
     icon(),
     tailwind({
       applyBaseStyles: false,
+      nesting: true,
     }),
     sitemap(),
   ],
