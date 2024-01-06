@@ -2,11 +2,11 @@ name: Run visual testing
 
 on:
   pull_request:
-    types: [ labeled ]
+    types: [ labeled, opened, reopened, synchronize ]
 
 jobs:
   build:
-    if: ${{ github.event.label.name == 'visual-testing' }}
+    if: contains(github.event.pull_request.labels.*.name, "visual-testing")
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
         uses: withastro/action@v1
         with:
           package-manager: pnpm@8
-      - name: Take website screenshots and upload to Percy
+      - name: Take team-ux.com screenshots and upload them to Percy
         run: pnpm percy snapshot dist/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
