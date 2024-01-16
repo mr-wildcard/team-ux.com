@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import yaml from "@rollup/plugin-yaml";
 import sitemap from "@astrojs/sitemap";
-import icon from "astro-icon";
 
 const LOCAL_PORT = 4321;
 const LOCAL_HOST = "localhost";
@@ -24,7 +23,6 @@ function getSiteURL() {
 /** @type {import('astro').AstroUserConfig} */
 export default defineConfig({
   integrations: [
-    icon(),
     tailwind({
       applyBaseStyles: false,
       nesting: true,

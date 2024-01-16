@@ -119,13 +119,13 @@ const isSelected = items.some(
       }
     }
 
-    :global([data-icon="arrow_drop_down"]) {
+    :global([astro-icon="arrow_drop_down"]) {
       @apply text-primary;
     }
   }
 
   :global(button.nav-item.opened) {
-    :global([data-icon="arrow_drop_down"]) {
+    :global([astro-icon="arrow_drop_down"]) {
       transform: rotateZ(180deg);
     }
 
