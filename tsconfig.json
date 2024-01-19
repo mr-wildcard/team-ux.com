@@ -6,7 +6,6 @@
         "name": "@astrojs/ts-plugin"
       }
     ],
-    "types": ["cypress", "@percy/cypress"],
     "baseUrl": ".",
     "paths": {
       "components/*": ["src/components/*"],
