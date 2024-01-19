@@ -82,7 +82,7 @@ const iconSize = variant === "transparent" ? 18 : 24;
           @apply text-primary bg-neutral4;
         }
 
-        & :global([astro-icon]) {
+        & :global([data-icon]) {
           @apply fill-neutral4;
         }
       }
@@ -103,12 +103,12 @@ const iconSize = variant === "transparent" ? 18 : 24;
           box-shadow: none;
         }
 
-        & :global([astro-icon]) {
+        & :global([data-icon]) {
           @apply fill-primary;
         }
 
         &:hover {
-          & :global([astro-icon]) {
+          & :global([data-icon]) {
             @apply fill-neutral4;
           }
         }

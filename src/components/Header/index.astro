@@ -137,7 +137,7 @@ import NavItems from "./NavItems.astro";
 
     position: -webkit-sticky;
 
-    :global([astro-icon="cross"]),
+    :global([data-icon="cross"]),
     .text-opened {
       display: none;
     }
@@ -151,19 +151,19 @@ import NavItems from "./NavItems.astro";
 
       #mobile-menu,
       .text-opened,
-      :global([astro-icon="cross"]) {
+      :global([data-icon="cross"]) {
         display: block;
       }
 
       .text-closed,
-      :global([astro-icon="hamburger"]) {
+      :global([data-icon="hamburger"]) {
         display: none;
       }
     }
   }
 
   #mobile-menu {
-    :global([astro-icon="arrow_drop_down"]) {
+    :global([data-icon="arrow_drop_down"]) {
       @apply text-primary;
     }
 

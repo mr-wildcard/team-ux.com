@@ -2,8 +2,8 @@
 import Brush from "components/@common/Brush.astro";
 import Picture from "components/@common/Picture.astro";
 import Grid from "components/@common/Grid.astro";
-import Icon from "components/@common/Icon.astro";
 import CallToAction from "components/@common/CallToAction.astro";
+import CurvedContainer from "components/CurvedContainer/index.astro";
 import DuoDeChoc from "components/DuoDeChoc.astro";
 import data from "data/homepage/derriere-team-ux.yaml";
 
@@ -21,208 +21,193 @@ const { block1, block2 } = data;
 ---
 
 <section>
-  <Icon name="oval" />
-
-  <div class="relative flex flex-col space-y-8 pb-20 lg:pb-[100px] bg-neutral4">
-    <div class="container">
-      <Grid>
-        <h2
-          class="col-span-full mt-[60px] 2xl:mt-0 mb-8 lg:mb-20 text-headline-extra-large lg:text-display-small lg:text-center"
-        >
-          {data.title}
-        </h2>
-      </Grid>
-
-      <Grid class="gap-y-5">
-        <div
-          class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col space-y-8 p-5 lg:p-10 bg-surface6 rounded-[26px]"
-        >
-          <h3 class="text-headline-medium-bold">
-            {block1.title}
-          </h3>
-
-          <div class="mx-auto lg:mx-0 w-[250px]">
-            <DuoDeChoc variant="small" />
-            <p class="text-label-large text-primary text-center mt-2.5">
-              {block1.pictureLegend}
-            </p>
-          </div>
-
-          <p class="text-body-medium">{block1.paragraph}</p>
-
-          <CallToAction
-            href="/nos-deux-profils"
-            type="secondary"
-            rightIcon="forward"
+  <CurvedContainer>
+    <div
+      class="relative flex flex-col space-y-8 pb-20 lg:pb-[100px] bg-neutral4"
+    >
+      <div class="container">
+        <Grid>
+          <h2
+            class="col-span-full mt-[60px] 2xl:mt-0 mb-8 lg:mb-20 text-headline-extra-large lg:text-display-small lg:text-center"
           >
-            {block1.callToAction.label}
-          </CallToAction>
-        </div>
-        <div
-          class="col-span-full lg:col-span-5 flex flex-col space-y-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
-        >
-          <h3 class="text-headline-medium-bold">{block2.title}</h3>
-          <div class="relative w-[200px] lg:w-auto mx-auto lg:mx-0">
-            <Brush id={1} class="w-[133px] lg:w-[173px] aspect-[16/19]" />
-            <Brush
-              id={4}
-              class="absolute top-0 left-[41px] lg:left-[52px] w-[160px] lg:w-[207px] aspect-[490/487]"
-            />
-          </div>
-          <p class="text-body-medium">{block2.paragraph}</p>
-          <CallToAction
-            href="/notre-manifeste"
-            type="secondary"
-            rightIcon="forward"
-          >
-            {block2.callToAction.label}
-          </CallToAction>
-        </div>
-      </Grid>
-    </div>
-    <div class="container">
-      <Grid>
-        <div
-          class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col space-y-0.5"
-        >
+            {data.title}
+          </h2>
+        </Grid>
+
+        <Grid class="gap-y-5">
           <div
-            class="flex flex-col p-5 lg:px-10 lg:pt-10 space-y-5 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+            class="col-span-full lg:col-start-2 lg:col-span-5 flex flex-col space-y-8 p-5 lg:p-10 bg-surface6 rounded-[26px]"
           >
             <h3 class="text-headline-medium-bold">
-              {data.certifications.title}
+              {block1.title}
             </h3>
-            <ul class="certifications">
-              <li>
-                <span class="hidden print:inline">Access 42</span>
 
-                <Picture
-                  src={Certif_Access42}
-                  width={80}
-                  height={58}
-                  alt="Access42"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline"
-                  >Interaction Design Foundation</span
-                >
+            <div class="mx-auto lg:mx-0 w-[250px]">
+              <DuoDeChoc variant="small" />
+              <p class="text-label-large text-primary text-center mt-2.5">
+                {block1.pictureLegend}
+              </p>
+            </div>
 
-                <Picture
-                  src={Certif_IDF}
-                  alt="Interaction Design Foundation"
-                  class="w-[170px] h-[56px]"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline">W3C</span>
+            <p class="text-body-medium">{block1.paragraph}</p>
 
-                <Picture
-                  src={Certif_W3C}
-                  alt="W3C"
-                  class="w-[90px] h-[46px]"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline">Opquast</span>
-
-                <Picture
-                  src={Certif_Opquast}
-                  class="w-[140px] h-[36px]"
-                  alt="Opquast"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline">UXer</span>
-
-                <Picture
-                  src={Certif_Uxer}
-                  alt="UXER"
-                  class="w-[46px] h-[47px]"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline">SHIFTA by Elisava</span>
-
-                <Picture
-                  src={Certif_Shifta}
-                  class="w-[106px] h-[40px]"
-                  alt="Shifta by ELISAVA"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline"
-                  >Institut du Numérique Responsable</span
-                >
-                <Picture
-                  src={Certif_INR}
-                  class="w-[120px] h-[44px]"
-                  alt="Institut du Numérique Responsable"
-                  densities={[1, 2]}
-                />
-              </li>
-            </ul>
-          </div>
-          <div
-            class="flex flex-col space-y-10 p-5 lg:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
-          >
-            <h3 class="text-headline-medium-bold">
-              {data.commited.title}
-            </h3>
-            <ul
-              class="flex items-center justify-around sm:justify-start space-x-[44px]"
+            <CallToAction
+              href="/nos-deux-profils"
+              type="secondary"
+              rightIcon="forward"
             >
-              <li>
-                <span class="hidden print:inline">Desino Etico</span>
-
-                <Picture
-                  src={Commit_DesignEthico}
-                  class="w-[90px] h-[49px]"
-                  alt="Desino Etico"
-                  densities={[1, 2]}
-                />
-              </li>
-              <li>
-                <span class="hidden print:inline">Designers Éthiques</span>
-
-                <Picture
-                  src={Commit_DesignEthique}
-                  class="w-[105px] h-[49px]"
-                  alt="Designers Éthiques"
-                  densities={[1, 2]}
-                />
-              </li>
-            </ul>
+              {block1.callToAction.label}
+            </CallToAction>
           </div>
-        </div>
-      </Grid>
-    </div>
-  </div>
+          <div
+            class="col-span-full lg:col-span-5 flex flex-col space-y-8 h-fit p-5 lg:p-10 bg-surface7 rounded-[26px]"
+          >
+            <h3 class="text-headline-medium-bold">{block2.title}</h3>
+            <div class="relative w-[200px] lg:w-auto mx-auto lg:mx-0">
+              <Brush id={1} class="w-[133px] lg:w-[173px] aspect-[16/19]" />
+              <Brush
+                id={4}
+                class="absolute top-0 left-[41px] lg:left-[52px] w-[160px] lg:w-[207px] aspect-[490/487]"
+              />
+            </div>
+            <p class="text-body-medium">{block2.paragraph}</p>
+            <CallToAction
+              href="/notre-manifeste"
+              type="secondary"
+              rightIcon="forward"
+            >
+              {block2.callToAction.label}
+            </CallToAction>
+          </div>
+        </Grid>
+      </div>
+      <div class="container">
+        <Grid>
+          <div
+            class="col-span-full lg:col-start-2 lg:col-span-10 flex flex-col space-y-0.5"
+          >
+            <div
+              class="flex flex-col p-5 lg:px-10 lg:pt-10 space-y-5 bg-surface5 rounded-t-[26px] rounded-b-[4px]"
+            >
+              <h3 class="text-headline-medium-bold">
+                {data.certifications.title}
+              </h3>
+              <ul class="certifications">
+                <li>
+                  <span class="hidden print:inline">Access 42</span>
 
-  <Icon name="oval" />
+                  <Picture
+                    src={Certif_Access42}
+                    width={80}
+                    height={58}
+                    alt="Access42"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline"
+                    >Interaction Design Foundation</span
+                  >
+
+                  <Picture
+                    src={Certif_IDF}
+                    alt="Interaction Design Foundation"
+                    class="w-[170px] h-[56px]"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline">W3C</span>
+
+                  <Picture
+                    src={Certif_W3C}
+                    alt="W3C"
+                    class="w-[90px] h-[46px]"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline">Opquast</span>
+
+                  <Picture
+                    src={Certif_Opquast}
+                    class="w-[140px] h-[36px]"
+                    alt="Opquast"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline">UXer</span>
+
+                  <Picture
+                    src={Certif_Uxer}
+                    alt="UXER"
+                    class="w-[46px] h-[47px]"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline">SHIFTA by Elisava</span>
+
+                  <Picture
+                    src={Certif_Shifta}
+                    class="w-[106px] h-[40px]"
+                    alt="Shifta by ELISAVA"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline"
+                    >Institut du Numérique Responsable</span
+                  >
+                  <Picture
+                    src={Certif_INR}
+                    class="w-[120px] h-[44px]"
+                    alt="Institut du Numérique Responsable"
+                    densities={[1, 2]}
+                  />
+                </li>
+              </ul>
+            </div>
+            <div
+              class="flex flex-col space-y-10 p-5 lg:p-10 bg-surface5 rounded-t-[4px] rounded-b-[26px]"
+            >
+              <h3 class="text-headline-medium-bold">
+                {data.commited.title}
+              </h3>
+              <ul
+                class="flex items-center justify-around sm:justify-start space-x-[44px]"
+              >
+                <li>
+                  <span class="hidden print:inline">Desino Etico</span>
+
+                  <Picture
+                    src={Commit_DesignEthico}
+                    class="w-[90px] h-[49px]"
+                    alt="Desino Etico"
+                    densities={[1, 2]}
+                  />
+                </li>
+                <li>
+                  <span class="hidden print:inline">Designers Éthiques</span>
+
+                  <Picture
+                    src={Commit_DesignEthique}
+                    class="w-[105px] h-[49px]"
+                    alt="Designers Éthiques"
+                    densities={[1, 2]}
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Grid>
+      </div>
+    </div>
+  </CurvedContainer>
 </section>
 
 <style>
-  section :global([astro-icon="oval"]) {
-    width: 100%;
-    height: 10px;
-
-    &:last-of-type {
-      transform: scaleY(-1);
-    }
-  }
-
-  @screen 2xl {
-    section :global([astro-icon="oval"]) {
-      height: 145px;
-    }
-  }
-
   .certifications {
     @apply flex items-center flex-wrap justify-around sm:justify-start 2xl:justify-between -mx-5;
 
