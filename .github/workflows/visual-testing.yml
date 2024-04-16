@@ -2,8 +2,7 @@ name: Run visual testing
 
 on:
   pull_request:
-    # run visual diffing test if label is added, and for all subsequent pushed commits
-    types: [ labeled, opened, synchronize, reopened ]
+    types: [ opened, synchronize, reopened ]
 
 jobs:
   visual-testing:
