@@ -6,7 +6,7 @@ on:
     types: [ labeled, opened, synchronize, reopened ]
 
 jobs:
-  build:
+  visual-testing:
     if: ${{ github.event.label.name == 'visual-testing' }}
     runs-on: ubuntu-latest
 
