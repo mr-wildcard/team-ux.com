@@ -20,3 +20,7 @@ upload:
   files: "**/*.{png,jpg,jpeg}"
   ignore: ""
   stripExtensions: false
+percy-css: | 
+    #toast { 
+      display: none; 
+    }
