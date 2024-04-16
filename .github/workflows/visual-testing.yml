@@ -6,7 +6,7 @@ on:
 
 jobs:
   visual-testing:
-    if: ${{ github.event.label.name == 'visual-testing' }}
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') }}
     runs-on: ubuntu-latest
 
     steps:
