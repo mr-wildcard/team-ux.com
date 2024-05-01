@@ -11,6 +11,10 @@ snapshot:
   enableJavaScript: true
   cliEnableJavaScript: true
   disableShadowDOM: false
+  percy-css: |
+    #toast { 
+      display: none; 
+    }
 discovery:
   allowedHostnames: []
   disallowedHostnames: []
@@ -20,7 +24,3 @@ upload:
   files: "**/*.{png,jpg,jpeg}"
   ignore: ""
   stripExtensions: false
-percy-css: | 
-    #toast { 
-      display: none; 
-    }
