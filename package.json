@@ -23,7 +23,7 @@
     "@astrojs/ts-plugin": "1.6.1",
     "@percy/cli": "1.28.5",
     "@rollup/plugin-yaml": "4.1.2",
-    "cssnano": "6.1.2",
+    "cssnano": "7.0.1",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
