@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build team-ux.com with Astro
-        uses: withastro/action@v2
+        uses: withastro/action@v3
         with:
           package-manager: pnpm@8
       - name: Take team-ux.com screenshots and upload them to Percy
