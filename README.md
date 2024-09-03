@@ -4,7 +4,7 @@ https://team-ux.com
 
 ![Team UX](./website.png)
 
-Built using [Astro](https://astro.build/) ♥️ [Tailwind CSS](https://tailwindcss.com/)
+Built using [Astro](https://astro.build/) ♥️ [Tailwind CSS](https://tailwindcss.com/) ♥️ [Cloudflare](https://developers.cloudflare.com/)
 
 ---
 
