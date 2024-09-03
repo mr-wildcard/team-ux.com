@@ -14,7 +14,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
-          package-manager: pnpm@9.1.0
+          package-manager: pnpm@9.9.0
       - name: Deploy to Infomaniak
         uses: easingthemes/ssh-deploy@main
         with:
