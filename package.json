@@ -3,7 +3,7 @@
   "license": "CC BY-NC-ND",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,15 +20,15 @@
     "@astrojs/check": "0.9.3",
     "@astrojs/sitemap": "3.1.6",
     "@astrojs/tailwind": "5.1.0",
-    "@astrojs/ts-plugin": "1.10.1",
+    "@astrojs/ts-plugin": "1.10.2",
     "@percy/cli": "1.29.3",
     "@rollup/plugin-yaml": "4.1.2",
-    "cssnano": "7.0.5",
-    "postcss": "8.4.44",
+    "cssnano": "7.0.6",
+    "postcss": "8.4.45",
     "prettier": "3.3.3",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.33.5",
-    "tailwindcss": "3.4.10",
-    "typescript": "5.5.4"
+    "tailwindcss": "3.4.11",
+    "typescript": "5.6.2"
   }
 }
