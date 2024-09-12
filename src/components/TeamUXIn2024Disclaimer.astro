@@ -8,11 +8,11 @@ import Icon from "./@common/Icon.astro";
   class="w-11/12 max-w-[692px] max-h-[590px] sm:w-3/4 lg:w-1/2 rounded-xl lg:rounded-[26px] backdrop:bg-[#08124f99]"
 >
   <div class="px-5 md:px-10 pt-5 md:pt-10 pb-5 flex justify-end">
-    <button id="close-2024-disclaimier" class="text-primary">
+    <button class="text-primary close-2024-disclaimer">
       <Icon name="cross" size={32} />
     </button>
   </div>
-  <div class="px-5 md:px-10 pb-8">
+  <div class="px-5 md:px-10 pb-8 text-body-medium">
     <p class="text-headline-medium-bold text-secondary mb-[30px]">
       En cette rentrée 2024, la belle aventure de Team UX prend un tournant.
     </p>
@@ -81,8 +81,12 @@ import Icon from "./@common/Icon.astro";
             Briefer Yuna pour un projet UX
           </CallToAction>
 
-          <CallToAction href="/projets" rightIcon="forward">
-            Découvrir nos projets
+          <CallToAction
+            as="button"
+            rightIcon="forward"
+            class="close-2024-disclaimer"
+          >
+            Voir le site Team UX
           </CallToAction>
         </div>
       </form>
@@ -161,13 +165,16 @@ import Icon from "./@common/Icon.astro";
       renderDisclaimer(disclaimerHTMLElement);
     }
 
-    const buttonCloseDisclaimer = window.document.querySelector<HTMLDivElement>(
-      "#close-2024-disclaimier",
-    );
+    const buttonsCloseDisclaimer =
+      window.document.querySelectorAll<HTMLDivElement>(
+        ".close-2024-disclaimer",
+      );
 
-    if (buttonCloseDisclaimer) {
-      buttonCloseDisclaimer.addEventListener("click", () => {
-        disclaimerHTMLElement.close();
+    if (buttonsCloseDisclaimer) {
+      buttonsCloseDisclaimer.forEach((button) => {
+        button.addEventListener("click", () => {
+          disclaimerHTMLElement.close();
+        });
       });
     }
   }
