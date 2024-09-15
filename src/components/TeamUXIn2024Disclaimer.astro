@@ -1,0 +1,195 @@
+---
+import CallToAction from "./@common/CallToAction.astro";
+import Icon from "./@common/Icon.astro";
+---
+
+<dialog
+  id="team-ux-in-2024-disclaimer"
+  class="w-11/12 max-w-[692px] max-h-[590px] sm:w-3/4 lg:w-1/2 rounded-xl lg:rounded-[26px] backdrop:bg-[#08124f99]"
+>
+  <div class="px-5 md:px-10 pt-5 md:pt-10 pb-5 flex justify-end">
+    <button class="text-primary close-2024-disclaimer">
+      <Icon name="cross" size={32} />
+    </button>
+  </div>
+  <div class="px-5 md:px-10 pb-8 text-body-medium">
+    <p class="text-headline-medium-bold text-secondary mb-[30px]">
+      En cette rentrée 2024, la belle aventure de Team UX prend un tournant.
+    </p>
+    <p>
+      Après sept années enrichissantes avec Team UX, nous avons pris la décision
+      d'évoluer vers de nouveaux horizons professionnels. Cette évolution est le
+      fruit de notre réflexion continue sur nos aspirations et nos objectifs
+      professionnels.
+    </p>
+    <br />
+    <p>
+      Tout comme le projet Team UX s’est formé naturellement entre nous il y a 7
+      ans, il se dissout aujourd’hui tout aussi naturellement pour faire place à
+      nos projets individuels (même sur ce point, on est tombées d’accord ❤️).
+    </p>
+    <br />
+    <p>
+      Daniela intègre une entreprise à mission et rejoint une grosse équipe
+      produit. Yuna poursuit son projet freelance en tant que designer
+      stratégique et UX ; elle collabore avec nos clientes et clients ainsi que
+      de nouvelles structures.
+    </p>
+    <br />
+    <p>
+      Nous remercions chaleureusement les dizaines de clientes et clients ainsi
+      que toutes les personnes qui ont accueilli avec enthousiasme notre projet
+      commun et nous ont suivies toutes ces années. Nous avons adoré travailler
+      avec vous et avancer à vos côtés.
+    </p>
+    <br />
+    <p>Retrouvez-nous chacune sur nos comptes LinkedIn personnels :</p>
+    <ul class="ml-7 list-disc list-outside">
+      <li>
+        <a href="https://www.linkedin.com/in/yunaorsini/">Yuna sur LinkedIn</a> (nouvel
+        onglet)
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/daniela-penaranda/"
+          >Daniela sur LinkedIn</a
+        > (nouvel onglet)
+      </li>
+    </ul>
+    <br />
+    <p>
+      Vous avez un projet UX ? N’hésitez pas à contacter directement Yuna à
+      l'adresse suivante : <a href="mailto:hello@yuna.work">hello@yuna.work</a>
+    </p>
+    <br />
+    <p>Merci à toutes et à tous pour votre confiance et votre soutien !</p>
+    <br />
+    <p>Yuna & Daniela</p>
+  </div>
+  <footer
+    class="col-span-full lg:col-span-6 sticky w-full bottom-0 bg-surface1 border-t border-t-neutral1"
+  >
+    <div class="p-5">
+      <form method="dialog">
+        <div
+          class="flex flex-col items-center space-y-5 xl:justify-center xl:space-y-0 xl:flex-row xl:space-x-7"
+        >
+          <CallToAction
+            variant="transparent"
+            rightIcon="open_in_new"
+            href="https://yuna.work"
+          >
+            Briefer Yuna pour un projet UX
+          </CallToAction>
+
+          <CallToAction
+            as="button"
+            rightIcon="forward"
+            class="close-2024-disclaimer"
+          >
+            Voir le site Team UX
+          </CallToAction>
+        </div>
+      </form>
+    </div>
+  </footer>
+</dialog>
+
+<style>
+  dialog {
+    & :global(a:not(.call-to-action)) {
+      @apply text-primary underline underline-offset-[4px];
+    }
+
+    footer {
+      position: -webkit-sticky;
+    }
+  }
+
+  dialog.polyfilled {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    background: white;
+    display: block;
+    overflow: auto;
+
+    &:not([open]) {
+      display: none;
+    }
+
+    & + :global(.backdrop) {
+      @apply bg-[#08124f99];
+
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  :global(._dialog_overlay) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+</style>
+
+<script>
+  const disclaimerHTMLElement =
+    window.document.querySelector<HTMLDialogElement>(
+      `#team-ux-in-2024-disclaimer`,
+    );
+
+  if (disclaimerHTMLElement) {
+    if (!("HTMLDialogElement" in window)) {
+      disclaimerHTMLElement.classList.add("polyfilled");
+
+      import("dialog-polyfill")
+        .then(({ default: dialogPolyfill }) => {
+          dialogPolyfill.registerDialog(disclaimerHTMLElement);
+        })
+        .then(() => {
+          renderDisclaimer(disclaimerHTMLElement);
+        })
+        .catch(() => {
+          console.error("Could not load HTML dialog polyfill");
+        });
+    } else {
+      renderDisclaimer(disclaimerHTMLElement);
+    }
+
+    const buttonsCloseDisclaimer =
+      window.document.querySelectorAll<HTMLDivElement>(
+        ".close-2024-disclaimer",
+      );
+
+    if (buttonsCloseDisclaimer) {
+      buttonsCloseDisclaimer.forEach((button) => {
+        button.addEventListener("click", () => {
+          disclaimerHTMLElement.close();
+        });
+      });
+    }
+  }
+
+  function renderDisclaimer(disclaimer: HTMLDialogElement) {
+    const disclaimerRead = window.sessionStorage.getItem(
+      "team-ux-in-2024-disclaimer-read",
+    );
+
+    if (disclaimerRead === "true") {
+      return;
+    }
+
+    disclaimer.showModal();
+
+    window.sessionStorage.setItem("team-ux-in-2024-disclaimer-read", "true");
+  }
+</script>
