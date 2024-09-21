@@ -11,10 +11,26 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          package-manager: pnpm@9.10.0
+          node-version-file: .nvmrc
+
+      - name: Setup PNPM using corepack
+        shell: "bash"
+        run: |
+          corepack enable
+          corepack install
+
+      - name: Install
+        shell: "bash"
+        run: pnpm i
+
+      - name: Build
+        shell: "bash"
+        run: pnpm build
+
       - name: Deploy to Infomaniak
         uses: easingthemes/ssh-deploy@main
         with:
