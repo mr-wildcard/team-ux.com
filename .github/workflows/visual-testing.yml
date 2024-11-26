@@ -6,7 +6,7 @@ on:
 
 jobs:
   visual-testing:
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') }}
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
       - name: Build
         shell: "bash"
         run: pnpm build
-      
+
       - name: Take team-ux.com screenshots and upload them to Percy
         run: pnpm percy snapshot dist/
         env:
