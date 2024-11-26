@@ -6,15 +6,32 @@ on:
 
 jobs:
   visual-testing:
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') }}
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Build team-ux.com with Astro
-        uses: withastro/action@v3
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          package-manager: pnpm@9.9.0
+          node-version-file: .nvmrc
+
+      - name: Setup PNPM using corepack
+        shell: "bash"
+        run: |
+          corepack enable
+          corepack install
+
+      - name: Install
+        shell: "bash"
+        run: pnpm i
+
+      - name: Build
+        shell: "bash"
+        run: pnpm build
+
       - name: Take team-ux.com screenshots and upload them to Percy
         run: pnpm percy snapshot dist/
         env:
