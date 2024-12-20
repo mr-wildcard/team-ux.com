@@ -25,8 +25,8 @@ importers:
         specifier: 3.2.1
         version: 3.2.1
       '@astrojs/tailwind':
-        specifier: 5.1.3
-        version: 5.1.3(astro@4.16.17(@types/node@20.10.6)(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)
+        specifier: 5.1.4
+        version: 5.1.4(astro@4.16.17(@types/node@20.10.6)(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.17)
       '@astrojs/ts-plugin':
         specifier: 1.10.4
         version: 1.10.4
@@ -52,8 +52,8 @@ importers:
         specifier: 0.33.5
         version: 0.33.5
       tailwindcss:
-        specifier: 3.4.16
-        version: 3.4.16
+        specifier: 3.4.17
+        version: 3.4.17
       typescript:
         specifier: 5.7.2
         version: 5.7.2
@@ -108,8 +108,8 @@ packages:
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
 
-  '@astrojs/tailwind@5.1.3':
-    resolution: {integrity: sha512-XF7WhXRhqEHGvADqc0kDtF7Yv/g4wAWTaj91jBBTBaYnc4+MQLH94duFfFa4NlTkRG40VQd012eF3MhO3Kk+bg==}
+  '@astrojs/tailwind@5.1.4':
+    resolution: {integrity: sha512-EJ3uoTZZr0RYwTrVS2HgYN0+VbXvg7h87AtwpD5OzqS3GyMwRmzfOwHfORTxoWGQRrY9k/Fi+Awk60kwpvRL5Q==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
@@ -486,10 +486,6 @@ packages:
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
-
-  '@jridgewell/gen-mapping@0.3.5':
-    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
-    engines: {node: '>=6.0.0'}
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -924,11 +920,6 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  browserslist@4.24.2:
-    resolution: {integrity: sha512-ZIc+Q62revdMcqC6aChtW4jz3My3klmCO1fEmINZY/8J3EpBg5/A/D0AKmBveUh6pgoeycoMkVMko84tuYS+Gg==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-
   browserslist@4.24.3:
     resolution: {integrity: sha512-1CPmv8iobE2fyRMV97dAcMVegvvWKxmq94hkLiAkUGwKVTyDLw33K+ZxiFrREKmmps4rIw6grcCFCnTMSZ/YiA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -954,9 +945,6 @@ packages:
 
   caniuse-lite@1.0.30001655:
     resolution: {integrity: sha512-jRGVy3iSGO5Uutn2owlb5gR6qsGngTw9ZTb4ali9f3glshcNmJ2noam4Mo9zia5P9Dk3jNNydy7vQjuE5dQmfg==}
-
-  caniuse-lite@1.0.30001680:
-    resolution: {integrity: sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==}
 
   caniuse-lite@1.0.30001688:
     resolution: {integrity: sha512-Nmqpru91cuABu/DTCXbM2NSRHzM2uVHfPnhJ/1zEAJx/ILBRVmz3pzH4N7DZqbdG0gWClsCC05Oj0mJ/1AWMbA==}
@@ -1211,9 +1199,6 @@ packages:
 
   electron-to-chromium@1.5.13:
     resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
-
-  electron-to-chromium@1.5.60:
-    resolution: {integrity: sha512-HcraRUkTKJ+8yA3b10i9qvhUlPBRDlKjn1XGek1zDGVfAKcvi8TsUnImGqLiEm9j6ZulxXIWWIo9BmbkbCTGgA==}
 
   electron-to-chromium@1.5.73:
     resolution: {integrity: sha512-8wGNxG9tAG5KhGd3eeA0o6ixhiNdgr0DcHWm85XPCphwZgD1lIEoi6t3VERayWao7SF7AAZTw6oARGJeVjH8Kg==}
@@ -2490,8 +2475,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tailwindcss@3.4.16:
-    resolution: {integrity: sha512-TI4Cyx7gDiZ6r44ewaJmt0o6BrMCT5aK5e0rmJ/G9Xq3w7CX/5VXl/zIPEJZFUK5VEqwByyhqNPycPlvcK4ZNw==}
+  tailwindcss@3.4.17:
+    resolution: {integrity: sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2975,13 +2960,13 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.3(astro@4.16.17(@types/node@20.10.6)(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)':
+  '@astrojs/tailwind@5.1.4(astro@4.16.17(@types/node@20.10.6)(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.17)':
     dependencies:
       astro: 4.16.17(@types/node@20.10.6)(rollup@4.28.1)(typescript@5.7.2)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
-      tailwindcss: 3.4.16
+      tailwindcss: 3.4.17
     transitivePeerDependencies:
       - ts-node
 
@@ -3342,12 +3327,6 @@ snapshots:
       strip-ansi-cjs: strip-ansi@6.0.1
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
-
-  '@jridgewell/gen-mapping@0.3.5':
-    dependencies:
-      '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.5.0
-      '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
@@ -3889,8 +3868,8 @@ snapshots:
 
   autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.2
-      caniuse-lite: 1.0.30001680
+      browserslist: 4.24.3
+      caniuse-lite: 1.0.30001688
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -3948,13 +3927,6 @@ snapshots:
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
-  browserslist@4.24.2:
-    dependencies:
-      caniuse-lite: 1.0.30001680
-      electron-to-chromium: 1.5.60
-      node-releases: 2.0.18
-      update-browserslist-db: 1.1.1(browserslist@4.24.2)
-
   browserslist@4.24.3:
     dependencies:
       caniuse-lite: 1.0.30001688
@@ -3972,14 +3944,12 @@ snapshots:
 
   caniuse-api@3.0.0:
     dependencies:
-      browserslist: 4.24.2
-      caniuse-lite: 1.0.30001680
+      browserslist: 4.24.3
+      caniuse-lite: 1.0.30001688
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001655: {}
-
-  caniuse-lite@1.0.30001680: {}
 
   caniuse-lite@1.0.30001688: {}
 
@@ -4242,8 +4212,6 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.5.13: {}
-
-  electron-to-chromium@1.5.60: {}
 
   electron-to-chromium@1.5.73: {}
 
@@ -5283,7 +5251,7 @@ snapshots:
 
   postcss-load-config@4.0.2(postcss@8.4.49):
     dependencies:
-      lilconfig: 3.1.2
+      lilconfig: 3.1.3
       yaml: 2.5.0
     optionalDependencies:
       postcss: 8.4.49
@@ -5750,13 +5718,13 @@ snapshots:
 
   stylehacks@7.0.4(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.2
+      browserslist: 4.24.3
       postcss: 8.4.49
       postcss-selector-parser: 6.1.2
 
   sucrase@3.35.0:
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/gen-mapping': 0.3.8
       commander: 4.1.1
       glob: 10.3.10
       lines-and-columns: 1.2.4
@@ -5780,7 +5748,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
 
-  tailwindcss@3.4.16:
+  tailwindcss@3.4.17:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -5916,12 +5884,6 @@ snapshots:
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
       browserslist: 4.23.3
-      escalade: 3.2.0
-      picocolors: 1.1.1
-
-  update-browserslist-db@1.1.1(browserslist@4.24.2):
-    dependencies:
-      browserslist: 4.24.2
       escalade: 3.2.0
       picocolors: 1.1.1
 
