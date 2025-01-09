@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.2)(yaml@2.5.0)
+        version: 5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -20,19 +20,19 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
       '@astrojs/sitemap':
         specifier: 3.2.1
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.4
-        version: 5.1.4(astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.2)(yaml@2.5.0))(tailwindcss@3.4.17)
+        version: 5.1.4(astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)
       '@astrojs/ts-plugin':
         specifier: 1.10.4
         version: 1.10.4
       '@percy/cli':
         specifier: 1.30.6
-        version: 1.30.6(typescript@5.7.2)
+        version: 1.30.6(typescript@5.7.3)
       '@rollup/plugin-yaml':
         specifier: 4.1.2
         version: 4.1.2(rollup@4.30.1)
@@ -55,8 +55,8 @@ importers:
         specifier: 3.4.17
         version: 3.4.17
       typescript:
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
 
 packages:
 
@@ -2555,8 +2555,8 @@ packages:
   typescript-auto-import-cache@0.3.3:
     resolution: {integrity: sha512-ojEC7+Ci1ij9eE6hp8Jl9VUNnsEKzztktP5gtYNRMrTmfXVwA1PITYYAkpxCvvupdSYa/Re51B6KMcv1CTZEUA==}
 
-  typescript@5.7.2:
-    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2984,12 +2984,12 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)':
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)':
     dependencies:
-      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
       chokidar: 4.0.1
       kleur: 4.1.5
-      typescript: 5.7.2
+      typescript: 5.7.3
       yargs: 17.7.2
     transitivePeerDependencies:
       - prettier
@@ -2999,12 +2999,12 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.2': {}
 
-  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)':
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)':
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/yaml2ts': 0.2.2
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@volar/kit': 2.4.10(typescript@5.7.2)
+      '@volar/kit': 2.4.10(typescript@5.7.3)
       '@volar/language-core': 2.4.10
       '@volar/language-server': 2.4.10
       '@volar/language-service': 2.4.10
@@ -3059,9 +3059,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.4(astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.2)(yaml@2.5.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.4(astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.2)(yaml@2.5.0)
+      astro: 5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.5.0)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
@@ -3432,29 +3432,29 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@percy/cli-app@1.30.6(typescript@5.7.2)':
+  '@percy/cli-app@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
-      '@percy/cli-exec': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
+      '@percy/cli-exec': 1.30.6(typescript@5.7.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-build@1.30.6(typescript@5.7.2)':
+  '@percy/cli-build@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-command@1.30.6(typescript@5.7.2)':
+  '@percy/cli-command@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/config': 1.30.6(typescript@5.7.2)
-      '@percy/core': 1.30.6(typescript@5.7.2)
+      '@percy/config': 1.30.6(typescript@5.7.3)
+      '@percy/core': 1.30.6(typescript@5.7.3)
       '@percy/logger': 1.30.6
     transitivePeerDependencies:
       - bufferutil
@@ -3462,18 +3462,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-config@1.30.6(typescript@5.7.2)':
+  '@percy/cli-config@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-exec@1.30.6(typescript@5.7.2)':
+  '@percy/cli-exec@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
       '@percy/logger': 1.30.6
       cross-spawn: 7.0.3
       which: 2.0.2
@@ -3483,9 +3483,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-snapshot@1.30.6(typescript@5.7.2)':
+  '@percy/cli-snapshot@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
       yaml: 2.5.0
     transitivePeerDependencies:
       - bufferutil
@@ -3493,9 +3493,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-upload@1.30.6(typescript@5.7.2)':
+  '@percy/cli-upload@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
       fast-glob: 3.3.2
       image-size: 1.1.1
     transitivePeerDependencies:
@@ -3504,15 +3504,15 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli@1.30.6(typescript@5.7.2)':
+  '@percy/cli@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/cli-app': 1.30.6(typescript@5.7.2)
-      '@percy/cli-build': 1.30.6(typescript@5.7.2)
-      '@percy/cli-command': 1.30.6(typescript@5.7.2)
-      '@percy/cli-config': 1.30.6(typescript@5.7.2)
-      '@percy/cli-exec': 1.30.6(typescript@5.7.2)
-      '@percy/cli-snapshot': 1.30.6(typescript@5.7.2)
-      '@percy/cli-upload': 1.30.6(typescript@5.7.2)
+      '@percy/cli-app': 1.30.6(typescript@5.7.3)
+      '@percy/cli-build': 1.30.6(typescript@5.7.3)
+      '@percy/cli-command': 1.30.6(typescript@5.7.3)
+      '@percy/cli-config': 1.30.6(typescript@5.7.3)
+      '@percy/cli-exec': 1.30.6(typescript@5.7.3)
+      '@percy/cli-snapshot': 1.30.6(typescript@5.7.3)
+      '@percy/cli-upload': 1.30.6(typescript@5.7.3)
       '@percy/client': 1.30.6
       '@percy/logger': 1.30.6
     transitivePeerDependencies:
@@ -3527,22 +3527,22 @@ snapshots:
       '@percy/logger': 1.30.6
       pako: 2.1.0
 
-  '@percy/config@1.30.6(typescript@5.7.2)':
+  '@percy/config@1.30.6(typescript@5.7.3)':
     dependencies:
       '@percy/logger': 1.30.6
       ajv: 8.12.0
-      cosmiconfig: 8.3.6(typescript@5.7.2)
+      cosmiconfig: 8.3.6(typescript@5.7.3)
       yaml: 2.5.0
     transitivePeerDependencies:
       - typescript
 
-  '@percy/core@1.30.6(typescript@5.7.2)':
+  '@percy/core@1.30.6(typescript@5.7.3)':
     dependencies:
       '@percy/client': 1.30.6
-      '@percy/config': 1.30.6(typescript@5.7.2)
+      '@percy/config': 1.30.6(typescript@5.7.3)
       '@percy/dom': 1.30.6
       '@percy/logger': 1.30.6
-      '@percy/webdriver-utils': 1.30.6(typescript@5.7.2)
+      '@percy/webdriver-utils': 1.30.6(typescript@5.7.3)
       content-disposition: 0.5.4
       cross-spawn: 7.0.3
       extract-zip: 2.0.1
@@ -3570,9 +3570,9 @@ snapshots:
 
   '@percy/sdk-utils@1.30.6': {}
 
-  '@percy/webdriver-utils@1.30.6(typescript@5.7.2)':
+  '@percy/webdriver-utils@1.30.6(typescript@5.7.3)':
     dependencies:
-      '@percy/config': 1.30.6(typescript@5.7.2)
+      '@percy/config': 1.30.6(typescript@5.7.3)
       '@percy/sdk-utils': 1.30.6
     transitivePeerDependencies:
       - typescript
@@ -3744,12 +3744,12 @@ snapshots:
 
   '@ungap/structured-clone@1.2.1': {}
 
-  '@volar/kit@2.4.10(typescript@5.7.2)':
+  '@volar/kit@2.4.10(typescript@5.7.3)':
     dependencies:
       '@volar/language-service': 2.4.10
       '@volar/typescript': 2.4.10
       typesafe-path: 0.2.2
-      typescript: 5.7.2
+      typescript: 5.7.3
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.0.8
 
@@ -3845,7 +3845,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.2)(yaml@2.5.0):
+  astro@5.1.4(@types/node@20.10.6)(jiti@1.21.6)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.5.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -3892,7 +3892,7 @@ snapshots:
       semver: 7.6.3
       shiki: 1.26.1
       tinyexec: 0.3.2
-      tsconfck: 3.1.4(typescript@5.7.2)
+      tsconfck: 3.1.4(typescript@5.7.3)
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
@@ -3905,7 +3905,7 @@ snapshots:
       yocto-spinner: 0.1.2
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
-      zod-to-ts: 1.2.0(typescript@5.7.2)(zod@3.24.1)
+      zod-to-ts: 1.2.0(typescript@5.7.3)(zod@3.24.1)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -4138,14 +4138,14 @@ snapshots:
 
   cookie@0.7.2: {}
 
-  cosmiconfig@8.3.6(typescript@5.7.2):
+  cosmiconfig@8.3.6(typescript@5.7.3):
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.7.3
 
   cross-spawn@7.0.3:
     dependencies:
@@ -5880,9 +5880,9 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsconfck@3.1.4(typescript@5.7.2):
+  tsconfck@3.1.4(typescript@5.7.3):
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.7.3
 
   tslib@2.6.2:
     optional: true
@@ -5895,7 +5895,7 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  typescript@5.7.2: {}
+  typescript@5.7.3: {}
 
   ufo@1.5.4: {}
 
@@ -6236,9 +6236,9 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  zod-to-ts@1.2.0(typescript@5.7.2)(zod@3.24.1):
+  zod-to-ts@1.2.0(typescript@5.7.3)(zod@3.24.1):
     dependencies:
-      typescript: 5.7.2
+      typescript: 5.7.3
       zod: 3.24.1
 
   zod@3.23.8: {}
