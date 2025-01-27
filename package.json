@@ -20,7 +20,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/tailwind": "5.1.4",
+    "@astrojs/tailwind": "5.1.5",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.30.6",
     "@rollup/plugin-yaml": "4.1.2",
