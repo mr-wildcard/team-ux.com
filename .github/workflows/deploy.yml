@@ -17,10 +17,6 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Install corepack
-        shell: "bash"
-        run: npm install -g corepack@latest
-
       - name: Setup PNPM using corepack
         shell: "bash"
         run: |
