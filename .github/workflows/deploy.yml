@@ -17,6 +17,12 @@ jobs:
         with:
           node-version-file: .nvmrc
 
+      # to fix: https://vercel.com/guides/corepack-errors-github-actions
+      # should be temporary.
+      - name: Install corepack
+        shell: "bash"
+        run: npm install -g corepack@latest
+
       - name: Setup PNPM using corepack
         shell: "bash"
         run: |
