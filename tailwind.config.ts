@@ -3,12 +3,6 @@ import { type Config } from "tailwindcss";
 export default {
   content: ["./src/**/*.{astro,ts}", "./public/**/*.html", "./public/**/*.css"],
   theme: {
-    container: {
-      center: true,
-      screens: {
-        "2xl": "1413px",
-      },
-    },
     extend: {
       spacing: {
         8: "30px",
