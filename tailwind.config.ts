@@ -7,9 +7,6 @@ export default {
       spacing: {
         8: "30px",
       },
-      screens: {
-        "2xl": "1512px",
-      },
     },
     colors: {
       primary: "#0F24F7",

@@ -18,6 +18,10 @@
   }
 }
 
+@theme {
+  --container-2xl: 1512px;
+}
+
 @utility container {
   margin-inline: auto;
 
