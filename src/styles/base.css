@@ -21,6 +21,8 @@
 @theme {
   --container-2xl: 1512px;
 
+  --spacing-8: 30px;
+
   --color-primary: #0f24f7;
   --color-secondary: #08124f;
   --color-surface1: #f5f3eb;
