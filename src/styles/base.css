@@ -224,7 +224,7 @@
   }
 }
 
-@utility .text-inherit: {
+@utility text-inherit {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
