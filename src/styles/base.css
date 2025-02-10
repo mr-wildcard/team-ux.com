@@ -20,6 +20,20 @@
 
 @theme {
   --container-2xl: 1512px;
+
+  --color-primary: #0f24f7;
+  --color-secondary: #08124f;
+  --color-surface1: #f5f3eb;
+  --color-surface2: #fdf1d1;
+  --color-surface3: #ffd9a6;
+  --color-surface4: #fbbb64;
+  --color-surface5: #dce1ff;
+  --color-surface6: #e9d6ff;
+  --color-surface7: #d3f5de;
+  --color-neutral1: #474c6b;
+  --color-neutral2: #9da1b5;
+  --color-neutral3: #dfe1ea;
+  --color-neutral4: #fff;
 }
 
 @utility container {
