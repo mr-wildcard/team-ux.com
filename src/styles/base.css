@@ -1,173 +1,199 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer utilities {
-  .responsive-wrapper {
-    @apply px-5 md:px-8 lg:px-[50px] 2xl:px-0;
+@config '../../tailwind.config.ts';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
+}
 
-  .text-display-large {
-    font-size: 42px;
-    line-height: 57px;
+@utility responsive-wrapper {
+  @apply px-5 md:px-8 lg:px-[50px] 2xl:px-0;
+}
+
+@utility text-display-large {
+  font-size: 42px;
+  line-height: 57px;
+  font-weight: 700;
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 72px;
+    line-height: 84px;
     font-weight: 700;
   }
+}
 
-  .text-headline-extra-large {
-    font-size: 28px;
-    line-height: 38px;
+@utility text-headline-extra-large {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 900;
+}
+
+@utility text-headline-large {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 32px;
+    line-height: 43px;
     font-weight: 900;
   }
+}
 
-  .text-headline-large {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 500;
-  }
+@utility text-headline-medium-bold {
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 900;
 
-  .text-headline-medium-bold {
-    font-size: 22px;
-    line-height: normal;
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 25px;
+    line-height: 34px;
     font-weight: 900;
   }
+}
 
-  .text-headline-medium {
-    font-size: 22px;
-    line-height: normal;
+@utility text-headline-medium {
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 700;
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 25px;
+    line-height: 34px;
     font-weight: 700;
   }
+}
 
-  .text-headline-small {
+@utility text-headline-small {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+@utility text-headline-small-bold {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 900;
+}
+
+@utility text-body-large {
+  font-size: 19px;
+  line-height: 29px;
+  font-weight: 500;
+
+  @media (width >= theme(--breakpoint-lg)) {
     font-size: 20px;
     line-height: 27px;
     font-weight: 700;
   }
+}
 
-  .text-headline-small-bold {
-    font-size: 20px;
-    line-height: normal;
-    font-weight: 900;
-  }
+@utility text-body-large-bold {
+  font-size: 19px;
+  line-height: 29px;
+  font-weight: 700;
+}
 
-  .text-body-large {
-    font-size: 19px;
-    line-height: 29px;
-    font-weight: 500;
-  }
+@utility text-body-medium {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
 
-  .text-body-large-bold {
-    font-size: 19px;
-    line-height: 29px;
-    font-weight: 700;
-  }
-
-  .text-body-medium {
+  @media (width >= theme(--breakpoint-lg)) {
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
   }
+}
 
-  .text-body-medium-bold {
+@utility text-body-medium-bold {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+
+  @media (width >= theme(--breakpoint-lg)) {
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
   }
+}
 
-  .text-label-large {
-    font-size: 18px;
-    line-height: 24px;
+@utility text-label-large {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@utility text-label-medium {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+@utility text-display-medium {
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 60px;
+    line-height: 82px;
     font-weight: 700;
   }
+}
 
-  .text-label-medium {
+@utility text-display-small {
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 48px;
+    line-height: 65px;
+    font-weight: 700;
+  }
+}
+
+@utility text-body-extra-large {
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 500;
+  }
+}
+
+@utility text-body-small {
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+}
+
+@utility text-label-medium-bold {
+  @media (width >= theme(--breakpoint-lg)) {
     font-size: 16px;
     line-height: 22px;
     font-weight: 700;
   }
+}
 
-  @screen lg {
-    .text-display-large {
-      font-size: 72px;
-      line-height: 84px;
-      font-weight: 700;
-    }
-
-    .text-display-medium {
-      font-size: 60px;
-      line-height: 82px;
-      font-weight: 700;
-    }
-
-    .text-display-small {
-      font-size: 48px;
-      line-height: 65px;
-      font-weight: 700;
-    }
-
-    .text-headline-large {
-      font-size: 32px;
-      line-height: 43px;
-      font-weight: 900;
-    }
-
-    .text-headline-medium-bold {
-      font-size: 25px;
-      line-height: 34px;
-      font-weight: 900;
-    }
-
-    .text-headline-medium {
-      font-size: 25px;
-      line-height: 34px;
-      font-weight: 700;
-    }
-
-    .text-body-extra-large {
-      font-size: 28px;
-      line-height: 38px;
-      font-weight: 500;
-    }
-
-    .text-body-large {
-      font-size: 20px;
-      line-height: 27px;
-      font-weight: 700;
-    }
-
-    .text-body-medium-bold {
-      font-size: 18px;
-      line-height: 28px;
-      font-weight: 700;
-    }
-
-    .text-body-medium {
-      font-size: 18px;
-      line-height: 28px;
-      font-weight: 500;
-    }
-
-    .text-body-small {
-      font-size: 14px;
-      line-height: 19px;
-      font-weight: 500;
-    }
-
-    .text-label-medium-bold {
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 700;
-    }
-
-    .text-label-medium {
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 500;
-    }
-
-    .text-label-small {
-      font-size: 14px;
-      line-height: 19px;
-      font-weight: 700;
-    }
+@utility text-label-small {
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
   }
 }
