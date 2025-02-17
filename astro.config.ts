@@ -26,13 +26,7 @@ export default defineConfig({
   integrations: [icon(), sitemap()],
   site: getSiteURL(),
   vite: {
-    plugins: [
-      yaml(),
-      tailwindcss({
-        applyBaseStyles: false,
-        nesting: true,
-      }),
-    ],
+    plugins: [yaml(), tailwindcss()],
     build: {
       // mainly for transpiling optional chaining for iOS 12, ffs
       target: "es2019",
