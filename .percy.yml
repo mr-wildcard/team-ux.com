@@ -12,7 +12,8 @@ snapshot:
   cliEnableJavaScript: true
   disableShadowDOM: false
   percy-css: |
-    #toast { 
+    #toast,
+    #team-ux-in-2024-disclaimer { 
       display: none; 
     }
 discovery:
