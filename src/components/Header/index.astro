@@ -112,9 +112,8 @@ import NavItems from "./NavItems.astro";
   @reference '../../styles/base.css';
 
   header {
-    @apply bg-surface1;
-
     position: -webkit-sticky;
+    background-color: var(--color-surface1);
 
     :global([data-icon="cross"]),
     .text-opened {
@@ -139,6 +138,17 @@ import NavItems from "./NavItems.astro";
         display: none;
       }
     }
+
+    @variant lg {
+      margin-left: 9px;
+      margin-right: 9px;
+      border-radius: 0 0 16px 16px;
+    }
+
+    @variant 2xl {
+      margin-left: -40px;
+      margin-right: -40px;
+    }
   }
 
   #mobile-menu {
@@ -155,23 +165,8 @@ import NavItems from "./NavItems.astro";
         opacity: 1;
       }
     }
-  }
 
-  @variant 2xl {
-    header {
-      margin-left: -40px;
-      margin-right: -40px;
-    }
-  }
-
-  @variant lg {
-    header {
-      margin-left: 9px;
-      margin-right: 9px;
-      border-radius: 0 0 16px 16px;
-    }
-
-    #mobile-menu {
+    @variant lg {
       display: none !important;
     }
   }
@@ -183,16 +178,14 @@ import NavItems from "./NavItems.astro";
       animation-fill-mode: forwards;
       animation-range: 0px 1px;
       animation-timeline: scroll(y root);
+
+      @variant lg {
+        animation-name: desktop-sticky-bg-white-header;
+      }
     }
 
     header:not([data-menu-opened="true"]) {
       animation-name: mobile-sticky-bg-white-header;
-    }
-
-    @variant lg {
-      header {
-        animation-name: desktop-sticky-bg-white-header;
-      }
     }
   }
 

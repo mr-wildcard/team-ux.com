@@ -53,13 +53,11 @@ const selected =
       text-underline-offset: 10px;
 
       .title {
-        @apply text-primary;
+        color: var(--color-primary);
       }
     }
 
     &:after {
-      @apply bg-primary;
-
       content: "";
       position: absolute;
       left: -1px;
@@ -68,15 +66,14 @@ const selected =
       height: 2px;
       border-radius: 2px;
       opacity: 0;
+      background-color: var(--color-primary);
     }
 
     &:focus {
       @apply rounded-[1px] outline outline-offset-[2px] outline-[3px] outline-secondary;
     }
-  }
 
-  @variant lg {
-    .nav-item {
+    @variant lg {
       position: relative;
       white-space: nowrap;
       padding: 0;
