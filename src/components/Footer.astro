@@ -52,6 +52,8 @@ import NavItem from "./Header/NavItem.astro";
 </footer>
 
 <style>
+  @reference '../styles/base.css';
+
   footer :global(.nav-item) {
     width: fit-content;
     padding: 0;
@@ -70,7 +72,7 @@ import NavItem from "./Header/NavItem.astro";
 
     &:hover:not(.selected) {
       :global(.title) {
-        @apply text-secondary !important;
+        color: var(--color-secondary) !important;
       }
 
       &:after {

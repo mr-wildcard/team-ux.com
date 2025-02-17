@@ -101,37 +101,16 @@ import NavItems from "./NavItems.astro";
 
     <p class="mt-12 p-5 text-headline-small-bold rounded-[26px] bg-surface3">
       Contactez-nous à l’adresse <br />
-      <a class="underline underline-offset-4" href="mailto:hello@team-ux.com"
-        >hello@team-ux.com</a
-      >
+      <a class="underline underline-offset-4" href="mailto:hello@team-ux.com">
+        hello@team-ux.com
+      </a>
     </p>
   </div>
 </header>
 
-<script>
-  if (!CSS.supports("animation-timeline", "scroll(y root)")) {
-    import("./scripts/sticky-header.fallback");
-  }
-
-  const header = document.querySelector("#header");
-  const menuButton = document.querySelector("#menu-opener");
-
-  menuButton.addEventListener("click", () => {
-    const { menuOpened } = header.dataset;
-
-    if (menuOpened === "true") {
-      header.setAttribute("data-menu-opened", "false");
-      menuButton.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("overflow-hidden");
-    } else {
-      header.setAttribute("data-menu-opened", "true");
-      menuButton.setAttribute("aria-expanded", "true");
-      document.body.classList.add("overflow-hidden");
-    }
-  });
-</script>
-
 <style>
+  @reference '../../styles/base.css';
+
   header {
     @apply bg-surface1;
 
@@ -143,7 +122,7 @@ import NavItems from "./NavItems.astro";
     }
 
     &[data-menu-opened="true"] {
-      @apply bg-surface2 !important;
+      background-color: var(--color-surface2) !important;
 
       & #menu-opener {
         @apply space-x-2.5 text-primary bg-surface5;
@@ -241,3 +220,5 @@ import NavItems from "./NavItems.astro";
     }
   }
 </style>
+
+<script src="./scripts/index.ts"></script>
