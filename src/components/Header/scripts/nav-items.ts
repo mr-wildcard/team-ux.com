@@ -4,7 +4,7 @@ const allButtons =
 allButtons.forEach((button) => {
   const submenu = button.querySelector<HTMLDivElement>(".submenu-container");
 
-  if (submenu) {
+  if (!submenu) {
     return;
   }
 
