@@ -27,15 +27,17 @@ const { expertise } = Astro.props;
 </div>
 
 <style>
+  @reference "../../../../styles/base.css";
+
   li {
     padding: 9px 20px;
 
-    @screen lg {
+    @variant lg {
       padding-left: 11px;
       padding-right: 11px;
     }
 
-    @screen xl {
+    @variant xl {
       padding: 11px 20px;
     }
   }

@@ -52,20 +52,22 @@ import DuoDeChoc from "components/DuoDeChoc.astro";
 </section>
 
 <style>
+  @reference "../../../styles/base.css";
+
   .our-work {
     font-size: 19px;
     font-style: normal;
     font-weight: 500;
     line-height: 29px;
 
-    @screen lg {
+    @variant lg {
       font-size: 22px;
       font-style: normal;
       font-weight: 500;
       line-height: 36px;
     }
 
-    @screen 2xl {
+    @variant 2xl {
       font-size: 28px;
       font-style: normal;
       font-weight: 500;
@@ -79,14 +81,14 @@ import DuoDeChoc from "components/DuoDeChoc.astro";
     font-weight: 700;
     line-height: 57px;
 
-    @screen lg {
+    @variant lg {
       font-size: 52px;
       font-style: normal;
       font-weight: 700;
       line-height: 65px;
     }
 
-    @screen 2xl {
+    @variant 2xl {
       font-size: 72px;
       font-style: normal;
       font-weight: 700;

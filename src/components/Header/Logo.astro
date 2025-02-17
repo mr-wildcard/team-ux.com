@@ -22,11 +22,13 @@ const htmlAttributes =
 </a>
 
 <style>
+  @reference "../../styles/base.css";
+
   :global([data-icon="logo"]) {
     width: 170px;
     height: 36px;
 
-    @screen lg {
+    @variant lg {
       width: 189px;
       height: 40px;
     }
