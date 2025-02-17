@@ -4,13 +4,16 @@
   @reference '../../styles/base.css';
 
   a {
-    @apply bg-surface3 hover:bg-surface4;
-
     padding: 6px 18px;
     border-radius: 100px;
+    background-color: var(--color-surface3);
+
+    &:hover {
+      background-color: var(--color-surface4);
+    }
 
     &:focus {
-      @apply outline outline-offset-[2px] outline-[3px] outline-secondary;
+      @apply outline-[3px] outline-offset-[2px] outline-secondary;
     }
   }
 </style>
