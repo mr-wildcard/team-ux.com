@@ -24,7 +24,7 @@
 }
 
 @theme {
-  --container-2xl: 1512px;
+  --breakpoint-2xl: 1512px;
 
   --spacing-8: 30px;
 
@@ -47,7 +47,7 @@
   margin-inline: auto;
 
   @variant 2xl {
-    width: 1413px;
+    max-width: 1413px;
   }
 }
 
