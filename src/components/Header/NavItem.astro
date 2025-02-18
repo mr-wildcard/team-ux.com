@@ -45,6 +45,28 @@ const selected =
 <style>
   @reference '../../styles/base.css';
 
+  button.nav-item {
+    :not(.selected):hover .title {
+       {
+        color: var(--color-secondary) !important;
+      }
+    }
+
+    [data-icon="arrow_drop_down"] {
+      color: var(--color-primary);
+    }
+  }
+
+  button.nav-item.opened {
+  [data-icon="arrow_drop_down"] {
+      transform: rotateZ(180deg);
+    }
+
+    .submenu-container {
+      display: block;
+    }
+  }
+
   .nav-item {
     display: block;
 

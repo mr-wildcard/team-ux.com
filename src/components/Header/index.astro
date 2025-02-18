@@ -50,7 +50,7 @@ import NavItems from "./NavItems.astro";
 
         <button
           id="menu-opener"
-          class="lg:hidden flex items-center space-x-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
+          class="lg:hidden flex items-center px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
           aria-expanded="false"
         >
           <span class="text-closed">Menu</span>
@@ -115,26 +115,32 @@ import NavItems from "./NavItems.astro";
     position: -webkit-sticky;
     background-color: var(--color-surface1);
 
-    :global([data-icon="cross"]),
+    [data-icon="cross"],
     .text-opened {
       display: none;
+    }
+
+    .text-opened,
+    .text-closed {
+      margin-right: calc(2.5 * var(--spacing));
     }
 
     &[data-menu-opened="true"] {
       background-color: var(--color-surface2) !important;
 
       & #menu-opener {
-        @apply space-x-2.5 text-primary bg-surface5;
+        color: var(--color-primary);
+        background-color: var(--color-surface5);
       }
 
       #mobile-menu,
       .text-opened,
-      :global([data-icon="cross"]) {
+      [data-icon="cross"] {
         display: block;
       }
 
       .text-closed,
-      :global([data-icon="hamburger"]) {
+      [data-icon="hamburger"] {
         display: none;
       }
     }
@@ -152,11 +158,11 @@ import NavItems from "./NavItems.astro";
   }
 
   #mobile-menu {
-    :global([data-icon="arrow_drop_down"]) {
-      color: var(--text-primary);
+    [data-icon="arrow_drop_down"] {
+      color: var(--color-primary);
     }
 
-    :global(.nav-item) {
+    .nav-item {
       display: inline;
       position: relative;
       text-decoration: none;

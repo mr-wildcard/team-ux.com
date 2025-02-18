@@ -1,9 +1,9 @@
 ---
-import { AstroGlobalPartial } from "astro";
+import { type AstroGlobalPartial } from "astro";
 import { getImage } from "astro:assets";
 import CallToAction from "components/@common/CallToAction.astro";
 import Testimonial, {
-  type Testimonial,
+  type TestimonialModel,
 } from "components/Testimonial.astro";
 import Icon from "components/@common/Icon.astro";
 import Tag from "components/@common/Tag.astro";
@@ -25,7 +25,7 @@ export type LargeProjectProps = {
     title: string;
     content: string;
   };
-  testimonial?: Testimonial | Array<Testimonial>
+  testimonial?: TestimonialModel | Array<TestimonialModel>
 }
 
 interface Props {
@@ -211,7 +211,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
     @reference '../../../../styles/base.css';
 
     .testimonials[open] {
-        :global([data-icon="expand_more"]) {
+        [data-icon="expand_more"] {
             transform: scaleY(-1);
         }
     }
