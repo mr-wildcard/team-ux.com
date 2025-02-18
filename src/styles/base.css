@@ -43,10 +43,6 @@
   --color-neutral4: #fff;
 }
 
-@custom-variant lg (@media (width >= theme(--breakpoint-lg)));
-@custom-variant xl (@media (width >= theme(--breakpoint-xl)));
-@custom-variant 2xl (@media (width >= theme(--breakpoint-2xl)));
-
 @utility container {
   margin-inline: auto;
 
