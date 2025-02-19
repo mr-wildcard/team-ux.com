@@ -1,9 +1,9 @@
 ---
-import { AstroGlobalPartial } from "astro";
+import { type AstroGlobalPartial } from "astro";
 import { getImage } from "astro:assets";
 import CallToAction from "components/@common/CallToAction.astro";
 import Testimonial, {
-  type Testimonial,
+  type TestimonialModel,
 } from "components/Testimonial.astro";
 import Icon from "components/@common/Icon.astro";
 import Tag from "components/@common/Tag.astro";
@@ -25,7 +25,7 @@ export type LargeProjectProps = {
     title: string;
     content: string;
   };
-  testimonial?: Testimonial | Array<Testimonial>
+  testimonial?: TestimonialModel | Array<TestimonialModel>
 }
 
 interface Props {
@@ -169,7 +169,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
                   <a
                     href={hrefPNG}
                     target="_blank"
-                    class="project-image-link lg:aspect-[431/361] relative flex overflow-hidden rounded-md lg:rounded-lg"
+                    class="project-image-link lg:aspect-431/361 relative flex overflow-hidden rounded-md lg:rounded-lg"
                   >
                     <CallToAction tabindex="-1" class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" type="secondary" rightIcon="open_in_new">
                       Ouvrir l'image
@@ -192,7 +192,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
               );
             })}
           </ul>
-          <div class="flex max-lg:flex-col max-lg:items-start items-center max-lg:space-y-2.5 lg:space-x-2.5 bg-surface7 px-5 py-5 lg:py-2.5 rounded">
+          <div class="flex max-lg:flex-col max-lg:items-start items-center max-lg:space-y-2.5 lg:space-x-2.5 bg-surface7 px-5 py-5 lg:py-2.5 rounded-sm">
             <span role="presentation">
               <Icon name="photo_prints" width={38} height={38} />
             </span>
@@ -208,8 +208,10 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
 </div>
 
 <style>
+    @reference '../../../../styles/base.css';
+
     .testimonials[open] {
-        :global([data-icon="expand_more"]) {
+        [data-icon="expand_more"] {
             transform: scaleY(-1);
         }
     }
@@ -230,7 +232,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
     }
   }
 
-  @screen lg {
+  @variant lg {
     .project-image-link {
       &:before {
         @apply bg-primary;

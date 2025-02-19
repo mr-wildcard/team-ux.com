@@ -61,6 +61,8 @@ const iconSize = variant === "transparent" ? 18 : 24;
 </HTMLTag>
 
 <style>
+  @reference '../../styles/base.css';
+
   .call-to-action {
     display: flex;
     align-items: center;
@@ -123,15 +125,15 @@ const iconSize = variant === "transparent" ? 18 : 24;
       }
 
       &.primary {
-        @apply text-primary;
+        color: var(--text-primary);
 
         &:hover {
-          @apply text-secondary;
+          color: var(--text-secondary);
         }
       }
 
       &.secondary {
-        @apply text-secondary;
+        color: var(--text-secondary);
       }
     }
   }

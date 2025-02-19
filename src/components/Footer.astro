@@ -15,7 +15,7 @@ import NavItem from "./Header/NavItem.astro";
         rightIcon="open_in_new"
         type="primary"
         variant="transparent"
-        class="!text-label-large lg:!text-label-medium-bold"
+        class="text-label-large! lg:text-label-medium-bold!"
       >
         Team UX sur LinkedIn
       </CallToAction>
@@ -52,6 +52,8 @@ import NavItem from "./Header/NavItem.astro";
 </footer>
 
 <style>
+  @reference '../styles/base.css';
+
   footer :global(.nav-item) {
     width: fit-content;
     padding: 0;
@@ -70,7 +72,7 @@ import NavItem from "./Header/NavItem.astro";
 
     &:hover:not(.selected) {
       :global(.title) {
-        @apply text-secondary !important;
+        color: var(--color-secondary) !important;
       }
 
       &:after {

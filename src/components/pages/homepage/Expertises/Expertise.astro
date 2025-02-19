@@ -17,7 +17,7 @@ const { expertise } = Astro.props;
     {
       expertise.skills.map((skill) => {
         return (
-          <li class="text-body-medium bg-surface5 rounded">
+          <li class="text-body-medium bg-surface5 rounded-sm">
             <h4>{skill}</h4>
           </li>
         );
@@ -27,15 +27,17 @@ const { expertise } = Astro.props;
 </div>
 
 <style>
+  @reference "../../../../styles/base.css";
+
   li {
     padding: 9px 20px;
 
-    @screen lg {
+    @variant lg {
       padding-left: 11px;
       padding-right: 11px;
     }
 
-    @screen xl {
+    @variant xl {
       padding: 11px 20px;
     }
   }
