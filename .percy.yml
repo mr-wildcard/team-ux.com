@@ -7,7 +7,6 @@ snapshot:
     - 1280
     - 1512
   minHeight: 1024
-  percyCSS: ""
   enableJavaScript: true
   cliEnableJavaScript: true
   disableShadowDOM: false
