@@ -1,5 +1,5 @@
 ---
-export interface Testimonial {
+export interface TestimonialModel {
   content: string;
   company: string;
   author: string;
@@ -8,7 +8,7 @@ export interface Testimonial {
 
 interface Props {
   viewMode: "block" | "inline";
-  testimonial: Testimonial;
+  testimonial: TestimonialModel;
 }
 
 const { viewMode = "block", testimonial } = Astro.props;

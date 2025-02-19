@@ -20,7 +20,7 @@ const urlPageTitles = new Map([
 
 <nav id="breadcrumb" aria-label="Breadcrumb" class="container">
   <Grid>
-    <ul class="col-span-full text-label-small">
+    <ul class="col-span-full text-label-small space-x-[4px]">
       <li>
         <a href="/" class="hover:underline underline-offset-[4px]">Accueil</a>
         <Icon name="chevron_right_breadcrumb" width={16} height={16} />
@@ -58,6 +58,8 @@ const urlPageTitles = new Map([
 </nav>
 
 <style>
+  @reference '../styles/base.css';
+
   ul {
     @apply space-x-[4px];
 
@@ -72,7 +74,7 @@ const urlPageTitles = new Map([
     }
 
     a {
-      @apply text-secondary;
+      color: var(--text-secondary);
     }
 
     span {

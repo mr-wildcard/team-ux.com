@@ -50,7 +50,7 @@ import NavItems from "./NavItems.astro";
 
         <button
           id="menu-opener"
-          class="lg:hidden flex items-center space-x-4 px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
+          class="lg:hidden flex items-center px-[15px] py-[11px] text-label-medium text-neutral4 bg-primary rounded-md"
           aria-expanded="false"
         >
           <span class="text-closed">Menu</span>
@@ -101,73 +101,63 @@ import NavItems from "./NavItems.astro";
 
     <p class="mt-12 p-5 text-headline-small-bold rounded-[26px] bg-surface3">
       Contactez-nous à l’adresse <br />
-      <a class="underline underline-offset-4" href="mailto:hello@team-ux.com"
-        >hello@team-ux.com</a
-      >
+      <a class="underline underline-offset-4" href="mailto:hello@team-ux.com">
+        hello@team-ux.com
+      </a>
     </p>
   </div>
 </header>
 
-<script>
-  if (!CSS.supports("animation-timeline", "scroll(y root)")) {
-    import("./scripts/sticky-header.fallback");
-  }
-
-  const header = document.querySelector("#header");
-  const menuButton = document.querySelector("#menu-opener");
-
-  menuButton.addEventListener("click", () => {
-    const { menuOpened } = header.dataset;
-
-    if (menuOpened === "true") {
-      header.setAttribute("data-menu-opened", "false");
-      menuButton.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("overflow-hidden");
-    } else {
-      header.setAttribute("data-menu-opened", "true");
-      menuButton.setAttribute("aria-expanded", "true");
-      document.body.classList.add("overflow-hidden");
-    }
-  });
-</script>
-
 <style>
+  @reference '../../styles/base.css';
+
   header {
-    @apply bg-surface1;
-
     position: -webkit-sticky;
+    background-color: var(--color-surface1);
 
-    :global([data-icon="cross"]),
+    [data-icon="cross"],
     .text-opened {
       display: none;
     }
 
+    .text-opened,
+    .text-closed {
+      margin-right: calc(2.5 * var(--spacing));
+    }
+
     &[data-menu-opened="true"] {
-      @apply bg-surface2 !important;
+      background-color: var(--color-surface2) !important;
 
       & #menu-opener {
-        @apply space-x-2.5 text-primary bg-surface5;
+        color: var(--color-primary);
+        background-color: var(--color-surface5);
       }
 
       #mobile-menu,
       .text-opened,
-      :global([data-icon="cross"]) {
+      [data-icon="cross"] {
         display: block;
       }
 
       .text-closed,
-      :global([data-icon="hamburger"]) {
+      [data-icon="hamburger"] {
         display: none;
       }
+    }
+
+    @variant lg {
+      margin-left: 9px;
+      margin-right: 9px;
+      border-radius: 0 0 16px 16px;
     }
   }
 
   #mobile-menu {
-    :global([data-icon="arrow_drop_down"]) {
-      @apply text-primary;
+    [data-icon="arrow_drop_down"] {
+      color: var(--color-primary);
     }
 
-    :global(.nav-item) {
+    .nav-item {
       display: inline;
       position: relative;
       text-decoration: none;
@@ -176,23 +166,8 @@ import NavItems from "./NavItems.astro";
         opacity: 1;
       }
     }
-  }
 
-  @screen 2xl {
-    header {
-      margin-left: -40px;
-      margin-right: -40px;
-    }
-  }
-
-  @screen lg {
-    header {
-      margin-left: 9px;
-      margin-right: 9px;
-      border-radius: 0 0 16px 16px;
-    }
-
-    #mobile-menu {
+    @variant lg {
       display: none !important;
     }
   }
@@ -204,16 +179,14 @@ import NavItems from "./NavItems.astro";
       animation-fill-mode: forwards;
       animation-range: 0px 1px;
       animation-timeline: scroll(y root);
+
+      @variant lg {
+        animation-name: desktop-sticky-bg-white-header;
+      }
     }
 
     header:not([data-menu-opened="true"]) {
       animation-name: mobile-sticky-bg-white-header;
-    }
-
-    @screen lg {
-      header {
-        animation-name: desktop-sticky-bg-white-header;
-      }
     }
   }
 
@@ -241,3 +214,5 @@ import NavItems from "./NavItems.astro";
     }
   }
 </style>
+
+<script src="./scripts/index.ts"></script>

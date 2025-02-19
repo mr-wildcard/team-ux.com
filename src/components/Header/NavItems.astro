@@ -40,103 +40,10 @@ const isSelected = items.some(
   </div>
 </NavItem>
 
-<script>
-  const buttons =
-    document.querySelectorAll<HTMLButtonElement[]>("button.nav-item");
-
-  buttons.forEach((button) => {
-    const submenu = button.querySelector<HTMLDivElement>(".submenu-container");
-
-    let timer;
-
-    function isSubmenuOpened() {
-      return button.classList.contains("opened");
-    }
-
-    function openSubmenu() {
-      button.classList.add("opened");
-      button.setAttribute("aria-expanded", "true");
-    }
-
-    function closeSubmenu() {
-      button.classList.remove("opened");
-      button.setAttribute("aria-expanded", "false");
-    }
-
-    function toggleSubmenu() {
-      if (isSubmenuOpened()) {
-        closeSubmenu();
-      } else {
-        openSubmenu();
-      }
-    }
-
-    function onClickOnButton() {
-      toggleSubmenu();
-
-      if (isSubmenuOpened()) {
-        submenu.addEventListener("mouseenter", onMouseEntersSubmenu);
-        window.addEventListener("click", onUserClicksOutside);
-      } else {
-        submenu.removeEventListener("mouseenter", onMouseEntersSubmenu);
-        window.removeEventListener("click", onUserClicksOutside);
-      }
-    }
-
-    function onMouseEntersSubmenu() {
-      clearTimeout(timer);
-
-      submenu.addEventListener("mouseleave", onMouseLeavesSubmenu);
-    }
-
-    function onMouseLeavesSubmenu() {
-      clearTimeout(timer);
-
-      submenu.removeEventListener("mouseleave", onMouseLeavesSubmenu);
-
-      timer = setTimeout(closeSubmenu, 3000);
-    }
-
-    function onUserClicksOutside(event: MouseEvent) {
-      const target = event.target as Node;
-
-      if (!button.contains(target) && target !== button) {
-        clearTimeout(timer);
-
-        closeSubmenu();
-      }
-    }
-
-    button.addEventListener("click", onClickOnButton);
-  });
-</script>
-
 <style>
-  :global(button.nav-item) {
-    &:not(.selected):hover {
-      :global(.title) {
-        @apply text-secondary !important;
-      }
-    }
-
-    :global([data-icon="arrow_drop_down"]) {
-      @apply text-primary;
-    }
-  }
-
-  :global(button.nav-item.opened) {
-    :global([data-icon="arrow_drop_down"]) {
-      transform: rotateZ(180deg);
-    }
-
-    .submenu-container {
-      display: block;
-    }
-  }
+  @reference '../../styles/base.css';
 
   .submenu-container {
-    @apply bg-neutral4;
-
     display: none;
     position: absolute;
     padding-top: 16px;
@@ -146,9 +53,10 @@ const isSelected = items.some(
     transform: translateX(-50%);
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(8, 18, 79, 0.25);
+    background-color: var(--color-neutral4);
 
-    :global(.nav-item .title) {
-      @apply text-secondary !important;
+    .nav-item .title {
+      color: var(--color-secondary) !important;
     }
   }
 
@@ -172,8 +80,10 @@ const isSelected = items.some(
 
       &:is(.selected),
       &:hover {
-        @apply bg-surface5;
+        background-color: var(--color-surface5);
       }
     }
   }
 </style>
+
+<script src="./scripts/nav-items.ts"></script>

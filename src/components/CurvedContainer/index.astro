@@ -15,6 +15,8 @@ interface Props {
 </div>
 
 <style>
+  @reference "../../styles/base.css";
+
   div :global(.curve) {
     width: 100%;
     height: 10px;
@@ -22,11 +24,9 @@ interface Props {
     &:last-of-type {
       transform: scaleY(-1);
     }
-  }
 
-  @screen 2xl {
-    div :global(.curve) {
-      height: 145px;
+    @variant xl {
+      height: 100px;
     }
   }
 </style>
