@@ -17,6 +17,10 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
+  dialog {
+    margin: auto;
+  }
+
   [role="button"],
   button {
     cursor: pointer;
