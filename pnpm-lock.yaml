@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: 5.4.0
-        version: 5.4.0(@types/node@20.10.6)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.5.0)
+        specifier: 5.4.1
+        version: 5.4.1(@types/node@20.10.6)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.32.1)(typescript@5.8.2)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.7.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)
       '@astrojs/sitemap':
         specifier: 3.2.1
         version: 3.2.1
@@ -32,7 +32,7 @@ importers:
         version: 1.10.4
       '@percy/cli':
         specifier: 1.30.8
-        version: 1.30.8(typescript@5.7.3)
+        version: 1.30.8(typescript@5.8.2)
       '@rollup/plugin-yaml':
         specifier: 4.1.2
         version: 4.1.2(rollup@4.32.1)
@@ -55,8 +55,8 @@ importers:
         specifier: 0.33.5
         version: 0.33.5
       typescript:
-        specifier: 5.7.3
-        version: 5.7.3
+        specifier: 5.8.2
+        version: 5.8.2
 
 packages:
 
@@ -74,6 +74,9 @@ packages:
 
   '@astrojs/compiler@2.10.3':
     resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
+
+  '@astrojs/compiler@2.10.4':
+    resolution: {integrity: sha512-86B3QGagP99MvSNwuJGiYSBHnh8nLvm2Q1IFI15wIUJJsPeQTO3eb2uwBmrqRsXykeR/mBzH8XCgz5AAt1BJrQ==}
 
   '@astrojs/internal-helpers@0.6.0':
     resolution: {integrity: sha512-XgHIJDQaGlFnTr0sDp1PiJrtqsWzbHP2qkTU+JpQ8SnBewKP2IKOe/wqCkl0CyfyRXRu3TSWu4t/cpYMVfuBNA==}
@@ -860,8 +863,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@5.4.0:
-    resolution: {integrity: sha512-7A//zrCtJUGfJcQAt6PDhMu4a6pogvnK54HLXnYlPnKSWQZu/tKIYWfyvocVnTuEYIPExIN3CpjNAFFLoweJVw==}
+  astro@5.4.1:
+    resolution: {integrity: sha512-z9BiBz8pV7pZVn1evZv/9bJil3A9UZNyEjDFH3IjD87ioz95HHGLgbjRbbqF1EwSy8JOLKlMNyuQPqjrX8xqWw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2480,8 +2483,8 @@ packages:
   typescript-auto-import-cache@0.3.3:
     resolution: {integrity: sha512-ojEC7+Ci1ij9eE6hp8Jl9VUNnsEKzztktP5gtYNRMrTmfXVwA1PITYYAkpxCvvupdSYa/Re51B6KMcv1CTZEUA==}
 
-  typescript@5.7.3:
-    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2903,12 +2906,12 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.7.3)':
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)':
     dependencies:
-      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.7.3)
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)
       chokidar: 4.0.1
       kleur: 4.1.5
-      typescript: 5.7.3
+      typescript: 5.8.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - prettier
@@ -2916,14 +2919,16 @@ snapshots:
 
   '@astrojs/compiler@2.10.3': {}
 
+  '@astrojs/compiler@2.10.4': {}
+
   '@astrojs/internal-helpers@0.6.0': {}
 
-  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.7.3)':
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)':
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/yaml2ts': 0.2.2
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@volar/kit': 2.4.10(typescript@5.7.3)
+      '@volar/kit': 2.4.10(typescript@5.8.2)
       '@volar/language-core': 2.4.10
       '@volar/language-server': 2.4.10
       '@volar/language-service': 2.4.10
@@ -3250,29 +3255,29 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@percy/cli-app@1.30.8(typescript@5.7.3)':
+  '@percy/cli-app@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
-      '@percy/cli-exec': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
+      '@percy/cli-exec': 1.30.8(typescript@5.8.2)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-build@1.30.8(typescript@5.7.3)':
+  '@percy/cli-build@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-command@1.30.8(typescript@5.7.3)':
+  '@percy/cli-command@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/config': 1.30.8(typescript@5.7.3)
-      '@percy/core': 1.30.8(typescript@5.7.3)
+      '@percy/config': 1.30.8(typescript@5.8.2)
+      '@percy/core': 1.30.8(typescript@5.8.2)
       '@percy/logger': 1.30.8
     transitivePeerDependencies:
       - bufferutil
@@ -3280,18 +3285,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-config@1.30.8(typescript@5.7.3)':
+  '@percy/cli-config@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-exec@1.30.8(typescript@5.7.3)':
+  '@percy/cli-exec@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
       '@percy/logger': 1.30.8
       cross-spawn: 7.0.3
       which: 2.0.2
@@ -3301,9 +3306,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-snapshot@1.30.8(typescript@5.7.3)':
+  '@percy/cli-snapshot@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
       yaml: 2.5.0
     transitivePeerDependencies:
       - bufferutil
@@ -3311,9 +3316,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-upload@1.30.8(typescript@5.7.3)':
+  '@percy/cli-upload@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
       fast-glob: 3.3.3
       image-size: 1.1.1
     transitivePeerDependencies:
@@ -3322,15 +3327,15 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli@1.30.8(typescript@5.7.3)':
+  '@percy/cli@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/cli-app': 1.30.8(typescript@5.7.3)
-      '@percy/cli-build': 1.30.8(typescript@5.7.3)
-      '@percy/cli-command': 1.30.8(typescript@5.7.3)
-      '@percy/cli-config': 1.30.8(typescript@5.7.3)
-      '@percy/cli-exec': 1.30.8(typescript@5.7.3)
-      '@percy/cli-snapshot': 1.30.8(typescript@5.7.3)
-      '@percy/cli-upload': 1.30.8(typescript@5.7.3)
+      '@percy/cli-app': 1.30.8(typescript@5.8.2)
+      '@percy/cli-build': 1.30.8(typescript@5.8.2)
+      '@percy/cli-command': 1.30.8(typescript@5.8.2)
+      '@percy/cli-config': 1.30.8(typescript@5.8.2)
+      '@percy/cli-exec': 1.30.8(typescript@5.8.2)
+      '@percy/cli-snapshot': 1.30.8(typescript@5.8.2)
+      '@percy/cli-upload': 1.30.8(typescript@5.8.2)
       '@percy/client': 1.30.8
       '@percy/logger': 1.30.8
     transitivePeerDependencies:
@@ -3348,23 +3353,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@percy/config@1.30.8(typescript@5.7.3)':
+  '@percy/config@1.30.8(typescript@5.8.2)':
     dependencies:
       '@percy/logger': 1.30.8
       ajv: 8.12.0
-      cosmiconfig: 8.3.6(typescript@5.7.3)
+      cosmiconfig: 8.3.6(typescript@5.8.2)
       yaml: 2.5.0
     transitivePeerDependencies:
       - typescript
 
-  '@percy/core@1.30.8(typescript@5.7.3)':
+  '@percy/core@1.30.8(typescript@5.8.2)':
     dependencies:
       '@percy/client': 1.30.8
-      '@percy/config': 1.30.8(typescript@5.7.3)
+      '@percy/config': 1.30.8(typescript@5.8.2)
       '@percy/dom': 1.30.8
       '@percy/logger': 1.30.8
-      '@percy/monitoring': 1.30.8(typescript@5.7.3)
-      '@percy/webdriver-utils': 1.30.8(typescript@5.7.3)
+      '@percy/monitoring': 1.30.8(typescript@5.8.2)
+      '@percy/webdriver-utils': 1.30.8(typescript@5.8.2)
       content-disposition: 0.5.4
       cross-spawn: 7.0.3
       extract-zip: 2.0.1
@@ -3390,9 +3395,9 @@ snapshots:
 
   '@percy/logger@1.30.8': {}
 
-  '@percy/monitoring@1.30.8(typescript@5.7.3)':
+  '@percy/monitoring@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/config': 1.30.8(typescript@5.7.3)
+      '@percy/config': 1.30.8(typescript@5.8.2)
       '@percy/logger': 1.30.8
       '@percy/sdk-utils': 1.30.8
       systeminformation: 5.25.11
@@ -3401,9 +3406,9 @@ snapshots:
 
   '@percy/sdk-utils@1.30.8': {}
 
-  '@percy/webdriver-utils@1.30.8(typescript@5.7.3)':
+  '@percy/webdriver-utils@1.30.8(typescript@5.8.2)':
     dependencies:
-      '@percy/config': 1.30.8(typescript@5.7.3)
+      '@percy/config': 1.30.8(typescript@5.8.2)
       '@percy/sdk-utils': 1.30.8
     transitivePeerDependencies:
       - typescript
@@ -3635,12 +3640,12 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@volar/kit@2.4.10(typescript@5.7.3)':
+  '@volar/kit@2.4.10(typescript@5.8.2)':
     dependencies:
       '@volar/language-service': 2.4.10
       '@volar/typescript': 2.4.10
       typesafe-path: 0.2.2
-      typescript: 5.7.3
+      typescript: 5.8.2
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.0.8
 
@@ -3740,9 +3745,9 @@ snapshots:
       - debug
       - supports-color
 
-  astro@5.4.0(@types/node@20.10.6)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.5.0):
+  astro@5.4.1(@types/node@20.10.6)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.32.1)(typescript@5.8.2)(yaml@2.5.0):
     dependencies:
-      '@astrojs/compiler': 2.10.3
+      '@astrojs/compiler': 2.10.4
       '@astrojs/internal-helpers': 0.6.0
       '@astrojs/markdown-remark': 6.2.0
       '@astrojs/telemetry': 3.2.0
@@ -3787,7 +3792,7 @@ snapshots:
       shiki: 1.29.2
       tinyexec: 0.3.2
       tinyglobby: 0.2.12
-      tsconfck: 3.1.4(typescript@5.7.3)
+      tsconfck: 3.1.4(typescript@5.8.2)
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
@@ -3800,7 +3805,7 @@ snapshots:
       yocto-spinner: 0.2.0
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
-      zod-to-ts: 1.2.0(typescript@5.7.3)(zod@3.24.1)
+      zod-to-ts: 1.2.0(typescript@5.8.2)(zod@3.24.1)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -4015,14 +4020,14 @@ snapshots:
 
   cookie@0.7.2: {}
 
-  cosmiconfig@8.3.6(typescript@5.7.3):
+  cosmiconfig@8.3.6(typescript@5.8.2):
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
     optionalDependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   cross-spawn@7.0.3:
     dependencies:
@@ -5728,9 +5733,9 @@ snapshots:
 
   trough@2.2.0: {}
 
-  tsconfck@3.1.4(typescript@5.7.3):
+  tsconfck@3.1.4(typescript@5.8.2):
     optionalDependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   tslib@2.6.2: {}
 
@@ -5742,7 +5747,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
 
-  typescript@5.7.3: {}
+  typescript@5.8.2: {}
 
   ufo@1.5.4: {}
 
@@ -6078,9 +6083,9 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  zod-to-ts@1.2.0(typescript@5.7.3)(zod@3.24.1):
+  zod-to-ts@1.2.0(typescript@5.8.2)(zod@3.24.1):
     dependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
       zod: 3.24.1
 
   zod@3.23.8: {}
