@@ -255,7 +255,7 @@
           legend: Conception des wireframes pour les écrans-clés de cette application mobile conversationnelle. Importance de l’UX writing dans le déroulé de l’expérience.
           alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (écran d’accueil, démarrage d’une discussion).
         - name: desktop-sacha-3
-          legend: Prototypage interactif de parcours sensibles autour de l’interaction avec l’IA et du modèle conversationnel. L’expérience doit être simple et fluide, quand le suj
+          legend: Prototypage interactif de parcours sensibles autour de l’interaction avec l’IA et du modèle conversationnel. L’expérience doit être simple et fluide, quand le sujet abordé est pointu et délicat.
           alt: Montage illustratif suggérant plusieurs wireframes conçus pendant ce projet (discussion en cours, liste de ressources, états d’attente et de relance, écran de prévention).
       description:
         title: Conception de Sacha, une appli mobile dotée d'une IA conversationnelle sur la santé sexuelle, accessible au grand public
