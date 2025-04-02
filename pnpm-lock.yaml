@@ -42,6 +42,9 @@ importers:
       cssnano:
         specifier: 7.0.6
         version: 7.0.6(postcss@8.5.3)
+      fast-xml-parser:
+        specifier: 5.1.0
+        version: 5.1.0
       postcss:
         specifier: 8.5.3
         version: 8.5.3
@@ -1261,6 +1264,10 @@ packages:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
 
+  fast-xml-parser@5.1.0:
+    resolution: {integrity: sha512-6fCOoEdpD/hU5fUDviXh0HE9aOiW6En0+4jeyY05F9lORwq6kaO4CrW+ke/hBKnr1pCldU8AVFITwFJEnz8O/w==}
+    hasBin: true
+
   fastq@1.19.0:
     resolution: {integrity: sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==}
 
@@ -2326,6 +2333,9 @@ packages:
   strip-ansi@7.1.0:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
+
+  strnum@2.0.5:
+    resolution: {integrity: sha512-YAT3K/sgpCUxhxNMrrdhtod3jckkpYwH6JAuwmUdXZsmzH1wUyzTMrrK2wYCEEqlKwrWDd35NeuUkbBy/1iK+Q==}
 
   stylehacks@7.0.4:
     resolution: {integrity: sha512-i4zfNrGMt9SB4xRK9L83rlsFCgdGANfeDAYacO1pkqcE7cRHPdWHwnKZVz7WY17Veq/FvyYsRAU++Ga+qDFIww==}
@@ -4183,6 +4193,10 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
+  fast-xml-parser@5.1.0:
+    dependencies:
+      strnum: 2.0.5
+
   fastq@1.19.0:
     dependencies:
       reusify: 1.0.4
@@ -5504,6 +5518,8 @@ snapshots:
   strip-ansi@7.1.0:
     dependencies:
       ansi-regex: 6.1.0
+
+  strnum@2.0.5: {}
 
   stylehacks@7.0.4(postcss@8.5.3):
     dependencies:
