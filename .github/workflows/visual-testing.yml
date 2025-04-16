@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [ opened, synchronize, reopened ]
 
+env:
+  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+  
 jobs:
   visual-testing:
     if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
