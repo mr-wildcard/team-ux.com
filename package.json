@@ -3,7 +3,7 @@
   "license": "CC BY-NC-ND",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.7.5",
+    "astro": "5.7.8",
     "astro-icon": "1.1.5",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.1.4"
