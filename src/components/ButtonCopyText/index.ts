@@ -29,10 +29,6 @@ toast?.addEventListener("animationend", () => {
 });
 
 buttons.forEach((button) => {
-  if (!navigator.clipboard) {
-    return button.remove();
-  }
-
   const { textToCopy, toastCopySuccessText } = button.dataset;
 
   async function onUserClicksOnCopyButton() {
