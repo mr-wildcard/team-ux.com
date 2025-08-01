@@ -3,7 +3,7 @@
   "license": "CC BY-NC-ND",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.12.6",
+    "astro": "5.12.8",
     "astro-icon": "1.1.5",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.1.11"
@@ -31,7 +31,7 @@
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.3",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "wait-on": "8.0.4"
   }
 }
