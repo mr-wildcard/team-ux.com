@@ -9,11 +9,7 @@ const LOCAL_HOST = "0.0.0.0";
 
 function getSiteURL() {
   if (process.env.CF_PAGES) {
-    if (process.env.CF_PAGES_BRANCH === "main") {
-      return "https://team-ux-com.pages.dev/";
-    } else {
-      return `https://${process.env.CF_PAGES_BRANCH}.team-ux-com.pages.dev/`;
-    }
+    return process.env.CF_PAGES_URL;
   } else if (process.env.GITHUB_ACTION) {
     return "https://www.team-ux.com/";
   } else {
