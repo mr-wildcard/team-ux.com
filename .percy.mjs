@@ -52,6 +52,11 @@ export default async function getPercySnapshotsConfig() {
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
+      percyCSS: `
+        #scroll-to-top-button {
+          display: none;
+        }
+      `,
       async execute() {
         document
           .querySelectorAll("summary")
