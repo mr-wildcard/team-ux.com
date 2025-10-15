@@ -6,7 +6,7 @@ on:
 
 jobs:
   visual-testing:
-    if: ${{ github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/')) }}
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
     runs-on: ubuntu-latest
 
     steps:
