@@ -43,4 +43,4 @@ jobs:
         run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          PREVIEW_URL: https://yuna.work
+          PREVIEW_URL: https://team-ux.com
