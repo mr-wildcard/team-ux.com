@@ -1,23 +1,22 @@
 import { XMLParser } from "fast-xml-parser";
 
-const { ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING = 4321 } = process.env;
+const { PREVIEW_URL } = process.env;
 
-const previewServerURL = `http://localhost:${ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING}`;
-const rootSitemapURL = `${previewServerURL}/sitemap-index.xml`;
+const rootSitemapURL = `${PREVIEW_URL}/sitemap-index.xml`;
 
 function getSnapshotName(websiteURL) {
   const url = new URL(websiteURL);
 
-  return `Team UX website - ${url.pathname === "/" ? "homepage" : url.pathname.replaceAll("/", "")}`;
+  return url.pathname === "/" ? "homepage" : url.pathname.replaceAll("/", "");
 }
 
 async function getWebsiteURLs() {
-  const parser = new XMLParser();
+  const xmlParser = new XMLParser();
 
   const request = await fetch(rootSitemapURL);
   const response = await request.text();
 
-  const rootSitemap = parser.parse(response);
+  const rootSitemap = xmlParser.parse(response);
 
   const sitemapURLs = [];
 
@@ -34,7 +33,7 @@ async function getWebsiteURLs() {
       const request = await fetch(sitemapURL);
       const response = await request.text();
 
-      const sitemapXML = parser.parse(response);
+      const sitemapXML = xmlParser.parse(response);
 
       return sitemapXML.urlset.url.map(({ loc }) => loc);
     }),
@@ -47,7 +46,7 @@ export default async function getPercySnapshotsConfig() {
   try {
     const websiteURLs = await getWebsiteURLs();
 
-    websiteURLs.push(`${previewServerURL}/not-found-page`);
+    websiteURLs.push(`${PREVIEW_URL}/not-found-page`);
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
@@ -75,33 +74,32 @@ export default async function getPercySnapshotsConfig() {
       },
     };
 
-    const desktopSnapshots = websiteURLs.map((websiteURL) => {
+    const snapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
         name: `${getSnapshotName(websiteURL)} - desktop`,
         url: websiteURL,
-        widths: [1512],
+        widths: [1512, 640],
       };
     });
 
-    const mobileSnapshots = websiteURLs.map((websiteURL) => {
+    const mobileMenuElement = "header#header";
+    const mobileMenuOpener = "#menu-opener";
+
+    const mobileMenuSnapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
-        name: `${getSnapshotName(websiteURL)} - mobile`,
+        name: `${getSnapshotName(websiteURL)} - mobile menu opened`,
         url: websiteURL,
         widths: [640],
-        additionalSnapshots: [
-          {
-            suffix: " - menu opened",
-            execute() {
-              document.querySelector("#menu-opener").click();
-            },
-          },
-        ],
+        scope: mobileMenuElement,
+        execute: `
+          document.querySelector("${mobileMenuOpener}").click();
+        `,
       };
     });
 
-    return [...desktopSnapshots, ...mobileSnapshots];
+    return [...snapshots, ...mobileMenuSnapshots];
   } catch (error) {
     console.error(error);
   }

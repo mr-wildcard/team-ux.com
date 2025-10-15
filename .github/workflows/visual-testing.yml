@@ -3,42 +3,46 @@ name: Run visual testing
 on:
   pull_request:
     types: [opened, synchronize, reopened, labeled]
-
-env:
-  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+  push:
+    branches:
+      - master
 
 jobs:
   visual-testing:
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
+    if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/'))) }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
 
+      - name: Get Cloudflare Pages deployment URL
+        id: wait-for-cloudflare-deployment-url
+        uses: mr-wildcard/action-get-cloudflare-deployment-url@v2
+        with:
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-pages-project: team-ux-com
+          branch-name: ${{ github.head_ref }}
+
       - uses: pnpm/action-setup@v4
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
-        shell: "bash"
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm i
 
-      - name: Build
-        shell: "bash"
-        run: pnpm build
-
-      - name: Start website preview server for visual testing
-        run: pnpm preview --port $ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING &
-
-      - name: Take website screenshots and upload them to Percy
-        run: |
-          pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
-          pnpm percy snapshot .percy.mjs --verbose
+      - name: Create Percy snapshots
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
+        run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PREVIEW_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}
