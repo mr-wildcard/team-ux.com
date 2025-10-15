@@ -4,6 +4,8 @@ const { PREVIEW_URL } = process.env;
 
 const rootSitemapURL = `${PREVIEW_URL}/sitemap-index.xml`;
 
+console.info(`✅ Using Cloudflare preview URL: ${rootSitemapURL}`);
+
 function getSnapshotName(websiteURL) {
   const url = new URL(websiteURL);
 
