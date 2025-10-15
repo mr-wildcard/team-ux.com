@@ -38,3 +38,9 @@ jobs:
           SOURCE: "dist/"
           TARGET: ${{ secrets.REMOTE_TARGET }}
           ARGS: "-rlgoDzvc -i --delete"
+
+      - name: Create Percy snapshots
+        run: pnpm percy snapshot .percy.mjs --disable-cache
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PREVIEW_URL: https://yuna.work
