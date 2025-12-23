@@ -3,7 +3,7 @@
   "license": "CC BY-NC-ND",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.26.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -22,7 +22,7 @@
     "@astrojs/check": "0.9.6",
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/ts-plugin": "1.10.6",
-    "@percy/cli": "1.31.5",
+    "@percy/cli": "1.31.6",
     "@rollup/plugin-yaml": "4.1.2",
     "@tailwindcss/vite": "4.1.18",
     "cssnano": "7.1.2",
