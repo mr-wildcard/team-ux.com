@@ -22,7 +22,7 @@ jobs:
           cloudflare-pages-project: team-ux-com
           branch-name: ${{ github.head_ref }}
 
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v6
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
 
       - name: Setup Node
