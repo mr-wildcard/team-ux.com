@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "6.1.5",
+    "astro": "6.1.6",
     "astro-icon": "1.1.5",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.2.2"
@@ -25,7 +25,7 @@
     "@percy/cli": "1.31.11",
     "@rollup/plugin-yaml": "4.1.2",
     "@tailwindcss/vite": "4.2.2",
-    "cssnano": "7.1.4",
+    "cssnano": "7.1.5",
     "fast-xml-parser": "5.5.12",
     "postcss": "8.5.9",
     "prettier": "3.8.2",
