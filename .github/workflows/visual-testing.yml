@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Get Cloudflare Pages deployment URL
         id: wait-for-cloudflare-deployment-url
@@ -22,12 +22,12 @@ jobs:
           cloudflare-pages-project: team-ux-com
           branch-name: ${{ github.head_ref }}
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.8
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
 
       - name: Setup Node
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
