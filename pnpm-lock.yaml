@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: 6.4.3
-        version: 6.4.3(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
+        specifier: 6.4.4
+        version: 6.4.4(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -1028,8 +1028,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@6.4.3:
-    resolution: {integrity: sha512-heArIk8zLcxuoj1WgBH2zGdAD8zKSU1mEcBvS6hYMEHRPlbtvB+4Y8ri9Z27hzeryvGaFgrH32zjghEfV2y07g==}
+  astro@6.4.4:
+    resolution: {integrity: sha512-hVe8tq3lqt/Dr0UyB//yUmQSlHMTU8scTiF/vQddQVahLE4TTaSdH5H0nb7OvRcwo0UmlAO8DWYar4jNaS7H+A==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3435,7 +3435,10 @@ snapshots:
     dependencies:
       '@percy/cli-command': 1.31.14(typescript@6.0.3)
     transitivePeerDependencies:
+      - bufferutil
+      - supports-color
       - typescript
+      - utf-8-validate
 
   '@percy/cli-command@1.31.14(typescript@6.0.3)':
     dependencies:
@@ -3452,7 +3455,10 @@ snapshots:
     dependencies:
       '@percy/cli-command': 1.31.14(typescript@6.0.3)
     transitivePeerDependencies:
+      - bufferutil
+      - supports-color
       - typescript
+      - utf-8-validate
 
   '@percy/cli-doctor@1.31.14(typescript@6.0.3)':
     dependencies:
@@ -3488,7 +3494,10 @@ snapshots:
       '@percy/cli-command': 1.31.14(typescript@6.0.3)
       yaml: 2.9.0
     transitivePeerDependencies:
+      - bufferutil
+      - supports-color
       - typescript
+      - utf-8-validate
 
   '@percy/cli-upload@1.31.14(typescript@6.0.3)':
     dependencies:
@@ -3496,7 +3505,10 @@ snapshots:
       fast-glob: 3.3.3
       image-size: 1.1.1
     transitivePeerDependencies:
+      - bufferutil
+      - supports-color
       - typescript
+      - utf-8-validate
 
   '@percy/cli@1.31.14(typescript@6.0.3)':
     dependencies:
@@ -3951,7 +3963,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@6.4.3(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0):
+  astro@6.4.4(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
