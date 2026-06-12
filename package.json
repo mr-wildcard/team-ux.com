@@ -3,7 +3,7 @@
   "license": "CC BY-NC-ND",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.34.2",
+  "packageManager": "pnpm@10.34.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -30,7 +30,7 @@
     "postcss": "8.5.15",
     "prettier": "3.8.4",
     "prettier-plugin-astro": "0.14.1",
-    "sharp": "0.35.0",
+    "sharp": "0.35.1",
     "typescript": "6.0.3"
   }
 }
