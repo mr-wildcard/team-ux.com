@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.0
 
       - name: Get Cloudflare Pages deployment URL
         id: wait-for-cloudflare-deployment-url
@@ -36,6 +36,8 @@ jobs:
       - name: Install
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm i
+        env:
+          PERCY_POSTINSTALL_BROWSER: "true"
 
       - name: Create Percy snapshots
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'

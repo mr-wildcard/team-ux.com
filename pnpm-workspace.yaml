@@ -1,0 +1,5 @@
+allowBuilds:
+  "@percy/core": true
+  esbuild: false
+  protobufjs: false
+  sharp: false
