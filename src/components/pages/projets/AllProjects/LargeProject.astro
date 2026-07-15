@@ -13,7 +13,7 @@ export type LargeProjectImage = {
   name: string;
   legend: string;
   alt: string;
-}
+};
 
 export type LargeProjectProps = {
   title: string;
@@ -25,12 +25,12 @@ export type LargeProjectProps = {
     title: string;
     content: string;
   };
-  testimonial?: TestimonialModel | Array<TestimonialModel>
-}
+  testimonial?: TestimonialModel | Array<TestimonialModel>;
+};
 
 interface Props {
   project: LargeProjectProps;
-  allProjectsImages: ReturnType<AstroGlobalPartial["glob"]>[]
+  allProjectsImages: ReturnType<AstroGlobalPartial["glob"]>[];
 }
 
 const { project, allProjectsImages } = Astro.props;
@@ -51,7 +51,8 @@ for (const { name } of project.images) {
   }
 }
 
-const hasManyTestimonials = Array.isArray(project.testimonial) && project.testimonial.length > 0;
+const hasManyTestimonials =
+  Array.isArray(project.testimonial) && project.testimonial.length > 0;
 ---
 
 <div
@@ -61,7 +62,9 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
     <div class="flex flex-col space-y-8 lg:flex-[0_0_40%]">
       <Picture
         class="w-[200px] h-[80px] rounded-[12px] border border-neutral3"
-        src={import(`../../../../images/projets/logos/logo-${project.logo}.png`)}
+        src={import(
+          `../../../../images/projets/logos/logo-${project.logo}.png`
+        )}
       />
 
       <div>
@@ -140,7 +143,7 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
 
   {
     project.images && (
-      <!-- 22px: height of the title "open gallery" -->
+      // 22px: height of the title "open gallery"
       <details class="gallery lg:-translate-y-[22px] lg:-mb-[22px]">
         <CallToAction
           as="summary"
@@ -162,7 +165,10 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
         <div class="gallery flex flex-col space-y-14 mt-8">
           <ul class="flex flex-col max-lg:space-y-12 lg:flex-row lg:space-x-4">
             {projectImages.map(async (projectImage, index) => {
-              const { src: hrefPNG } = await getImage({ src: projectImage.default, format: 'png' });
+              const { src: hrefPNG } = await getImage({
+                src: projectImage.default,
+                format: "png",
+              });
 
               return (
                 <li class="flex-1">
@@ -171,7 +177,12 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
                     target="_blank"
                     class="project-image-link lg:aspect-431/361 relative flex overflow-hidden rounded-md lg:rounded-lg"
                   >
-                    <CallToAction tabindex="-1" class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" type="secondary" rightIcon="open_in_new">
+                    <CallToAction
+                      tabindex="-1"
+                      class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                      type="secondary"
+                      rightIcon="open_in_new"
+                    >
                       Ouvrir l'image
                     </CallToAction>
 
@@ -186,7 +197,12 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
                   </a>
 
                   {project.images[index].legend && (
-                    <p id={`project-image-desc-${project.images[index].name}`} class="mt-5 text-body-medium">{project.images[index].legend}</p>
+                    <p
+                      id={`project-image-desc-${project.images[index].name}`}
+                      class="mt-5 text-body-medium"
+                    >
+                      {project.images[index].legend}
+                    </p>
                   )}
                 </li>
               );
@@ -197,24 +213,31 @@ const hasManyTestimonials = Array.isArray(project.testimonial) && project.testim
               <Icon name="photo_prints" width={38} height={38} />
             </span>
             <p class="text-body-medium">
-              Dans une <a href="/demarche-eco-conception" class="text-primary underline underline-offset-[4px] hover:text-secondary">démarche d’éco-responsabilité</a>, nous vous proposons de
-              n’ouvrir que les galeries dont vous avez besoin.
+              Dans une{" "}
+              <a
+                href="/demarche-eco-conception"
+                class="text-primary underline underline-offset-[4px] hover:text-secondary"
+              >
+                démarche d’éco-responsabilité
+              </a>
+              , nous vous proposons de n’ouvrir que les galeries dont vous avez
+              besoin.
             </p>
           </div>
         </div>
       </details>
     )
-    }
+  }
 </div>
 
 <style>
-    @reference '../../../../styles/base.css';
+  @reference '../../../../styles/base.css';
 
-    .testimonials[open] {
-        [data-icon="expand_more"] {
-            transform: scaleY(-1);
-        }
+  .testimonials[open] {
+    [data-icon="expand_more"] {
+      transform: scaleY(-1);
     }
+  }
 
   .gallery {
     .opened {
