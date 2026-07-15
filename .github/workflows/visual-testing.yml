@@ -3,15 +3,18 @@ name: Run visual testing
 on:
   pull_request:
     types: [opened, synchronize, reopened, labeled]
+  push:
+    branches:
+      - main
 
 jobs:
   visual-testing:
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/') }}
+    if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'visual-testing') || startsWith(github.head_ref, 'renovate/'))) }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7
 
       - name: Get Cloudflare Pages deployment URL
         id: wait-for-cloudflare-deployment-url
@@ -19,15 +22,15 @@ jobs:
         with:
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-pages-project: team-ux-com
+          cloudflare-pages-project: yuna-work
           branch-name: ${{ github.head_ref }}
 
-      - uses: pnpm/action-setup@v6.0.9
+      - uses: pnpm/action-setup@v6
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
 
       - name: Setup Node
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        uses: actions/setup-node@v7.0.0
+        uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -37,7 +40,7 @@ jobs:
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm i
 
-      - name: Create Percy snapshots
+      - name: Take team-ux.com screenshots and upload them to Percy
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
