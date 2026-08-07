@@ -40,8 +40,8 @@ importers:
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       cssnano:
-        specifier: 8.0.3
-        version: 8.0.3(postcss@8.5.25)
+        specifier: 8.0.4
+        version: 8.0.4(postcss@8.5.25)
       fast-xml-parser:
         specifier: 5.10.1
         version: 5.10.1
@@ -1374,8 +1374,8 @@ packages:
     peerDependencies:
       postcss: ^8.5.25
 
-  cssnano@8.0.3:
-    resolution: {integrity: sha512-26CzddLeYJfseLA+ugUgDRHqntaUxuQJ2WNYpyrgjnpP61SQTTNdbt/EJ2FCxW3b4Dl/fCJ0iEYE4VUb5mdWQQ==}
+  cssnano@8.0.4:
+    resolution: {integrity: sha512-m6epEvKkzysdXamdK4BU9S6lQzx+syY+5Qm4f2dbpxlewBtEYOKi2v2iIr1jLsjuAr3V1WjRp6hXFPH1BEDirw==}
     engines: {node: ^22.11.0 || ^24.11.0 || >=26.0}
     peerDependencies:
       postcss: ^8.5.25
@@ -4396,7 +4396,7 @@ snapshots:
     dependencies:
       postcss: 8.5.25
 
-  cssnano@8.0.3(postcss@8.5.25):
+  cssnano@8.0.4(postcss@8.5.25):
     dependencies:
       cssnano-preset-default: 8.0.4(postcss@8.5.25)
       lilconfig: 3.1.3
