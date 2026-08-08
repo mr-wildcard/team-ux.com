@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "7.1.6",
+    "astro": "7.2.0",
     "astro-icon": "1.1.5",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.3.3"
@@ -22,12 +22,12 @@
     "@astrojs/check": "0.9.10",
     "@astrojs/sitemap": "3.7.3",
     "@astrojs/ts-plugin": "1.10.10",
-    "@percy/cli": "1.32.5",
+    "@percy/cli": "1.32.6",
     "@rollup/plugin-yaml": "5.0.0",
     "@tailwindcss/vite": "4.3.3",
     "cssnano": "8.0.4",
     "fast-xml-parser": "5.10.1",
-    "postcss": "8.5.25",
+    "postcss": "8.5.26",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.35.3",
