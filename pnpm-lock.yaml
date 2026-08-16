@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: 7.2.1
-        version: 7.2.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.1.2)(jiti@2.7.0)(yaml@2.9.0)
+        specifier: 7.2.2
+        version: 7.2.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.1.2)(jiti@2.7.0)(yaml@2.9.0)
       astro-icon:
         specifier: 1.1.5
-        version: 1.1.5
+        version: 1.1.5(supports-color@7.2.0)
       dialog-polyfill:
         specifier: 0.5.6
         version: 0.5.6
@@ -32,7 +32,7 @@ importers:
         version: 1.10.10(typescript@6.0.3)
       '@percy/cli':
         specifier: 1.32.6
-        version: 1.32.6(typescript@6.0.3)
+        version: 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@rollup/plugin-yaml':
         specifier: 5.0.0
         version: 5.0.0
@@ -1172,8 +1172,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@7.2.1:
-    resolution: {integrity: sha512-ynyMTiyF//GLcd8+gRNbvcKgS1ht+qTgp/fkkHIpGYNILLseQqQRuPZ9PqXYKfsact4J1emZaXRDpg2bl35Pag==}
+  astro@7.2.2:
+    resolution: {integrity: sha512-OvLWCpXpb43lVYcWzSBJ0sk44qcEYYRZCjadtalLfAwb2RaC3P/zT+blZykBw/o6suw6sQQkn00ugN36akD8Mw==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     peerDependencies:
@@ -1247,6 +1247,10 @@ packages:
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
 
+  chalk@4.1.2:
+    resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
+    engines: {node: '>=10'}
+
   character-entities-html4@2.1.0:
     resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
 
@@ -1301,6 +1305,10 @@ packages:
   commander@11.1.0:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
+
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
+    engines: {node: '>=20'}
 
   commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -1589,6 +1597,10 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
+  find-process@2.1.1:
+    resolution: {integrity: sha512-SrQDx3QhlmHM90iqn9rdjCQcw/T+WlpOkHFsjoRgB+zTpDfltNA1VSNYeYELwhUTJy12UFxqjWhmhOrJc+o4sA==}
+    hasBin: true
+
   flattie@1.1.1:
     resolution: {integrity: sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==}
     engines: {node: '>=8'}
@@ -1648,6 +1660,10 @@ packages:
 
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
+
+  has-flag@4.0.0:
+    resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
+    engines: {node: '>=8'}
 
   hast-util-from-html@2.0.3:
     resolution: {integrity: sha512-CUSRHXyKjzHov8yKsQjGOElXy/3EKpyX56ELnkHH34vDVw1N1XSQ1ZcAvTyAPtGqLTuKP/uxM+aLkSPqF/EtMw==}
@@ -1939,6 +1955,10 @@ packages:
 
   lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
+
+  loglevel@1.9.2:
+    resolution: {integrity: sha512-HgMmCqIJSAKqo68l0rS2AanEWfkxaZ5wNiEFb5ggm08lDs9Xl2KxBlX3PTcaD2chBM1gXAYf491/M2Rv8Jwayg==}
+    engines: {node: '>= 0.6.0'}
 
   long@5.3.2:
     resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
@@ -2577,6 +2597,10 @@ packages:
 
   suf-log@2.5.3:
     resolution: {integrity: sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==}
+
+  supports-color@7.2.0:
+    resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
+    engines: {node: '>=8'}
 
   svgo@3.3.4:
     resolution: {integrity: sha512-GsNRis4e8jxn2Y9ENz/8lbJ93CstG8svtMnuRaHbiF2LTJ5tK0/q3t/URPq9Zc7zVWBJnNnJMIp6bevK7bSmNg==}
@@ -3387,13 +3411,13 @@ snapshots:
       protobufjs: 7.6.5
       yargs: 17.7.3
 
-  '@iconify/tools@4.2.0':
+  '@iconify/tools@4.2.0(supports-color@7.2.0)':
     dependencies:
       '@iconify/types': 2.0.0
-      '@iconify/utils': 2.3.0
+      '@iconify/utils': 2.3.0(supports-color@7.2.0)
       cheerio: 1.2.0
       domhandler: 5.0.3
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@7.2.0)
       local-pkg: 1.2.1
       pathe: 2.0.3
       svgo: 3.3.4
@@ -3403,12 +3427,12 @@ snapshots:
 
   '@iconify/types@2.0.0': {}
 
-  '@iconify/utils@2.3.0':
+  '@iconify/utils@2.3.0(supports-color@7.2.0)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@antfu/utils': 8.1.1
       '@iconify/types': 2.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       globals: 15.15.0
       kolorist: 1.8.0
       local-pkg: 1.2.1
@@ -3579,29 +3603,29 @@ snapshots:
 
   '@oxc-project/types@0.142.0': {}
 
-  '@percy/cli-app@1.32.6(typescript@6.0.3)':
+  '@percy/cli-app@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
-      '@percy/cli-exec': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-exec': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-build@1.32.6(typescript@6.0.3)':
+  '@percy/cli-build@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-command@1.32.6(typescript@6.0.3)':
+  '@percy/cli-command@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       '@percy/config': 1.32.6(typescript@6.0.3)
-      '@percy/core': 1.32.6(typescript@6.0.3)
+      '@percy/core': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/logger': 1.32.6
     transitivePeerDependencies:
       - bufferutil
@@ -3609,24 +3633,24 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-config@1.32.6(typescript@6.0.3)':
+  '@percy/cli-config@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-doctor@1.32.6(typescript@6.0.3)':
+  '@percy/cli-doctor@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
-      '@percy/client': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/client': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/config': 1.32.6(typescript@6.0.3)
-      '@percy/core': 1.32.6(typescript@6.0.3)
+      '@percy/core': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/env': 1.32.6
       '@percy/logger': 1.32.6
-      '@percy/monitoring': 1.32.6(typescript@6.0.3)
+      '@percy/monitoring': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       minimatch: 9.0.9
       ws: 8.21.2
     transitivePeerDependencies:
@@ -3635,9 +3659,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-exec@1.32.6(typescript@6.0.3)':
+  '@percy/cli-exec@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/logger': 1.32.6
       cross-spawn: 7.0.6
       which: 2.0.2
@@ -3647,9 +3671,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-snapshot@1.32.6(typescript@6.0.3)':
+  '@percy/cli-snapshot@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       yaml: 2.9.0
     transitivePeerDependencies:
       - bufferutil
@@ -3657,9 +3681,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-upload@1.32.6(typescript@6.0.3)':
+  '@percy/cli-upload@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       fast-glob: 3.3.3
       image-size: 1.0.2
     transitivePeerDependencies:
@@ -3668,17 +3692,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli@1.32.6(typescript@6.0.3)':
+  '@percy/cli@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
-      '@percy/cli-app': 1.32.6(typescript@6.0.3)
-      '@percy/cli-build': 1.32.6(typescript@6.0.3)
-      '@percy/cli-command': 1.32.6(typescript@6.0.3)
-      '@percy/cli-config': 1.32.6(typescript@6.0.3)
-      '@percy/cli-doctor': 1.32.6(typescript@6.0.3)
-      '@percy/cli-exec': 1.32.6(typescript@6.0.3)
-      '@percy/cli-snapshot': 1.32.6(typescript@6.0.3)
-      '@percy/cli-upload': 1.32.6(typescript@6.0.3)
-      '@percy/client': 1.32.6(typescript@6.0.3)
+      '@percy/cli-app': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-build': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-command': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-config': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-doctor': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-exec': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-snapshot': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/cli-upload': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/client': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/logger': 1.32.6
     transitivePeerDependencies:
       - bufferutil
@@ -3686,12 +3710,12 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/client@1.32.6(typescript@6.0.3)':
+  '@percy/client@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       '@percy/config': 1.32.6(typescript@6.0.3)
       '@percy/env': 1.32.6
       '@percy/logger': 1.32.6
-      pac-proxy-agent: 7.2.0
+      pac-proxy-agent: 7.2.0(supports-color@7.2.0)
       pako: 2.2.0
     transitivePeerDependencies:
       - supports-color
@@ -3706,16 +3730,16 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@percy/core@1.32.6(typescript@6.0.3)':
+  '@percy/core@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       '@grpc/grpc-js': 1.14.4
       '@grpc/proto-loader': 0.8.1
-      '@percy/client': 1.32.6(typescript@6.0.3)
+      '@percy/client': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       '@percy/config': 1.32.6(typescript@6.0.3)
       '@percy/dom': 1.32.6
       '@percy/logger': 1.32.6
-      '@percy/monitoring': 1.32.6(typescript@6.0.3)
-      '@percy/webdriver-utils': 1.32.6(typescript@6.0.3)
+      '@percy/monitoring': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
+      '@percy/webdriver-utils': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
       adm-zip: 0.6.0
       busboy: 1.6.0
       content-disposition: 0.5.4
@@ -3730,7 +3754,7 @@ snapshots:
       ws: 8.21.2
       yaml: 2.9.0
     optionalDependencies:
-      '@percy/cli-doctor': 1.32.6(typescript@6.0.3)
+      '@percy/cli-doctor': 1.32.6(supports-color@7.2.0)(typescript@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3745,26 +3769,26 @@ snapshots:
 
   '@percy/logger@1.32.6': {}
 
-  '@percy/monitoring@1.32.6(typescript@6.0.3)':
+  '@percy/monitoring@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       '@percy/config': 1.32.6(typescript@6.0.3)
       '@percy/logger': 1.32.6
-      '@percy/sdk-utils': 1.32.6
+      '@percy/sdk-utils': 1.32.6(supports-color@7.2.0)
       systeminformation: 5.33.1
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  '@percy/sdk-utils@1.32.6':
+  '@percy/sdk-utils@1.32.6(supports-color@7.2.0)':
     dependencies:
-      pac-proxy-agent: 7.2.0
+      pac-proxy-agent: 7.2.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@percy/webdriver-utils@1.32.6(typescript@6.0.3)':
+  '@percy/webdriver-utils@1.32.6(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       '@percy/config': 1.32.6(typescript@6.0.3)
-      '@percy/sdk-utils': 1.32.6
+      '@percy/sdk-utils': 1.32.6(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4107,15 +4131,15 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  astro-icon@1.1.5:
+  astro-icon@1.1.5(supports-color@7.2.0):
     dependencies:
-      '@iconify/tools': 4.2.0
+      '@iconify/tools': 4.2.0(supports-color@7.2.0)
       '@iconify/types': 2.0.0
-      '@iconify/utils': 2.3.0
+      '@iconify/utils': 2.3.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  astro@7.2.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.1.2)(jiti@2.7.0)(yaml@2.9.0):
+  astro@7.2.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.1.2)(jiti@2.7.0)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler-rs': 0.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
       '@astrojs/internal-helpers': 0.10.2
@@ -4136,6 +4160,7 @@ snapshots:
       dset: 3.1.4
       es-module-lexer: 2.3.1
       esbuild: 0.28.1
+      find-process: 2.1.1
       flattie: 1.1.1
       fontace: 0.4.1
       get-tsconfig: 5.0.0-beta.4
@@ -4265,6 +4290,11 @@ snapshots:
 
   ccount@2.0.1: {}
 
+  chalk@4.1.2:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+
   character-entities-html4@2.1.0: {}
 
   character-entities-legacy@3.0.0: {}
@@ -4327,6 +4357,8 @@ snapshots:
   comma-separated-tokens@2.0.3: {}
 
   commander@11.1.0: {}
+
+  commander@14.0.3: {}
 
   commander@7.2.0: {}
 
@@ -4441,9 +4473,11 @@ snapshots:
 
   data-uri-to-buffer@6.0.2: {}
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   defu@6.1.7: {}
 
@@ -4581,9 +4615,9 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -4647,6 +4681,12 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
+  find-process@2.1.1:
+    dependencies:
+      chalk: 4.1.2
+      commander: 14.0.3
+      loglevel: 1.9.2
+
   flattie@1.1.1: {}
 
   fontace@0.4.1:
@@ -4674,11 +4714,11 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  get-uri@6.0.5:
+  get-uri@6.0.5(supports-color@7.2.0):
     dependencies:
       basic-ftp: 5.3.1
       data-uri-to-buffer: 6.0.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4712,6 +4752,8 @@ snapshots:
       radix3: 1.1.2
       ufo: 1.6.4
       uncrypto: 0.1.3
+
+  has-flag@4.0.0: {}
 
   hast-util-from-html@2.0.3:
     dependencies:
@@ -4776,17 +4818,17 @@ snapshots:
 
   http-cache-semantics@4.2.0: {}
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4964,6 +5006,8 @@ snapshots:
 
   lodash.camelcase@4.3.0: {}
 
+  loglevel@1.9.2: {}
+
   long@5.3.2: {}
 
   lru-cache@11.5.2: {}
@@ -5114,16 +5158,16 @@ snapshots:
 
   p-timeout@7.0.1: {}
 
-  pac-proxy-agent@7.2.0:
+  pac-proxy-agent@7.2.0(supports-color@7.2.0):
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.4
-      debug: 4.4.3
-      get-uri: 6.0.5
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      debug: 4.4.3(supports-color@7.2.0)
+      get-uri: 6.0.5(supports-color@7.2.0)
+      http-proxy-agent: 7.0.2(supports-color@7.2.0)
+      https-proxy-agent: 7.0.6(supports-color@7.2.0)
       pac-resolver: 7.0.1
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5566,10 +5610,10 @@ snapshots:
 
   smol-toml@1.7.1: {}
 
-  socks-proxy-agent@8.0.5:
+  socks-proxy-agent@8.0.5(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       socks: 2.8.9
     transitivePeerDependencies:
       - supports-color
@@ -5635,6 +5679,10 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
+
+  supports-color@7.2.0:
+    dependencies:
+      has-flag: 4.0.0
 
   svgo@3.3.4:
     dependencies:
