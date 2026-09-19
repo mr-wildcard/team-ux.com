@@ -2,7 +2,7 @@ name: Deploy to Infomaniak
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -12,18 +12,9 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v7.0.1
 
-      - uses: pnpm/action-setup@v6.1.0
-
-      - name: Setup Node
-        uses: actions/setup-node@v7.0.0
+      - uses: pnpm/setup@v2.1.0
         with:
-          node-version-file: .nvmrc
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install
-        shell: "bash"
-        run: pnpm i
+          cache: true
 
       - name: Build
         shell: "bash"
