@@ -32,10 +32,10 @@
     "@percy/cli": "1.32.10",
     "@rollup/plugin-yaml": "5.0.0",
     "@tailwindcss/vite": "4.3.3",
-    "cssnano": "9.0.4",
+    "cssnano": "9.0.5",
     "fast-xml-parser": "5.11.1",
     "postcss": "8.5.28",
-    "prettier": "3.9.7",
+    "prettier": "3.9.8",
     "prettier-plugin-astro": "1.0.1",
     "sharp": "0.35.4",
     "typescript": "6.0.3"
