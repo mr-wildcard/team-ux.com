@@ -53,181 +53,166 @@ for (const { name } of project.images) {
 
 const hasManyTestimonials =
   Array.isArray(project.testimonial) && project.testimonial.length > 0;
+
+const buttonOpenTestimonialsLabel = `Déplier ${hasManyTestimonials ? "les témoignages" : "le témoignage"}`;
 ---
 
-<div
-  class="project flex flex-col max-lg:space-y-8 px-5 py-6 lg:p-10 bg-neutral4 rounded-[26px]"
->
+<div class="project flex flex-col max-lg:space-y-8 px-5 py-6 lg:p-10 bg-neutral4 rounded-[26px]">
   <div class="flex flex-col max-lg:space-y-8 lg:flex-row lg:space-x-8">
     <div class="flex flex-col space-y-8 lg:flex-[0_0_40%]">
       <Picture
         class="w-[200px] h-[80px] rounded-[12px] border border-neutral3"
-        src={import(
-          `../../../../images/projets/logos/logo-${project.logo}.png`
-        )}
+        src={
+          import(`../../../../images/projets/logos/logo-${project.logo}.png`)
+        }
       />
 
       <div>
-        <p class="mb-3 lg:mb-2.5 text-headline-medium-bold">
-          {project.title}
-        </p>
-        <p class="text-body-large text-neutral1">
-          {project.activity}
-        </p>
+        <p class="mb-3 lg:mb-2.5 text-headline-medium-bold">{project.title}</p>
+        <p class="text-body-large text-neutral1">{project.activity}</p>
       </div>
       <ul class="flex flex-wrap -mx-[5px]">
-        {
-          project.skills.map((skill) => {
-            return (
-              <li class="m-[5px]">
-                <Tag name={skill} />
-              </li>
-            );
-          })
-        }
+        {project.skills.map((skill) => {
+          return (
+            <li class="m-[5px]">
+              <Tag name={skill} />
+            </li>
+          );
+        })}
       </ul>
     </div>
-    <div
-      class="flex flex-col space-y-5 px-5 py-6 lg:p-10 bg-surface5 rounded-[20px]"
-    >
+    <div class="flex flex-col space-y-5 px-5 py-6 lg:p-10 bg-surface5 rounded-[20px]">
       <h3 class="text-headline-medium-bold lg:text-headline-large">
         {project.description.title}
       </h3>
-      <p class="text-body-medium">
-        {project.description.content}
-      </p>
+      <p class="text-body-medium">{project.description.content}</p>
 
-      {
-        project.testimonial && (
-          <details class="testimonials">
-            <summary>
-              <CallToAction
-                type="secondary"
-                as="div"
-                rightIcon="expand_more"
-                class="cursor-pointer"
-              >
-                Déplier&nbsp;
-                {hasManyTestimonials ? "les témoignages" : "le témoignage"}
-              </CallToAction>
-            </summary>
+      {project.testimonial && (
+        <details class="testimonials">
+          <summary>
+            <CallToAction
+              type="secondary"
+              as="div"
+              rightIcon="expand_more"
+              class="cursor-pointer"
+            >
+              {buttonOpenTestimonialsLabel}
+            </CallToAction>
+          </summary>
 
-            <div class="mt-5">
-              {!hasManyTestimonials && (
-                <Testimonial
-                  viewMode="inline"
-                  testimonial={project.testimonial}
-                />
-              )}
+          <div class="mt-5">
+            {!hasManyTestimonials && (
+              <Testimonial
+                viewMode="inline"
+                testimonial={project.testimonial}
+              />
+            )}
 
-              {hasManyTestimonials && (
-                <ul class="flex flex-col space-y-2.5">
-                  {project.testimonial.map((testimonial) => {
-                    return (
-                      <li>
-                        <Testimonial
-                          viewMode="inline"
-                          testimonial={testimonial}
-                        />
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </div>
-          </details>
-        )
-      }
+            {hasManyTestimonials && (
+              <ul class="flex flex-col space-y-2.5">
+                {project.testimonial.map((testimonial) => {
+                  return (
+                    <li>
+                      <Testimonial
+                        viewMode="inline"
+                        testimonial={testimonial}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        </details>
+      )}
     </div>
   </div>
 
-  {
-    project.images && (
-      // 22px: height of the title "open gallery"
-      <details class="gallery lg:-translate-y-[22px] lg:-mb-[22px]">
-        <CallToAction
-          as="summary"
-          type="primary"
-          variant="transparent"
-          class="underline w-full cursor-pointer"
-        >
-          <span class="closed flex items-center space-x-1.5 ">
-            <span>Afficher la galerie de ce projet</span>
-            <Icon name="visibility" width={22} height={22} />
-          </span>
+  {project.images && (
+    // 22px: height of the title "open gallery"
+    <details class="gallery lg:-translate-y-[22px] lg:-mb-[22px]">
+      <CallToAction
+        as="summary"
+        type="primary"
+        variant="transparent"
+        class="underline w-full cursor-pointer"
+      >
+        <span class="closed flex items-center space-x-1.5">
+          <span>Afficher la galerie de ce projet</span>
+          <Icon name="visibility" width={22} height={22} />
+        </span>
 
-          <span class="opened flex items-center space-x-1.5">
-            <span>Fermer la galerie</span>
-            <Icon name="cross" width={18} height={18} />
-          </span>
-        </CallToAction>
+        <span class="opened flex items-center space-x-1.5">
+          <span>Fermer la galerie</span>
+          <Icon name="cross" width={18} height={18} />
+        </span>
+      </CallToAction>
 
-        <div class="gallery flex flex-col space-y-14 mt-8">
-          <ul class="flex flex-col max-lg:space-y-12 lg:flex-row lg:space-x-4">
-            {projectImages.map(async (projectImage, index) => {
-              const { src: hrefPNG } = await getImage({
-                src: projectImage.default,
-                format: "png",
-              });
+      <div class="gallery flex flex-col space-y-14 mt-8">
+        <ul class="flex flex-col max-lg:space-y-12 lg:flex-row lg:space-x-4">
+          {projectImages.map(async (projectImage, index) => {
+            const { src: hrefPNG } = await getImage({
+              src: projectImage.default,
+              format: "png",
+            });
 
-              return (
-                <li class="flex-1">
-                  <a
-                    href={hrefPNG}
-                    target="_blank"
-                    class="project-image-link lg:aspect-431/361 relative flex overflow-hidden rounded-md lg:rounded-lg"
+            return (
+              <li class="flex-1">
+                <a
+                  href={hrefPNG}
+                  target="_blank"
+                  class="project-image-link lg:aspect-431/361 relative flex overflow-hidden rounded-md lg:rounded-lg"
+                >
+                  <CallToAction
+                    tabindex="-1"
+                    class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    type="secondary"
+                    rightIcon="open_in_new"
                   >
-                    <CallToAction
-                      tabindex="-1"
-                      class="opacity-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                      type="secondary"
-                      rightIcon="open_in_new"
-                    >
-                      Ouvrir l'image
-                    </CallToAction>
+                    Ouvrir l'image
+                  </CallToAction>
 
-                    <Picture
-                      src={projectImage.default}
-                      style="opacity: 0"
-                      class="opacity-0 transition-opacity"
-                      onload="this.style.opacity = '1'"
-                      alt={project.images[index].alt ?? ""}
-                      longdesc={`#project-image-desc-${project.images[index].name}`}
-                    />
-                  </a>
+                  <Picture
+                    src={projectImage.default}
+                    style="opacity: 0"
+                    class="opacity-0 transition-opacity"
+                    onload="this.style.opacity = '1'"
+                    alt={project.images[index].alt ?? ""}
+                    longdesc={`#project-image-desc-${project.images[index].name}`}
+                  />
+                </a>
 
-                  {project.images[index].legend && (
-                    <p
-                      id={`project-image-desc-${project.images[index].name}`}
-                      class="mt-5 text-body-medium"
-                    >
-                      {project.images[index].legend}
-                    </p>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-          <div class="flex max-lg:flex-col max-lg:items-start items-center max-lg:space-y-2.5 lg:space-x-2.5 bg-surface7 px-5 py-5 lg:py-2.5 rounded-sm">
-            <span role="presentation">
-              <Icon name="photo_prints" width={38} height={38} />
-            </span>
-            <p class="text-body-medium">
-              Dans une{" "}
-              <a
-                href="/demarche-eco-conception"
-                class="text-primary underline underline-offset-[4px] hover:text-secondary"
-              >
-                démarche d’éco-responsabilité
-              </a>
-              , nous vous proposons de n’ouvrir que les galeries dont vous avez
-              besoin.
-            </p>
-          </div>
+                {project.images[index].legend && (
+                  <p
+                    id={`project-image-desc-${project.images[index].name}`}
+                    class="mt-5 text-body-medium"
+                  >
+                    {project.images[index].legend}
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+        <div class="flex max-lg:flex-col max-lg:items-start items-center max-lg:space-y-2.5 lg:space-x-2.5 bg-surface7 px-5 py-5 lg:py-2.5 rounded-sm">
+          <span role="presentation">
+            <Icon name="photo_prints" width={38} height={38} />
+          </span>
+          <p class="text-body-medium">
+            Dans une{" "}
+            <a
+              href="/demarche-eco-conception"
+              class="text-primary underline underline-offset-[4px] hover:text-secondary"
+            >
+              démarche d’éco-responsabilité
+            </a>
+            , nous vous proposons de n’ouvrir que les galeries dont vous avez
+            besoin.
+          </p>
         </div>
-      </details>
-    )
-  }
+      </div>
+    </details>
+  )}
 </div>
 
 <style>
