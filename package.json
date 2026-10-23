@@ -20,17 +20,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "7.4.1",
+    "astro": "7.4.2",
     "astro-icon": "1.2.0",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.11",
+    "@astrojs/check": "0.9.12",
     "@astrojs/sitemap": "3.7.4",
     "@astrojs/ts-plugin": "1.10.12",
-    "@percy/cli": "1.32.11",
-    "@rollup/plugin-yaml": "5.0.0",
+    "@percy/cli": "1.32.12",
+    "@rollup/plugin-yaml": "5.0.1",
     "@tailwindcss/vite": "4.3.3",
     "cssnano": "9.9.0",
     "fast-xml-parser": "5.11.2",
