@@ -34,7 +34,7 @@
     "@tailwindcss/vite": "4.3.3",
     "cssnano": "9.9.0",
     "fast-xml-parser": "5.11.2",
-    "postcss": "8.5.31",
+    "postcss": "8.5.32",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "sharp": "0.35.5",
