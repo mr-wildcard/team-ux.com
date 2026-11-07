@@ -20,7 +20,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "7.4.5",
+    "astro": "7.4.7",
     "astro-icon": "1.2.0",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.3.4"
