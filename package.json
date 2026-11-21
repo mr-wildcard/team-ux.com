@@ -20,14 +20,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "7.4.12",
+    "astro": "7.4.13",
     "astro-icon": "1.2.0",
     "dialog-polyfill": "0.5.6",
     "tailwindcss": "4.3.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
-    "@astrojs/sitemap": "3.7.5",
+    "@astrojs/sitemap": "3.7.6",
     "@astrojs/ts-plugin": "1.11.0",
     "@percy/cli": "1.32.12",
     "@rollup/plugin-yaml": "5.0.1",
